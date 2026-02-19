@@ -1,0 +1,28 @@
+---
+// Redirect all /en/* URLs to /* for backwards compatibility
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = [
+    '', 'about', 'admissions', 'contact', 'early-years',
+    'holiday-camps', 'middle-school', 'primary', 'team', 'tuition', 'news'
+  ];
+
+  // Also redirect /en/news/<slug> to /news/<slug>
+  const posts = (await getCollection('blog'))
+    .filter(post => post.data.lang === 'en');
+
+  const blogPaths = posts.map(post => ({
+    params: { slug: `news/${post.id.replace('en/', '')}` }
+  }));
+
+  return [
+    ...pages.map(p => ({ params: { slug: p || undefined } })),
+    ...blogPaths
+  ];
+}
+
+const { slug } = Astro.params;
+const destination = slug ? `/${slug}` : '/';
+return Astro.redirect(destination, 301);
+---

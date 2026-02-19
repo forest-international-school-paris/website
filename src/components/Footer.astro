@@ -47,7 +47,7 @@ const translations = {
 };
 
 const t = translations[lang];
-const basePath = `/${lang}`;
+const basePath = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <footer class="bg-[#2d5a3d] text-white">
@@ -73,7 +73,7 @@ const basePath = `/${lang}`;
       <div>
         <h3 class="text-lg font-semibold mb-4">{t.quickLinks}</h3>
         <ul class="space-y-2">
-          <li><a href={basePath} class="text-white/80 hover:text-white transition-colors">{t.home}</a></li>
+          <li><a href={basePath || '/'} class="text-white/80 hover:text-white transition-colors">{t.home}</a></li>
           <li><a href={`${basePath}/about`} class="text-white/80 hover:text-white transition-colors">{t.about}</a></li>
           <li><a href={`${basePath}/admissions`} class="text-white/80 hover:text-white transition-colors">{t.admissions}</a></li>
         </ul>

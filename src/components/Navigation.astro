@@ -48,8 +48,8 @@ const translations = {
 
 const t = translations[lang];
 const altLang = lang === 'en' ? 'fr' : 'en';
-const basePath = `/${lang}`;
-const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
+const basePath = lang === 'en' ? '' : `/${lang}`;
+const newsPath = lang === 'en' ? '/news' : `${basePath}/actualites`;
 ---
 
 <!-- Top Bar -->
@@ -72,7 +72,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
     <div class="flex items-center gap-4">
       <span class="text-white/70">Mareil-Marly, Paris West</span>
       <span class="text-white/40">|</span>
-      <a href={`/${altLang}`} class="flex items-center gap-1 hover:text-[#c9a962] transition-colors">
+      <a href={altLang === 'fr' ? '/fr' : '/'} class="flex items-center gap-1 hover:text-[#c9a962] transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
         </svg>
@@ -87,7 +87,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       <!-- Logo -->
-      <a href={basePath} class="flex items-center gap-3 group flex-shrink-0">
+      <a href={basePath || '/'} class="flex items-center gap-3 group flex-shrink-0">
         <img src="/images/logo-header.png" alt="Forest International School Logo" class="w-16 h-16 object-contain rounded-full group-hover:scale-105 transition-transform duration-300 flex-shrink-0" />
         <div class="hidden sm:block whitespace-nowrap">
           <span class="text-xl font-bold text-[#1e3d29] tracking-tight block">Forest International</span>
@@ -101,7 +101,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center">
         <div class="flex items-center gap-1">
-          <a href={basePath} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.home}</a>
+          <a href={basePath || '/'} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.home}</a>
 
           <!-- About Us Dropdown -->
           <div class="relative group">
@@ -209,7 +209,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
 
       <!-- Mobile: Language + Menu -->
       <div class="flex items-center gap-3 lg:hidden">
-        <a href={`/${altLang}`} class="text-sm font-medium text-[#2d5a3d] hover:text-[#1e3d29]">
+        <a href={altLang === 'fr' ? '/fr' : '/'} class="text-sm font-medium text-[#2d5a3d] hover:text-[#1e3d29]">
           {t.langSwitch}
         </a>
         <button id="mobile-menu-btn" class="p-2 text-gray-700 hover:text-[#2d5a3d] hover:bg-[#2d5a3d]/5 rounded-lg transition-colors">
@@ -227,7 +227,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
   <!-- Mobile Navigation -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 max-h-[calc(100vh-5rem)] overflow-y-auto">
     <div class="max-w-6xl mx-auto px-4 py-4 space-y-1">
-      <a href={basePath} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.home}</a>
+      <a href={basePath || '/'} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.home}</a>
 
       <div class="py-2">
         <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-4 mb-2">{t.aboutUs}</div>

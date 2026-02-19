@@ -20,7 +20,11 @@ const {
 
 const altLang = lang === 'en' ? 'fr' : 'en';
 const currentPath = Astro.url.pathname;
-const altPath = currentPath.replace(`/${lang}`, `/${altLang}`);
+// English pages are at root (/about), French at /fr/about
+// Switching en→fr: add /fr prefix; switching fr→en: remove /fr prefix
+const altPath = lang === 'en'
+  ? `/fr${currentPath}`
+  : currentPath.replace(/^\/fr/, '') || '/';
 
 // Popup configuration - Edit these values to change the popup content
 const popupConfig = {
@@ -34,7 +38,7 @@ const popupConfig = {
     buttonText: "RSVP Now",
     buttonLink: "https://forms.gle/5Fz3Dve7MHkF8VcV7",
     secondaryButtonText: "Learn More",
-    secondaryButtonLink: "/en/admissions",
+    secondaryButtonLink: "/admissions",
     badge: "Open Day",
     image: "/images/campus.jpg"
   },
