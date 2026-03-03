@@ -9,7 +9,7 @@ const blog = defineCollection({
     date: z.coerce.date(),
     author: z.string().default('Forest International School'),
     image: z.string().optional(),
-    lang: z.enum(['en', 'fr']),
+    lang: z.literal('en'),
     tags: z.array(z.string()).optional(),
   }),
 });

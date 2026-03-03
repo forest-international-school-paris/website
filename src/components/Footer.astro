@@ -1,53 +1,23 @@
 ---
-interface Props {
-  lang: 'en' | 'fr';
-}
-
-const { lang } = Astro.props;
-
-const translations = {
-  en: {
-    quickLinks: 'Quick Links',
-    programs: 'Programs',
-    contact: 'Contact Us',
-    home: 'Home',
-    about: 'About',
-    admissions: 'Admissions',
-    earlyYears: 'Early Years',
-    primary: 'Primary School',
-    middleSchool: 'Middle School',
-    address: 'Address',
-    phone: 'Phone',
-    email: 'Email',
-    hours: 'Office Hours',
-    hoursText: 'Office Hours: 7:30 AM - 6:30 PM',
-    schoolDay: 'School Day: 8:30 AM - 5:00 PM',
-    copyright: '2024 Forest International School Paris. All rights reserved.',
-    followUs: 'Follow Us'
-  },
-  fr: {
-    quickLinks: 'Liens Rapides',
-    programs: 'Programmes',
-    contact: 'Contactez-nous',
-    home: 'Accueil',
-    about: 'A Propos',
-    admissions: 'Admissions',
-    earlyYears: 'Maternelle',
-    primary: 'Ecole Primaire',
-    middleSchool: 'College',
-    address: 'Adresse',
-    phone: 'Telephone',
-    email: 'Email',
-    hours: 'Heures d\'ouverture',
-    hoursText: 'Heures d\'ouverture: 7h30 - 18h30',
-    schoolDay: 'Journee scolaire: 8h30 - 17h',
-    copyright: '2024 Forest International School Paris. Tous droits reserves.',
-    followUs: 'Suivez-nous'
-  }
+const t = {
+  quickLinks: 'Quick Links',
+  programs: 'Programs',
+  contact: 'Contact Us',
+  home: 'Home',
+  about: 'About',
+  admissions: 'Admissions',
+  earlyYears: 'Early Years',
+  primary: 'Primary School',
+  middleSchool: 'Middle School',
+  address: 'Address',
+  phone: 'Phone',
+  email: 'Email',
+  hours: 'Office Hours',
+  hoursText: 'Office Hours: 7:30 AM - 6:30 PM',
+  schoolDay: 'School Day: 8:30 AM - 5:00 PM',
+  copyright: '2024 Forest International School Paris. All rights reserved.',
+  followUs: 'Follow Us'
 };
-
-const t = translations[lang];
-const basePath = lang === 'en' ? '' : `/${lang}`;
 ---
 
 <footer class="bg-[#2d5a3d] text-white">
@@ -63,9 +33,7 @@ const basePath = lang === 'en' ? '' : `/${lang}`;
           </div>
         </div>
         <p class="text-white/80 text-sm leading-relaxed">
-          {lang === 'en'
-            ? 'Nurturing young minds through nature-based learning in the heart of Paris west.'
-            : 'Nourrir les jeunes esprits a travers l\'apprentissage base sur la nature au coeur de l\'ouest parisien.'}
+          Nurturing young minds through nature-based learning in the heart of Paris west.
         </p>
       </div>
 
@@ -73,9 +41,9 @@ const basePath = lang === 'en' ? '' : `/${lang}`;
       <div>
         <h3 class="text-lg font-semibold mb-4">{t.quickLinks}</h3>
         <ul class="space-y-2">
-          <li><a href={basePath || '/'} class="text-white/80 hover:text-white transition-colors">{t.home}</a></li>
-          <li><a href={`${basePath}/about`} class="text-white/80 hover:text-white transition-colors">{t.about}</a></li>
-          <li><a href={`${basePath}/admissions`} class="text-white/80 hover:text-white transition-colors">{t.admissions}</a></li>
+          <li><a href="/" class="text-white/80 hover:text-white transition-colors">{t.home}</a></li>
+          <li><a href="/about" class="text-white/80 hover:text-white transition-colors">{t.about}</a></li>
+          <li><a href="/admissions" class="text-white/80 hover:text-white transition-colors">{t.admissions}</a></li>
         </ul>
       </div>
 
@@ -83,9 +51,9 @@ const basePath = lang === 'en' ? '' : `/${lang}`;
       <div>
         <h3 class="text-lg font-semibold mb-4">{t.programs}</h3>
         <ul class="space-y-2">
-          <li><a href={`${basePath}/early-years`} class="text-white/80 hover:text-white transition-colors">{t.earlyYears}</a></li>
-          <li><a href={`${basePath}/primary`} class="text-white/80 hover:text-white transition-colors">{t.primary}</a></li>
-          <li><a href={`${basePath}/middle-school`} class="text-white/80 hover:text-white transition-colors">{t.middleSchool}</a></li>
+          <li><a href="/early-years" class="text-white/80 hover:text-white transition-colors">{t.earlyYears}</a></li>
+          <li><a href="/primary" class="text-white/80 hover:text-white transition-colors">{t.primary}</a></li>
+          <li><a href="/middle-school" class="text-white/80 hover:text-white transition-colors">{t.middleSchool}</a></li>
         </ul>
       </div>
 
