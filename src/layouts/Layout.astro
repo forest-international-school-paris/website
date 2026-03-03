@@ -24,8 +24,10 @@ const ogImageUrl = new URL(image, siteUrl).href;
 const fullTitle = `${title} | Forest International School Paris`;
 
 // Popup configuration
-const popup = {
+// Set expiresDate to auto-hide the popup after the event (YYYY-MM-DD, end of that day)
+const popupConfig = {
   enabled: true,
+  expiresDate: "2026-03-07",
   title: "Open Day",
   subtitle: "Rooted in nature, growing through learning",
   date: "Saturday, 7 March 2026",
@@ -38,6 +40,11 @@ const popup = {
   badge: "Open Day",
   image: "/images/campus.jpg"
 };
+
+const isExpired = popupConfig.expiresDate
+  ? new Date() > new Date(popupConfig.expiresDate + "T23:59:59")
+  : false;
+const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
 ---
 
 <!DOCTYPE html>
