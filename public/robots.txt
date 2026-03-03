@@ -1,3 +1,4 @@
-# Temporary demo site - block all crawlers
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://forest-international.com/sitemap-index.xml

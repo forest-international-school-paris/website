@@ -7,14 +7,21 @@ import Popup from '../components/Popup.astro';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
   showPopup?: boolean;
 }
 
 const {
   title,
   description = "Forest International School Paris - A bilingual school nurturing young minds through nature-based learning",
+  image = "/images/campus.jpg",
   showPopup = true
 } = Astro.props;
+
+const siteUrl = 'https://forest-international.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = new URL(image, siteUrl).href;
+const fullTitle = `${title} | Forest International School Paris`;
 
 // Popup configuration
 const popup = {
@@ -38,13 +45,68 @@ const popup = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Forest International School Paris" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>{title} | Forest International School Paris</title>
+    <title>{fullTitle}</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Forest International School Paris",
+      "alternateName": "Forest International",
+      "url": siteUrl,
+      "logo": `${siteUrl}/images/logo-header.png`,
+      "image": `${siteUrl}/images/campus.jpg`,
+      "description": "A bilingual school nurturing young minds through nature-based learning in Paris west.",
+      "telephone": "+33139168735",
+      "email": "discover@forestinternationalschool.com",
+      "foundingDate": "2003",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "28 Rue de Tour d'Echelle",
+        "addressLocality": "Mareil-Marly",
+        "postalCode": "78750",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8784,
+        "longitude": 2.0917
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Paris West, Ile-de-France"
+      },
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33139168735",
+        "contactType": "admissions",
+        "email": "discover@forestinternationalschool.com",
+        "availableLanguage": ["English", "French"]
+      }
+    })} />
   </head>
   <body class="bg-[#faf8f5] text-gray-800 min-h-screen flex flex-col">
     <Navigation />
