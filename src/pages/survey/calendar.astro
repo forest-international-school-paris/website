@@ -1,0 +1,235 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Calendar Tool Survey" description="Help us choose the best booking system for Forest International School" showPopup={false}>
+  <section class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+
+      <!-- Header -->
+      <div class="text-center mb-10">
+        <div class="w-16 h-16 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl mx-auto mb-5 flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h1 class="text-3xl lg:text-4xl font-bold text-[#1e3d29] mb-3">Calendar Booking Survey</h1>
+        <p class="text-gray-600 max-w-lg mx-auto">
+          Hi Sophie! We're looking into the best booking tool for the website. Your answers will help us choose the perfect fit.
+        </p>
+      </div>
+
+      <!-- Survey Form -->
+      <form
+        action="https://formsubmit.co/koreal6803@gmail.com"
+        method="POST"
+        class="space-y-8"
+      >
+        <!-- Formsubmit config -->
+        <input type="hidden" name="_subject" value="Calendar Survey Response from Sophie" />
+        <input type="hidden" name="_next" value="https://forest-international.com/survey/thank-you" />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="text" name="_honey" style="display:none" />
+
+        <!-- Q1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Q1. What matters most to you?</h2>
+          <p class="text-gray-500 text-sm mb-4">Pick the one that feels most important.</p>
+          <div class="space-y-3">
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q1_priority" value="Simplicity - it just works" required class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">It just works — the simplest, most reliable option</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q1_priority" value="Professional branding" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">It should look professional and match our school's branding</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q1_priority" value="Embedded on website" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Parents should be able to book without leaving our website</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q1_priority" value="Calendar sync to avoid double-booking" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">It must sync with my Google Calendar so I don't get double-booked</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Q2. What types of appointments do you need?</h2>
+          <p class="text-gray-500 text-sm mb-4">Select all that apply.</p>
+          <div class="space-y-3">
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="checkbox" name="q2_types" value="In-person school visit" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">In-person school visit</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="checkbox" name="q2_types" value="Online video call" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Online video call (Google Meet, Zoom, etc.)</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="checkbox" name="q2_types" value="Phone call" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Phone call</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="checkbox" name="q2_types" value="Parent-teacher meeting" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Parent-teacher meeting</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="checkbox" name="q2_types" value="Other" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Other</span>
+            </label>
+          </div>
+          <input
+            type="text"
+            name="q2_other"
+            placeholder="If other, please describe..."
+            class="mt-3 w-full px-4 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2d5a3d]/30 focus:border-[#2d5a3d]"
+          />
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Q3. Who will receive bookings?</h2>
+          <p class="text-gray-500 text-sm mb-4">Will other staff members also need their own booking calendars?</p>
+          <div class="space-y-3">
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q3_staff" value="Just me" required class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Just me</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q3_staff" value="1-2 other staff" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Yes, 1-2 other staff members</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q3_staff" value="Several staff" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Yes, several staff members</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Q4. Budget preference?</h2>
+          <p class="text-gray-500 text-sm mb-4">There are excellent free options, but a small payment can unlock better features.</p>
+          <div class="space-y-3">
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q4_budget" value="Must be free" required class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">It must be completely free</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q4_budget" value="Small one-time payment OK" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">A small one-time payment (~$29) is fine</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q4_budget" value="Small monthly fee OK" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">A small monthly fee is also acceptable</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Q5. How should parents access the booking?</h2>
+          <p class="text-gray-500 text-sm mb-4">The calendar can either appear directly on our website or open in a new tab.</p>
+          <div class="space-y-3">
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q5_embed" value="Must be embedded" required class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">It must appear directly inside our website (embedded)</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q5_embed" value="Link in new tab is fine" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">A link that opens in a new tab is perfectly fine</span>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="radio" name="q5_embed" value="Either works" class="mt-1 accent-[#2d5a3d]" />
+              <span class="text-gray-700 group-hover:text-[#1e3d29] transition-colors">Either works for me</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Q6. About the error you encountered</h2>
+          <p class="text-gray-500 text-sm mb-4">This helps us understand what went wrong with the current calendar.</p>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-gray-700 text-sm font-medium mb-2">Which device were you using?</label>
+              <div class="flex flex-wrap gap-3">
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_device" value="Phone" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Phone</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_device" value="Tablet" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Tablet</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_device" value="Computer" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Computer</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-700 text-sm font-medium mb-2">Which browser?</label>
+              <div class="flex flex-wrap gap-3">
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_browser" value="Safari" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Safari</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_browser" value="Chrome" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Chrome</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_browser" value="Firefox" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Firefox</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="radio" name="q6_browser" value="Other" class="accent-[#2d5a3d]" />
+                  <span class="text-gray-700 group-hover:text-[#1e3d29] text-sm">Other</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-700 text-sm font-medium mb-2">Can you describe the error? (optional)</label>
+              <textarea
+                name="q6_error_description"
+                rows="3"
+                placeholder="e.g., 'The calendar area was blank' or 'I saw a message saying...'"
+                class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2d5a3d]/30 focus:border-[#2d5a3d] resize-none"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra comments -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h2 class="font-bold text-[#1e3d29] text-lg mb-1">Anything else?</h2>
+          <p class="text-gray-500 text-sm mb-4">Any other thoughts or preferences you'd like to share.</p>
+          <textarea
+            name="extra_comments"
+            rows="3"
+            placeholder="Optional..."
+            class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2d5a3d]/30 focus:border-[#2d5a3d] resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center pt-2">
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-[#2d5a3d] to-[#4a7c5c] text-white font-bold rounded-xl hover:from-[#1e3d29] hover:to-[#2d5a3d] transition-all shadow-lg text-lg"
+          >
+            Submit Survey
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+          <p class="text-gray-400 text-xs mt-3">Your response will be sent to the school's development team.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>
