@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title,
-  description = "Forest International School Paris - A bilingual school nurturing young minds through nature-based learning",
+  description = "Forest International School Paris - An English school nurturing young minds through nature-based learning",
   image = "/images/campus.jpg",
   showPopup = true
 } = Astro.props;
@@ -32,7 +32,7 @@ const popupConfig = {
   subtitle: "Rooted in nature, growing through learning",
   date: "Saturday, 11 April 2026",
   time: "10:00 AM - 12:30 PM",
-  message: "Discover how our holistic, bilingual, and outdoor learning approach helps every child grow with confidence.",
+  message: "Discover how our holistic, English-speaking, and outdoor learning approach helps every child grow with confidence.",
   buttonText: "RSVP Now",
   buttonLink: "https://forms.gle/5Fz3Dve7MHkF8VcV7",
   secondaryButtonText: "Learn More",
@@ -85,7 +85,7 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
       "url": siteUrl,
       "logo": `${siteUrl}/images/logo-header.png`,
       "image": `${siteUrl}/images/campus.jpg`,
-      "description": "A bilingual school nurturing young minds through nature-based learning in Paris west.",
+      "description": "An English school nurturing young minds through nature-based learning in Paris west.",
       "telephone": "+33632725145",
       "email": "discover@forestinternationalschool.com",
       "foundingDate": "2003",
