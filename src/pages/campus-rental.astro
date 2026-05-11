@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Campus Rental" description="Rent the Forest International School Paris campus for your events, workshops, or activities.">
+  <!-- Hero Section -->
+  <section class="relative py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/campus.jpg" alt="Forest International School Campus" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/95 via-[#2d5a3d]/80 to-[#2d5a3d]/60"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Venue Hire</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Campus Rental</h1>
+        <p class="text-xl text-white/90 leading-relaxed">
+          Host your events, workshops, or activities at our beautiful campus in the heart of Paris. A unique nature-inspired venue available for private hire outside of school hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spaces Available -->
+  <section class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Our Spaces</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-4">Available Facilities</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          A versatile range of indoor and outdoor spaces suitable for a variety of occasions.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="w-12 h-12 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21V7l9-4 9 4v14M9 21V9m6 12V9"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Classrooms</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Bright, well-equipped classrooms ideal for workshops, tutoring sessions, or small group activities.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="w-12 h-12 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18s-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Multipurpose Hall</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A spacious hall suitable for performances, presentations, fitness classes, or community gatherings.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="w-12 h-12 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Outdoor Garden</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Our lush garden provides a tranquil outdoor setting for nature-based activities, parties, or open-air events.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">Interested in Renting Our Campus?</h2>
+      <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
+        Get in touch to discuss availability, rates, and how we can accommodate your event.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-[#2d5a3d] text-white font-bold rounded-full hover:bg-[#1e3d29] transition-colors shadow-lg hover:shadow-xl">
+          Contact Us
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
