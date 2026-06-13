@@ -1,5 +1,4 @@
 ---
-// Popup Component - Shows once, then becomes a small badge in bottom-left
 interface Props {
   enabled?: boolean;
   title?: string;
@@ -17,11 +16,11 @@ interface Props {
 
 const {
   enabled = true,
-  title = "Open Day",
+  title = "Wednesday MasterClasses",
   subtitle = "",
-  date = "Saturday, 13 June 2026",
-  time = "10:00 AM - 12:30 PM",
-  message = "Join us for our upcoming Open Day! Meet our teachers, tour our campus, and discover our unique nature-based approach to education.",
+  date = "Every Wednesday",
+  time = "8:00 AM - 6:00 PM",
+  message = "",
   buttonText = "Register Now",
   buttonLink = "/contact",
   secondaryButtonText = "",
@@ -31,7 +30,7 @@ const {
 } = Astro.props;
 
 const closeText = 'Close';
-const badgeText = 'Open Day';
+const badgeText = badge || 'MasterClasses';
 ---
 
 {enabled && (
@@ -44,7 +43,7 @@ const badgeText = 'Open Day';
       <!-- Popup Container -->
       <div class="absolute inset-0 flex items-center justify-center p-4">
         <div class="relative max-w-lg w-full max-h-[calc(100vh-2rem)]" id="popup-content">
-          <!-- Close Button - positioned at top-right corner, always visible above scrollable content -->
+          <!-- Close Button -->
           <button id="popup-close" class="absolute top-2 right-2 z-20 w-10 h-10 bg-white hover:bg-gray-100 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110" aria-label={closeText}>
             <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -53,6 +52,7 @@ const badgeText = 'Open Day';
 
           <!-- Scrollable content area -->
           <div class="bg-white rounded-3xl shadow-2xl overflow-hidden overflow-y-auto max-h-[calc(100vh-2rem)] transform transition-all">
+
           <!-- Image Header -->
           {image && (
             <div class="relative h-48 overflow-hidden">
@@ -119,7 +119,7 @@ const badgeText = 'Open Day';
 
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-3">
-              <a href={buttonLink} class="flex-1 inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-[#2d5a3d] to-[#4a7c5c] text-white font-bold rounded-xl hover:from-[#1e3d29] hover:to-[#2d5a3d] transition-all shadow-lg hover:shadow-xl">
+              <a href={buttonLink} target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-[#2d5a3d] to-[#4a7c5c] text-white font-bold rounded-xl hover:from-[#1e3d29] hover:to-[#2d5a3d] transition-all shadow-lg hover:shadow-xl">
                 {buttonText}
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -140,9 +140,10 @@ const badgeText = 'Open Day';
     <!-- Mini Badge (shown after popup is closed) - Bottom Left -->
     <div id="mini-badge" class="fixed bottom-6 left-6 z-40 hidden">
       <button id="mini-badge-btn" class="group flex items-center gap-3 px-4 py-3 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 hover:-translate-y-1">
-        <div class="w-12 h-12 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-xl flex flex-col items-center justify-center flex-shrink-0 text-white">
-          <span class="text-xs font-bold leading-none">13</span>
-          <span class="text-[10px] leading-none">JUN</span>
+        <div class="w-12 h-12 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
         </div>
         <div class="text-left">
           <div class="text-sm font-bold text-[#1e3d29]">{badgeText}</div>
@@ -164,17 +165,14 @@ const badgeText = 'Open Day';
 
     if (!popup || !miniBadge) return;
 
-    // Check if popup was already shown this session
     const popupShown = sessionStorage.getItem('popup-shown');
 
     if (!popupShown) {
-      // First visit - show popup after delay
       setTimeout(() => {
         showPopup();
         sessionStorage.setItem('popup-shown', 'true');
       }, 15000);
     } else {
-      // Already seen - show mini badge
       miniBadge.classList.remove('hidden');
     }
 
@@ -206,23 +204,18 @@ const badgeText = 'Open Day';
         popup.classList.add('hidden');
         popup.classList.remove('flex');
         document.body.style.overflow = '';
-
-        // Show mini badge after closing
         miniBadge.classList.remove('hidden');
       }, 200);
     }
 
-    // Event listeners
     closeBtn?.addEventListener('click', closePopup);
     backdrop?.addEventListener('click', closePopup);
 
-    // Mini badge click - reopen popup
     miniBadgeBtn?.addEventListener('click', () => {
       miniBadge.classList.add('hidden');
       showPopup();
     });
 
-    // ESC key to close
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !popup.classList.contains('hidden')) {
         closePopup();
