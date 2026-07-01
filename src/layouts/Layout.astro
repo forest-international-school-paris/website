@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import Popup from '../components/Popup.astro';
+import Analytics from '../components/Analytics.astro';
 
 interface Props {
   title: string;
@@ -114,6 +115,9 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
         "availableLanguage": ["English", "French"]
       }
     })} />
+
+    <!-- Analytics (PostHog) -->
+    <Analytics />
   </head>
   <body class="bg-[#faf8f5] text-gray-800 min-h-screen flex flex-col">
     <Navigation />
