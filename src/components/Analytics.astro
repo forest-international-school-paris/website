@@ -1,15 +1,14 @@
 ---
 // PostHog analytics + critical event tracking.
-// The project API key is a *public* (client-side) key by design, but we read it
-// from an env var so it can be rotated without code changes and omitted in dev.
-//
-// Set these in a local `.env` file and in your Cloudflare Pages build env:
-//   PUBLIC_POSTHOG_KEY=phc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-//   PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com   (optional, defaults to EU)
-//
-// The school is based in France, so we default to PostHog's EU cloud for GDPR.
-const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY;
-const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST ?? 'https://eu.i.posthog.com';
+// The PostHog project API key is a *public* client-side key by design — it ships
+// to every visitor's browser in the page source (just like PostHog's own install
+// snippet). It is safe to commit. We hardcode it as the default so production
+// works without any build-env configuration, and still allow an env-var override
+// (e.g. to point a staging build at a different project):
+//   PUBLIC_POSTHOG_KEY=phc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   (optional override)
+//   PUBLIC_POSTHOG_HOST=https://us.i.posthog.com            (optional override)
+const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY || 'phc_xqBPSrfiPEQXzi3WH9w6RTnh8san2uTrVzjRxAcS6cPq';
+const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
 ---
 
 {posthogKey && (
