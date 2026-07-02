@@ -43,15 +43,14 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Scheduled
 
-- 2026-07-03 (after user deploys): verify live — `/holiday-camps` shows new title
-  "Holiday Camps in English near Paris", program pages show new titles, FR pages
-  resolve; then IndexNow ping `/holiday-camps`, `/early-years`, `/primary`,
-  `/middle-school`, `/fr/admissions`, `/fr/stages-vacances` and confirm sitemap.
-  Optionally run `seo-drift` toolbelt baseline right after. Also re-run homepage
-  Lighthouse against LIVE to confirm the LCP fix landed (baseline: live 14.9s → local
-  build 5.8s).
+- ~~2026-07-03 verify-live~~ DONE EARLY 2026-07-02 ~18:00: deploy landed same evening;
+  all pages verified live, sitemap = 15 URLs (survey excluded), IndexNow 202 for 11
+  URLs, homepage Lighthouse live: perf 84 / LCP 3.7s (was 66 / 14.9s).
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
-  baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E upgrade.
+  baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E
+  upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
+  `measure-gsc.mjs --inspect` on `/`, `/holiday-camps`, `/fr/admissions`,
+  `/fr/stages-vacances`.
 - 2026-07-11: Summer 2026 camp week 1 (6–10 Jul) is over → freshness check on
   `/holiday-camps` + `/fr/stages-vacances` (expired week still shown as upcoming?
   fact change = user confirmation). Camp-recap post (P1) unblocks — ask user for real
@@ -59,8 +58,10 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## User actions (agent cannot do these)
 
-1. **Deploy pipeline** — user said 2026-07-02 they will handle it "tomorrow" (2026-07-03).
-   Until live-verified, pushed changes (incl. the FR pages + IndexNow key file) wait.
+1. **Deploy pipeline** — a deploy LANDED 2026-07-02 ~18:00 (all 12 pushed commits live,
+   IndexNow key file serving). Open question for user: was this a manual school-side
+   deploy or is git-connected auto-deploy now enabled? Determines whether the loop can
+   verify-live in the same iteration or must keep scheduling follow-ups.
 2. **Charset header (found 2026-07-02, verified live):** server sends `Content-Type:
    text/html` without `charset=utf-8`, so default-decoding AI/scraper pipelines corrupt
    `€` prices and dashes (e.g. "450â¬/week" on `/holiday-camps`). One-line fix in the
@@ -130,6 +131,13 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-02 (12) | Deploy landed (~18:00) → verify-live executed early: all changed
+  pages + FR pages serve new content, sitemap 15 URLs (survey excluded ✓), IndexNow
+  HTTP 202 for 11 URLs (key file now serving), live homepage Lighthouse **84 perf /
+  3.7s LCP** (from 66 / 14.9s pre-fix — CDN beats the local 5.8s estimate). Publish
+  loop (Bible #6) fully closed for all 2026-07-02 work. | Next: date-gated (07-09
+  measurement + T+7 inspections, 07-11 camps freshness/recap); WebP/srcset + pillar
+  deep-audit for a fresh session. Loop idles.
 - 2026-07-02 (11) | CWV baseline (first run; keyless PSI 429'd → local Lighthouse via
   system Chrome). Live mobile: homepage perf 66 / **LCP 14.9s** (gallery-2.jpg was
   7.2MB!), programs ~89 / ~3.1s, camps 79 / 4.3s. Fixed same-iteration: Pillow

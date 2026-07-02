@@ -3,15 +3,52 @@
   "strategy": "mobile",
   "source": "local Lighthouse (system Chrome, headless; keyless PSI quota exhausted). CrUX: no field data at current traffic.",
   "live_before_fixes": {
-    "/": { "perf": 66, "lcp_ms": 14905, "cls": 0, "tbt_ms": 61 },
-    "/early-years/": { "perf": 89, "lcp_ms": 3037, "cls": 0, "tbt_ms": 4 },
-    "/primary/": { "perf": 89, "lcp_ms": 3158, "cls": 0.018, "tbt_ms": 6 },
-    "/middle-school/": { "perf": 89, "lcp_ms": 3168, "cls": 0.01, "tbt_ms": 7 },
-    "/holiday-camps/": { "perf": 79, "lcp_ms": 4251, "cls": 0.086, "tbt_ms": 4 }
+    "/": {
+      "perf": 66,
+      "lcp_ms": 14905,
+      "cls": 0,
+      "tbt_ms": 61
+    },
+    "/early-years/": {
+      "perf": 89,
+      "lcp_ms": 3037,
+      "cls": 0,
+      "tbt_ms": 4
+    },
+    "/primary/": {
+      "perf": 89,
+      "lcp_ms": 3158,
+      "cls": 0.018,
+      "tbt_ms": 6
+    },
+    "/middle-school/": {
+      "perf": 89,
+      "lcp_ms": 3168,
+      "cls": 0.01,
+      "tbt_ms": 7
+    },
+    "/holiday-camps/": {
+      "perf": 79,
+      "lcp_ms": 4251,
+      "cls": 0.086,
+      "tbt_ms": 4
+    }
   },
   "local_build_after_fixes": {
-    "/": { "perf": 74, "lcp_ms": 5781, "cls": 0.026 }
+    "/": {
+      "perf": 74,
+      "lcp_ms": 5781,
+      "cls": 0.026
+    }
   },
-  "fixes_applied": "gallery-2.jpg 7.2MB→297KB (was 4752px wide in a grid tile), campus.jpg 431→325KB, children-diversity.jpg 551→224KB, hero-banner.jpg 264→199KB, promo-2023/outdoor-learning recompressed; homepage below-fold imgs loading=lazy; hero fetchpriority=high",
-  "next": "re-measure live after deploy; WebP/AVIF + responsive srcset queued in Needs fixing"
+  "fixes_applied": "gallery-2.jpg 7.2MB\u2192297KB (was 4752px wide in a grid tile), campus.jpg 431\u2192325KB, children-diversity.jpg 551\u2192224KB, hero-banner.jpg 264\u2192199KB, promo-2023/outdoor-learning recompressed; homepage below-fold imgs loading=lazy; hero fetchpriority=high",
+  "next": "re-measure live after deploy; WebP/AVIF + responsive srcset queued in Needs fixing",
+  "live_after_deploy": {
+    "/": {
+      "perf": 84,
+      "lcp_ms": 3707,
+      "cls": 0.026,
+      "tbt_ms": 36
+    }
+  }
 }
