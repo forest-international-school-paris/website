@@ -24,13 +24,14 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Needs fixing (P1)
 
-- **Summer 2026 camp season is NOW** — verify `/holiday-camps` current-session info is
-  live-accurate and write the first camp-focused post (backlog has camp gaps). Seasonal
-  deadline logic: `seo-strategy.md` calendar. Data backs this: `/holiday-camps` is at
-  pos 16.2 with 25 impressions (baseline 2026-07-02) — the site's only page-level
-  striking-distance opportunity.
-- Money pages have thin/missing per-page descriptions in places — run mode E audit on
-  one pillar (start with camps, it's in season).
+- **First camp-focused post** (rest of the P1 camp item; hub work done 2026-07-02 —
+  live-accuracy verified + mode E upgrade shipped). Bible #4 note: the hub owns
+  "summer camp paris english" head terms — the post must take a differentiated long-tail
+  angle. Best candidate: a camp-recap post with real photos AFTER the July sessions run
+  (weeks of 6/13/20 July) — real proof beats a generic pre-camp guide.
+- Money pages have thin/missing per-page descriptions — camps done (2026-07-02); still
+  thin: `early-years.astro`, `primary.astro`, `middle-school.astro` (~85-char generic
+  descriptions, no location/differentiator). Next mode E target: programs pillar.
 - `welcome-new-school-year.md` (Sept 2024) fails lint: 124 words, 0 internal links,
   stale year. Decide per Bible #9: refresh into an evergreen "school year at Forest"
   piece, or accept as archived news (then teach lint an `archive` allowance) — don't
@@ -42,8 +43,11 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Scheduled
 
+- 2026-07-03 (after user deploys): verify live — `/holiday-camps` shows new title
+  "Holiday Camps in English near Paris" + FR pages resolve; then IndexNow ping
+  `/holiday-camps`, `/fr/admissions`, `/fr/stages-vacances` and confirm sitemap.
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
-  baseline).
+  baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E upgrade.
 
 ## User actions (agent cannot do these)
 
@@ -98,6 +102,14 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-02 (4) | P1 camps, phase 1: `/holiday-camps` live-accuracy verified (live =
+  repo, Summer 2026 sessions current) + mode E upgrade shipped — keyworded title
+  ("Holiday Camps in English near Paris"), 128-char description with location, answer
+  block in hero (English / Mareil-Marly / open to all 2-12), H2 "Camp dates, hours and
+  rates", new "Beyond the holidays" section linking all 3 program hubs + tuition +
+  admissions (page had ZERO internal links before). All facts untouched (QA-gate diff
+  check). Awaits user deploy → verify-live + IndexNow scheduled 07-03. | Next: mode E
+  on programs pillar descriptions, or camp post per Needs-fixing note.
 - 2026-07-02 (3) | GSC OAuth completed (user approved browser login; gotcha: gcloud
   rejects a custom `--scopes` list unless it also includes `cloud-platform` — the
   measurement.md command alone fails). First full baseline pulled (PostHog + GSC) →
