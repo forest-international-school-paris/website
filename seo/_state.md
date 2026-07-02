@@ -33,15 +33,33 @@
 
 ## User actions (agent cannot do these)
 
-1. **GSC API unlock (1 min):** Search Console → property forest-international.com →
-   Settings → Users and permissions → Add user
-   `firebase-adminsdk-tjtuk@fdata-299302.iam.gserviceaccount.com` (Full permission).
-   Then flip `gsc.api_ready` to `true` in `seo/_registry.json`.
-2. **Google Business Profile:** confirm claimed status + category/hours/NAP match
+1. **GSC API unlock (one-time, ~1 min; adding users to the property is NOT possible,
+   so this is the OAuth route as koreal6803@gmail.com).** Run in a terminal (or with
+   `!` prefix in a Claude Code session) and choose koreal6803@gmail.com in the browser:
+   ```bash
+   CLOUDSDK_CONFIG=$HOME/.config/gcloud-school gcloud auth application-default login \
+     --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly'
+   ```
+   Then flip `gsc.api_ready` to `true` in `seo/_registry.json`. Details: skill
+   `references/measurement.md` §2.
+2. **Deploy pipeline** — user said 2026-07-02 they will handle it "tomorrow" (2026-07-03).
+   Until live-verified, pushed changes (incl. the FR pages + IndexNow key file) wait.
+3. **Google Business Profile:** confirm claimed status + category/hours/NAP match
    `seo/_registry.json` `nap`. Agent will maintain a GBP post draft list here once
    confirmed.
-3. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
+4. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
    submit sitemap.
+
+## User confirmations (site fact inconsistencies found 2026-07-02 — Bible #2/#8)
+
+- **Camp ages:** `/holiday-camps` says "ages 2-12" (canonical, per 2026-06 commit), but
+  homepage `index.astro` line ~627 still says camps "open to all children aged 2-14" —
+  which is right? (FR pages follow the canonical 2-12.)
+- **Admissions age ceiling:** `/admissions` Key Information says "up to 15 years";
+  `/about` and homepage say ages 2-14. Which is the real ceiling?
+- **Phone NAP mismatch:** footer + README show +33 1 39 16 87 35; JSON-LD + WhatsApp
+  button use +33 6 32 72 51 45. Both may be real (landline vs mobile) but the JSON-LD
+  and GBP should use one consistent primary number.
 
 ## User decisions (open strategy questions — do not act without answer)
 
@@ -53,11 +71,11 @@
   (b) user gets deploy access (added to the school's CF account / API token),
   (c) status quo: school deploys on their rhythm, loop verifies afterwards.
 
-- **French-language pages**: FR queries (école internationale yvelines…) are a real
-  demand pool (see `seo/_backlog.json` fr-tagged rows); site is EN-only today. Relaunch
-  French = significant commitment (every page bilingual, ongoing sync). Recommendation
-  when asked: start with 1–2 FR landing pages for camps + admissions rather than full
-  bilingual site.
+- ~~French-language pages~~ **DECIDED 2026-07-02** (user: "do the recommendation"):
+  two FR landing pages built — `/fr/admissions` + `/fr/stages-vacances`, with hreflang
+  pairing to `/admissions` and `/holiday-camps`, footer links, popup suppressed on FR
+  pages. Full bilingual relaunch remains NOT approved; further FR pages only on new
+  user decision.
 
 ## Periodic last-run
 
@@ -72,6 +90,13 @@
 
 ## Iteration log
 
+- 2026-07-02 (2) | FR landing pages built (`/fr/admissions`, `/fr/stages-vacances`;
+  facts sourced from admissions/holiday-camps/about/contact pages; hreflang via new
+  Layout `alternates`/`lang` props; footer links added). GSC auth switched to OAuth-user
+  route (no property permission needed) — awaiting one-time login. Found 3 site fact
+  inconsistencies → "User confirmations". Local build verified; deploy waits on user
+  (tomorrow). | Next: after deploy, verify FR pages live + IndexNow them; first
+  measurement run 07-09.
 - 2026-07-02 | Engine installed (skill + loop + registry + backlog + measurement scripts;
   adapted from the FinLab SEO engine). PostHog verified live (project 493129, events
   since 07-01). Deploy path confirmed: push to origin/main auto-deploys. | Next: first

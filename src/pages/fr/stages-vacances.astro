@@ -1,0 +1,175 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const alternates = [
+  { hreflang: 'en', href: '/holiday-camps' },
+  { hreflang: 'fr', href: '/fr/stages-vacances' },
+  { hreflang: 'x-default', href: '/holiday-camps' },
+];
+
+const registerCampUrl = 'https://forms.gle/6y8k9xULoLzSCt7n7';
+const registerSummerUrl = 'https://forms.gle/5JfDd3U13ZTYMvK76';
+---
+
+<Layout
+  title="Stages de vacances en anglais 2-12 ans – Ouest de Paris"
+  description="Stages de vacances en immersion anglaise à Mareil-Marly (78), près de Saint-Germain-en-Laye : Toussaint, hiver, printemps et été. Enfants de 2 à 12 ans."
+  image="/images/summer-camp.jpg"
+  lang="fr"
+  alternates={alternates}
+  showPopup={false}
+>
+  <!-- Hero -->
+  <section class="relative min-h-[50vh] flex items-center">
+    <div class="absolute inset-0">
+      <img src="/images/summer-camp.jpg" alt="Stage de vacances en anglais à la Forest International School Paris" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/90 to-[#2d5a3d]/70"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl">
+        <span class="inline-block px-4 py-2 bg-[#c9a962] text-[#1e3d29] rounded-full font-bold text-sm mb-6">OUVERT À TOUS LES ENFANTS</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Stages de vacances en anglais</h1>
+        <p class="text-xl text-white/90 mb-4">
+          Pendant les vacances scolaires, la Forest International School Paris organise des stages en
+          immersion anglaise pour les enfants de 2 à 12 ans, sur son campus au cœur de la nature à
+          Mareil-Marly, près de Saint-Germain-en-Laye. Ouverts à tous, même aux enfants non
+          scolarisés à l'école.
+        </p>
+        <a href={registerCampUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
+          S'inscrire
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dates & tarifs -->
+  <section class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Dates et tarifs 2026-2027</h2>
+        <p class="text-gray-600 text-lg mt-4">Journées de 10h à 16h pendant les petites vacances, de 10h à 17h l'été. Repas et collations : 40 € par semaine.</p>
+      </div>
+      <div class="overflow-x-auto bg-white rounded-2xl shadow-lg">
+        <table class="w-full text-left text-sm md:text-base">
+          <thead>
+            <tr class="border-b border-gray-200 text-[#1e3d29]">
+              <th class="px-6 py-4 font-bold">Stage</th>
+              <th class="px-6 py-4 font-bold">Dates</th>
+              <th class="px-6 py-4 font-bold">Horaires</th>
+              <th class="px-6 py-4 font-bold">Tarif</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-600">
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Toussaint 2026</td>
+              <td class="px-6 py-4">26 – 30 octobre 2026</td>
+              <td class="px-6 py-4">10h – 16h</td>
+              <td class="px-6 py-4">450 €/semaine</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Hiver 2027</td>
+              <td class="px-6 py-4">8 – 12 février 2027</td>
+              <td class="px-6 py-4">10h – 16h</td>
+              <td class="px-6 py-4">450 €/semaine</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Printemps 2027</td>
+              <td class="px-6 py-4">5 – 9 avril 2027</td>
+              <td class="px-6 py-4">10h – 16h</td>
+              <td class="px-6 py-4">450 €/semaine</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Été 2026</td>
+              <td class="px-6 py-4">6 – 10 juillet · 13 – 17 juillet (sauf le 14) · 20 – 24 juillet 2026</td>
+              <td class="px-6 py-4">10h – 17h</td>
+              <td class="px-6 py-4">425 €/semaine</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Été 2027</td>
+              <td class="px-6 py-4">5 – 9 juillet · 12 – 16 juillet · 19 – 23 juillet 2027</td>
+              <td class="px-6 py-4">10h – 17h</td>
+              <td class="px-6 py-4">480 €/semaine</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-500 text-sm mt-4 text-center">
+        L'été, accueil anticipé dès 9h et départ tardif jusqu'à 18h : 40 € par jour. Inscription été :
+        <a href={registerSummerUrl} target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline">formulaire dédié</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ce que font les enfants -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">Une semaine type</h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        Aventures dans la forêt, ateliers créatifs, exploration en plein air — et l'été, baignade
+        dans la piscine de l'école et temps calme à l'ombre des arbres. Toutes les activités se
+        déroulent en anglais, encadrées par l'équipe de l'école.
+      </p>
+      <p class="text-gray-600">
+        Le mercredi en période scolaire, l'école propose aussi les « Wednesday MasterClasses »,
+        ateliers d'anglais ludiques (maternelle et début de primaire : liste d'attente uniquement) —
+        détails sur la <a href="/holiday-camps" class="text-[#2d5a3d] underline">page anglaise des stages</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Questions fréquentes</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Mon enfant doit-il déjà parler anglais ?</h3>
+          <p class="text-gray-600">Les stages sont ouverts à tous les enfants de 2 à 12 ans. Les activités se déroulent en anglais : c'est justement l'occasion de progresser en s'amusant. Pour une situation particulière, <a href="/contact" class="text-[#2d5a3d] underline">contactez l'équipe</a>.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Faut-il être élève de l'école ?</h3>
+          <p class="text-gray-600">Non. Les stages sont ouverts à tous les enfants, scolarisés ou non à la Forest International School.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Les repas sont-ils prévus ?</h3>
+          <p class="text-gray-600">Oui, en option : 40 € par semaine, collations incluses.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Comment s'inscrire ?</h3>
+          <p class="text-gray-600">Via le <a href={registerCampUrl} target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline">formulaire d'inscription en ligne</a> (Toussaint, hiver, printemps) ou le <a href={registerSummerUrl} target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline">formulaire été</a>.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Où se déroulent les stages ?</h3>
+          <p class="text-gray-600">Sur le campus de l'école : 28 Rue de Tour d'Echelle, 78750 Mareil-Marly — dans l'Ouest parisien, près de Saint-Germain-en-Laye, Marly-le-Roi et Le Vésinet.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">L'école accueille-t-elle aussi des élèves à l'année ?</h3>
+          <p class="text-gray-600">Oui, de 2 à 14 ans, de la maternelle au collège : voir la page <a href="/fr/admissions" class="text-[#2d5a3d] underline">admissions en français</a>.</p>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-10">
+        Le site principal de l'école est en anglais — <a href="/holiday-camps" class="text-[#2d5a3d] underline">voir cette page en anglais</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Réservez la semaine de votre enfant</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+        Les groupes sont limités : inscrivez votre enfant en ligne ou posez vos questions à l'équipe, en français ou en anglais.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href={registerCampUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
+          S'inscrire à un stage
+        </a>
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-bold rounded-full border-2 border-white hover:bg-white hover:text-[#2d5a3d] transition-colors">
+          Contacter l'équipe
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

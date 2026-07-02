@@ -1,8 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const alternates = [
+  { hreflang: 'en', href: '/admissions' },
+  { hreflang: 'fr', href: '/fr/admissions' },
+  { hreflang: 'x-default', href: '/admissions' },
+];
 ---
 
-<Layout title="Admissions" description="Apply to Forest International School Paris - Admissions process and requirements">
+<Layout title="Admissions" description="Apply to Forest International School Paris - Admissions process and requirements" alternates={alternates}>
   <!-- Hero Section with Image -->
   <section class="relative py-20 lg:py-32 overflow-hidden">
     <div class="absolute inset-0">

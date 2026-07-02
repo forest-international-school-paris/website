@@ -1,8 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const alternates = [
+  { hreflang: 'en', href: '/holiday-camps' },
+  { hreflang: 'fr', href: '/fr/stages-vacances' },
+  { hreflang: 'x-default', href: '/holiday-camps' },
+];
 ---
 
-<Layout title="Holiday Camps" description="Holiday Camps & English Enrichment at Forest International School Paris - Open to ALL children ages 2-12!">
+<Layout title="Holiday Camps" description="Holiday Camps & English Enrichment at Forest International School Paris - Open to ALL children ages 2-12!" alternates={alternates}>
   <!-- Hero Section with Image -->
   <section class="relative min-h-[60vh] flex items-center">
     <div class="absolute inset-0">

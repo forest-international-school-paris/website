@@ -1,0 +1,167 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const alternates = [
+  { hreflang: 'en', href: '/admissions' },
+  { hreflang: 'fr', href: '/fr/admissions' },
+  { hreflang: 'x-default', href: '/admissions' },
+];
+---
+
+<Layout
+  title="École internationale anglophone 2-14 ans – Yvelines"
+  description="École internationale anglophone à Mareil-Marly, près de Saint-Germain-en-Laye (78). Enfants de 2 à 14 ans, pédagogie par la nature. Admissions toute l'année."
+  lang="fr"
+  alternates={alternates}
+  showPopup={false}
+>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/children-diversity.jpg" alt="Enfants de la Forest International School Paris" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/95 via-[#2d5a3d]/80 to-[#2d5a3d]/60"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Admissions</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">École internationale anglophone dans l'Ouest parisien</h1>
+        <p class="text-xl text-white/90 leading-relaxed">
+          La Forest International School Paris est une école internationale anglophone installée à
+          Mareil-Marly (Yvelines), à quelques minutes de Saint-Germain-en-Laye. Elle accueille les
+          enfants de 2 à 14 ans, de la maternelle au collège, avec une pédagogie fondée sur la nature.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- L'école en bref -->
+  <section class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">L'école en bref</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Âges accueillis</h3>
+          <p class="text-gray-600">De 2 à 14 ans : <a href="/early-years" class="text-[#2d5a3d] underline">maternelle (2-5 ans)</a>, <a href="/primary" class="text-[#2d5a3d] underline">primaire (6-11 ans)</a> et <a href="/middle-school" class="text-[#2d5a3d] underline">collège (11-14 ans)</a>.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Programme</h3>
+          <p class="text-gray-600">Enseignement en anglais selon l'English National Curriculum, avec le programme Pearson iPrimary.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Un campus dans la nature</h3>
+          <p class="text-gray-600">Fondée en 2003, l'école pratique l'apprentissage au contact direct de la nature, sur son campus forestier de Mareil-Marly.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Journée type</h3>
+          <p class="text-gray-600">Classe de 8h45 à 15h45, club périscolaire jusqu'à 17h, accueil tardif jusqu'à 18h.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Localisation</h3>
+          <p class="text-gray-600">28 Rue de Tour d'Echelle, 78750 Mareil-Marly — proche de Saint-Germain-en-Laye, Marly-le-Roi et Le Vésinet.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Frais de scolarité</h3>
+          <p class="text-gray-600">Les tarifs sont publiés en toute transparence sur la page <a href="/tuition" class="text-[#2d5a3d] underline">Tuition &amp; Fees</a> (en anglais).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Processus d'admission -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Comment inscrire votre enfant</h2>
+        <p class="text-gray-600 text-lg mt-4">Les candidatures sont acceptées toute l'année et l'école ne pratique pas de liste d'attente pour les admissions : contactez-nous pour connaître les places disponibles.</p>
+      </div>
+      <ol class="space-y-6">
+        <li class="flex items-start gap-6">
+          <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center text-white font-bold text-lg">1</div>
+          <div class="bg-[#faf8f5] rounded-2xl p-6 flex-grow">
+            <h3 class="text-lg font-bold text-[#1e3d29] mb-1">Déposez votre demande</h3>
+            <p class="text-gray-600">Remplissez le <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzobNF-7dTwJnfd8-poukuc0ICQ0o_-AAdhsxRJ2KPhg_VGA/viewform" target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline font-semibold">formulaire de candidature</a> pour manifester votre intérêt et vous inscrire à une journée portes ouvertes.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-6">
+          <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center text-white font-bold text-lg">2</div>
+          <div class="bg-[#faf8f5] rounded-2xl p-6 flex-grow">
+            <h3 class="text-lg font-bold text-[#1e3d29] mb-1">Visitez l'école</h3>
+            <p class="text-gray-600">Visite sur place, rendez-vous en visioconférence ou journée portes ouvertes : vous rencontrez l'équipe et découvrez le campus.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-6">
+          <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center text-white font-bold text-lg">3</div>
+          <div class="bg-[#faf8f5] rounded-2xl p-6 flex-grow">
+            <h3 class="text-lg font-bold text-[#1e3d29] mb-1">Constituez le dossier</h3>
+            <p class="text-gray-600">Si l'école correspond à votre projet, vous soumettez le dossier d'inscription avec les documents demandés.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-6">
+          <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#c9a962] to-[#d4b872] rounded-2xl flex items-center justify-center text-white font-bold text-lg">4</div>
+          <div class="bg-[#faf8f5] rounded-2xl p-6 flex-grow border-2 border-[#c9a962]">
+            <h3 class="text-lg font-bold text-[#1e3d29] mb-1">Confirmation</h3>
+            <p class="text-gray-600">Après acceptation, la place de votre enfant est confirmée et un membre de l'équipe admissions vous accompagne à chaque étape.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Questions fréquentes</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">À quels âges peut-on inscrire un enfant ?</h3>
+          <p class="text-gray-600">L'école accueille les enfants de 2 à 14 ans, répartis entre la maternelle (Early Years), le primaire et le collège (Middle School).</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Peut-on s'inscrire en cours d'année ?</h3>
+          <p class="text-gray-600">Oui. Les candidatures sont étudiées tout au long de l'année scolaire, sans date limite liée à l'anniversaire de l'enfant.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Dans quelle langue se déroulent les cours ?</h3>
+          <p class="text-gray-600">L'enseignement est dispensé en anglais, selon l'English National Curriculum. Notre équipe répond à vos questions en français comme en anglais.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Où se trouve l'école et comment y accéder ?</h3>
+          <p class="text-gray-600">Le campus est situé au 28 Rue de Tour d'Echelle à Mareil-Marly (78750), dans l'Ouest parisien, à proximité de Saint-Germain-en-Laye. Voir la <a href="/contact" class="text-[#2d5a3d] underline">page contact</a> pour le plan d'accès.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Quels sont les frais de scolarité ?</h3>
+          <p class="text-gray-600">L'ensemble des tarifs est publié sur la page <a href="/tuition" class="text-[#2d5a3d] underline">Tuition &amp; Fees</a>.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-bold text-[#1e3d29] mb-2">Proposez-vous des activités pendant les vacances scolaires ?</h3>
+          <p class="text-gray-600">Oui : des <a href="/fr/stages-vacances" class="text-[#2d5a3d] underline">stages de vacances en anglais</a> ouverts à tous les enfants de 2 à 12 ans, même non scolarisés à l'école.</p>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-10">
+        Le site principal de l'école est en anglais — <a href="/admissions" class="text-[#2d5a3d] underline">voir cette page en anglais</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Venez rencontrer l'école</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+        Contactez l'équipe admissions pour vérifier les places disponibles ou organiser une visite du campus.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2d5a3d] font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+          Prendre contact
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzobNF-7dTwJnfd8-poukuc0ICQ0o_-AAdhsxRJ2KPhg_VGA/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-bold rounded-full border-2 border-white hover:bg-white hover:text-[#2d5a3d] transition-colors">
+          Formulaire de candidature
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

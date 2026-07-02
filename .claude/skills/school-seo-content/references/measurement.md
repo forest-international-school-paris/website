@@ -33,15 +33,25 @@ over-react to single-day noise.
 
 ## 2. Google Search Console (needs one-time user action)
 
-Property: `forest-international.com`, viewable with Google account koreal6803@gmail.com.
+Property: `forest-international.com`, viewable ONLY with Google account
+koreal6803@gmail.com (no permission to add users — the service-account route is
+unavailable for this site).
 
-**To unlock automated pulls** (until then this section is manual/UI):
-1. GSC UI → property → Settings → Users and permissions → Add user:
-   `firebase-adminsdk-tjtuk@fdata-299302.iam.gserviceaccount.com` (Full).
-2. Then: `node scripts/measure-gsc.mjs` (uses
-   `GOOGLE_APPLICATION_CREDENTIALS=~/Documents/fdata/fdata-299302-new-key.json`;
-   defaults `GSC_SITE_URL=sc-domain:forest-international.com`, override with env var if
-   the property is URL-prefix type).
+**To unlock automated pulls — one-time OAuth login as koreal6803@gmail.com** (the user
+runs this interactively, e.g. by typing it with a `!` prefix in a Claude Code session;
+pick koreal6803@gmail.com in the browser):
+
+```bash
+CLOUDSDK_CONFIG=$HOME/.config/gcloud-school gcloud auth application-default login \
+  --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly'
+```
+
+The separate `gcloud-school` config dir is deliberate: the default ADC belongs to
+finlab.company@gmail.com and is used for Cloud SQL — never overwrite it. After login,
+`node scripts/measure-gsc.mjs` works (reads the refresh token from that file, sends
+`x-goog-user-project: fdata-299302`; defaults `GSC_SITE_URL=sc-domain:forest-international.com`,
+override if the property is URL-prefix type). Then flip `gsc.api_ready` to `true` in
+`seo/_registry.json`.
 
 What it computes: 28-day query+page performance bucketed into the clusters defined in
 `seo/_registry.json` (`clusters` regexes: brand / choose-school / programs / camps /

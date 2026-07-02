@@ -42,9 +42,10 @@
   "gsc": {
     "property": "sc-domain:forest-international.com",
     "ui_account": "koreal6803@gmail.com",
-    "api_service_account": "firebase-adminsdk-tjtuk@fdata-299302.iam.gserviceaccount.com",
+    "auth_method": "oauth-user (ADC file in ~/.config/gcloud-school; see measurement.md §2 — SA route unavailable, no permission to add users)",
+    "quota_project": "fdata-299302",
     "api_ready": false,
-    "note": "api_ready flips true once the SA is added as a user in GSC settings"
+    "note": "api_ready flips true once the one-time gcloud ADC login as koreal6803 is done"
   },
   "indexnow": {
     "key": "b280f89a85f31d2b590dd38b55198774"
