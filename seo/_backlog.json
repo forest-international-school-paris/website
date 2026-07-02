@@ -1,0 +1,602 @@
+{
+  "pillars": [
+    "choose-school",
+    "programs",
+    "camps-activities",
+    "brand"
+  ],
+  "demand_terms": 95,
+  "covered": 11,
+  "gaps": 84,
+  "note": "lang=fr rows are user-decision items (site is EN-only)",
+  "backlog": [
+    {
+      "term": "forest international school johor",
+      "pillar": "brand",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest international school malaysia",
+      "pillar": "brand",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest international school osaka",
+      "pillar": "brand",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english speaking summer camp paris",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "summer camp english paris",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "summer camp examples",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "summer camp paris kids",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "summer courses in paris",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "what is summer camp in french",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "is paris kid friendly",
+      "pillar": "camps-activities",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british school paris fees",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "2-evaluation",
+      "covered": false
+    },
+    {
+      "term": "american section international school de saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "american section international school de saint germain en laye photos",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british school paris",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british school paris jobs",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british school paris term dates",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british school paris vacancies",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british section international school saint germain en laye photos",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "college international saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "college international yvelines",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "difference between world school and international school",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "ecole international de saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "ecole international yvelines",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "ecole internationale yvelines",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english classes paris",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english courses paris",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english school paris",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english school paris france",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english school paris jobs",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international high school of saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school paris 15",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school paris careers",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school paris employment",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school paris jobs",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school paris saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school paris term dates",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school saint germain en laye france",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school yvelines",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "lycee international school saint germain en laye",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "rishs international school timings",
+      "pillar": "choose-school",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "british school of paris holidays",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "forest international school paris summer camp",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "forest international school paris avis",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "2-evaluation",
+      "covered": false
+    },
+    {
+      "term": "forest international school paris reviews",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "2-evaluation",
+      "covered": false
+    },
+    {
+      "term": "bilingual childcare near me",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "bilingual kindergarten paris",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "bilingual preschool near me",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "bilingual preschool paris",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "bilingual spanish preschool near me",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "disadvantages of nature based learning programs in schools",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english french school near me",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english kindergarten paris",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english language schools in paris",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english preschool paris",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "english primary school paris",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest international school paris careers",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest international school paris jobs",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest international school paris photos",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest school paris ontario",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "french international school hours",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "international school of paris salary",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based education jobs",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based education schools",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based learning academy",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based learning academy queen creek",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based learning benefits",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based learning schools",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature based learning schools near me",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "nature-based learning programs in schools",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "what is nature based learning",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "stage anglais enfant paris",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "4-seasonal",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 11",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 12",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 13",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 14",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 15",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 16",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 17",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "cours anglais enfant paris 18",
+      "pillar": "camps-activities",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "forest school ile de france",
+      "pillar": "programs",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "formation forest school france",
+      "pillar": "programs",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    },
+    {
+      "term": "francesca forest school",
+      "pillar": "programs",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": false
+    }
+  ]
+}

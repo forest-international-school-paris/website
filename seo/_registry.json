@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-07-02",
+  "site": "https://forest-international.com",
+  "note": "Single source for mutable SEO facts (Bible: never re-copy these into prose).",
+  "pillars": {
+    "choose-school": { "hub": "/admissions", "secondary_hubs": ["/", "/about", "/tuition"] },
+    "programs": { "hub": "/early-years", "secondary_hubs": ["/primary", "/middle-school"] },
+    "camps-activities": { "hub": "/holiday-camps" }
+  },
+  "clusters": [
+    { "name": "brand", "pattern": "forest.?international|forest school (paris|mareil)" },
+    { "name": "camps", "pattern": "camp|stage|holiday|summer|vacances|wednesday|mercredi|masterclass" },
+    { "name": "programs", "pattern": "preschool|nursery|maternelle|primary|primaire|middle school|coll\\u00e8ge|forest school|nature" },
+    { "name": "local", "pattern": "mareil|marly|saint.germain|v\\u00e9sinet|vesinet|yvelines|78\\b|versailles|near me|pr\\u00e8s de" },
+    { "name": "choose-school", "pattern": "international school|english school|\\u00e9cole (internationale|anglaise|bilingue)|bilingual school|admission|fees|tuition" }
+  ],
+  "publish_caps": {
+    "new_posts_per_day": 1,
+    "new_posts_per_week": 3,
+    "note": "ceiling, not target — a small school site must never look like a content farm"
+  },
+  "lint": {
+    "min_words_guide": 1000,
+    "min_words_news": 150,
+    "description_chars": [110, 160]
+  },
+  "posthog": {
+    "project_id": "493129",
+    "host": "https://us.posthog.com",
+    "conversion_events": [
+      "apply_click",
+      "contact_form_click",
+      "masterclass_register_click",
+      "whatsapp_click",
+      "email_click",
+      "phone_click",
+      "popup_shown",
+      "popup_cta_click"
+    ],
+    "data_since": "2026-07-01"
+  },
+  "gsc": {
+    "property": "sc-domain:forest-international.com",
+    "ui_account": "koreal6803@gmail.com",
+    "api_service_account": "firebase-adminsdk-tjtuk@fdata-299302.iam.gserviceaccount.com",
+    "api_ready": false,
+    "note": "api_ready flips true once the SA is added as a user in GSC settings"
+  },
+  "indexnow": {
+    "key": "b280f89a85f31d2b590dd38b55198774"
+  },
+  "nap": {
+    "name": "Forest International School Paris",
+    "address": "28 Rue de Tour d'Echelle, 78750 Mareil-Marly, France",
+    "phone": "+33 6 32 72 51 45",
+    "email": "discover@forestinternationalschool.com"
+  },
+  "canonical_blurb": "Forest International School Paris is an English-language international school in Mareil-Marly, west of Paris, welcoming children aged 2 to 14. Learning combines an international curriculum with daily nature-based education on a forest campus near Saint-Germain-en-Laye.",
+  "content_counts": { "posts": 1, "guides": 0, "news": 1 }
+}
