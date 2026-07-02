@@ -131,6 +131,13 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-03 (13) | FR discoverability (user picked option A): added visible
+  "🇫🇷 Voir cette page en français" hero button on the 2 EN counterparts →
+  `/admissions`→`/fr/admissions`, `/holiday-camps`→`/fr/stages-vacances`. Closes the
+  EN→FR gap (previously only footer + machine hreflang; header nav stays EN-only by
+  design — full bilingual relaunch still NOT approved). Link-only, money-page facts
+  untouched (QA diff). | Next: verify live + IndexNow the 2 pages; queue still date-gated
+  (07-09 measurement, 07-11 camps).
 - 2026-07-02 (12) | Deploy landed (~18:00) → verify-live executed early: all changed
   pages + FR pages serve new content, sitemap 15 URLs (survey excluded ✓), IndexNow
   HTTP 202 for 11 URLs (key file now serving), live homepage Lighthouse **84 perf /
