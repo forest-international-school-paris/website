@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-07-02T14:43:50.974Z",
+  "site": "sc-domain:forest-international.com",
+  "window": {
+    "start": "2026-06-02",
+    "end": "2026-06-30"
+  },
+  "clusters": {
+    "brand": {
+      "clicks": 5,
+      "impressions": 11,
+      "position": 2.4
+    },
+    "choose-school": {
+      "clicks": 0,
+      "impressions": 11,
+      "position": 32.4
+    },
+    "other": {
+      "clicks": 0,
+      "impressions": 7,
+      "position": 14.1
+    },
+    "local": {
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    "programs": {
+      "clicks": 0,
+      "impressions": 10,
+      "position": 26
+    },
+    "camps": {
+      "clicks": 0,
+      "impressions": 4,
+      "position": 58.3
+    }
+  },
+  "striking_distance": [],
+  "top_pages": [
+    {
+      "page": "https://forest-international.com/",
+      "clicks": 8,
+      "impressions": 77,
+      "position": 11.7
+    },
+    {
+      "page": "https://forest-international.com/holiday-camps/",
+      "clicks": 1,
+      "impressions": 25,
+      "position": 16.2
+    },
+    {
+      "page": "https://forest-international.com/team/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 5.8
+    },
+    {
+      "page": "https://forest-international.com/about/",
+      "clicks": 0,
+      "impressions": 9,
+      "position": 3.4
+    },
+    {
+      "page": "https://forest-international.com/admissions/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 2.1
+    },
+    {
+      "page": "https://forest-international.com/middle-school/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 82
+    },
+    {
+      "page": "https://forest-international.com/primary/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "page": "https://forest-international.com/tuition/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.5
+    }
+  ],
+  "totals": {
+    "clicks": 5,
+    "impressions": 44,
+    "queries": 25
+  }
+}

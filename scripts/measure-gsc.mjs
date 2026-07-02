@@ -15,7 +15,8 @@
  *      GSC_OAUTH_ADC_FILE or ~/.config/gcloud-school/application_default_credentials.json.
  *      One-time creation (choose koreal6803@gmail.com in the browser):
  *        CLOUDSDK_CONFIG=$HOME/.config/gcloud-school gcloud auth application-default login \
- *          --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly'
+ *          --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform'
+ *      (cloud-platform must be included — gcloud rejects custom --scopes without it.)
  *      (Separate config dir on purpose — the default ADC belongs to finlab.company and
  *      is used for Cloud SQL; do not overwrite it.)
  *      User-credential calls send x-goog-user-project: GSC_QUOTA_PROJECT (default
@@ -77,7 +78,7 @@ async function accessToken() {
     console.error('[measure-gsc] no credentials found. Recommended one-time setup');
     console.error('(OAuth as koreal6803@gmail.com — no GSC user changes needed):');
     console.error("  CLOUDSDK_CONFIG=$HOME/.config/gcloud-school gcloud auth application-default login \\");
-    console.error("    --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly'");
+    console.error("    --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform'");
     console.error('then re-run this script. (Alternatives: GSC_TOKEN_FILE or a service-account');
     console.error('key that is a user on the property.)');
     process.exit(1);

@@ -44,8 +44,8 @@
     "ui_account": "koreal6803@gmail.com",
     "auth_method": "oauth-user (ADC file in ~/.config/gcloud-school; see measurement.md §2 — SA route unavailable, no permission to add users)",
     "quota_project": "fdata-299302",
-    "api_ready": false,
-    "note": "api_ready flips true once the one-time gcloud ADC login as koreal6803 is done"
+    "api_ready": true,
+    "note": "credentialed 2026-07-02 (ADC login needs cloud-platform in --scopes or gcloud rejects the list)"
   },
   "indexnow": {
     "key": "b280f89a85f31d2b590dd38b55198774"

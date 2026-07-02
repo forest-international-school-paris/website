@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T13:57:28.443Z",
+  "generated_at": "2026-07-02T14:45:25.861Z",
   "window_days": 28,
   "project": "493129",
   "data": {
@@ -19,7 +19,7 @@
         ],
         [
           "Referral",
-          10
+          11
         ],
         [
           "Organic Social",
@@ -63,7 +63,7 @@
         [
           "popup_shown",
           "Referral",
-          6
+          7
         ],
         [
           "whatsapp_click",

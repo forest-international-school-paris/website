@@ -5,17 +5,30 @@
 
 ## North star (latest measurement)
 
-- **PostHog**: data since 2026-07-01 (2 days — too young to trend). Baseline snapshot
-  pending first weekly measure run. Conversion events wired: see `seo/_registry.json`.
-- **GSC**: API not yet credentialed (`gsc.api_ready=false`); UI viewable as
-  koreal6803@gmail.com. No baseline pulled yet.
+**Baseline 2026-07-02** — first credentialed pull (PostHog 28d; GSC 2026-06-02..06-30).
+Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.json`.
+
+- **PostHog**: organic sessions 21/28d (Direct 24, Referral 11, Social 1). Organic entry
+  pages: `/` 18, `/holiday-camps/` 3. Organic-attributed conversions: 23× `popup_shown`
+  only — ZERO hard conversions (apply/contact/whatsapp/email/phone) from organic yet.
+  The few hard conversions are all Direct (whatsapp 3, masterclass 2, apply 1, email 1).
+- **GSC**: 5 clicks / 44 impressions / 25 queries (site is tiny; treat as baseline, not
+  trend). Brand pos 2.4 = all 5 clicks. Non-brand clusters far off page 1: choose-school
+  pos 32.4 (11 imp), programs pos 26.0 (10 imp), camps pos 58.3 (4 imp). Page-level:
+  `/` 8 clicks/77 imp/pos 11.7; `/holiday-camps/` 1 click/25 imp/**pos 16.2** — best
+  non-brand opportunity, in season. `/admissions` pos 2.1 (7 imp), `/about` 3.4,
+  `/tuition` 2.5: positions fine, impressions tiny → outside homepage+camps the
+  constraint is VISIBILITY (queries covered), not position. Striking-distance query
+  list: empty (nothing clears the ≥10-impression filter yet).
 - **AI citations**: not yet spot-checked.
 
 ## Needs fixing (P1)
 
 - **Summer 2026 camp season is NOW** — verify `/holiday-camps` current-session info is
   live-accurate and write the first camp-focused post (backlog has camp gaps). Seasonal
-  deadline logic: `seo-strategy.md` calendar.
+  deadline logic: `seo-strategy.md` calendar. Data backs this: `/holiday-camps` is at
+  pos 16.2 with 25 impressions (baseline 2026-07-02) — the site's only page-level
+  striking-distance opportunity.
 - Money pages have thin/missing per-page descriptions in places — run mode E audit on
   one pillar (start with camps, it's in season).
 - `welcome-new-school-year.md` (Sept 2024) fails lint: 124 words, 0 internal links,
@@ -29,26 +42,21 @@
 
 ## Scheduled
 
-- 2026-07-09: first weekly measurement run (PostHog baseline snapshot).
+- 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
+  baseline).
 
 ## User actions (agent cannot do these)
 
-1. **GSC API unlock (one-time, ~1 min; adding users to the property is NOT possible,
-   so this is the OAuth route as koreal6803@gmail.com).** Run in a terminal (or with
-   `!` prefix in a Claude Code session) and choose koreal6803@gmail.com in the browser:
-   ```bash
-   CLOUDSDK_CONFIG=$HOME/.config/gcloud-school gcloud auth application-default login \
-     --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly'
-   ```
-   Then flip `gsc.api_ready` to `true` in `seo/_registry.json`. Details: skill
-   `references/measurement.md` §2.
-2. **Deploy pipeline** — user said 2026-07-02 they will handle it "tomorrow" (2026-07-03).
+1. **Deploy pipeline** — user said 2026-07-02 they will handle it "tomorrow" (2026-07-03).
    Until live-verified, pushed changes (incl. the FR pages + IndexNow key file) wait.
-3. **Google Business Profile:** confirm claimed status + category/hours/NAP match
+2. **Google Business Profile:** confirm claimed status + category/hours/NAP match
    `seo/_registry.json` `nap`. Agent will maintain a GBP post draft list here once
    confirmed.
-4. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
+3. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
    submit sitemap.
+
+(Done 2026-07-02: GSC API unlock — OAuth login completed as koreal6803@gmail.com;
+`gsc.api_ready=true`.)
 
 ## User confirmations (site fact inconsistencies found 2026-07-02 — Bible #2/#8)
 
@@ -81,7 +89,7 @@
 
 | Task | Cycle | Last run |
 |---|---|---|
-| Measure (PostHog/GSC) | 7d | never |
+| Measure (PostHog/GSC) | 7d | 2026-07-02 (baseline) |
 | Site health sweep | 7d | never |
 | Keyword mining | 7d | 2026-07-02 (initial seed) |
 | Local/GEO sweep | 30d | never |
@@ -90,6 +98,12 @@
 
 ## Iteration log
 
+- 2026-07-02 (3) | GSC OAuth completed (user approved browser login; gotcha: gcloud
+  rejects a custom `--scopes` list unless it also includes `cloud-platform` — the
+  measurement.md command alone fails). First full baseline pulled (PostHog + GSC) →
+  north-star block; `gsc.api_ready=true`. Data confirms P1: `/holiday-camps` pos 16.2 /
+  25 imp is the only page-level striking-distance target. | Next: P1 camps — mode E
+  audit of `/holiday-camps` + first camp post.
 - 2026-07-02 (2) | FR landing pages built (`/fr/admissions`, `/fr/stages-vacances`;
   facts sourced from admissions/holiday-camps/about/contact pages; hreflang via new
   Layout `alternates`/`lang` props; footer links added). GSC auth switched to OAuth-user

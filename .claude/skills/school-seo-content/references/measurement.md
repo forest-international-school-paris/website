@@ -43,8 +43,10 @@ pick koreal6803@gmail.com in the browser):
 
 ```bash
 CLOUDSDK_CONFIG=$HOME/.config/gcloud-school gcloud auth application-default login \
-  --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly'
+  --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform'
 ```
+
+(`cloud-platform` must be in the list — gcloud rejects any custom `--scopes` without it.)
 
 The separate `gcloud-school` config dir is deliberate: the default ADC belongs to
 finlab.company@gmail.com and is used for Cloud SQL — never overwrite it. After login,
