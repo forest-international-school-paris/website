@@ -24,6 +24,10 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Needs fixing (P1)
 
+- **Modern image delivery:** convert hero/gallery images to WebP/AVIF with responsive
+  `srcset` (Lighthouse models ~2.6s further LCP saving on the homepage after the
+  2026-07-02 recompression pass; consider Astro's `<Image>` component). Also
+  `activities.png` (550KB PNG photo on `/about`) → JPEG/WebP.
 - **First camp-focused post** (rest of the P1 camp item; hub work done 2026-07-02 —
   live-accuracy verified + mode E upgrade shipped). Bible #4 note: the hub owns
   "summer camp paris english" head terms — the post must take a differentiated long-tail
@@ -43,7 +47,9 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   "Holiday Camps in English near Paris", program pages show new titles, FR pages
   resolve; then IndexNow ping `/holiday-camps`, `/early-years`, `/primary`,
   `/middle-school`, `/fr/admissions`, `/fr/stages-vacances` and confirm sitemap.
-  Optionally run `seo-drift` toolbelt baseline right after.
+  Optionally run `seo-drift` toolbelt baseline right after. Also re-run homepage
+  Lighthouse against LIVE to confirm the LCP fix landed (baseline: live 14.9s → local
+  build 5.8s).
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E upgrade.
 - 2026-07-11: Summer 2026 camp week 1 (6–10 Jul) is over → freshness check on
@@ -119,11 +125,19 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 | Keyword mining | 7d | 2026-07-02 (initial seed) |
 | Local/GEO sweep | 30d | 2026-07-02 |
 | Pillar deep-audit | 30d | never |
-| Core Web Vitals (toolbelt `seo-google`) | 30d | never |
+| Core Web Vitals (local Lighthouse; PSI keyless = quota-flaky) | 30d | 2026-07-02 |
 | Freshness sweep | term boundaries | never |
 
 ## Iteration log
 
+- 2026-07-02 (11) | CWV baseline (first run; keyless PSI 429'd → local Lighthouse via
+  system Chrome). Live mobile: homepage perf 66 / **LCP 14.9s** (gallery-2.jpg was
+  7.2MB!), programs ~89 / ~3.1s, camps 79 / 4.3s. Fixed same-iteration: Pillow
+  recompression (gallery-2 −96%, hero −25%, 4 more), homepage below-fold `loading=lazy`,
+  hero `fetchpriority=high` → local build perf 74 / LCP 5.8s. WebP/srcset follow-up →
+  Needs fixing. Snapshot: `seo/metrics/cwv-2026-07-02.json`. | Next: queue is
+  deploy-gated (07-03 verify) + date-gated (07-11 camps); pillar deep-audit is the only
+  free P3 — defer to a fresh session, idle down.
 - 2026-07-02 (10) | GEO answer blocks shipped (P1 from audit): homepage welcome ¶ now a
   direct answer block (English-language, ages 2-14, Mareil-Marly near
   Saint-Germain-en-Laye, west of Paris, ENC); vague hero "heart of Paris west" →

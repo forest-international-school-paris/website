@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="relative min-h-[600px] lg:min-h-[calc(100vh-120px)] flex items-center">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img
+      <img fetchpriority="high"
         src="/images/hero-banner.jpg"
         alt="Children learning in nature at Forest International School"
         class="w-full h-full object-cover"
@@ -56,7 +56,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div class="relative">
           <div class="relative z-10">
-            <img
+            <img loading="lazy"
               src="/images/children-diversity.jpg"
               alt="Diverse children at Forest International School"
               class="rounded-3xl shadow-2xl w-full"
@@ -185,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Early Years -->
         <a href="/early-years" class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500">
           <div class="aspect-[3/4]">
-            <img
+            <img loading="lazy"
               src="/images/forest-walk.jpg"
               alt="Early years outdoor learning"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -208,7 +208,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Primary School -->
         <a href="/primary" class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500">
           <div class="aspect-[3/4]">
-            <img
+            <img loading="lazy"
               src="/images/gallery-2.jpg"
               alt="Primary school forest activities"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -231,7 +231,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Middle School -->
         <a href="/middle-school" class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500">
           <div class="aspect-[3/4]">
-            <img
+            <img loading="lazy"
               src="/images/outdoor-learning.jpg"
               alt="Middle school students"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -344,7 +344,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div>
-        <img
+        <img loading="lazy"
           src="/images/campus.jpg"
           alt="Forest International School Campus"
           class="w-full object-cover rounded-3xl shadow-lg"
@@ -433,7 +433,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Ms. Sophie Lovejoy -->
         <div class="group text-center">
           <div class="relative mb-4 mx-auto w-28 h-28 lg:w-36 lg:h-36">
-            <img
+            <img loading="lazy"
               src="/images/team/sophie-lovejoy-2026.jpeg"
               alt="Ms. Sophie Lovejoy - Principal"
               class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
@@ -447,7 +447,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Mr Kralka -->
         <div class="group text-center">
           <div class="relative mb-4 mx-auto w-28 h-28 lg:w-36 lg:h-36">
-            <img
+            <img loading="lazy"
               src="/images/team/mr-kralka.avif"
               alt="Mr Kralka - Assistant Head Academic"
               class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
@@ -460,7 +460,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Miss Sharon -->
         <div class="group text-center">
           <div class="relative mb-4 mx-auto w-28 h-28 lg:w-36 lg:h-36">
-            <img
+            <img loading="lazy"
               src="/images/team/miss-sharon.avif"
               alt="Miss Sharon - Assistant Head Pastoral"
               class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
@@ -473,7 +473,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Miss Hannah -->
         <div class="group text-center">
           <div class="relative mb-4 mx-auto w-28 h-28 lg:w-36 lg:h-36">
-            <img
+            <img loading="lazy"
               src="/images/team/miss-hannah.avif"
               alt="Miss Hannah - EYFS Lead"
               class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
@@ -660,7 +660,7 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
         <div class="order-1 lg:order-2 relative">
-          <img
+          <img loading="lazy"
             src="/images/summer-camp.jpg"
             alt="Summer Camp at Forest International School"
             class="rounded-3xl shadow-2xl"
@@ -677,7 +677,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- CTA Section -->
   <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
     <div class="absolute inset-0">
-      <img
+      <img loading="lazy"
         src="/images/promo-2023.jpg"
         alt="Forest International School"
         class="w-full h-full object-cover opacity-10"
