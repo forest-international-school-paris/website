@@ -42,8 +42,11 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 - **Nav redesign (user's uncommitted local edit to `src/components/Navigation.astro`,
   found 2026-07-03):** merges About+Programs into a "School" mega-menu, promotes Holiday
   Camps to top-level, moves Campus Rental into a "More" dropdown. Builds clean, all 11
-  link targets exist, no orphans. LEFT UNCOMMITTED on purpose — substantial UI, user
-  away when asked whether it's final. Do NOT auto-commit; ask the user before shipping.
+  link targets exist, no orphans. Same uncommitted set also adds `@lucide/astro` to
+  package.json/lock (icon lib, presumably for this UI). LEFT UNCOMMITTED on purpose —
+  substantial UI, user away when asked whether it's final. Do NOT auto-commit; ask the
+  user before shipping. (Untracked `.agents/`, `.impeccable/`, `PRODUCT.md` = user's
+  other work, left alone.)
 
 ## Scheduled
 
