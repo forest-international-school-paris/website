@@ -6,6 +6,9 @@ const alternates = [
   { hreflang: 'fr', href: '/fr/stages-vacances' },
   { hreflang: 'x-default', href: '/holiday-camps' },
 ];
+
+const masterClassRegisterUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSenMtdBQPV1w-LJjl6SLFV07K6GGkGf-lx760_lxrqfrFMrEA/viewform';
+const bookVisitUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
 ---
 
 <Layout title="Holiday Camps in English near Paris" description="English-language holiday and summer camps for children aged 2-12 on our forest campus near Saint-Germain-en-Laye, west of Paris." alternates={alternates}>
@@ -54,7 +57,7 @@ const alternates = [
   </section>
 
   <!-- Wednesday MasterClasses Banner -->
-  <section class="bg-[#c9a962] py-10">
+  <section id="masterclasses" class="bg-[#c9a962] py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block px-4 py-1.5 bg-[#1e3d29] text-white rounded-full font-semibold text-sm mb-4">Every Wednesday</span>
       <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-3">Wednesday MasterClasses</h2>
@@ -64,6 +67,17 @@ const alternates = [
       <p class="text-[#1e3d29]/80 font-semibold mb-6">
         🎟️ Early Years &amp; Lower Primary — <span class="underline">Waitlist only</span>
       </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3">
+        <a href={masterClassRegisterUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 bg-[#1e3d29] text-white font-bold rounded-full hover:bg-[#2d5a3d] transition-colors shadow-lg">
+          Register Now
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href={bookVisitUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 bg-white text-[#1e3d29] font-bold rounded-full border-2 border-[#1e3d29]/15 hover:bg-[#faf8f5] transition-colors shadow-sm">
+          Book a Visit
+        </a>
+      </div>
     </div>
   </section>
 

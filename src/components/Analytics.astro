@@ -44,7 +44,7 @@ const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog
         var path = window.location.pathname;
         if (path.indexOf('/contact') !== -1) {
           posthog.capture('contact_form_click', props);
-        } else if (link.closest('#announcement-popup')) {
+        } else if (link.closest('#announcement-popup') || link.closest('#masterclasses')) {
           posthog.capture('masterclass_register_click', props);
         } else {
           posthog.capture('apply_click', props);
