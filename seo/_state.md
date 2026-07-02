@@ -24,13 +24,6 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Needs fixing (P1)
 
-- **GEO answer blocks (from 2026-07-02 live-site GEO audit):** homepage and `/admissions`
-  lack a direct-answer opening block (who/ages 2-14/where/what's different) in MAIN
-  content — location on those pages lives only in footer/schema, which extraction
-  pipelines strip. "Saint-Germain-en-Laye" appears ZERO times in main copy on homepage/
-  admissions/early-years (only /holiday-camps has it — the audit's model page). Copy-only
-  fix, all facts already verified (2-14, Mareil-Marly, near Saint-Germain-en-Laye, max 11
-  per class, English National Curriculum, founded 2003 per JSON-LD).
 - **First camp-focused post** (rest of the P1 camp item; hub work done 2026-07-02 —
   live-accuracy verified + mode E upgrade shipped). Bible #4 note: the hub owns
   "summer camp paris english" head terms — the post must take a differentiated long-tail
@@ -131,6 +124,13 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-02 (10) | GEO answer blocks shipped (P1 from audit): homepage welcome ¶ now a
+  direct answer block (English-language, ages 2-14, Mareil-Marly near
+  Saint-Germain-en-Laye, west of Paris, ENC); vague hero "heart of Paris west" →
+  "Mareil-Marly, west of Paris"; admissions hero + process intro gained location + a
+  year-round/fees pointer linking `/tuition`; early-years hero now names
+  Saint-Germain-en-Laye. Main-content mentions of Saint-Germain-en-Laye: 1→4 pages.
+  Facts untouched (QA diff). | Next: CWV periodic (30d, never) or pillar deep-audit.
 - 2026-07-02 (9) | Local/GEO sweep (mode F, first run; live-site audit via seo-geo
   toolbelt agent). Shipped: `public/llms.txt` created (was 404 live; facts from
   registry/canonical pages only), Instagram added to empty JSON-LD `sameAs`. Found →
