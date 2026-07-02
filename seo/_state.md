@@ -24,6 +24,13 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Needs fixing (P1)
 
+- **GEO answer blocks (from 2026-07-02 live-site GEO audit):** homepage and `/admissions`
+  lack a direct-answer opening block (who/ages 2-14/where/what's different) in MAIN
+  content — location on those pages lives only in footer/schema, which extraction
+  pipelines strip. "Saint-Germain-en-Laye" appears ZERO times in main copy on homepage/
+  admissions/early-years (only /holiday-camps has it — the audit's model page). Copy-only
+  fix, all facts already verified (2-14, Mareil-Marly, near Saint-Germain-en-Laye, max 11
+  per class, English National Curriculum, founded 2003 per JSON-LD).
 - **First camp-focused post** (rest of the P1 camp item; hub work done 2026-07-02 —
   live-accuracy verified + mode E upgrade shipped). Bible #4 note: the hub owns
   "summer camp paris english" head terms — the post must take a differentiated long-tail
@@ -55,10 +62,25 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 1. **Deploy pipeline** — user said 2026-07-02 they will handle it "tomorrow" (2026-07-03).
    Until live-verified, pushed changes (incl. the FR pages + IndexNow key file) wait.
-2. **Google Business Profile:** confirm claimed status + category/hours/NAP match
-   `seo/_registry.json` `nap`. Agent will maintain a GBP post draft list here once
-   confirmed.
-3. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
+2. **Charset header (found 2026-07-02, verified live):** server sends `Content-Type:
+   text/html` without `charset=utf-8`, so default-decoding AI/scraper pipelines corrupt
+   `€` prices and dashes (e.g. "450â¬/week" on `/holiday-camps`). One-line fix in the
+   school's Cloudflare config: always send `text/html; charset=utf-8`.
+3. **Google Business Profile:** confirm claimed status + category ("International
+   school" primary; "Preschool", "Summer camp organizer" secondary) + hours + NAP =
+   `seo/_registry.json` `nap`. Ready-to-paste GBP post (facts from `/holiday-camps`):
+   "Summer Camp 2026 at Forest International School Paris — English-language camp for
+   children aged 2-12 on our forest campus in Mareil-Marly. Weekly sessions: 6-10 July,
+   13-17 July (excl. 14th), 20-24 July. Daily 10am-5pm, 425 €/week.
+   https://forest-international.com/holiday-camps/"
+4. **Social profiles for `sameAs` + entity graph:** Instagram added (site's own
+   published handle). Provide real URLs if they exist: LinkedIn, Facebook, YouTube —
+   and where the homepage video is hosted (if YouTube, exposing that link is a strong
+   AI-citation signal).
+5. **Directory citations** (submission text = `canonical_blurb` in `seo/_registry.json`):
+   international-schools-database.com, expatica.com, angloinfo.com (Paris/IdF), Message
+   Paris. NAP exactly as registry.
+6. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
    submit sitemap.
 
 (Done 2026-07-02: GSC API unlock — OAuth login completed as koreal6803@gmail.com;
@@ -74,6 +96,10 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 - **Phone NAP mismatch:** footer + README show +33 1 39 16 87 35; JSON-LD + WhatsApp
   button use +33 6 32 72 51 45. Both may be real (landline vs mobile) but the JSON-LD
   and GBP should use one consistent primary number.
+- **Third phone variant (found 2026-07-02):** `campus-rental.astro` uses
+  +33 6 32 72 71 45 twice (WhatsApp link + display) — one digit off the canonical
+  mobile. Separate rentals line, or a typo that loses rental inquiries? If typo, fix to
+  +33 6 32 72 51 45.
 
 ## User decisions (open strategy questions — do not act without answer)
 
@@ -98,13 +124,23 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 | Measure (PostHog/GSC) | 7d | 2026-07-02 (baseline) |
 | Site health sweep | 7d | 2026-07-02 |
 | Keyword mining | 7d | 2026-07-02 (initial seed) |
-| Local/GEO sweep | 30d | never |
+| Local/GEO sweep | 30d | 2026-07-02 |
 | Pillar deep-audit | 30d | never |
 | Core Web Vitals (toolbelt `seo-google`) | 30d | never |
 | Freshness sweep | term boundaries | never |
 
 ## Iteration log
 
+- 2026-07-02 (9) | Local/GEO sweep (mode F, first run; live-site audit via seo-geo
+  toolbelt agent). Shipped: `public/llms.txt` created (was 404 live; facts from
+  registry/canonical pages only), Instagram added to empty JSON-LD `sameAs`. Found →
+  state: GEO answer-block gap on homepage/admissions + zero "Saint-Germain-en-Laye" in
+  main copy outside /holiday-camps (Needs fixing P1); charset-header corruption of €
+  prices, GBP post draft, directory list, social-profile URLs (User actions); third
+  phone variant on campus-rental (User confirmations). Robots.txt: all AI crawlers
+  allowed ✓; JSON-LD NAP consistent ✓ (foundingDate 2003). REJECTED from audit: Review
+  schema on own testimonials (self-serving review markup violates Google guidelines).
+  | Next: GEO answer blocks (new P1 top) or CWV periodic.
 - 2026-07-02 (8) | Site-health sweep (first run, sub-agent over dist/): links/images/
   expired-dates/sitemap-coverage CLEAN. Fixed same-iteration: hreflang→canonical
   trailing-slash mismatch (normalized once in `Layout.astro`), thin descriptions on
