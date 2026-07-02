@@ -6,11 +6,13 @@ author: "Matthew Jackson"
 image: "/images/campus.jpg"
 lang: "en"
 tags: ["announcement", "school year"]
+lint_allow:
+  - "word_count: archived dated announcement from Sept 2024, kept as authentic school history (state decision 2026-07-02); not held to the new-article floor"
 ---
 
 Dear Parents and Students,
 
-We are thrilled to welcome everyone back to Forest International School Paris for the 2024-2025 academic year!
+We are thrilled to welcome everyone back to [Forest International School Paris](/about) for the 2024-2025 academic year!
 
 ## What's New This Year
 

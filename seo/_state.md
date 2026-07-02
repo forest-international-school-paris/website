@@ -29,13 +29,9 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   "summer camp paris english" head terms — the post must take a differentiated long-tail
   angle. Best candidate: a camp-recap post with real photos AFTER the July sessions run
   (weeks of 6/13/20 July) — real proof beats a generic pre-camp guide.
-- Money pages have thin/missing per-page descriptions — camps done (2026-07-02); still
-  thin: `early-years.astro`, `primary.astro`, `middle-school.astro` (~85-char generic
-  descriptions, no location/differentiator). Next mode E target: programs pillar.
-- `welcome-new-school-year.md` (Sept 2024) fails lint: 124 words, 0 internal links,
-  stale year. Decide per Bible #9: refresh into an evergreen "school year at Forest"
-  piece, or accept as archived news (then teach lint an `archive` allowance) — don't
-  leave it as the only post shaping the blog's quality profile.
+- Money pages: camps + programs pillars done (2026-07-02). Remaining thin candidates
+  for a later mode E pass: `about.astro`, `team.astro`, `contact.astro`, `tuition.astro`
+  descriptions (check during next pillar deep-audit).
 
 ## In progress (WIP)
 
@@ -105,6 +101,13 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-02 (7) | P1 resolved: `welcome-new-school-year.md` ARCHIVED (decision: real
+  dated school history stays; refresh would need unavailable 2026-27 facts and risk
+  fake-freshness, delete is a user-only action). Implementation: `lint_allow`
+  word_count with written reason (the existing mechanism IS the archive allowance — no
+  lint code change), de-orphaned with an `/about` link. Lint PASS 0/0; build green.
+  Policy note: §E review N/A when an archived post's prose is unchanged (nothing new to
+  score); lint + build still mandatory. | Next: site-health sweep (P3, never run).
 - 2026-07-02 (6) | claude-seo v2.2.0 suite (AgriciDaniel, 10.4k★, MIT) installed at user
   level after online comparison vs aaron-he-zhu/seo-geo-claude-skills + seranking (best
   fit: free-tier tooling, GSC/PSI integration, local+GEO skills). Loop skill tuned:
