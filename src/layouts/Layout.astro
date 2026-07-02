@@ -14,6 +14,8 @@ interface Props {
   // hreflang alternates for pages that exist in both languages, e.g.
   // [{ hreflang: 'en', href: '/admissions' }, { hreflang: 'fr', href: '/fr/admissions' }]
   alternates?: { hreflang: string; href: string }[];
+  // utility pages (surveys, redirect targets) that must stay out of search
+  noindex?: boolean;
 }
 
 const {
@@ -22,7 +24,8 @@ const {
   image = "/images/campus.jpg",
   showPopup = true,
   lang = 'en',
-  alternates = []
+  alternates = [],
+  noindex = false
 } = Astro.props;
 
 const siteUrl = 'https://forest-international.com';
@@ -61,8 +64,10 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     {alternates.map((alt) => (
-      <link rel="alternate" hreflang={alt.hreflang} href={new URL(alt.href, siteUrl).href} />
+      // hreflang must reference the canonical (trailing-slash) URL form
+      <link rel="alternate" hreflang={alt.hreflang} href={new URL(alt.href.endsWith('/') ? alt.href : `${alt.href}/`, siteUrl).href} />
     ))}
     <link rel="icon" type="image/png" href="/images/logo-header.png" />
     <link rel="apple-touch-icon" href="/images/logo-header.png" />

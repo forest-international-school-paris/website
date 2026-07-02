@@ -29,9 +29,9 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   "summer camp paris english" head terms — the post must take a differentiated long-tail
   angle. Best candidate: a camp-recap post with real photos AFTER the July sessions run
   (weeks of 6/13/20 July) — real proof beats a generic pre-camp guide.
-- Money pages: camps + programs pillars done (2026-07-02). Remaining thin candidates
-  for a later mode E pass: `about.astro`, `team.astro`, `contact.astro`, `tuition.astro`
-  descriptions (check during next pillar deep-audit).
+- Money pages: camps + programs + admissions/tuition descriptions done (2026-07-02).
+  Remaining low-priority description candidates for the next pillar deep-audit:
+  `about.astro`, `team.astro`, `contact.astro` (70 chars), `/news` index (62 chars).
 
 ## In progress (WIP)
 
@@ -46,6 +46,10 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   Optionally run `seo-drift` toolbelt baseline right after.
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E upgrade.
+- 2026-07-11: Summer 2026 camp week 1 (6–10 Jul) is over → freshness check on
+  `/holiday-camps` + `/fr/stages-vacances` (expired week still shown as upcoming?
+  fact change = user confirmation). Camp-recap post (P1) unblocks — ask user for real
+  photos/anecdotes from week 1 (child-photo rules Bible #3).
 
 ## User actions (agent cannot do these)
 
@@ -92,7 +96,7 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 | Task | Cycle | Last run |
 |---|---|---|
 | Measure (PostHog/GSC) | 7d | 2026-07-02 (baseline) |
-| Site health sweep | 7d | never |
+| Site health sweep | 7d | 2026-07-02 |
 | Keyword mining | 7d | 2026-07-02 (initial seed) |
 | Local/GEO sweep | 30d | never |
 | Pillar deep-audit | 30d | never |
@@ -101,6 +105,14 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-02 (8) | Site-health sweep (first run, sub-agent over dist/): links/images/
+  expired-dates/sitemap-coverage CLEAN. Fixed same-iteration: hreflang→canonical
+  trailing-slash mismatch (normalized once in `Layout.astro`), thin descriptions on
+  `/admissions` (80→151) + `/tuition` (76→153), campus-rental double-branded title +
+  false "heart of Paris" → Mareil-Marly, `/survey/*` orphans noindexed + filtered from
+  sitemap (new Layout `noindex` prop). Deferred: contact//news descriptions (low) →
+  Needs fixing; late-July camp freshness → Scheduled 07-11. | Next: keyword mining is
+  the most-overdue P3 not yet due; queue otherwise empty until 07-03 verify-live.
 - 2026-07-02 (7) | P1 resolved: `welcome-new-school-year.md` ARCHIVED (decision: real
   dated school history stays; refresh would need unavailable 2026-27 facts and risk
   fake-freshness, delete is a user-only action). Implementation: `lint_allow`
