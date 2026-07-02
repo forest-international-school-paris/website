@@ -36,18 +36,20 @@ Verify in the built output, not just dev: `grep -l "<title fragment>" dist/news/
 There is no draft flag in this repo — **anything merged to main goes live**. Drafts stay
 uncommitted (or on a branch) until the quality gate passes.
 
-## 3. Deploy = push to main (auto-deploy)
+## 3. Deploy: push delivers code; production deploy is NOT confirmed automatic
 
-The site auto-deploys from GitHub `origin/main` via the school's Cloudflare account
-(verified 2026-07-02: pushed commits go live; no deploy runs from this machine —
-`wrangler deploy` is NOT part of the SOP and the local wrangler account has no such
-worker). Therefore:
+Findings (2026-07-02): the live site serves content from recent main commits, but a test
+push did NOT go live within 25 minutes — production deploys are most likely run manually
+from the school's side (their Cloudflare account; the local wrangler login has no such
+worker/zone, so `wrangler deploy` from this machine is NOT possible). Until the
+deploy-pipeline question in `seo/_state.md` "User decisions" is resolved:
 
 1. `git add <files> && git commit` (message states slug/mode) → `git push origin main`.
-2. Poll the live URL until the change appears (~2–5 min typical):
-   `curl -s https://forest-international.com/news/<slug>/ | grep -c "<title fragment>"` —
-   give up after ~15 min and record a "deploy pipeline" item in `seo/_state.md` for the
-   user (the pipeline lives on the school's Cloudflare account, we can't fix it here).
+2. Poll the live URL a few times (~15 min cap):
+   `curl -s https://forest-international.com/news/<slug>/ | grep -c "<title fragment>"`.
+   Live → continue to §4. Not live → the content is "pushed, awaiting deploy": add a
+   Scheduled item ("verify <slug> live, then IndexNow") + keep the deploy-pipeline user
+   action on top of `seo/_state.md`. NEVER ping IndexNow for a URL that isn't live yet.
 3. `git pull --rebase` before starting any iteration — the school's staff also edits this
    repo (Cowork sessions); conflicts are resolved, never force-pushed.
 

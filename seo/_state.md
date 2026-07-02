@@ -45,6 +45,14 @@
 
 ## User decisions (open strategy questions — do not act without answer)
 
+- **Deploy pipeline (BLOCKS full loop autonomy):** pushes to origin/main do NOT go live
+  automatically (tested 2026-07-02: IndexNow key file pushed, still 404 after 25 min,
+  while June/July commits are live — school side likely deploys manually). Until
+  resolved, the loop pushes content and schedules "verify live" follow-ups. Options:
+  (a) school enables git-connected auto-deploy on their Cloudflare account,
+  (b) user gets deploy access (added to the school's CF account / API token),
+  (c) status quo: school deploys on their rhythm, loop verifies afterwards.
+
 - **French-language pages**: FR queries (école internationale yvelines…) are a real
   demand pool (see `seo/_backlog.json` fr-tagged rows); site is EN-only today. Relaunch
   French = significant commitment (every page bilingual, ongoing sync). Recommendation
@@ -71,7 +79,8 @@
 
 ## Lessons
 
-- Deploy runs on the school's Cloudflare account (git-connected). No local wrangler
-  deploy — the "website" worker doesn't exist on koreal6803's account; publish = push.
+- Deploy runs on the school's Cloudflare account and is NOT triggered by push (tested
+  2026-07-02). No local wrangler deploy possible — the "website" worker doesn't exist
+  on koreal6803's account. Publish = push + verify-live follow-up (publishing.md §3).
 - Local node_modules had been installed inside a Linux Cowork container; after machine
   switches, `rm -rf node_modules && npm install` before building.
