@@ -39,16 +39,20 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## In progress (WIP)
 
-(empty)
+- **Nav redesign (user's uncommitted local edit to `src/components/Navigation.astro`,
+  found 2026-07-03):** merges About+Programs into a "School" mega-menu, promotes Holiday
+  Camps to top-level, moves Campus Rental into a "More" dropdown. Builds clean, all 11
+  link targets exist, no orphans. LEFT UNCOMMITTED on purpose — substantial UI, user
+  away when asked whether it's final. Do NOT auto-commit; ask the user before shipping.
 
 ## Scheduled
 
 - ~~2026-07-03 verify-live~~ DONE EARLY 2026-07-02 ~18:00: deploy landed same evening;
   all pages verified live, sitemap = 15 URLs (survey excluded), IndexNow 202 for 11
   URLs, homepage Lighthouse live: perf 84 / LCP 3.7s (was 66 / 14.9s).
-- ASAP after next deploy: verify `/admissions` + `/holiday-camps` show the
-  "Voir cette page en français" link live, then IndexNow-ping both (pushed 2026-07-03,
-  not yet live at push time).
+- ~~ASAP after next deploy: verify FR link live + IndexNow~~ DONE 2026-07-03 ~01:00:
+  both `/admissions` + `/holiday-camps` show the "Voir cette page en français" link
+  live; IndexNow HTTP 200 for both.
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E
   upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
@@ -91,9 +95,8 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## User confirmations (site fact inconsistencies found 2026-07-02 — Bible #2/#8)
 
-- **Camp ages:** `/holiday-camps` says "ages 2-12" (canonical, per 2026-06 commit), but
-  homepage `index.astro` line ~627 still says camps "open to all children aged 2-14" —
-  which is right? (FR pages follow the canonical 2-12.)
+- **Camp ages:** resolved — `/holiday-camps`, FR camp pages, `llms.txt`, and the
+  homepage camp promo now all use the canonical camp range: children aged 2-12.
 - **Admissions age ceiling:** `/admissions` Key Information says "up to 15 years";
   `/about` and homepage say ages 2-14. Which is the real ceiling?
 - **Phone NAP mismatch:** footer + README show +33 1 39 16 87 35; JSON-LD + WhatsApp
@@ -134,6 +137,12 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-03 (14) | FR-link deploy landed → verified live on both counterparts +
+  IndexNow 200. Found user's uncommitted local work: shipped the confirmed camp-age fix
+  (homepage promo 2-14→2-12, matching canonical `/holiday-camps`; live still showed the
+  wrong 2-14) + state note. LEFT the nav redesign uncommitted (WIP; asked user, no reply
+  in 60s → conservative: don't auto-ship substantial UI). | Next: user to confirm nav;
+  queue date-gated (07-09 measurement, 07-11 camps).
 - 2026-07-03 (13) | FR discoverability (user picked option A): added visible
   "🇫🇷 Voir cette page en français" hero button on the 2 EN counterparts →
   `/admissions`→`/fr/admissions`, `/holiday-camps`→`/fr/stages-vacances`. Closes the
