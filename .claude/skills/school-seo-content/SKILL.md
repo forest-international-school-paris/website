@@ -6,7 +6,7 @@ description: Plan, write, optimize, and publish SEO content for the Forest Inter
   "english school saint-germain-en-laye", "english preschool paris", "summer camp paris
   english", and "forest school paris". Covers four surfaces - (1) blog/news articles
   (src/content/blog/en -> /news/<slug>, guide + news profiles, fact verification against
-  canonical pages, English lint); (2) money-page on-page SEO (the .astro program pages:
+  canonical pages, English lint); (2) money-page on-page SEO (the .astro program pages -
   early-years, primary, middle-school, holiday-camps, admissions, tuition - titles,
   descriptions, headings, schema, internal links); (3) local SEO + AI-search GEO
   (Google Business Profile checklist, NAP consistency, llms.txt, being cited by
