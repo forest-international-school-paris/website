@@ -44,8 +44,10 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 ## Scheduled
 
 - 2026-07-03 (after user deploys): verify live — `/holiday-camps` shows new title
-  "Holiday Camps in English near Paris" + FR pages resolve; then IndexNow ping
-  `/holiday-camps`, `/fr/admissions`, `/fr/stages-vacances` and confirm sitemap.
+  "Holiday Camps in English near Paris", program pages show new titles, FR pages
+  resolve; then IndexNow ping `/holiday-camps`, `/early-years`, `/primary`,
+  `/middle-school`, `/fr/admissions`, `/fr/stages-vacances` and confirm sitemap.
+  Optionally run `seo-drift` toolbelt baseline right after.
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E upgrade.
 
@@ -98,10 +100,23 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 | Keyword mining | 7d | 2026-07-02 (initial seed) |
 | Local/GEO sweep | 30d | never |
 | Pillar deep-audit | 30d | never |
+| Core Web Vitals (toolbelt `seo-google`) | 30d | never |
 | Freshness sweep | term boundaries | never |
 
 ## Iteration log
 
+- 2026-07-02 (6) | claude-seo v2.2.0 suite (AgriciDaniel, 10.4k★, MIT) installed at user
+  level after online comparison vs aaron-he-zhu/seo-geo-claude-skills + seranking (best
+  fit: free-tier tooling, GSC/PSI integration, local+GEO skills). Loop skill tuned:
+  toolbelt section, CWV periodic (30d), seo-drift post-deploy check, seo-sxo
+  stalled-page rule; fixed stale "push = deploy" header. Old generic `seo-audit` skill
+  backed up to `~/.claude/skills-backup/`. | Next: loop runs on schedule; site-health
+  sweep (never run) is due.
+- 2026-07-02 (5) | Programs pillar mode E: `early-years`/`primary`/`middle-school`
+  keyworded titles + 124–156-char descriptions (location, curriculum), hero answer
+  blocks, CTA interlinks (tuition + siblings + camps; pages previously linked only
+  contact/admissions). Facts untouched (QA diff check). | Next: verify live after
+  deploy, IndexNow with the 07-03 batch.
 - 2026-07-02 (4) | P1 camps, phase 1: `/holiday-camps` live-accuracy verified (live =
   repo, Summer 2026 sessions current) + mode E upgrade shipped — keyworded title
   ("Holiday Camps in English near Paris"), 128-char description with location, answer
@@ -135,3 +150,6 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   on koreal6803's account. Publish = push + verify-live follow-up (publishing.md §3).
 - Local node_modules had been installed inside a Linux Cowork container; after machine
   switches, `rm -rf node_modules && npm install` before building.
+- System `python3` is 3.9; the claude-seo toolbelt venv uses Homebrew python3.11 at
+  `~/.claude/skills/seo/.venv`. Toolbelt is machine-local (not in this repo) — loop
+  falls back to manual procedures when absent.

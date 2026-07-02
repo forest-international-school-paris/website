@@ -1,5 +1,5 @@
 ---
-description: School SEO autonomous loop, one iteration — read state → pick highest-ROI work → execute → machine quality gate → autonomous commit/push (=deploy)/IndexNow → update state
+description: School SEO autonomous loop, one iteration — read state → pick highest-ROI work → execute → machine quality gate → autonomous commit/push/verify-live/IndexNow → update state
 ---
 
 # School SEO Loop — single iteration
@@ -10,8 +10,9 @@ phases across iterations; memory lives entirely in the state file. Goal: west-Pa
 parents searching for English schooling (ages 2–14) or English camps find this school
 (Bible §1 KPIs: organic-attributed inquiries > SERP share > AI citations).
 **Autonomy per Bible §7 (2026-07-02):** quality gate fully green → commit, push origin
-main (= production deploy), IndexNow — no per-action approval. The price of autonomy is a
-quality gate that never bends.
+main, verify live after the school-side deploy runs (push alone does NOT deploy —
+publishing.md §3), IndexNow only once live — no per-action approval. The price of
+autonomy is a quality gate that never bends.
 
 ## 0. Start (fixed order)
 
@@ -42,11 +43,16 @@ quality gate that never bends.
     `seo/_backlog.json` (`source: striking-distance`).
   - **Site health (7d):** sub-agent sweeps built `dist/`: broken internal links, missing
     descriptions, orphan posts, expired dates still displayed. Small fixes → fix now;
-    big → "Needs fixing".
+    big → "Needs fixing". Deep pass (monthly, on the LIVE site): `seo-technical` skill
+    from the toolbelt below.
   - **Keyword mining (7d):** `python3 .claude/skills/school-seo-content/scripts/discover_keywords.py`;
     review new gaps into the backlog (French-tagged rows stay user-decision).
   - **Local/GEO (30d):** mode F sweep — NAP grep, llms.txt freshness, GBP action list +
-    directory/citation list refreshed in state "User actions".
+    directory/citation list refreshed in state "User actions". Toolbelt: `seo-local`
+    (GBP/citations/NAP cross-platform), `seo-geo` (AI-crawler access, llms.txt,
+    citability) — their FINDINGS feed mode F; Bible still governs what ships.
+  - **Core Web Vitals (30d):** `seo-google` toolbelt skill (PageSpeed/CrUX, free tier) on
+    homepage + the 3 program hubs + `/holiday-camps`; regressions → "Needs fixing".
   - **Pillar deep-audit (30d):** one pillar: hub on-page quality (mode E), interlinks,
     cannibalization, content gaps.
   - **Freshness sweep (at term boundaries):** camp/term dates and fees still current?
@@ -55,6 +61,18 @@ quality gate that never bends.
 - **P4 new content**: top of `seo/_backlog.json` (priority: decision + seasonal intents,
   then striking-distance, then awareness); write via the `school-seo-content` skill
   (mode B), phased: A fact-pack → B draft → C quality gate → D publish.
+
+**Stalled-page diagnosis:** a page sitting at position 5–20 for 2+ measurement cycles
+with no movement → run the `seo-sxo` toolbelt skill (reads the live SERP for page-type /
+intent mismatch) before writing more content at it.
+
+## Toolbelt (claude-seo suite, installed 2026-07-02 at user level `~/.claude/skills/`)
+
+`seo-technical`, `seo-local`, `seo-geo`, `seo-google`, `seo-sxo`, `seo-drift`, `seo-page`
+and siblings (AgriciDaniel/claude-seo v2.2.0; venv at `~/.claude/skills/seo/.venv`).
+Machine-local — NOT in this repo; if missing, fall back to the manual procedures above.
+They are analysts, not authors: their output feeds "Needs fixing"/briefs, but facts,
+register, and the quality gate stay governed by the Bible and `article-checklist.md`.
 
 ## 2. Execute
 
@@ -79,7 +97,9 @@ Follow the `school-seo-content` skill for the chosen mode. Iron rules while exec
 
 1. `git add <iteration files> && git commit` (message: mode/slug) → `git push origin main`.
 2. Poll live URL until change visible (~15 min cap; timeout → "Needs fixing" +
-   deploy-pipeline note for user).
+   deploy-pipeline note for user). After a deploy lands, `seo-drift` toolbelt skill can
+   diff live SEO-critical elements against the repo's intent (catches school-side deploy
+   regressions).
 3. `node scripts/indexnow-submit.mjs <changed urls>`; confirm sitemap contains them.
 4. Update `seo/_state.md`: iteration log (date | did | result | next), WIP, scheduled
    items (incl. T+7 GSC check), periodic last-runs, lessons. Commit + push state with
