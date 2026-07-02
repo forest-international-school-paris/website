@@ -46,6 +46,9 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 - ~~2026-07-03 verify-live~~ DONE EARLY 2026-07-02 ~18:00: deploy landed same evening;
   all pages verified live, sitemap = 15 URLs (survey excluded), IndexNow 202 for 11
   URLs, homepage Lighthouse live: perf 84 / LCP 3.7s (was 66 / 14.9s).
+- ASAP after next deploy: verify `/admissions` + `/holiday-camps` show the
+  "Voir cette page en français" link live, then IndexNow-ping both (pushed 2026-07-03,
+  not yet live at push time).
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E
   upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
