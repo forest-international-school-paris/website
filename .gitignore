@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # local logs
 dev_server.log
+
+# claude worktrees (local session artifacts)
+.claude/worktrees/
