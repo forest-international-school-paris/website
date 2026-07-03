@@ -28,33 +28,24 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   `srcset` (Lighthouse models ~2.6s further LCP saving on the homepage after the
   2026-07-02 recompression pass; consider Astro's `<Image>` component). Also
   `activities.png` (550KB PNG photo on `/about`) → JPEG/WebP.
-- **First camp-focused post** — likely being handled by the user: uncommitted
-  `summer-school-paris-2026-english-camp.md` + committed articles (`222d876`). When the
-  user's WIP settles, review the live camp article against Bible #4 (must not cannibalize
-  the `/holiday-camps` hub on "summer camp paris english" — differentiate onto long-tail)
-  and §E rubric; run `lint_article.py`. A real-photo recap after the July sessions is
-  still the strongest future angle.
+- ~~First camp-focused post~~ DONE by user + REVIEWED 2026-07-03: `summer-school-paris-
+  2026-english-camp.md` live, lint-clean, differentiated (experiential day-in-the-life,
+  links back to `/holiday-camps` hub — not cannibalizing). A real-photo recap after the
+  July sessions remains the strongest NEXT camp angle.
+- **Watch (07-09 measurement):** `english-school-paris-pre-elementary-primary` has a
+  head-term-y title ("English School Paris: Pre-Elementary & Primary"). Reviewed as OK
+  now (it's a comparison/choose-school guide, heavy hub linking to /early-years,
+  /primary, /admissions, /tuition — supports, doesn't compete). But if GSC shows it
+  splitting impressions with `/early-years` or `/primary` on transactional queries,
+  differentiate its title.
 - Money pages: camps + programs + admissions/tuition descriptions done (2026-07-02).
   Remaining low-priority description candidates for the next pillar deep-audit:
   `about.astro`, `team.astro`, `contact.astro` (70 chars), `/news` index (62 chars).
 
 ## In progress (WIP)
 
-- **User is actively building content (2026-07-03) — loop is HANDS-OFF the working
-  tree.** Nav redesign SHIPPED by user (`292a9bc`); also pushed: SEO news articles
-  (`222d876`), MasterClass buttons (`c8ec8f7`). On top of that, large UNCOMMITTED WIP
-  is present: new EN article `english-school-paris-pre-elementary-primary.md`, edits to
-  `international-school-paris-visit-checklist.md` + `summer-school-paris-2026-english-camp.md`,
-  a new `ArticleTableEnhancer.astro`, and `lint_article.py` / `content.config.ts` /
-  `global.css` changes. The loop must NOT commit, build-commit, or run autonomous
-  content units while this is in flight (would collide with the user's edits).
-- **🚩 FRENCH RELAUNCH IN PROGRESS — RED LINE, needs explicit user sign-off.** Untracked
-  `src/content/blog/fr/` (French blog posts) + `src/pages/fr/news/` (French news routes)
-  go beyond the two approved FR landing pages. Bible §7 + the FR "User decisions" item:
-  full bilingual relaunch is NOT approved and the loop never publishes FR content
-  autonomously. The user appears to be driving this themselves (fine) — but confirm it's
-  the intended direction, and the loop will not commit/IndexNow any FR content until the
-  "French relaunch" decision is explicitly flipped to approved in this file.
+(empty — user's content session settled 2026-07-03; all committed to origin `d4c2d82`,
+reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Scheduled
 
@@ -128,11 +119,16 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   (b) user gets deploy access (added to the school's CF account / API token),
   (c) status quo: school deploys on their rhythm, loop verifies afterwards.
 
-- ~~French-language pages~~ **DECIDED 2026-07-02** (user: "do the recommendation"):
-  two FR landing pages built — `/fr/admissions` + `/fr/stages-vacances`, with hreflang
-  pairing to `/admissions` and `/holiday-camps`, footer links, popup suppressed on FR
-  pages. Full bilingual relaunch remains NOT approved; further FR pages only on new
-  user decision.
+- **French section — EXPANDING (user-driven, 2026-07-03).** Beyond the two FR landing
+  pages, the user has committed a FR blog guide (`blog/fr/ecole-anglaise-paris-maternelle-
+  primaire.md`), a FR news route (`/fr/news/[...slug]`), and aligned `/fr/stages-vacances`
+  (commits `706e1bd`, `d4c2d82`). All live, hreflang-paired with EN twins, in sitemap.
+  This is a de-facto French relaunch by the user's own hand. **PENDING: explicit confirm**
+  (asked 2026-07-03) that the loop should treat FR as an approved ACTIVE pillar —
+  i.e. IndexNow FR pages, measure FR queries, keep FR facts in sync. Until confirmed:
+  loop indexes EN only (FR still gets organic crawl since live + in sitemap), and never
+  AUTHORS new FR pages autonomously. Note: FR fee/date facts must mirror the canonical
+  EN pages exactly (Bible #8) — verify on next FR touch.
 
 ## Periodic last-run
 
@@ -148,6 +144,15 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-03 (16) | User's content wave settled (committed `706e1bd`+`d4c2d82`, tree
+  clean, live). REVIEWED it: all 4 EN posts lint-clean (0/0), build 21 pages, all in
+  sitemap, hreflang correct (new EN pre-elementary post ↔ FR twin reciprocal), none
+  orphaned (2-3 inbound links each). Anti-cannibalization (Bible #4): both risk posts OK
+  — summer-camp post is experiential + links to hub; pre-elementary is a comparison guide
+  with heavy hub linking. Ran EN publish loop: IndexNow 200 for the 3 new posts + changed
+  `/admissions`, `/holiday-camps`, `/news`. Held FR IndexNow pending explicit relaunch
+  confirm (asked). | Next: on user's FR answer, flip the decision + IndexNow FR; else
+  07-09 measurement.
 - 2026-07-03 (15) | Loop woke to a busy tree: user shipped nav redesign (`292a9bc`),
   SEO articles (`222d876`), MasterClass buttons (`c8ec8f7`) — all on origin, in sync.
   Large uncommitted user WIP in flight (new EN article, FR blog + FR news routes,
