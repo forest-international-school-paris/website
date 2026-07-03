@@ -29,7 +29,9 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   gallery-2 −18%, campus −21%; children-diversity is −4% i.e. WebP is LARGER, skip it).
   Not worth bolting `<picture>` onto the homepage the user is actively redesigning —
   best done via Astro's `<Image>`/`<Picture>` component as part of their UI work (auto
-  WebP+srcset). `activities.png` (550KB PNG on `/about`) → still a clean single-file win.
+  WebP+srcset). ~~`activities.png`~~ DONE 2026-07-03: 550KB PNG → 86KB optimized JPEG
+  (−84%) + `loading="lazy"`, PNG removed. Remaining PNGs (logos, inst_savio) are small
+  and correctly PNG.
 - ~~First camp-focused post~~ DONE by user + REVIEWED 2026-07-03: `summer-school-paris-
   2026-english-camp.md` live, lint-clean, differentiated (experiential day-in-the-life,
   links back to `/holiday-camps` hub — not cannibalizing). A real-photo recap after the
@@ -149,6 +151,11 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
+- 2026-07-03 (19) | Optimized `activities.png` on `/about`: 550KB→86KB JPEG (−84%,
+  RGB no-alpha so JPEG is safe), added `loading=lazy`, removed the PNG, single ref
+  updated. Build 21pp green, no dangling refs. Last standing image-payload monster gone.
+  | Next: verify live + IndexNow `/about` after deploy; then queue is empty (FR pending
+  user, 07-09 measurement). Idling after this.
 - 2026-07-03 (18) | Scheduled verify-live: deploy landed, `/contact` `/news` `/about`
   new descriptions live → IndexNow 200. Publish loop closed. Remaining autonomous queue
   is low-value only (activities.png WebP; general WebP downgraded) — holding to avoid
