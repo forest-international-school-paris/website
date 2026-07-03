@@ -58,6 +58,8 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 - ~~ASAP after next deploy: verify FR link live + IndexNow~~ DONE 2026-07-03 ~01:00:
   both `/admissions` + `/holiday-camps` show the "Voir cette page en français" link
   live; IndexNow HTTP 200 for both.
+- ASAP after next deploy: verify + IndexNow `/contact`, `/news`, `/about` (new
+  descriptions pushed 606ff3d, not live at push time).
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E
   upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
