@@ -28,25 +28,33 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   `srcset` (Lighthouse models ~2.6s further LCP saving on the homepage after the
   2026-07-02 recompression pass; consider Astro's `<Image>` component). Also
   `activities.png` (550KB PNG photo on `/about`) → JPEG/WebP.
-- **First camp-focused post** (rest of the P1 camp item; hub work done 2026-07-02 —
-  live-accuracy verified + mode E upgrade shipped). Bible #4 note: the hub owns
-  "summer camp paris english" head terms — the post must take a differentiated long-tail
-  angle. Best candidate: a camp-recap post with real photos AFTER the July sessions run
-  (weeks of 6/13/20 July) — real proof beats a generic pre-camp guide.
+- **First camp-focused post** — likely being handled by the user: uncommitted
+  `summer-school-paris-2026-english-camp.md` + committed articles (`222d876`). When the
+  user's WIP settles, review the live camp article against Bible #4 (must not cannibalize
+  the `/holiday-camps` hub on "summer camp paris english" — differentiate onto long-tail)
+  and §E rubric; run `lint_article.py`. A real-photo recap after the July sessions is
+  still the strongest future angle.
 - Money pages: camps + programs + admissions/tuition descriptions done (2026-07-02).
   Remaining low-priority description candidates for the next pillar deep-audit:
   `about.astro`, `team.astro`, `contact.astro` (70 chars), `/news` index (62 chars).
 
 ## In progress (WIP)
 
-- **Nav redesign (user's uncommitted local edit to `src/components/Navigation.astro`,
-  found 2026-07-03):** merges About+Programs into a "School" mega-menu, promotes Holiday
-  Camps to top-level, moves Campus Rental into a "More" dropdown. Builds clean, all 11
-  link targets exist, no orphans. Same uncommitted set also adds `@lucide/astro` to
-  package.json/lock (icon lib, presumably for this UI). LEFT UNCOMMITTED on purpose —
-  substantial UI, user away when asked whether it's final. Do NOT auto-commit; ask the
-  user before shipping. (Untracked `.agents/`, `.impeccable/`, `PRODUCT.md` = user's
-  other work, left alone.)
+- **User is actively building content (2026-07-03) — loop is HANDS-OFF the working
+  tree.** Nav redesign SHIPPED by user (`292a9bc`); also pushed: SEO news articles
+  (`222d876`), MasterClass buttons (`c8ec8f7`). On top of that, large UNCOMMITTED WIP
+  is present: new EN article `english-school-paris-pre-elementary-primary.md`, edits to
+  `international-school-paris-visit-checklist.md` + `summer-school-paris-2026-english-camp.md`,
+  a new `ArticleTableEnhancer.astro`, and `lint_article.py` / `content.config.ts` /
+  `global.css` changes. The loop must NOT commit, build-commit, or run autonomous
+  content units while this is in flight (would collide with the user's edits).
+- **🚩 FRENCH RELAUNCH IN PROGRESS — RED LINE, needs explicit user sign-off.** Untracked
+  `src/content/blog/fr/` (French blog posts) + `src/pages/fr/news/` (French news routes)
+  go beyond the two approved FR landing pages. Bible §7 + the FR "User decisions" item:
+  full bilingual relaunch is NOT approved and the loop never publishes FR content
+  autonomously. The user appears to be driving this themselves (fine) — but confirm it's
+  the intended direction, and the loop will not commit/IndexNow any FR content until the
+  "French relaunch" decision is explicitly flipped to approved in this file.
 
 ## Scheduled
 
@@ -140,6 +148,14 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Iteration log
 
+- 2026-07-03 (15) | Loop woke to a busy tree: user shipped nav redesign (`292a9bc`),
+  SEO articles (`222d876`), MasterClass buttons (`c8ec8f7`) — all on origin, in sync.
+  Large uncommitted user WIP in flight (new EN article, FR blog + FR news routes,
+  ArticleTableEnhancer, lint/config edits). HELD all autonomous work to avoid colliding
+  with the active session; recorded WIP + 🚩FR-relaunch red-line flag; committed only
+  this state file. Nothing due today (next: 07-09 measure, 07-11 camps). | Next: once
+  user's WIP is committed/settled, review new articles (Bible #4 anti-cannibalization +
+  §E + lint) and confirm FR-relaunch direction before any FR indexing.
 - 2026-07-03 (14) | FR-link deploy landed → verified live on both counterparts +
   IndexNow 200. Found user's uncommitted local work: shipped the confirmed camp-age fix
   (homepage promo 2-14→2-12, matching canonical `/holiday-camps`; live still showed the
