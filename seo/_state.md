@@ -154,8 +154,9 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 - 2026-07-03 (19) | Optimized `activities.png` on `/about`: 550KB→86KB JPEG (−84%,
   RGB no-alpha so JPEG is safe), added `loading=lazy`, removed the PNG, single ref
   updated. Build 21pp green, no dangling refs. Last standing image-payload monster gone.
-  | Next: verify live + IndexNow `/about` after deploy; then queue is empty (FR pending
-  user, 07-09 measurement). Idling after this.
+  | Verify-live DONE ~05:26: activities.jpg 200, old .png 404, IndexNow 200. Autonomous
+  queue now EMPTY (all image + description P1s cleared). Next work is user-gated (FR) or
+  dated (07-09 measure, 07-11 camps). Loop stopping frequent polling per pacing rule.
 - 2026-07-03 (18) | Scheduled verify-live: deploy landed, `/contact` `/news` `/about`
   new descriptions live → IndexNow 200. Publish loop closed. Remaining autonomous queue
   is low-value only (activities.png WebP; general WebP downgraded) — holding to avoid
