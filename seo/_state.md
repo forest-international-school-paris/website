@@ -58,8 +58,8 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 - ~~ASAP after next deploy: verify FR link live + IndexNow~~ DONE 2026-07-03 ~01:00:
   both `/admissions` + `/holiday-camps` show the "Voir cette page en français" link
   live; IndexNow HTTP 200 for both.
-- ASAP after next deploy: verify + IndexNow `/contact`, `/news`, `/about` (new
-  descriptions pushed 606ff3d, not live at push time).
+- ~~verify + IndexNow `/contact`, `/news`, `/about` descriptions~~ DONE 2026-07-03
+  ~03:50: all 3 live, IndexNow HTTP 200.
 - 2026-07-09: weekly measurement run (PostHog + GSC; first deltas vs the 2026-07-02
   baseline). Watch `/holiday-camps` position (16.2 at baseline) after the mode E
   upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
@@ -149,6 +149,11 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
+- 2026-07-03 (18) | Scheduled verify-live: deploy landed, `/contact` `/news` `/about`
+  new descriptions live → IndexNow 200. Publish loop closed. Remaining autonomous queue
+  is low-value only (activities.png WebP; general WebP downgraded) — holding to avoid
+  over-churning the user's active design project. | Next: FR decision (user), 07-09
+  measurement, 07-11 camps. Idling.
 - 2026-07-03 (17) | Idle queue (FR pending user, nothing due till 07-09) → took two P1
   items. (a) Re-measured the WebP P1: post-recompression win is modest (hero −36%, others
   18-21%, children-diversity worse) → downgraded to LOW, best via Astro <Image> in the
