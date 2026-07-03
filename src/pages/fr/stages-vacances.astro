@@ -1,5 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import {
+  ArrowRight,
+  BusFront,
+  CalendarDays,
+  Clock,
+  Euro,
+  Flower2,
+  Leaf,
+  Snowflake,
+  SunMedium,
+  Utensils,
+} from '@lucide/astro';
 
 const alternates = [
   { hreflang: 'en', href: '/holiday-camps' },
@@ -7,169 +19,534 @@ const alternates = [
   { hreflang: 'x-default', href: '/holiday-camps' },
 ];
 
-const registerCampUrl = 'https://forms.gle/6y8k9xULoLzSCt7n7';
-const registerSummerUrl = 'https://forms.gle/5JfDd3U13ZTYMvK76';
+const masterClassRegisterUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSenMtdBQPV1w-LJjl6SLFV07K6GGkGf-lx760_lxrqfrFMrEA/viewform';
+const bookVisitUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
+const campRegisterUrl = 'https://forms.gle/6y8k9xULoLzSCt7n7';
+
+const campCards = [
+  {
+    key: 'autumn',
+    season: 'Automne',
+    title: 'Stage de la Toussaint',
+    icon: Leaf,
+    registerUrl: campRegisterUrl,
+    description: 'Une semaine d\'automne dynamique avec aventures dans la nature, ateliers créatifs et exploration en plein air.',
+    facts: [
+      { label: 'Dates', value: '26 - 30 octobre 2026', icon: CalendarDays },
+      { label: 'Horaires', value: 'Tous les jours 10h00 - 16h00', icon: Clock },
+      { label: 'Tarif', value: '450 €/semaine', icon: Euro },
+      { label: 'Repas', value: '40 €/semaine, collations incluses', icon: Utensils },
+    ],
+  },
+  {
+    key: 'winter',
+    season: 'Hiver',
+    title: 'Stage d\'hiver de février',
+    icon: Snowflake,
+    registerUrl: campRegisterUrl,
+    description: 'Une semaine pour sortir de l\'hiver avec apprentissages dans la nature, projets créatifs et activités en plein air.',
+    facts: [
+      { label: 'Dates', value: '8 - 12 février 2027', icon: CalendarDays },
+      { label: 'Horaires', value: 'Tous les jours 10h00 - 16h00', icon: Clock },
+      { label: 'Tarif', value: '450 €/semaine', icon: Euro },
+      { label: 'Repas', value: '40 €/semaine, collations incluses', icon: Utensils },
+    ],
+  },
+  {
+    key: 'spring',
+    season: 'Printemps',
+    title: 'Stage de printemps',
+    icon: Flower2,
+    registerUrl: campRegisterUrl,
+    description: 'Un stage de vacances pour célébrer le printemps avec fleurs, activités ludiques et beaucoup de nature.',
+    facts: [
+      { label: 'Dates', value: '5 - 9 avril 2027', icon: CalendarDays },
+      { label: 'Horaires', value: 'Tous les jours 10h00 - 16h00', icon: Clock },
+      { label: 'Tarif', value: '450 €/semaine', icon: Euro },
+      { label: 'Repas', value: '40 €/semaine, collations incluses', icon: Utensils },
+    ],
+  },
+  {
+    key: 'summer-2026',
+    season: 'Été 2026',
+    title: 'Stage d\'été 2026',
+    icon: SunMedium,
+    registerUrl: 'https://forms.gle/Xxp1hi3qc8AdtAsCA',
+    description: 'Notre Summer Camp propose un programme riche d\'activités en plein air : piscine, exploration de la forêt et du verger, ateliers créatifs, sciences, cuisine, pâtisserie et jeux de groupe.',
+    sessions: [
+      '6 - 10 juillet 2026',
+      '13 - 17 juillet 2026 (sauf le 14)',
+      '20 - 24 juillet 2026',
+    ],
+    facts: [
+      { label: 'Horaires', value: 'Tous les jours 10h00 - 17h00', icon: Clock },
+      { label: 'Tarif', value: '425 €/semaine', icon: Euro },
+      { label: 'Repas', value: '40 €/semaine, collations incluses', icon: Utensils },
+      { label: 'Accueil anticipé / départ tardif', value: '9h30 et 17h30 — 40 €/jour', icon: BusFront },
+    ],
+  },
+  {
+    key: 'summer-2027',
+    season: 'Été 2027',
+    title: 'Stage d\'été 2027',
+    icon: SunMedium,
+    registerUrl: 'https://forms.gle/5JfDd3U13ZTYMvK76',
+    description: 'Notre Summer Camp propose un programme riche d\'activités en plein air, avec baignade dans la piscine et temps calme dans la forêt à l\'ombre des arbres.',
+    sessions: [
+      '5 - 9 juillet 2027',
+      '12 - 16 juillet 2027',
+      '19 - 23 juillet 2027',
+    ],
+    facts: [
+      { label: 'Horaires', value: 'Tous les jours 10h00 - 17h00', icon: Clock },
+      { label: 'Tarif', value: '480 €/semaine', icon: Euro },
+      { label: 'Repas', value: '40 €/semaine, collations incluses', icon: Utensils },
+      { label: 'Accueil anticipé / départ tardif', value: '9h00 et 18h00 — 40 €/jour', icon: BusFront },
+    ],
+  },
+];
 ---
 
 <Layout
-  title="Stages de vacances en anglais 2-12 ans – Ouest de Paris"
-  description="Stages de vacances en immersion anglaise à Mareil-Marly (78), près de Saint-Germain-en-Laye : Toussaint, hiver, printemps et été. Enfants de 2 à 12 ans."
+  title="Stages de vacances en anglais près de Paris"
+  description="Stages de vacances en anglais pour les enfants de 2 à 12 ans sur notre campus dans la nature près de Saint-Germain-en-Laye, à l'ouest de Paris."
   image="/images/summer-camp.jpg"
   lang="fr"
   alternates={alternates}
   showPopup={false}
 >
-  <!-- Hero -->
-  <section class="relative min-h-[50vh] flex items-center">
+  <!-- Hero Section with Image -->
+  <section class="relative min-h-[60vh] flex items-center">
     <div class="absolute inset-0">
-      <img src="/images/summer-camp.jpg" alt="Stage de vacances en anglais à la Forest International School Paris" class="w-full h-full object-cover" />
+      <img
+        src="/images/summer-camp.jpg"
+        alt="Stages de vacances à la Forest International School Paris à Mareil-Marly"
+        class="w-full h-full object-cover"
+      />
       <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/90 to-[#2d5a3d]/70"></div>
     </div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="max-w-2xl">
-        <span class="inline-block px-4 py-2 bg-[#c9a962] text-[#1e3d29] rounded-full font-bold text-sm mb-6">OUVERT À TOUS LES ENFANTS</span>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Stages de vacances en anglais</h1>
-        <p class="text-xl text-white/90 mb-4">
-          Pendant les vacances scolaires, la Forest International School Paris organise des stages en
-          immersion anglaise pour les enfants de 2 à 12 ans, sur son campus au cœur de la nature à
-          Mareil-Marly, près de Saint-Germain-en-Laye. Ouverts à tous, même aux enfants non
-          scolarisés à l'école.
+        <div class="mb-4">
+          <a href="/holiday-camps" hreflang="en" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/25 hover:bg-white/20 transition-colors">
+            View this page in English
+          </a>
+        </div>
+        <span class="inline-block px-4 py-2 bg-[#c9a962] text-[#1e3d29] rounded-full font-bold text-sm mb-6">
+          OUVERT À TOUS LES ENFANTS
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Stages de vacances en anglais, à l'ouest de Paris
+        </h1>
+        <p class="text-xl text-white/90 mb-8">
+          Éveiller la curiosité, la créativité et le lien avec la nature pendant les vacances scolaires. Des aventures joyeuses pour les enfants de 2 à 12 ans.
         </p>
-        <a href={registerCampUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
+        <p class="text-sm text-white/70 mb-8">
+          Stages en anglais sur notre campus forestier à Mareil-Marly, près de Saint-Germain-en-Laye — ouverts à tous les enfants de 2 à 12 ans, qu'ils soient ou non scolarisés à Forest pendant l'année.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#camps" class="inline-flex items-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
+            Voir les stages
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full border-2 border-white/30 hover:bg-white/20 transition-colors">
+            Nous contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wednesday MasterClasses Banner -->
+  <section id="masterclasses" class="bg-[#c9a962] py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-4 py-1.5 bg-[#1e3d29] text-white rounded-full font-semibold text-sm mb-4">Chaque mercredi</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-3">Wednesday MasterClasses</h2>
+      <p class="text-[#1e3d29]/70 mb-4 max-w-2xl mx-auto">
+        Des ateliers d'enrichissement en anglais chaque mercredi, conçus pour stimuler la créativité, la curiosité et le plaisir d'apprendre en dehors de la classe.
+      </p>
+      <p class="text-[#1e3d29]/80 font-semibold mb-6">
+        Early Years &amp; Lower Primary — <span class="underline">liste d'attente uniquement</span>
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3">
+        <a href={masterClassRegisterUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 bg-[#1e3d29] text-white font-bold rounded-full hover:bg-[#2d5a3d] transition-colors shadow-lg">
           S'inscrire
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href={bookVisitUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 bg-white text-[#1e3d29] font-bold rounded-full border-2 border-[#1e3d29]/15 hover:bg-[#faf8f5] transition-colors shadow-sm">
+          Réserver une visite
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Dates & tarifs -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Dates et tarifs 2026-2027</h2>
-        <p class="text-gray-600 text-lg mt-4">Journées de 10h à 16h pendant les petites vacances, de 10h à 17h l'été. Repas et collations : 40 € par semaine.</p>
+  <!-- Holiday Camps -->
+  <section id="camps" class="py-16 lg:py-24 bg-[#faf8f5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Programmes 2026/27</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Dates, horaires et tarifs des stages</h2>
       </div>
-      <div class="overflow-x-auto bg-white rounded-2xl shadow-lg">
-        <table class="w-full text-left text-sm md:text-base">
-          <thead>
-            <tr class="border-b border-gray-200 text-[#1e3d29]">
-              <th class="px-6 py-4 font-bold">Stage</th>
-              <th class="px-6 py-4 font-bold">Dates</th>
-              <th class="px-6 py-4 font-bold">Horaires</th>
-              <th class="px-6 py-4 font-bold">Tarif</th>
-            </tr>
-          </thead>
-          <tbody class="text-gray-600">
-            <tr class="border-b border-gray-100">
-              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Toussaint 2026</td>
-              <td class="px-6 py-4">26 – 30 octobre 2026</td>
-              <td class="px-6 py-4">10h – 16h</td>
-              <td class="px-6 py-4">450 €/semaine</td>
-            </tr>
-            <tr class="border-b border-gray-100">
-              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Hiver 2027</td>
-              <td class="px-6 py-4">8 – 12 février 2027</td>
-              <td class="px-6 py-4">10h – 16h</td>
-              <td class="px-6 py-4">450 €/semaine</td>
-            </tr>
-            <tr class="border-b border-gray-100">
-              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Printemps 2027</td>
-              <td class="px-6 py-4">5 – 9 avril 2027</td>
-              <td class="px-6 py-4">10h – 16h</td>
-              <td class="px-6 py-4">450 €/semaine</td>
-            </tr>
-            <tr class="border-b border-gray-100">
-              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Été 2026</td>
-              <td class="px-6 py-4">6 – 10 juillet · 13 – 17 juillet (sauf le 14) · 20 – 24 juillet 2026</td>
-              <td class="px-6 py-4">10h – 17h</td>
-              <td class="px-6 py-4">425 €/semaine</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-semibold text-[#1e3d29]">Été 2027</td>
-              <td class="px-6 py-4">5 – 9 juillet · 12 – 16 juillet · 19 – 23 juillet 2027</td>
-              <td class="px-6 py-4">10h – 17h</td>
-              <td class="px-6 py-4">480 €/semaine</td>
-            </tr>
-          </tbody>
-        </table>
+
+      <div class="camp-list" aria-label="Programmes de stages de vacances">
+        {campCards.map((camp) => {
+          const SeasonIcon = camp.icon;
+
+          return (
+            <article class={`camp-card camp-card--${camp.key}`}>
+              <div class="camp-card__content">
+                <div class="camp-card__header">
+                  <div class="camp-card__title-group">
+                    <div class="camp-card__season">
+                      <span class="camp-card__mark" aria-hidden="true">
+                        <SeasonIcon size={22} strokeWidth={2.2} />
+                      </span>
+                      <span>{camp.season}</span>
+                    </div>
+                    <h3>{camp.title}</h3>
+                  </div>
+
+                  <a
+                    href={camp.registerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="camp-card__cta"
+                    aria-label={`S'inscrire au ${camp.title}`}
+                  >
+                    S'inscrire
+                    <ArrowRight size={17} strokeWidth={2.4} aria-hidden="true" />
+                  </a>
+                </div>
+                <p class="camp-card__description">{camp.description}</p>
+
+                {camp.sessions && (
+                  <div class="camp-card__sessions">
+                    <p>Semaines proposées</p>
+                    <div>
+                      {camp.sessions.map((session) => (
+                        <span>{session}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <dl class="camp-card__facts">
+                  {camp.facts.map((fact) => {
+                    const FactIcon = fact.icon;
+
+                    return (
+                      <div class="camp-fact">
+                        <dt>
+                          <FactIcon size={16} strokeWidth={2.2} aria-hidden="true" />
+                          <span>{fact.label}</span>
+                        </dt>
+                        <dd>{fact.value}</dd>
+                      </div>
+                    );
+                  })}
+                </dl>
+
+                {camp.key === 'summer-2026' && (
+                  <p class="camp-card__note">
+                    Des cours particuliers de natation et un transport depuis Saint-Germain-en-Laye/Le Pecq et Paris 16 sont disponibles en option, selon l'ordre d'inscription.
+                    {' '}
+                    <a href="https://forms.gle/ZZJ8tFxyJnEQXpEf6" target="_blank" rel="noopener noreferrer">Demander la natation ou le transport</a>.
+                    {' '}
+                    Lire aussi notre
+                    {' '}
+                    <a href="/news/summer-school-paris-2026-english-camp">article Summer School Paris 2026</a>.
+                  </p>
+                )}
+              </div>
+            </article>
+          );
+        })}
       </div>
-      <p class="text-gray-500 text-sm mt-4 text-center">
-        L'été, accueil anticipé dès 9h et départ tardif jusqu'à 18h : 40 € par jour. Inscription été :
-        <a href={registerSummerUrl} target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline">formulaire dédié</a>.
-      </p>
     </div>
   </section>
 
-  <!-- Ce que font les enfants -->
-  <section class="py-16 lg:py-24 bg-white">
+  <!-- Beyond the holidays -->
+  <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">Une semaine type</h2>
-      <p class="text-gray-600 text-lg leading-relaxed mb-6">
-        Aventures dans la forêt, ateliers créatifs, exploration en plein air — et l'été, baignade
-        dans la piscine de l'école et temps calme à l'ombre des arbres. Toutes les activités se
-        déroulent en anglais, encadrées par l'équipe de l'école.
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-4">Au-delà des vacances</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+        Si votre enfant aime les stages, la vie à l'école suit le même esprit — dehors, en anglais, tous les jours. Découvrez
+        <a href="/early-years" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Early Years (2-5 ans)</a>,
+        <a href="/primary" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Primary School (6-11 ans)</a> et
+        <a href="/middle-school" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Middle School (11-14 ans)</a>,
+        consultez les <a href="/tuition" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">frais de scolarité</a>,
+        ou visitez la page <a href="/fr/admissions" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">admissions</a> — les candidatures sont ouvertes toute l'année.
       </p>
-      <p class="text-gray-600">
-        Le mercredi en période scolaire, l'école propose aussi les « Wednesday MasterClasses »,
-        ateliers d'anglais ludiques (maternelle et début de primaire : liste d'attente uniquement) —
-        détails sur la <a href="/holiday-camps" class="text-[#2d5a3d] underline">page anglaise des stages</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Questions fréquentes</h2>
-      </div>
-      <div class="space-y-4">
-        <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-bold text-[#1e3d29] mb-2">Mon enfant doit-il déjà parler anglais ?</h3>
-          <p class="text-gray-600">Les stages sont ouverts à tous les enfants de 2 à 12 ans. Les activités se déroulent en anglais : c'est justement l'occasion de progresser en s'amusant. Pour une situation particulière, <a href="/contact" class="text-[#2d5a3d] underline">contactez l'équipe</a>.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-bold text-[#1e3d29] mb-2">Faut-il être élève de l'école ?</h3>
-          <p class="text-gray-600">Non. Les stages sont ouverts à tous les enfants, scolarisés ou non à la Forest International School.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-bold text-[#1e3d29] mb-2">Les repas sont-ils prévus ?</h3>
-          <p class="text-gray-600">Oui, en option : 40 € par semaine, collations incluses.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-bold text-[#1e3d29] mb-2">Comment s'inscrire ?</h3>
-          <p class="text-gray-600">Via le <a href={registerCampUrl} target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline">formulaire d'inscription en ligne</a> (Toussaint, hiver, printemps) ou le <a href={registerSummerUrl} target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] underline">formulaire été</a>.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-bold text-[#1e3d29] mb-2">Où se déroulent les stages ?</h3>
-          <p class="text-gray-600">Sur le campus de l'école : 28 Rue de Tour d'Echelle, 78750 Mareil-Marly — dans l'Ouest parisien, près de Saint-Germain-en-Laye, Marly-le-Roi et Le Vésinet.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-bold text-[#1e3d29] mb-2">L'école accueille-t-elle aussi des élèves à l'année ?</h3>
-          <p class="text-gray-600">Oui, de 2 à 14 ans, de la maternelle au collège : voir la page <a href="/fr/admissions" class="text-[#2d5a3d] underline">admissions en français</a>.</p>
-        </div>
-      </div>
-      <p class="text-center text-gray-500 text-sm mt-10">
-        Le site principal de l'école est en anglais — <a href="/holiday-camps" class="text-[#2d5a3d] underline">voir cette page en anglais</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Réservez la semaine de votre enfant</h2>
-      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-        Les groupes sont limités : inscrivez votre enfant en ligne ou posez vos questions à l'équipe, en français ou en anglais.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href={registerCampUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
-          S'inscrire à un stage
-        </a>
-        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-bold rounded-full border-2 border-white hover:bg-white hover:text-[#2d5a3d] transition-colors">
-          Contacter l'équipe
-        </a>
-      </div>
+      <a href="/fr/admissions" class="inline-flex items-center px-8 py-4 bg-[#2d5a3d] text-white font-bold rounded-full hover:bg-[#1e3d29] transition-colors shadow-lg">
+        Découvrir les admissions
+      </a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .camp-list {
+    display: grid;
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+  }
+
+  .camp-card {
+    --camp-accent: #2d5a3d;
+    --camp-tint: #f4f9f5;
+    --camp-chip: rgba(45, 90, 61, 0.1);
+    --camp-line: rgba(45, 90, 61, 0.16);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--camp-line);
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, var(--camp-tint) 0%, #ffffff 46%, #ffffff 100%);
+    box-shadow: 0 4px 8px rgba(30, 61, 41, 0.08);
+  }
+
+  .camp-card--autumn {
+    --camp-accent: #b85f2c;
+    --camp-tint: #fff3ea;
+    --camp-chip: rgba(184, 95, 44, 0.11);
+    --camp-line: rgba(184, 95, 44, 0.18);
+  }
+
+  .camp-card--winter {
+    --camp-accent: #2d719f;
+    --camp-tint: #eef8ff;
+    --camp-chip: rgba(45, 113, 159, 0.11);
+    --camp-line: rgba(45, 113, 159, 0.18);
+  }
+
+  .camp-card--spring {
+    --camp-accent: #4f8737;
+    --camp-tint: #f1faec;
+    --camp-chip: rgba(79, 135, 55, 0.12);
+    --camp-line: rgba(79, 135, 55, 0.18);
+  }
+
+  .camp-card--summer-2026,
+  .camp-card--summer-2027 {
+    --camp-accent: #9b7a24;
+    --camp-tint: #fff8dc;
+    --camp-chip: rgba(201, 169, 98, 0.16);
+    --camp-line: rgba(155, 122, 36, 0.2);
+  }
+
+  .camp-card__content {
+    padding: clamp(1.35rem, 3vw, 2.35rem);
+  }
+
+  .camp-card__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .camp-card__title-group {
+    max-width: 76ch;
+  }
+
+  .camp-card__season {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--camp-accent);
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
+  .camp-card__mark {
+    display: inline-flex;
+    width: 2.7rem;
+    height: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--camp-accent);
+    color: #ffffff;
+  }
+
+  .camp-card h3 {
+    margin-top: 0.85rem;
+    color: #1e3d29;
+    font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .camp-card__description {
+    max-width: 76ch;
+    margin-top: 1rem;
+    color: #33483b;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+
+  .camp-card__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 2.85rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: #2d5a3d;
+    color: #ffffff;
+    font-size: 0.94rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .camp-card__cta:hover {
+    background: #1e3d29;
+  }
+
+  .camp-card__sessions {
+    margin-top: 1.5rem;
+  }
+
+  .camp-card__sessions p {
+    color: #516356;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+  }
+
+  .camp-card__sessions div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .camp-card__sessions span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--camp-line);
+    border-radius: 999px;
+    background: var(--camp-chip);
+    color: #1e3d29;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .camp-card__facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1rem, 2.2vw, 1.5rem);
+    margin-top: 1.5rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--camp-line);
+  }
+
+  .camp-fact dt {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #526558;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .camp-fact dt svg {
+    color: var(--camp-accent);
+    flex: 0 0 auto;
+  }
+
+  .camp-fact dd {
+    margin-top: 0.5rem;
+    color: #173723;
+    font-size: 0.96rem;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  .camp-card__note {
+    margin-top: 1.25rem;
+    color: #3b4d40;
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .camp-card__note a {
+    color: #2d5a3d;
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.16em;
+  }
+
+  .camp-card__note a:hover {
+    color: #1e3d29;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .camp-card,
+    .camp-card__mark,
+    .camp-card__cta,
+    .camp-card__cta svg {
+      transition:
+        transform 220ms cubic-bezier(0.25, 1, 0.5, 1),
+        background-color 180ms ease,
+        box-shadow 220ms cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .camp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(30, 61, 41, 0.1);
+    }
+
+    .camp-card:hover .camp-card__mark {
+      transform: rotate(-4deg) scale(1.03);
+    }
+
+    .camp-card__cta:hover svg {
+      transform: translateX(3px);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .camp-card__header {
+      grid-template-columns: 1fr;
+    }
+
+    .camp-card__cta {
+      justify-self: start;
+    }
+
+    .camp-card__facts {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 560px) {
+    .camp-card__content {
+      padding: 1.15rem;
+    }
+
+    .camp-card__mark {
+      width: 2.45rem;
+      height: 2.45rem;
+      border-radius: 12px;
+    }
+
+    .camp-card__facts {
+      grid-template-columns: 1fr;
+      gap: 0.95rem;
+    }
+
+    .camp-card__cta {
+      width: 100%;
+    }
+  }
+</style>
