@@ -24,10 +24,12 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## Needs fixing (P1)
 
-- **Modern image delivery:** convert hero/gallery images to WebP/AVIF with responsive
-  `srcset` (Lighthouse models ~2.6s further LCP saving on the homepage after the
-  2026-07-02 recompression pass; consider Astro's `<Image>` component). Also
-  `activities.png` (550KB PNG photo on `/about`) → JPEG/WebP.
+- **Modern image delivery (re-measured 2026-07-03 — now LOW priority):** after the
+  07-02 JPEG recompression the remaining WebP win is modest (hero-banner −36% 198→129KB,
+  gallery-2 −18%, campus −21%; children-diversity is −4% i.e. WebP is LARGER, skip it).
+  Not worth bolting `<picture>` onto the homepage the user is actively redesigning —
+  best done via Astro's `<Image>`/`<Picture>` component as part of their UI work (auto
+  WebP+srcset). `activities.png` (550KB PNG on `/about`) → still a clean single-file win.
 - ~~First camp-focused post~~ DONE by user + REVIEWED 2026-07-03: `summer-school-paris-
   2026-english-camp.md` live, lint-clean, differentiated (experiential day-in-the-life,
   links back to `/holiday-camps` hub — not cannibalizing). A real-photo recap after the
@@ -38,9 +40,10 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   /primary, /admissions, /tuition — supports, doesn't compete). But if GSC shows it
   splitting impressions with `/early-years` or `/primary` on transactional queries,
   differentiate its title.
-- Money pages: camps + programs + admissions/tuition descriptions done (2026-07-02).
-  Remaining low-priority description candidates for the next pillar deep-audit:
-  `about.astro`, `team.astro`, `contact.astro` (70 chars), `/news` index (62 chars).
+- ~~Thin descriptions~~ DONE 2026-07-03: `/contact` (70→157), `/news` (63→147),
+  `/about` (101→159) rewritten to 110-160 with canonical positioning. (`/team` was
+  already fine at 136 — earlier note was wrong.) All money/program page descriptions
+  now within range.
 
 ## In progress (WIP)
 
@@ -144,6 +147,13 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
+- 2026-07-03 (17) | Idle queue (FR pending user, nothing due till 07-09) → took two P1
+  items. (a) Re-measured the WebP P1: post-recompression win is modest (hero −36%, others
+  18-21%, children-diversity worse) → downgraded to LOW, best via Astro <Image> in the
+  user's UI work; cleaned up test files. (b) Fixed thin descriptions: `/contact` 70→157,
+  `/news` 63→147, `/about` 101→159 (canonical positioning, no facts, descriptions-only
+  diff, build 21pp green). | Next: verify live + IndexNow the 3 pages after deploy; FR
+  still pending; 07-09 measurement.
 - 2026-07-03 (16) | User's content wave settled (committed `706e1bd`+`d4c2d82`, tree
   clean, live). REVIEWED it: all 4 EN posts lint-clean (0/0), build 21 pages, all in
   sitemap, hreflang correct (new EN pre-elementary post ↔ FR twin reciprocal), none
