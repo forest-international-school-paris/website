@@ -79,8 +79,14 @@ def site_routes():
         route = "/" + rel[:-len(".astro")]
         route = re.sub(r"/index$", "", route) or "/"
         routes.add(route)
-    for f in glob.glob(os.path.join(REPO, "src/content/blog/en/*.md")):
-        routes.add("/news/" + os.path.basename(f)[:-3])
+    for f in glob.glob(os.path.join(REPO, "src/content/blog/**/*.md"), recursive=True):
+        rel = os.path.relpath(f, os.path.join(REPO, "src/content/blog"))
+        parts = rel.split(os.sep)
+        slug = os.path.basename(f)[:-3]
+        if parts[0] == "fr":
+            routes.add("/fr/news/" + slug)
+        else:
+            routes.add("/news/" + slug)
     return routes
 
 
@@ -118,8 +124,8 @@ def lint_file(path, routes):
     for key in ("title", "description", "date", "lang"):
         if not fm.get(key):
             L.err("fm_required", f"missing frontmatter field '{key}'")
-    if fm.get("lang") and fm["lang"] != "en":
-        L.err("fm_lang", f"lang must be 'en' (got {fm['lang']!r})")
+    if fm.get("lang") and fm["lang"] not in ("en", "fr"):
+        L.err("fm_lang", f"lang must be 'en' or 'fr' (got {fm['lang']!r})")
     ptype = fm.get("type", "news")
     if ptype not in WORD_FLOORS:
         L.err("fm_type", f"type must be guide|news (got {ptype!r})")

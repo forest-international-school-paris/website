@@ -9,7 +9,7 @@ const blog = defineCollection({
     date: z.coerce.date(),
     author: z.string().default('Forest International School'),
     image: z.string().optional(),
-    lang: z.literal('en'),
+    lang: z.enum(['en', 'fr']),
     // 'guide' = evergreen SEO piece, 'news' = announcement/recap — selects the lint
     // profile in .claude/skills/school-seo-content/references/article-checklist.md
     type: z.enum(['guide', 'news']).default('news'),

@@ -1,7 +1,7 @@
 ---
 title: "Summer School Paris 2026: English Camp"
 description: "Summer school Paris 2026: English-led forest camp in Mareil-Marly, with swimming, crafts, science, cooking and optional transport."
-date: 2026-07-03
+date: 2026-06-26
 author: "Forest International School"
 image: "/images/summer-camp.jpg"
 lang: "en"

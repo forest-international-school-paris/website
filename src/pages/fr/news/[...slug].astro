@@ -1,35 +1,41 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import ArticleTableEnhancer from '../../components/ArticleTableEnhancer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import ArticleTableEnhancer from '../../../components/ArticleTableEnhancer.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts
-    .filter(post => post.data.lang === 'en')
+    .filter(post => post.data.lang === 'fr')
     .map((post) => ({
-      params: { slug: post.id.replace('en/', '') },
+      params: { slug: post.id.replace('fr/', '') },
       props: { post },
     }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const slug = post.id.replace('en/', '');
+const slug = post.id.replace('fr/', '');
 const translations: Record<string, string> = {
-  'english-school-paris-pre-elementary-primary': '/fr/news/ecole-anglaise-paris-maternelle-primaire',
+  'ecole-anglaise-paris-maternelle-primaire': '/news/english-school-paris-pre-elementary-primary',
 };
 const alternates = translations[slug]
   ? [
-      { hreflang: 'en', href: `/news/${slug}` },
-      { hreflang: 'fr', href: translations[slug] },
-      { hreflang: 'x-default', href: `/news/${slug}` },
+      { hreflang: 'fr', href: `/fr/news/${slug}` },
+      { hreflang: 'en', href: translations[slug] },
+      { hreflang: 'x-default', href: translations[slug] },
     ]
   : [];
 ---
 
-<Layout title={post.data.title} description={post.data.description} image={post.data.image} alternates={alternates}>
-  <!-- Hero Section -->
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.image}
+  lang="fr"
+  alternates={alternates}
+  showPopup={false}
+>
   <section class="relative py-16 lg:py-24">
     {post.data.image && (
       <div class="absolute inset-0">
@@ -38,16 +44,16 @@ const alternates = translations[slug]
       </div>
     )}
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <a href="/news" class="inline-flex items-center text-[#c9a962] hover:text-white mb-6 transition-colors">
+      <a href="/fr/admissions" class="inline-flex items-center text-[#c9a962] hover:text-white mb-6 transition-colors">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
-        Back to News
+        Retour aux admissions
       </a>
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">{post.data.title}</h1>
       <div class="flex items-center justify-center gap-4 text-white/80">
         <time datetime={post.data.date.toISOString()}>
-          {post.data.date.toLocaleDateString('en-US', {
+          {post.data.date.toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -59,7 +65,6 @@ const alternates = translations[slug]
     </div>
   </section>
 
-  <!-- Article Content -->
   <section class="py-12 lg:py-16 bg-white">
     <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-green">
       <Content />
@@ -67,15 +72,14 @@ const alternates = translations[slug]
     <ArticleTableEnhancer />
   </section>
 
-  <!-- Share & Back -->
   <section class="py-12 bg-[#faf8f5]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <a href="/news" class="inline-flex items-center text-[#2d5a3d] font-semibold hover:text-[#1e3d29] transition-colors">
+        <a href="/fr/admissions" class="inline-flex items-center text-[#2d5a3d] font-semibold hover:text-[#1e3d29] transition-colors">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
           </svg>
-          Back to All News
+          Admissions
         </a>
         {post.data.tags && post.data.tags.length > 0 && (
           <div class="flex flex-wrap gap-2">

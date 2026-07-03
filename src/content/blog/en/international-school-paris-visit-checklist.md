@@ -1,7 +1,7 @@
 ---
 title: "International School Paris Visit Checklist"
 description: "What to ask when choosing an international school in Paris, with notes from our English-language campus in Mareil-Marly for ages 2-14."
-date: 2026-07-03
+date: 2026-06-19
 author: "Forest International School"
 image: "/images/campus.jpg"
 lang: "en"

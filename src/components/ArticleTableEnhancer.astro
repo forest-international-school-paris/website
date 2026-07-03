@@ -1,0 +1,22 @@
+<script is:inline>
+  const enhanceArticleTables = () => {
+    document.querySelectorAll('article.prose table').forEach((table) => {
+      if (table.parentElement?.classList.contains('article-table-scroll')) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'article-table-scroll';
+      wrapper.setAttribute('role', 'region');
+      wrapper.setAttribute('aria-label', 'Scrollable comparison table');
+      wrapper.tabIndex = 0;
+
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', enhanceArticleTables);
+  } else {
+    enhanceArticleTables();
+  }
+</script>

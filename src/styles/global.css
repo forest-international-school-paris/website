@@ -44,6 +44,112 @@
   }
 }
 
+/* Long-form article tables generated from Markdown need more room than body copy. */
+.article-table-scroll {
+  width: min(72rem, calc(100vw - 2rem));
+  margin: 2rem 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid rgba(45, 90, 61, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(30, 61, 41, 0.08);
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-table-scroll:focus-visible {
+  outline: 3px solid rgba(201, 169, 98, 0.75);
+  outline-offset: 4px;
+}
+
+.article-table-scroll table {
+  width: 100%;
+  min-width: 58rem;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.article-table-scroll th,
+.article-table-scroll td {
+  text-align: left;
+  vertical-align: top;
+  border-right: 1px solid rgba(45, 90, 61, 0.1);
+  border-bottom: 1px solid rgba(45, 90, 61, 0.12);
+}
+
+.article-table-scroll th {
+  padding: 1rem;
+  background: #eef6f0;
+  color: #1e3d29;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.article-table-scroll td {
+  padding: 1rem;
+  color: #2f3b35;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.article-table-scroll th:last-child,
+.article-table-scroll td:last-child {
+  border-right: 0;
+}
+
+.article-table-scroll tbody tr:nth-child(even) td {
+  background: #fbfaf7;
+}
+
+.article-table-scroll tbody tr:hover td {
+  background: #f3f8f4;
+}
+
+.article-table-scroll tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-table-scroll a {
+  color: #2d5a3d;
+  font-weight: 600;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+.article-table-scroll::-webkit-scrollbar {
+  height: 0.75rem;
+}
+
+.article-table-scroll::-webkit-scrollbar-track {
+  background: #f4f1eb;
+  border-radius: 999px;
+}
+
+.article-table-scroll::-webkit-scrollbar-thumb {
+  background: rgba(45, 90, 61, 0.42);
+  border: 3px solid #f4f1eb;
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .article-table-scroll {
+    width: calc(100vw - 1.5rem);
+    border-radius: 10px;
+  }
+
+  .article-table-scroll table {
+    min-width: 52rem;
+  }
+
+  .article-table-scroll th,
+  .article-table-scroll td {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

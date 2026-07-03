@@ -1,5 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {
+  ArrowRight,
+  BusFront,
+  CalendarDays,
+  Clock,
+  Euro,
+  Flower2,
+  Leaf,
+  Snowflake,
+  SunMedium,
+  Utensils,
+} from '@lucide/astro';
 
 const alternates = [
   { hreflang: 'en', href: '/holiday-camps' },
@@ -9,6 +21,90 @@ const alternates = [
 
 const masterClassRegisterUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSenMtdBQPV1w-LJjl6SLFV07K6GGkGf-lx760_lxrqfrFMrEA/viewform';
 const bookVisitUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
+const campRegisterUrl = 'https://forms.gle/6y8k9xULoLzSCt7n7';
+
+const campCards = [
+  {
+    key: 'autumn',
+    season: 'Autumn',
+    title: 'October Toussaint Camp',
+    icon: Leaf,
+    registerUrl: campRegisterUrl,
+    description: 'An action-packed autumn week of nature adventures, creative workshops, and outdoor exploration.',
+    facts: [
+      { label: 'Dates', value: '26th – 30th October 2026', icon: CalendarDays },
+      { label: 'Hours', value: 'Daily 10:00 am – 4:00 pm', icon: Clock },
+      { label: 'Rate', value: '450 €/week', icon: Euro },
+      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
+    ],
+  },
+  {
+    key: 'winter',
+    season: 'Winter',
+    title: 'February Winter Camp',
+    icon: Snowflake,
+    registerUrl: campRegisterUrl,
+    description: 'Beat the winter blues with a week of nature-based learning, creative projects, and fun outdoor activities.',
+    facts: [
+      { label: 'Dates', value: '8th – 12th February 2027', icon: CalendarDays },
+      { label: 'Hours', value: 'Daily 10:00 am – 4:00 pm', icon: Clock },
+      { label: 'Rate', value: '450 €/week', icon: Euro },
+      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
+    ],
+  },
+  {
+    key: 'spring',
+    season: 'Spring',
+    title: 'Spring Holiday Camp',
+    icon: Flower2,
+    registerUrl: campRegisterUrl,
+    description: 'Celebrate spring with our holiday camp full of flowers, fun activities, and lots of nature!',
+    facts: [
+      { label: 'Dates', value: '5th – 9th April 2027', icon: CalendarDays },
+      { label: 'Hours', value: 'Daily 10:00 am – 4:00 pm', icon: Clock },
+      { label: 'Rate', value: '450 €/week', icon: Euro },
+      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
+    ],
+  },
+  {
+    key: 'summer-2026',
+    season: 'Summer 2026',
+    title: 'Holiday Summer Camp 2026',
+    icon: SunMedium,
+    registerUrl: 'https://forms.gle/Xxp1hi3qc8AdtAsCA',
+    description: 'Our Summer Camp offers a rich mix of outdoor activities, including splashy fun in our swimming pool, forest and orchard exploration, creative workshops, science, cooking, baking and group games.',
+    sessions: [
+      '6th – 10th July 2026',
+      '13th – 17th July 2026 (excl. 14th)',
+      '20th – 24th July 2026',
+    ],
+    facts: [
+      { label: 'Hours', value: 'Daily 10:00 am – 5:00 pm', icon: Clock },
+      { label: 'Rate', value: '425 €/week', icon: Euro },
+      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
+      { label: 'Early Drop-off / Late Pick-up', value: '9:30 am & 5:30 pm — 40 €/day', icon: BusFront },
+    ],
+  },
+  {
+    key: 'summer-2027',
+    season: 'Summer 2027',
+    title: 'Holiday Summer Camp 2027',
+    icon: SunMedium,
+    registerUrl: 'https://forms.gle/5JfDd3U13ZTYMvK76',
+    description: 'Our Summer Camp offers a rich mix of outdoor activities, including splashy fun in our swimming pool and chill-out forest time in the shadows of its trees.',
+    sessions: [
+      '5th – 9th July 2027',
+      '12th – 16th July 2027',
+      '19th – 23rd July 2027',
+    ],
+    facts: [
+      { label: 'Hours', value: 'Daily 10:00 am – 5:00 pm', icon: Clock },
+      { label: 'Rate', value: '480 €/week', icon: Euro },
+      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
+      { label: 'Early Drop-off / Late Pick-up', value: '9:00 am & 6:00 pm — 40 €/day', icon: BusFront },
+    ],
+  },
+];
 ---
 
 <Layout title="Holiday Camps in English near Paris" description="English-language holiday and summer camps for children aged 2-12 on our forest campus near Saint-Germain-en-Laye, west of Paris." alternates={alternates}>
@@ -89,228 +185,79 @@ const bookVisitUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
         <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Camp dates, hours and rates</h2>
       </div>
 
-      <div class="space-y-8">
-        <!-- October Camp -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <div class="md:flex">
-            <div class="md:w-2 bg-[#e07b39] shrink-0"></div>
-            <div class="p-8 lg:p-10 flex-1">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                <div>
-                  <span class="inline-block px-3 py-1 bg-[#e07b39]/15 text-[#c05e1e] rounded-full text-xs font-semibold mb-3">Autumn</span>
-                  <h3 class="text-2xl font-bold text-[#1e3d29]">October Toussaint Camp</h3>
-                </div>
-                <a href="https://forms.gle/6y8k9xULoLzSCt7n7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 bg-[#2d5a3d] text-white font-semibold rounded-full hover:bg-[#1e3d29] transition-colors text-sm shrink-0">
-                  Register
-                  <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-gray-600 mb-6">An action-packed autumn week of nature adventures, creative workshops, and outdoor exploration.</p>
-              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Dates</p>
-                  <p class="font-semibold text-[#1e3d29]">26th – 30th October 2026</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Hours</p>
-                  <p class="font-semibold text-[#1e3d29]">Daily 10:00 am – 4:00 pm</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Rate</p>
-                  <p class="font-semibold text-[#1e3d29]">450 €/week</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Food</p>
-                  <p class="font-semibold text-[#1e3d29]">40 €/week, snacks included</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="camp-list" aria-label="Holiday camp programmes">
+        {campCards.map((camp) => {
+          const SeasonIcon = camp.icon;
 
-        <!-- February Camp -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <div class="md:flex">
-            <div class="md:w-2 bg-[#6baed6] shrink-0"></div>
-            <div class="p-8 lg:p-10 flex-1">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                <div>
-                  <span class="inline-block px-3 py-1 bg-[#6baed6]/20 text-[#2d7ab0] rounded-full text-xs font-semibold mb-3">Winter</span>
-                  <h3 class="text-2xl font-bold text-[#1e3d29]">February Winter Camp</h3>
-                </div>
-                <a href="https://forms.gle/6y8k9xULoLzSCt7n7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 bg-[#2d5a3d] text-white font-semibold rounded-full hover:bg-[#1e3d29] transition-colors text-sm shrink-0">
-                  Register
-                  <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-gray-600 mb-6">Beat the winter blues with a week of nature-based learning, creative projects, and fun outdoor activities.</p>
-              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Dates</p>
-                  <p class="font-semibold text-[#1e3d29]">8th – 12th February 2027</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Hours</p>
-                  <p class="font-semibold text-[#1e3d29]">Daily 10:00 am – 4:00 pm</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Rate</p>
-                  <p class="font-semibold text-[#1e3d29]">450 €/week</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Food</p>
-                  <p class="font-semibold text-[#1e3d29]">40 €/week, snacks included</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          return (
+            <article class={`camp-card camp-card--${camp.key}`}>
+              <div class="camp-card__content">
+                <div class="camp-card__header">
+                  <div class="camp-card__title-group">
+                    <div class="camp-card__season">
+                      <span class="camp-card__mark" aria-hidden="true">
+                        <SeasonIcon size={22} strokeWidth={2.2} />
+                      </span>
+                      <span>{camp.season}</span>
+                    </div>
+                    <h3>{camp.title}</h3>
+                  </div>
 
-        <!-- April Camp -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <div class="md:flex">
-            <div class="md:w-2 bg-[#7ab648] shrink-0"></div>
-            <div class="p-8 lg:p-10 flex-1">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                <div>
-                  <span class="inline-block px-3 py-1 bg-[#7ab648]/15 text-[#5a8a30] rounded-full text-xs font-semibold mb-3">Spring</span>
-                  <h3 class="text-2xl font-bold text-[#1e3d29]">Spring Holiday Camp</h3>
+                  <a
+                    href={camp.registerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="camp-card__cta"
+                    aria-label={`Register for ${camp.title}`}
+                  >
+                    Register
+                    <ArrowRight size={17} strokeWidth={2.4} aria-hidden="true" />
+                  </a>
                 </div>
-                <a href="https://forms.gle/6y8k9xULoLzSCt7n7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 bg-[#2d5a3d] text-white font-semibold rounded-full hover:bg-[#1e3d29] transition-colors text-sm shrink-0">
-                  Register
-                  <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-gray-600 mb-6">Celebrate spring with our holiday camp full of flowers, fun activities, and lots of nature!</p>
-              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Dates</p>
-                  <p class="font-semibold text-[#1e3d29]">5th – 9th April 2027</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Hours</p>
-                  <p class="font-semibold text-[#1e3d29]">Daily 10:00 am – 4:00 pm</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Rate</p>
-                  <p class="font-semibold text-[#1e3d29]">450 €/week</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Food</p>
-                  <p class="font-semibold text-[#1e3d29]">40 €/week, snacks included</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                <p class="camp-card__description">{camp.description}</p>
 
-        <!-- Summer Camp 2026 -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <div class="md:flex">
-            <div class="md:w-2 bg-[#c9a962] shrink-0"></div>
-            <div class="p-8 lg:p-10 flex-1">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                <div>
-                  <span class="inline-block px-3 py-1 bg-[#c9a962]/20 text-[#a8872e] rounded-full text-xs font-semibold mb-3">Summer 2026</span>
-                  <h3 class="text-2xl font-bold text-[#1e3d29]">Holiday Summer Camp 2026</h3>
-                </div>
-                <a href="https://forms.gle/Xxp1hi3qc8AdtAsCA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 bg-[#2d5a3d] text-white font-semibold rounded-full hover:bg-[#1e3d29] transition-colors text-sm shrink-0">
-                  Register
-                  <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-gray-600 mb-6">Our Summer Camp offers a rich mix of outdoor activities, including splashy fun in our swimming pool, forest and orchard exploration, creative workshops, science, cooking, baking and group games.</p>
-              <div class="mb-6">
-                <p class="text-gray-500 text-xs mb-2">Weekly Sessions</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1.5 bg-[#c9a962]/10 text-[#1e3d29] rounded-lg text-sm font-medium">6th – 10th July 2026</span>
-                  <span class="px-3 py-1.5 bg-[#c9a962]/10 text-[#1e3d29] rounded-lg text-sm font-medium">13th – 17th July 2026 (excl. 14th)</span>
-                  <span class="px-3 py-1.5 bg-[#c9a962]/10 text-[#1e3d29] rounded-lg text-sm font-medium">20th – 24th July 2026</span>
-                </div>
-              </div>
-              <div class="grid sm:grid-cols-2 gap-4 text-sm">
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Hours</p>
-                  <p class="font-semibold text-[#1e3d29]">Daily 10:00 am – 5:00 pm</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Rate</p>
-                  <p class="font-semibold text-[#1e3d29]">425 €/week</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Food</p>
-                  <p class="font-semibold text-[#1e3d29]">40 €/week, snacks included</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Early Drop-off / Late Pick-up</p>
-                  <p class="font-semibold text-[#1e3d29]">9:30 am & 5:30 pm — 40 €/day</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-600 mt-5">
-                Optional private swimming classes and transportation from Saint-Germain-en-Laye/Le Pecq and Paris 16 are available on a first-come-first-served basis.
-                <a href="https://forms.gle/ZZJ8tFxyJnEQXpEf6" target="_blank" rel="noopener noreferrer" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Request swimming or transportation</a>.
-                Read more in our
-                <a href="/news/summer-school-paris-2026-english-camp" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Summer School Paris 2026 article</a>.
-              </p>
-            </div>
-          </div>
-        </div>
+                {camp.sessions && (
+                  <div class="camp-card__sessions">
+                    <p>Weekly Sessions</p>
+                    <div>
+                      {camp.sessions.map((session) => (
+                        <span>{session}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
-        <!-- Summer Camp 2027 -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <div class="md:flex">
-            <div class="md:w-2 bg-[#c9a962] shrink-0"></div>
-            <div class="p-8 lg:p-10 flex-1">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                <div>
-                  <span class="inline-block px-3 py-1 bg-[#c9a962]/20 text-[#a8872e] rounded-full text-xs font-semibold mb-3">Summer 2027</span>
-                  <h3 class="text-2xl font-bold text-[#1e3d29]">Holiday Summer Camp 2027</h3>
-                </div>
-                <a href="https://forms.gle/5JfDd3U13ZTYMvK76" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 bg-[#2d5a3d] text-white font-semibold rounded-full hover:bg-[#1e3d29] transition-colors text-sm shrink-0">
-                  Register
-                  <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
+                <dl class="camp-card__facts">
+                  {camp.facts.map((fact) => {
+                    const FactIcon = fact.icon;
+
+                    return (
+                      <div class="camp-fact">
+                        <dt>
+                          <FactIcon size={16} strokeWidth={2.2} aria-hidden="true" />
+                          <span>{fact.label}</span>
+                        </dt>
+                        <dd>{fact.value}</dd>
+                      </div>
+                    );
+                  })}
+                </dl>
+
+                {camp.key === 'summer-2026' && (
+                  <p class="camp-card__note">
+                    Optional private swimming classes and transportation from Saint-Germain-en-Laye/Le Pecq and Paris 16 are available on a first-come-first-served basis.
+                    {' '}
+                    <a href="https://forms.gle/ZZJ8tFxyJnEQXpEf6" target="_blank" rel="noopener noreferrer">Request swimming or transportation</a>.
+                    {' '}
+                    Read more in our
+                    {' '}
+                    <a href="/news/summer-school-paris-2026-english-camp">Summer School Paris 2026 article</a>.
+                  </p>
+                )}
               </div>
-              <p class="text-gray-600 mb-6">Our Summer Camp offers a rich mix of outdoor activities, including splashy fun in our swimming pool and chill-out forest time in the shadows of its trees.</p>
-              <div class="mb-6">
-                <p class="text-gray-500 text-xs mb-2">Weekly Sessions</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1.5 bg-[#c9a962]/10 text-[#1e3d29] rounded-lg text-sm font-medium">5th – 9th July 2027</span>
-                  <span class="px-3 py-1.5 bg-[#c9a962]/10 text-[#1e3d29] rounded-lg text-sm font-medium">12th – 16th July 2027</span>
-                  <span class="px-3 py-1.5 bg-[#c9a962]/10 text-[#1e3d29] rounded-lg text-sm font-medium">19th – 23rd July 2027</span>
-                </div>
-              </div>
-              <div class="grid sm:grid-cols-2 gap-4 text-sm">
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Hours</p>
-                  <p class="font-semibold text-[#1e3d29]">Daily 10:00 am – 5:00 pm</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Rate</p>
-                  <p class="font-semibold text-[#1e3d29]">480 €/week</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Food</p>
-                  <p class="font-semibold text-[#1e3d29]">40 €/week, snacks included</p>
-                </div>
-                <div class="bg-[#faf8f5] rounded-xl p-4">
-                  <p class="text-gray-500 text-xs mb-1">Early Drop-off / Late Pick-up</p>
-                  <p class="font-semibold text-[#1e3d29]">9:00 am & 6:00 pm — 40 €/day</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -333,3 +280,266 @@ const bookVisitUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
     </div>
   </section>
 </Layout>
+
+<style>
+  .camp-list {
+    display: grid;
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+  }
+
+  .camp-card {
+    --camp-accent: #2d5a3d;
+    --camp-tint: #f4f9f5;
+    --camp-chip: rgba(45, 90, 61, 0.1);
+    --camp-line: rgba(45, 90, 61, 0.16);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--camp-line);
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, var(--camp-tint) 0%, #ffffff 46%, #ffffff 100%);
+    box-shadow: 0 4px 8px rgba(30, 61, 41, 0.08);
+  }
+
+  .camp-card--autumn {
+    --camp-accent: #b85f2c;
+    --camp-tint: #fff3ea;
+    --camp-chip: rgba(184, 95, 44, 0.11);
+    --camp-line: rgba(184, 95, 44, 0.18);
+  }
+
+  .camp-card--winter {
+    --camp-accent: #2d719f;
+    --camp-tint: #eef8ff;
+    --camp-chip: rgba(45, 113, 159, 0.11);
+    --camp-line: rgba(45, 113, 159, 0.18);
+  }
+
+  .camp-card--spring {
+    --camp-accent: #4f8737;
+    --camp-tint: #f1faec;
+    --camp-chip: rgba(79, 135, 55, 0.12);
+    --camp-line: rgba(79, 135, 55, 0.18);
+  }
+
+  .camp-card--summer-2026,
+  .camp-card--summer-2027 {
+    --camp-accent: #9b7a24;
+    --camp-tint: #fff8dc;
+    --camp-chip: rgba(201, 169, 98, 0.16);
+    --camp-line: rgba(155, 122, 36, 0.2);
+  }
+
+  .camp-card__content {
+    padding: clamp(1.35rem, 3vw, 2.35rem);
+  }
+
+  .camp-card__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .camp-card__title-group {
+    max-width: 76ch;
+  }
+
+  .camp-card__season {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--camp-accent);
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
+  .camp-card__mark {
+    display: inline-flex;
+    width: 2.7rem;
+    height: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--camp-accent);
+    color: #ffffff;
+  }
+
+  .camp-card h3 {
+    margin-top: 0.85rem;
+    color: #1e3d29;
+    font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .camp-card__description {
+    max-width: 76ch;
+    margin-top: 1rem;
+    color: #33483b;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+
+  .camp-card__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 2.85rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: #2d5a3d;
+    color: #ffffff;
+    font-size: 0.94rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .camp-card__cta:hover {
+    background: #1e3d29;
+  }
+
+  .camp-card__sessions {
+    margin-top: 1.5rem;
+  }
+
+  .camp-card__sessions p {
+    color: #516356;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+  }
+
+  .camp-card__sessions div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .camp-card__sessions span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--camp-line);
+    border-radius: 999px;
+    background: var(--camp-chip);
+    color: #1e3d29;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .camp-card__facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1rem, 2.2vw, 1.5rem);
+    margin-top: 1.5rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--camp-line);
+  }
+
+  .camp-fact dt {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #526558;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .camp-fact dt svg {
+    color: var(--camp-accent);
+    flex: 0 0 auto;
+  }
+
+  .camp-fact dd {
+    margin-top: 0.5rem;
+    color: #173723;
+    font-size: 0.96rem;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  .camp-card__note {
+    margin-top: 1.25rem;
+    color: #3b4d40;
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .camp-card__note a {
+    color: #2d5a3d;
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.16em;
+  }
+
+  .camp-card__note a:hover {
+    color: #1e3d29;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .camp-card,
+    .camp-card__mark,
+    .camp-card__cta,
+    .camp-card__cta svg {
+      transition:
+        transform 220ms cubic-bezier(0.25, 1, 0.5, 1),
+        background-color 180ms ease,
+        box-shadow 220ms cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .camp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(30, 61, 41, 0.1);
+    }
+
+    .camp-card:hover .camp-card__mark {
+      transform: rotate(-4deg) scale(1.03);
+    }
+
+    .camp-card__cta:hover svg {
+      transform: translateX(3px);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .camp-card__header {
+      grid-template-columns: 1fr;
+    }
+
+    .camp-card__cta {
+      justify-self: start;
+    }
+
+    .camp-card__facts {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 560px) {
+    .camp-card__content {
+      padding: 1.15rem;
+    }
+
+    .camp-card__mark {
+      width: 2.45rem;
+      height: 2.45rem;
+      border-radius: 12px;
+    }
+
+    .camp-card__facts {
+      grid-template-columns: 1fr;
+      gap: 0.95rem;
+    }
+
+    .camp-card__cta {
+      width: 100%;
+    }
+  }
+</style>
