@@ -11,7 +11,7 @@ tags: ["english school", "pre-elementary", "primary", "paris west"]
 
 If you are looking for an English school in Paris for a pre-elementary or elementary child, compare four things first: the age your child can start, the language model, the curriculum path after age 5, and whether the daily commute works from your part of Paris or west Paris. Forest International School Paris is one option for families looking west of the city: our Early Years welcome children aged 2-5, our Primary School welcomes ages 6-11, and both are taught in English on our campus in Mareil-Marly, near Saint-Germain-en-Laye.
 
-*Version française : [École anglaise à Paris : maternelle et primaire](/fr/news/ecole-anglaise-paris-maternelle-primaire).*
+*Version française : [École anglaise à Paris : maternelle et primaire](/fr/news/ecole-anglaise-paris-maternelle-primaire/).*
 
 By pre-elementary, most families mean Nursery, Pre-School, Pre-K, Kindergarten or Maternelle: the years before formal primary school. Elementary is often called Primary in British and international schools, and it usually covers ages 6-11. The names vary, so the important question is not the label on the brochure. It is whether the school has the right class for your child's age, language profile and next move.
 
@@ -21,7 +21,7 @@ The schools below are among the options families commonly compare for English-la
 
 | School | Area | Relevant ages | Language and curriculum | Fee signal checked in July 2026 | Strong fit if... |
 |---|---|---:|---|---|---|
-| Forest International School Paris | Mareil-Marly, west of Paris | 2-11 for Early Years and Primary | English-language school; English National Curriculum with IPC in Primary; French included | Our [tuition page](/tuition) lists annual tuition lines from 12,500 EUR to 19,000 EUR across Pre-School, Early Years, Lower Primary and Upper Primary, with other fees shown separately | You want a smaller English-language school, regular forest learning and a west Paris campus |
+| Forest International School Paris | Mareil-Marly, west of Paris | 2-11 for Early Years and Primary | English-language school; English National Curriculum with IPC in Primary; French included | Our [tuition page](/tuition/) lists annual tuition lines from 12,500 EUR to 19,000 EUR across Pre-School, Early Years, Lower Primary and Upper Primary, with other fees shown separately | You want a smaller English-language school, regular forest learning and a west Paris campus |
 | International School of Paris | Paris 16e | Nursery to Grade 5 | English-language IB Primary Years Programme | Public fee page lists Nursery-Pre-K at 25,500 EUR, Kindergarten at 31,100 EUR and Grades 1-5 at 31,400 EUR | You want an IB path in central-west Paris |
 | American School of Paris | Saint-Cloud | Ages 3-10 for Early Childhood and Lower School | Fully English-speaking early years; American curriculum with French included | Public fee page lists K3-K5 at 25,000 EUR and Grades 1-5 at 34,600 EUR, plus annual and first-year fees | You want an American curriculum and a large international campus |
 | ICS Paris | Paris 15e | Ages 3-10 for Nursery/Pre-K/Kindergarten and Grades 1-5 | English-language IB school | Public fee page lists Nursery/Pre-K/Kindergarten at 20,994 EUR and Grades 1-5 at 24,759 EUR, plus new-student fees | You want an IB school inside Paris 15 |
@@ -36,15 +36,15 @@ Parents often ask whether a smaller school outside central Paris can compare wit
 
 | Aspect | At Forest International School Paris | What to compare elsewhere |
 |---|---|---|
-| Starting age | [Early Years](/early-years) starts from age 2, with Nursery and Pre-School for ages 2-5 | Some schools start at age 3, while others offer age 2 or 2.5 entry |
-| Primary age range | [Primary School](/primary) is for ages 6-11 | Check whether Grade 1 starts at age 5, 6 or 7, especially if moving between US, UK and French systems |
+| Starting age | [Early Years](/early-years/) starts from age 2, with Nursery and Pre-School for ages 2-5 | Some schools start at age 3, while others offer age 2 or 2.5 entry |
+| Primary age range | [Primary School](/primary/) is for ages 6-11 | Check whether Grade 1 starts at age 5, 6 or 7, especially if moving between US, UK and French systems |
 | Class size | Published programme details show a maximum of 5 students for the younger Early Years group and 11 for the older Early Years and Primary groups | Ask for actual class size in your child's year, not only the school average |
 | Curriculum | Primary combines the English National Curriculum with the International Primary Curriculum | Compare British, American, IB PYP and French bilingual paths |
 | French | English is the teaching language and French is part of the programme; Early Years includes 4.5 hours of immersive French each week | Ask whether French is foreign-language French, native-level French, bilingual instruction or a daily subject |
 | Outdoor learning | Children learn on a forest campus in Mareil-Marly, with forest and gardens used as part of school life | Ask whether outdoor learning is daily, weekly, seasonal or mainly recreational |
 | Specialist lessons | Early Years includes specialist teachers for Music, Sport and French; Primary includes language support, technology, swimming and outdoor activities | Ask which subjects are taught by the class teacher and which by specialists |
-| Admissions | [Admissions](/admissions) are open year-round, with visits, virtual meetings and Open Days | Ask about testing, waiting lists, mid-year entry and the documents needed before a place can be confirmed |
-| Fees | Forest publishes tuition and additional fees on one [fees page](/tuition), including cantine, bus, breakfast club and after-school club where relevant | Compare the first-year total, not only annual tuition: application, registration, capital, lunch, bus and learning-support fees can change the total |
+| Admissions | [Admissions](/admissions/) are open year-round, with visits, virtual meetings and Open Days | Ask about testing, waiting lists, mid-year entry and the documents needed before a place can be confirmed |
+| Fees | Forest publishes tuition and additional fees on one [fees page](/tuition/), including cantine, bus, breakfast club and after-school club where relevant | Compare the first-year total, not only annual tuition: application, registration, capital, lunch, bus and learning-support fees can change the total |
 | Location | Forest is in Mareil-Marly, near Saint-Germain-en-Laye, west of Paris | Compare real morning and afternoon routes from your home, not only the distance on a map |
 
 ## West Paris and Yvelines areas to include in your search
@@ -78,7 +78,7 @@ For Primary children, the question changes. Parents want to know whether English
 
 For any English school in Paris, tuition is only part of the decision. A first-year invoice may include an application fee, registration fee, capital or development fee, lunch, transport, English-language support, learning support, after-school activities and trips.
 
-At Forest, current fees are published on [tuition](/tuition). As of July 2026, the page lists tuition separately from development, cantine and optional extras. It also explains that cantine includes organic lunches and snacks, with no charge for children bringing a lunch box. Optional extras include breakfast club, after-school clubs and bus service, depending on what a family needs.
+At Forest, current fees are published on [tuition](/tuition/). As of July 2026, the page lists tuition separately from development, cantine and optional extras. It also explains that cantine includes organic lunches and snacks, with no charge for children bringing a lunch box. Optional extras include breakfast club, after-school clubs and bus service, depending on what a family needs.
 
 When you compare schools, make a simple family spreadsheet with these columns:
 
@@ -117,7 +117,7 @@ Bring the same questions to each school, then compare the answers the same day.
 - Are applications open for our timing?
 - Can we visit during a normal school day?
 
-Forest's [admissions page](/admissions) explains the year-round process, and families can [contact us](/contact) to book a visit.
+Forest's [admissions page](/admissions/) explains the year-round process, and families can [contact us](/contact/) to book a visit.
 
 ## FAQ
 
@@ -151,4 +151,4 @@ Visit your shortlisted schools. For younger children especially, the feel of the
 
 ## Next step
 
-If you are comparing English pre-elementary and primary schools in Paris or west Paris, start with your child's age, language profile and daily route. Then come and see the school in person. You can read about [Early Years](/early-years), [Primary School](/primary), [admissions](/admissions), or [book a visit](/contact) with Forest International School Paris.
+If you are comparing English pre-elementary and primary schools in Paris or west Paris, start with your child's age, language profile and daily route. Then come and see the school in person. You can read about [Early Years](/early-years/), [Primary School](/primary/), [admissions](/admissions/), or [book a visit](/contact/) with Forest International School Paris.

@@ -12,7 +12,7 @@ lint_allow:
 
 Dear Parents and Students,
 
-We are thrilled to welcome everyone back to [Forest International School Paris](/about) for the 2024-2025 academic year!
+We are thrilled to welcome everyone back to [Forest International School Paris](/about/) for the 2024-2025 academic year!
 
 ## What's New This Year
 

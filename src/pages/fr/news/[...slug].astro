@@ -17,7 +17,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const slug = post.id.replace('fr/', '');
 const translations: Record<string, string> = {
-  'ecole-anglaise-paris-maternelle-primaire': '/news/english-school-paris-pre-elementary-primary',
+  'ecole-anglaise-paris-maternelle-primaire': '/news/english-school-paris-pre-elementary-primary/',
 };
 const alternates = translations[slug]
   ? [
@@ -44,7 +44,7 @@ const alternates = translations[slug]
       </div>
     )}
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <a href="/fr/admissions" class="inline-flex items-center text-[#c9a962] hover:text-white mb-6 transition-colors">
+      <a href="/fr/admissions/" class="inline-flex items-center text-[#c9a962] hover:text-white mb-6 transition-colors">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
@@ -75,7 +75,7 @@ const alternates = translations[slug]
   <section class="py-12 bg-[#faf8f5]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <a href="/fr/admissions" class="inline-flex items-center text-[#2d5a3d] font-semibold hover:text-[#1e3d29] transition-colors">
+        <a href="/fr/admissions/" class="inline-flex items-center text-[#2d5a3d] font-semibold hover:text-[#1e3d29] transition-colors">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
           </svg>

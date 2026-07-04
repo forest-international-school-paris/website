@@ -46,7 +46,7 @@ Transportation is also available from Saint-Germain-en-Laye/Le Pecq and Paris 16
 
 ## Summer camp dates and registration
 
-The full camp dates, weekly rates and current availability are kept on the [Holiday Camps page](/holiday-camps). Families can also contact the school through [Contact Us](/contact) if they need help choosing the right week or adding swimming and transport options.
+The full camp dates, weekly rates and current availability are kept on the [Holiday Camps page](/holiday-camps/). Families can also contact the school through [Contact Us](/contact/) if they need help choosing the right week or adding swimming and transport options.
 
 For the 2026 camp, please use:
 

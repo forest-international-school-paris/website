@@ -12,7 +12,7 @@ interface Props {
   showPopup?: boolean;
   lang?: 'en' | 'fr';
   // hreflang alternates for pages that exist in both languages, e.g.
-  // [{ hreflang: 'en', href: '/admissions' }, { hreflang: 'fr', href: '/fr/admissions' }]
+  // [{ hreflang: 'en', href: '/admissions/' }, { hreflang: 'fr', href: '/fr/admissions/' }]
   alternates?: { hreflang: string; href: string }[];
   // utility pages (surveys, redirect targets) that must stay out of search
   noindex?: boolean;
@@ -46,7 +46,7 @@ const popupConfig = {
   buttonText: "Register Now",
   buttonLink: "https://docs.google.com/forms/d/e/1FAIpQLSenMtdBQPV1w-LJjl6SLFV07K6GGkGf-lx760_lxrqfrFMrEA/viewform",
   secondaryButtonText: "Learn More",
-  secondaryButtonLink: "/admissions",
+  secondaryButtonLink: "/admissions/",
   badge: "MasterClasses",
   image: "/images/campus.jpg"
 };

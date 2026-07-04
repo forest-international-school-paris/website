@@ -11,7 +11,7 @@ tags: ["école anglophone", "maternelle", "primaire", "Yvelines"]
 
 Pour choisir une école anglaise à Paris en maternelle, en pré-élémentaire ou en primaire, commencez par quatre critères concrets : l'âge d'entrée, la langue d'enseignement, le programme suivi après 5 ans et le trajet quotidien depuis votre commune. La Forest International School Paris accueille les enfants de 2 à 5 ans en Early Years et de 6 à 11 ans en Primary School, en anglais, sur son campus de Mareil-Marly, près de Saint-Germain-en-Laye.
 
-*English version: [English School Paris: Pre-Elementary & Primary](/news/english-school-paris-pre-elementary-primary).*
+*English version: [English School Paris: Pre-Elementary & Primary](/news/english-school-paris-pre-elementary-primary/).*
 
 En France, les familles parlent plutôt de maternelle et de primaire. Les écoles internationales utilisent parfois Nursery, Pre-School, Pre-K, Kindergarten, Early Years, Elementary ou Primary. Pour une famille, le nom compte moins que la réalité de la classe : votre enfant aura-t-il le bon âge, le bon niveau de langue, un adulte qui le connaît bien et un trajet qui reste raisonnable chaque matin ?
 
@@ -21,7 +21,7 @@ Les écoles ci-dessous font partie des options que les familles comparent souven
 
 | École | Secteur | Âges concernés | Langue et programme | Repère tarifaire public vérifié en juillet 2026 | Profil de famille |
 |---|---|---:|---|---|---|
-| Forest International School Paris | Mareil-Marly, Ouest parisien | 2-11 ans pour Early Years et Primary | École anglophone ; English National Curriculum et IPC en primaire ; français inclus | Le [barème des frais](/tuition) indique des lignes annuelles de 12 500 EUR à 19 000 EUR pour Pre-School, Early Years, Lower Primary et Upper Primary, avec les autres frais séparés | Famille cherchant une petite école anglophone, un campus dans la nature et une localisation à l'ouest de Paris |
+| Forest International School Paris | Mareil-Marly, Ouest parisien | 2-11 ans pour Early Years et Primary | École anglophone ; English National Curriculum et IPC en primaire ; français inclus | Le [barème des frais](/tuition/) indique des lignes annuelles de 12 500 EUR à 19 000 EUR pour Pre-School, Early Years, Lower Primary et Upper Primary, avec les autres frais séparés | Famille cherchant une petite école anglophone, un campus dans la nature et une localisation à l'ouest de Paris |
 | International School of Paris | Paris 16e | Nursery à Grade 5 | IB Primary Years Programme en anglais | Frais publics : Nursery-Pre-K à 25 500 EUR, Kindergarten à 31 100 EUR, Grades 1-5 à 31 400 EUR | Famille cherchant un parcours IB à Paris 16 |
 | American School of Paris | Saint-Cloud | 3-10 ans pour Early Childhood et Lower School | Environnement entièrement anglophone ; programme américain ; français intégré | Frais publics : K3-K5 à 25 000 EUR, Grades 1-5 à 34 600 EUR, avec frais annuels et frais de première inscription | Famille cherchant un programme américain et un grand campus international |
 | ICS Paris | Paris 15e | 3-10 ans pour Nursery/Pre-K/Kindergarten et Grades 1-5 | École IB anglophone | Frais publics : Nursery/Pre-K/Kindergarten à 20 994 EUR, Grades 1-5 à 24 759 EUR, plus frais nouveaux élèves | Famille cherchant un IB anglophone dans Paris 15 |
@@ -36,15 +36,15 @@ Une école plus petite hors de Paris intra-muros ne répond pas au même besoin 
 
 | Critère | À Forest International School Paris | À vérifier dans les autres écoles |
 |---|---|---|
-| Âge d'entrée | [Early Years](/early-years) accueille les enfants de 2 à 5 ans, avec Nursery et Pre-School | Certaines écoles commencent à 3 ans, d'autres à 2 ou 2,5 ans |
-| Primaire | [Primary School](/primary) accueille les enfants de 6 à 11 ans | Vérifiez si Grade 1 correspond à 5, 6 ou 7 ans selon le système |
+| Âge d'entrée | [Early Years](/early-years/) accueille les enfants de 2 à 5 ans, avec Nursery et Pre-School | Certaines écoles commencent à 3 ans, d'autres à 2 ou 2,5 ans |
+| Primaire | [Primary School](/primary/) accueille les enfants de 6 à 11 ans | Vérifiez si Grade 1 correspond à 5, 6 ou 7 ans selon le système |
 | Taille des classes | Les informations publiées indiquent un maximum de 5 enfants pour le plus jeune groupe Early Years et 11 pour les groupes plus âgés et le primaire | Demandez l'effectif réel de la classe de votre enfant, pas seulement une moyenne générale |
 | Programme | Le primaire combine l'English National Curriculum et l'International Primary Curriculum | Comparez parcours britannique, américain, IB PYP et bilingue français |
 | Français | L'enseignement principal est en anglais et le français fait partie du programme ; en Early Years, 4,5 heures de français immersif sont prévues chaque semaine | Demandez si le français est langue étrangère, langue maternelle, enseignement bilingue ou matière quotidienne |
 | Nature et extérieur | Le campus de Mareil-Marly permet une pédagogie régulière au contact de la forêt et des jardins | Demandez si les sorties dehors sont quotidiennes, hebdomadaires, saisonnières ou surtout récréatives |
 | Enseignants spécialistes | Early Years inclut des enseignants spécialistes pour la musique, le sport et le français ; le primaire inclut langues, technologie, natation et activités extérieures | Demandez ce qui est enseigné par le professeur principal et ce qui est enseigné par des spécialistes |
-| Admissions | La [page admissions](/fr/admissions) explique les candidatures possibles toute l'année, avec visite sur place, rendez-vous en ligne ou portes ouvertes | Demandez les tests, listes d'attente, possibilités d'arrivée en cours d'année et documents requis |
-| Frais | Forest publie les frais de scolarité et les options sur la page [Tuition & Fees](/tuition) | Comparez le coût total de première année : dossier, inscription, fonds de développement, cantine, bus, soutien linguistique |
+| Admissions | La [page admissions](/fr/admissions/) explique les candidatures possibles toute l'année, avec visite sur place, rendez-vous en ligne ou portes ouvertes | Demandez les tests, listes d'attente, possibilités d'arrivée en cours d'année et documents requis |
+| Frais | Forest publie les frais de scolarité et les options sur la page [Tuition & Fees](/tuition/) | Comparez le coût total de première année : dossier, inscription, fonds de développement, cantine, bus, soutien linguistique |
 | Localisation | Forest est à Mareil-Marly, près de Saint-Germain-en-Laye, dans les Yvelines | Testez le trajet réel le matin et l'après-midi, pas seulement la distance sur une carte |
 
 ## Recherches locales : communes de l'Ouest parisien
@@ -78,7 +78,7 @@ En primaire, les questions changent. Les parents veulent savoir si lecture, écr
 
 Dans les écoles privées internationales à Paris, les frais de scolarité ne sont qu'une partie du coût. La première année peut aussi inclure frais de dossier, inscription, contribution au développement ou au capital, cantine, transport, soutien en anglais, soutien en français, accompagnement spécialisé, activités après l'école et voyages.
 
-À Forest, les frais actuels sont publiés sur la page [frais de scolarité](/tuition). En juillet 2026, cette page distingue les frais de scolarité, les frais de développement, la cantine et les options. Elle précise aussi que la cantine inclut repas biologiques et collations, sans frais pour les enfants qui apportent leur lunch box. Des options existent pour le breakfast club, les clubs après l'école et le bus selon les besoins.
+À Forest, les frais actuels sont publiés sur la page [frais de scolarité](/tuition/). En juillet 2026, cette page distingue les frais de scolarité, les frais de développement, la cantine et les options. Elle précise aussi que la cantine inclut repas biologiques et collations, sans frais pour les enfants qui apportent leur lunch box. Des options existent pour le breakfast club, les clubs après l'école et le bus selon les besoins.
 
 Pour comparer plusieurs écoles, notez dans un tableau familial :
 
@@ -115,7 +115,7 @@ Posez les mêmes questions à chaque école, puis comparez vos notes le jour mê
 - Les candidatures sont-elles ouvertes pour notre calendrier ?
 - Peut-on visiter pendant une journée scolaire ordinaire ?
 
-Le [processus d'admission en français](/fr/admissions) explique le fonctionnement de Forest, et vous pouvez [contacter l'école](/contact) pour organiser une visite.
+Le [processus d'admission en français](/fr/admissions/) explique le fonctionnement de Forest, et vous pouvez [contacter l'école](/contact/) pour organiser une visite.
 
 ## FAQ
 
@@ -145,4 +145,4 @@ Les écoles privées anglophones et internationales à Paris ont souvent des fra
 
 ## Prochaine étape
 
-Si vous comparez les écoles anglophones de maternelle et de primaire à Paris, dans les Yvelines ou autour de Saint-Germain-en-Laye, commencez par l'âge, la langue et le trajet. Ensuite, venez voir le campus. Vous pouvez lire la page [admissions en français](/fr/admissions), consulter [Early Years](/early-years) et [Primary School](/primary), ou [prendre contact](/contact) avec Forest International School Paris.
+Si vous comparez les écoles anglophones de maternelle et de primaire à Paris, dans les Yvelines ou autour de Saint-Germain-en-Laye, commencez par l'âge, la langue et le trajet. Ensuite, venez voir le campus. Vous pouvez lire la page [admissions en français](/fr/admissions/), consulter [Early Years](/early-years/) et [Primary School](/primary/), ou [prendre contact](/contact/) avec Forest International School Paris.

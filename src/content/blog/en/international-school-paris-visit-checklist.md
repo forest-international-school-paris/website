@@ -11,7 +11,7 @@ tags: ["admissions", "school choice", "paris"]
 
 A school visit should answer three questions quickly: will my child feel known here, does the curriculum fit our family's plans, and can daily life work from our home in Paris or Ile-de-France? For parents comparing international schools in Paris, the most useful visit is practical: look at the classrooms, walk the outdoor spaces, ask how English and French are taught, and check the admissions path before you leave.
 
-At [Forest International School Paris](/about), families visit a real campus in Mareil-Marly, near Saint-Germain-en-Laye, west of Paris. We are an English-language international school from Early Years through Middle School, with learning shaped by project work, the English National Curriculum and regular time outdoors on a forest campus.
+At [Forest International School Paris](/about/), families visit a real campus in Mareil-Marly, near Saint-Germain-en-Laye, west of Paris. We are an English-language international school from Early Years through Middle School, with learning shaped by project work, the English National Curriculum and regular time outdoors on a forest campus.
 
 ## Why a visit matters
 
@@ -25,12 +25,12 @@ Use these questions during a visit, then compare your notes the same day while t
 
 | What to ask | What to look for | At Forest International School Paris |
 |---|---|---|
-| Which ages are taught here? | A clear route for siblings and future transitions | [Early Years](/early-years) for ages 2-5, [Primary](/primary) for ages 6-11 and [Middle School](/middle-school) for ages 11-14 |
+| Which ages are taught here? | A clear route for siblings and future transitions | [Early Years](/early-years/) for ages 2-5, [Primary](/primary/) for ages 6-11 and [Middle School](/middle-school/) for ages 11-14 |
 | What curriculum does the school follow? | A named curriculum, not vague international wording | English National Curriculum, with IPC in Primary and IMYC in Middle School |
 | How much time do children spend outdoors? | Outdoor learning that is part of the school week, not a rare treat | Nature-based learning on a forest campus in Mareil-Marly |
 | How is French taught? | A plan for both non-francophone and French-speaking children | English-language learning with French included in the programme |
-| How do admissions work? | A clear next step after the visit | [Admissions](/admissions) explains the year-round application process |
-| Where are fees published? | A transparent fee page before you apply | Annual fees and optional extras are listed on [tuition](/tuition) |
+| How do admissions work? | A clear next step after the visit | [Admissions](/admissions/) explains the year-round application process |
+| Where are fees published? | A transparent fee page before you apply | Annual fees and optional extras are listed on [tuition](/tuition/) |
 
 ## Look first at the child's daily experience
 
@@ -76,11 +76,11 @@ Before or during the visit, check:
 - How quickly the admissions team can advise on availability
 - Whether a second visit, trial day or follow-up conversation is possible
 
-Forest's [admissions page](/admissions) explains that applications can be submitted throughout the school year and that families can arrange an in-person visit, virtual meeting or Open Day. Fees are published separately so families can review tuition before making a decision.
+Forest's [admissions page](/admissions/) explains that applications can be submitted throughout the school year and that families can arrange an in-person visit, virtual meeting or Open Day. Fees are published separately so families can review tuition before making a decision.
 
 ## When a camp is a useful first step
 
-If your child is nervous about joining a new school, a holiday programme can make the campus familiar before a school application. Forest's [holiday camps](/holiday-camps) are English-language camps on the same Mareil-Marly campus and are open to children whether or not they attend Forest during the school year.
+If your child is nervous about joining a new school, a holiday programme can make the campus familiar before a school application. Forest's [holiday camps](/holiday-camps/) are English-language camps on the same Mareil-Marly campus and are open to children whether or not they attend Forest during the school year.
 
 A camp is not a substitute for an admissions visit, but it can help a child experience the adults, the grounds and the rhythm of learning outdoors. For families searching for summer camp in Paris as well as a school place, that first low-pressure experience can be helpful.
 
@@ -109,11 +109,11 @@ The school offers Early Years for ages 2-5, Primary for ages 6-11 and Middle Sch
 
 ### Can we visit before applying?
 
-Yes. Families can arrange a school visit through [contact](/contact), and the admissions process also refers to in-person visits, virtual meetings and Open Days. A visit is the best way to understand whether the school is right for your child.
+Yes. Families can arrange a school visit through [contact](/contact/), and the admissions process also refers to in-person visits, virtual meetings and Open Days. A visit is the best way to understand whether the school is right for your child.
 
 ### Where can I find tuition fees?
 
-Current annual tuition fees, payment information and optional extras are published on the [tuition page](/tuition). Review fees before applying so the conversation with admissions can focus on fit, timing and your child's needs.
+Current annual tuition fees, payment information and optional extras are published on the [tuition page](/tuition/). Review fees before applying so the conversation with admissions can focus on fit, timing and your child's needs.
 
 ### Does the school teach French as well as English?
 
@@ -125,4 +125,4 @@ It can be. Holiday camps are open to children who do not attend Forest during th
 
 ## Next step
 
-If you are comparing international schools in Paris or west of Paris, start with the practical questions above, then come and see the school in person. You can read the [admissions steps](/admissions) or [book a visit](/contact) with Forest International School Paris.
+If you are comparing international schools in Paris or west of Paris, start with the practical questions above, then come and see the school in person. You can read the [admissions steps](/admissions/) or [book a visit](/contact/) with Forest International School Paris.
