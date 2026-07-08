@@ -39,10 +39,24 @@ const popupConfig = {
   enabled: true,
   expiresDate: "2027-12-31",
   title: "Wednesday MasterClasses",
-  subtitle: "English Enrichment for curious minds",
+  subtitle: "Two tailored programmes, one for every child",
   date: "Every Wednesday",
   time: "8:00 AM - 6:00 PM",
-  message: "Enhance your child's English with our expert-led Wednesday MasterClasses engaging, hands-on sessions designed to inspire curiosity and build confidence in language and communication.",
+  message: "Expert-led, hands-on enrichment sessions. Choose the track that fits your child, or combine both.",
+  programs: [
+    {
+      icon: "🇬🇧",
+      name: "English Enrichment",
+      audience: "For French speakers",
+      description: "Build confidence and fluency in spoken and written English through playful, immersive activities."
+    },
+    {
+      icon: "🇫🇷",
+      name: "L'Atelier du Français",
+      audience: "For non-francophones",
+      description: "Support expat and international children to develop French naturally through hands-on, immersive workshops."
+    }
+  ],
   buttonText: "Register Now",
   buttonLink: "https://docs.google.com/forms/d/e/1FAIpQLSenMtdBQPV1w-LJjl6SLFV07K6GGkGf-lx760_lxrqfrFMrEA/viewform",
   secondaryButtonText: "Learn More",
@@ -156,6 +170,7 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
         secondaryButtonLink={popup.secondaryButtonLink}
         badge={popup.badge}
         image={popup.image}
+        programs={popup.programs}
       />
     )}
 
