@@ -67,8 +67,32 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
 
 ## In progress (WIP)
 
-(empty — user's content session settled 2026-07-03; all committed to origin `d4c2d82`,
-reviewed below. FR-relaunch confirmation still pending — see User decisions.)
+**Content/authority plan for the choose-school cluster (started 2026-07-09, user-approved).**
+Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
+- **Strategic pivot (validated on live SERP):** STOP chasing "international school paris"
+  (204 imp, pos 31, page 3-4). That SERP is a fortress — ASP (1946), ISP (1982), ICS,
+  Ermitage (1941), EIB, British School of Paris, all IB World Schools ages 3-18 on huge
+  domains, plus directories (Good Schools Guide, MumAbroad, Expatica). Unwinnable
+  short-term for a small 2-14 Mareil-Marly school. Any effort spent ranking there is wasted.
+- **Where we CAN win (Bible §2 pillar 1):** the geo-qualified long-tail — "international
+  school west of Paris", "english school Yvelines", "…near Saint-Germain-en-Laye",
+  "bilingual school Mareil-Marly". Competition is fragmented across towns (British
+  School/Croissy, Ermitage/Maisons-Laffitte, EIB de la Jonchère, Être et Découvrir/St Nom
+  la Bretèche) — nobody owns "English school for young children, west-Paris/Yvelines," and
+  Forest ALREADY surfaces in this SERP. Winnable + on-moat.
+- **Coverage gap found:** no EN page has "Yvelines" in its title/description (only FR
+  admissions does); "yvelines" appears in just 2 pages of body copy. The geo facet is
+  wide open. Existing choose-school posts cover other facets: visit-checklist = process,
+  pre-elementary = age-scoped. Geography is uncovered → the new spoke's differentiator.
+- **Architecture:** hub = `/admissions` + homepage own the geo positioning (homepage title
+  already → "English-Language School in West Paris" ✓). New spoke = a first-hand
+  west-Paris/Yvelines schools landscape guide (brief now at top of `seo/_backlog.json`,
+  `source: authority-plan-2026-07-09`). Funnels to hub + program pages + /tuition.
+- **Phase 2 (next iteration):** write the spoke via `school-seo-content` mode B (full
+  fact-pack → draft → lint + independent §E → publish loop). Anti-cannibalization boundary
+  = GEOGRAPHY facet only; verify vs both existing guides before shipping.
+
+(Prior WIP cleared: user's 2026-07-03 content session settled, committed `d4c2d82`, reviewed.)
 
 ## Scheduled
 
@@ -191,7 +215,15 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
-- 2026-07-09 (22) | Third snippet fix ("繼續優化"): full title audit vs per-page GSC found
+- 2026-07-09 (23) | Content/authority plan — Phase 1 (user approved "啟動內容/權威計畫").
+  Diagnosed the pos-31 choose-school problem on the LIVE SERP: "international school paris"
+  is a fortress (decades-old IB World Schools + directories) → unwinnable, STOP chasing it.
+  Pivot to the winnable geo long-tail (west Paris / Yvelines / Saint-Germain), where
+  competition is fragmented and Forest already surfaces. Found the coverage gap (no EN page
+  owns "Yvelines"; geography facet uncovered by the 2 existing choose-school posts). Wrote
+  the architecture + a differentiated content brief (GEO facet) to backlog top + WIP.
+  No page shipped — this is a planning unit. | Phase 2 next: write the west-Paris/Yvelines
+  schools guide (mode B, full gate), anti-cannibalization boundary = geography only. Third snippet fix ("繼續優化"): full title audit vs per-page GSC found
   the biggest winnable-click gap = `/news/english-school-paris-pre-elementary-primary`
   (pos 8.5, page-1, 87imp, **0clk**). Reframed keyword-stuffed title → "Choosing an
   English School in West Paris" comparison-guide framing + click-worthy description
