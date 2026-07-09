@@ -122,6 +122,21 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
    Paris. NAP exactly as registry.
 6. **Bing Webmaster Tools** (optional but feeds ChatGPT retrieval): add site, verify,
    submit sitemap.
+7. **Submit sitemap in GSC (2026-07-09):** GSC "Sitemaps" report shows none submitted.
+   robots.txt already advertises it and it serves 200, so Google can discover it — but
+   submitting explicitly speeds discovery + unlocks coverage reporting. GSC → Sitemaps →
+   add `sitemap-index.xml` → Submit. (Console action = user; loop can also push via the
+   GSC Sitemaps API on request since OAuth is set up.)
+8. **Cloudflare redirect hygiene (2026-07-09, diagnosed from GSC "Page with redirect"):**
+   the "Page with redirect" entries are EXPECTED — non-canonical variants (`http://`,
+   no-trailing-slash, `/index.html`) correctly redirect to the canonical `https://` +
+   trailing-slash pages (which serve 200 and carry `<link rel=canonical>` to themselves).
+   Not a bug; don't try to index those. TWO optional edge improvements on the school's
+   Cloudflare account: (a) the normalization redirects are **307 (temporary)** — canonical
+   redirects should be **301/308 (permanent)** so Google consolidates signals faster;
+   (b) `http://…/admissions` redirects to `http://…/admissions/` (stays HTTP) → enable
+   **"Always Use HTTPS"** for a clean single-hop http→https 301. Both LOW priority (Google
+   already follows 307s); can't be fixed in-repo (no `_redirects`; it's edge behavior).
 
 (Done 2026-07-02: GSC API unlock — OAuth login completed as koreal6803@gmail.com;
 `gsc.api_ready=true`.)
