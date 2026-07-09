@@ -54,12 +54,12 @@ Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.js
   2026-english-camp.md` live, lint-clean, differentiated (experiential day-in-the-life,
   links back to `/holiday-camps` hub — not cannibalizing). A real-photo recap after the
   July sessions remains the strongest NEXT camp angle.
-- **Watch (07-09 measurement):** `english-school-paris-pre-elementary-primary` has a
-  head-term-y title ("English School Paris: Pre-Elementary & Primary"). Reviewed as OK
-  now (it's a comparison/choose-school guide, heavy hub linking to /early-years,
-  /primary, /admissions, /tuition — supports, doesn't compete). But if GSC shows it
-  splitting impressions with `/early-years` or `/primary` on transactional queries,
-  differentiate its title.
+- ~~**Watch:** `english-school-paris-pre-elementary-primary` head-term-y title~~ RESOLVED
+  2026-07-09: GSC showed it at pos 8.5 / 87 imp / **0 clicks** — page-1 but no CTR, and
+  outranking `/early-years` (16.7) + `/primary` (13.4) on the shared intent. Reframed
+  title "English School Paris: Pre-Elementary & Primary" → "Choosing an English School in
+  West Paris" (comparison-guide framing) + click-worthier description. Both fixes: earns
+  the research click AND differentiates from the program hubs. Lint PASS, prose untouched.
 - ~~Thin descriptions~~ DONE 2026-07-03: `/contact` (70→157), `/news` (63→147),
   `/about` (101→159) rewritten to 110-160 with canonical positioning. (`/team` was
   already fine at 136 — earlier note was wrong.) All money/program page descriptions
@@ -88,9 +88,10 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 - **ASAP after next deploy: verify homepage + /admissions snippets live + IndexNow.**
   New titles: `/` = "English-Language School in West Paris, Ages 2–14"; `/admissions` =
   "Admissions — Apply to an English School in West Paris". Confirm live, then
-  `node scripts/indexnow-submit.mjs https://forest-international.com/ https://forest-international.com/admissions/`.
+  `node scripts/indexnow-submit.mjs https://forest-international.com/ https://forest-international.com/admissions/ https://forest-international.com/news/english-school-paris-pre-elementary-primary/`.
   T+7 (2026-07-16) GSC re-check: did near-brand CTR (international forest school, forest
-  school paris, ecole forest) lift on `/`, and did `/admissions` (pos 16.2) draw any clicks?
+  school paris, ecole forest) lift on `/`, `/admissions` (pos 16.2) draw any clicks, and
+  the pre-elementary post (pos 8.5 / 87 imp / 0 clk) start converting impressions?
 - 2026-07-11: Summer 2026 camp week 1 (6–10 Jul) is over → freshness check on
   `/holiday-camps` + `/fr/stages-vacances` (expired week still shown as upcoming?
   fact change = user confirmation). Camp-recap post (P1) unblocks — ask user for real
@@ -190,7 +191,16 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
-- 2026-07-09 (21) | Second snippet fix (user: "please do it"): `/admissions`
+- 2026-07-09 (22) | Third snippet fix ("繼續優化"): full title audit vs per-page GSC found
+  the biggest winnable-click gap = `/news/english-school-paris-pre-elementary-primary`
+  (pos 8.5, page-1, 87imp, **0clk**). Reframed keyword-stuffed title → "Choosing an
+  English School in West Paris" comparison-guide framing + click-worthy description
+  (approach / school day / full first-year fees). Two-birds: earns the click + resolves
+  the cannibalization watch (differentiates from /early-years, /primary). Article gate:
+  lint PASS 0-err, prose unchanged (§E N/A), build 21pp green. | Remaining weak titles
+  noted for later: `/about` "About Our School" (143imp/pos13.9), `/tuition` "Tuition Fees"
+  (fees intent), `/team` "Our Team" (pos5/24imp). Bigger prize still open: choose-school
+  cluster position problem (pos 31) needs a content/authority plan, not snippets. Second snippet fix (user: "please do it"): `/admissions`
   (200imp/0clk/pos16.2). Title "Admissions" → "Admissions — Apply to an English School
   in West Paris"; description now leads with apply + english-language + Mareil-Marly/west
   Paris + real on-page differentiators (year-round admissions, no birthday cut-off, book
