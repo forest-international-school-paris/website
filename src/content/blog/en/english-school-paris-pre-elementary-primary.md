@@ -1,6 +1,6 @@
 ---
-title: "English School Paris: Pre-Elementary & Primary"
-description: "Compare English pre-elementary and primary schools in Paris and west Paris, including Mareil-Marly, Saint-Germain-en-Laye and L'Étang-la-Ville."
+title: "Choosing an English School in West Paris"
+description: "A practical comparison of English pre-elementary and primary schools in west Paris — approach, the school day and full first-year fees near Saint-Germain-en-Laye."
 date: 2026-07-03
 author: "Forest International School"
 image: "/images/forest-walk.jpg"
