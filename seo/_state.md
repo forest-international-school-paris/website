@@ -85,11 +85,12 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
   upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
   `measure-gsc.mjs --inspect` on `/`, `/holiday-camps`, `/fr/admissions`,
   `/fr/stages-vacances`.
-- **ASAP after next deploy: verify homepage snippet live + IndexNow.** New `<title>` =
-  "English-Language School in West Paris, Ages 2–14"; confirm live SERP source, then
-  `node scripts/indexnow-submit.mjs https://forest-international.com/`. T+7 (2026-07-16)
-  GSC re-check: did near-brand CTR (international forest school, forest school paris,
-  ecole forest) lift on the homepage?
+- **ASAP after next deploy: verify homepage + /admissions snippets live + IndexNow.**
+  New titles: `/` = "English-Language School in West Paris, Ages 2–14"; `/admissions` =
+  "Admissions — Apply to an English School in West Paris". Confirm live, then
+  `node scripts/indexnow-submit.mjs https://forest-international.com/ https://forest-international.com/admissions/`.
+  T+7 (2026-07-16) GSC re-check: did near-brand CTR (international forest school, forest
+  school paris, ecole forest) lift on `/`, and did `/admissions` (pos 16.2) draw any clicks?
 - 2026-07-11: Summer 2026 camp week 1 (6–10 Jul) is over → freshness check on
   `/holiday-camps` + `/fr/stages-vacances` (expired week still shown as upcoming?
   fact change = user confirmation). Camp-recap post (P1) unblocks — ask user for real
@@ -174,6 +175,14 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
+- 2026-07-09 (21) | Second snippet fix (user: "please do it"): `/admissions`
+  (200imp/0clk/pos16.2). Title "Admissions" → "Admissions — Apply to an English School
+  in West Paris"; description now leads with apply + english-language + Mareil-Marly/west
+  Paris + real on-page differentiators (year-round admissions, no birthday cut-off, book
+  a visit). Deliberately NO age number — admissions page says "2 to 15" (unresolved vs
+  homepage/about "2–14", see User confirmations) so kept it out to avoid riding a
+  conflicting fact. Metadata-only, facts all on-page. Build 21pp green, verified in dist.
+  | Verify-live + IndexNow `/admissions` folded into the next-deploy scheduled item.
 - 2026-07-09 (20) | Weekly measurement (due today) + acted on the finding. GSC 27clk/
   616imp/102q — click gap diagnosed as position-problem (generic terms pos ~31, page 3-4,
   no snippet fix helps) vs snippet-problem (near-brand terms page-1 but ~0 CTR). Fixed the
