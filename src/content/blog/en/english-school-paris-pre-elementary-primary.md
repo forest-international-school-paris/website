@@ -64,6 +64,8 @@ Families do not always search by the school's town. They search from home, a fut
 
 This local step matters for younger children. A three-year-old's school day is shaped by sleep, separation, food, toilet independence and travel. A primary child may manage a longer route if the school is the right academic and social fit. For a pre-elementary child, a calm morning can matter as much as curriculum language.
 
+If your search takes in older children too, our guide to [English and international schools west of Paris](/news/english-international-schools-west-paris-yvelines/) maps the same area across the full 2 to 14 age range, with the main towns and the different types of school you will meet.
+
 ## What a younger child's school day should show you
 
 <img src="/images/forest-walk.jpg" alt="Children walking through the forest near Forest International School Paris in Mareil-Marly" />
