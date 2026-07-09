@@ -15,7 +15,7 @@
       "pillar": "choose-school",
       "lang": "en",
       "intent": "2-consideration",
-      "covered": false,
+      "covered": true,
       "source": "authority-plan-2026-07-09",
       "priority": "P4-next",
       "targets": [
@@ -27,7 +27,9 @@
       ],
       "brief": "First-hand GEO-scoped landscape guide: 'Choosing an English or international school in west Paris (Yvelines)'. The moat piece only a real local school can write. Cover the real towns (Mareil-Marly, Saint-Germain-en-Laye, L'Etang-la-Ville, Croissy, Maisons-Laffitte, St Nom la Breteche), the honest landscape of options, how to choose by age 2-14, transparent-fees + nature angle, and where Forest genuinely fits. Funnel to /admissions (hub) + program pages + /tuition. Real competitor context is fine (British School of Paris/Croissy, Ermitage/Maisons-Laffitte, EIB de la Jonchere, Etre et Decouvrir, Lycee International de Saint-Germain) but no fabricated facts about them.",
       "anti_cannibalization": "Differentiating facet = GEOGRAPHY. NOT process (visit-checklist owns that), NOT age-comparison (pre-elementary post owns that). If overlap creeps in during writing, cut it. One EN page owns the Yvelines/west-Paris geo intent.",
-      "strategy_note": "Do NOT chase the raw head term 'international school paris' (pos 31) — that SERP is a fortress of decades-old IB World Schools (ASP 1946, ISP 1982, ICS, Ermitage, EIB, British School) + directories; unwinnable short-term for a small 2-14 Mareil-Marly school. Win the geo-qualified long-tail where competition is fragmented and Forest is a genuine best-answer."
+      "strategy_note": "Do NOT chase the raw head term 'international school paris' (pos 31) — that SERP is a fortress of decades-old IB World Schools (ASP 1946, ISP 1982, ICS, Ermitage, EIB, British School) + directories; unwinnable short-term for a small 2-14 Mareil-Marly school. Win the geo-qualified long-tail where competition is fragmented and Forest is a genuine best-answer.",
+      "covered_by": "news/english-international-schools-west-paris-yvelines",
+      "covered_date": "2026-07-09"
     },
     {
       "term": "international forest school",

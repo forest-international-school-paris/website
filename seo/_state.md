@@ -88,9 +88,20 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
   already → "English-Language School in West Paris" ✓). New spoke = a first-hand
   west-Paris/Yvelines schools landscape guide (brief now at top of `seo/_backlog.json`,
   `source: authority-plan-2026-07-09`). Funnels to hub + program pages + /tuition.
-- **Phase 2 (next iteration):** write the spoke via `school-seo-content` mode B (full
-  fact-pack → draft → lint + independent §E → publish loop). Anti-cannibalization boundary
-  = GEOGRAPHY facet only; verify vs both existing guides before shipping.
+- **Phase 2 DONE 2026-07-09:** shipped `english-international-schools-west-paris-yvelines`
+  (1369 words, geo facet). Quality gate fully green: lint 0/0, independent §E review PASS
+  (no required fixes), build 22pp, in sitemap. Inbound link added from the pre-elementary
+  post (no orphan). Committed `8d31bc4`. Awaiting deploy → verify-live + IndexNow (Scheduled).
+- **Two non-blocking observations from the §E review (for the loop owner):**
+  1. **Fee figures differ across our own canonical pages:** early-years + primary say
+     19,500–23,500 EUR/yr, middle-school says 17,490–26,860, and the `/tuition` table spans
+     ~12,000–28,500 across tiers. Likely legitimate per-program pricing, not a bug — but no
+     single "whole-school range" exists, so NEVER quote one in copy (this post points to
+     `/tuition` instead). If the user wants one headline range, that's a User confirmation.
+  2. **Watch overlap:** the pre-elementary post also has a "West Paris and Yvelines areas"
+     table. Still differentiated (age-scoped vs geo/school-types), and now the pre-elementary
+     post delegates the full-age geo depth to the new guide via the inbound link. Keep the
+     two from converging in future edits.
 
 (Prior WIP cleared: user's 2026-07-03 content session settled, committed `d4c2d82`, reviewed.)
 
@@ -112,7 +123,7 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 - **ASAP after next deploy: verify homepage + /admissions snippets live + IndexNow.**
   New titles: `/` = "English-Language School in West Paris, Ages 2–14"; `/admissions` =
   "Admissions — Apply to an English School in West Paris". Confirm live, then
-  `node scripts/indexnow-submit.mjs https://forest-international.com/ https://forest-international.com/admissions/ https://forest-international.com/news/english-school-paris-pre-elementary-primary/`.
+  `node scripts/indexnow-submit.mjs https://forest-international.com/ https://forest-international.com/admissions/ https://forest-international.com/news/english-school-paris-pre-elementary-primary/ https://forest-international.com/news/english-international-schools-west-paris-yvelines/`.
   T+7 (2026-07-16) GSC re-check: did near-brand CTR (international forest school, forest
   school paris, ecole forest) lift on `/`, `/admissions` (pos 16.2) draw any clicks, and
   the pre-elementary post (pos 8.5 / 87 imp / 0 clk) start converting impressions?
@@ -215,7 +226,15 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 
 ## Iteration log
 
-- 2026-07-09 (23) | Content/authority plan — Phase 1 (user approved "啟動內容/權威計畫").
+- 2026-07-09 (24) | Content/authority Phase 2 — WROTE + shipped the geo-authority guide
+  `english-international-schools-west-paris-yvelines` (1369 words). Fact-pack from canonical
+  pages; targets the winnable geo long-tail (yvelines / west-of-paris), differentiated on
+  the geography facet. Self-caught a whole-school fee-range error in draft (quoted EY/primary
+  19,500–23,500 but middle-school + /tuition table differ) → removed the number, pointed to
+  /tuition. Gate: lint 0/0, INDEPENDENT §E sub-agent PASS (no required fixes, verified every
+  fact vs canonical), build 22pp, sitemap ✓. No-orphan link added from pre-elementary post.
+  Committed `8d31bc4`. | Deploy-gated: verify-live + IndexNow the new URL (Scheduled). T+7
+  (07-16) measure whether it draws yvelines/west-paris impressions. Backlog item marked covered. Content/authority plan — Phase 1 (user approved "啟動內容/權威計畫").
   Diagnosed the pos-31 choose-school problem on the LIVE SERP: "international school paris"
   is a fortress (decades-old IB World Schools + directories) → unwinnable, STOP chasing it.
   Pivot to the winnable geo long-tail (west Paris / Yvelines / Saint-Germain), where
