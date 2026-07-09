@@ -11,6 +11,65 @@
   "note": "lang=fr rows are user-decision items (site is EN-only)",
   "backlog": [
     {
+      "term": "international forest school",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "2-consideration",
+      "covered": true,
+      "source": "striking-distance",
+      "gsc": {
+        "pos": 7.5,
+        "imp": 59,
+        "clicks": 1,
+        "as_of": "2026-07-09"
+      },
+      "note": "page-1, awful CTR -> snippet/disambiguation problem, not ranking"
+    },
+    {
+      "term": "forest school paris",
+      "pillar": "brand",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": true,
+      "source": "striking-distance",
+      "gsc": {
+        "pos": 6.3,
+        "imp": 22,
+        "clicks": 2,
+        "as_of": "2026-07-09"
+      }
+    },
+    {
+      "term": "forest school",
+      "pillar": "programs",
+      "lang": "en",
+      "intent": "1-awareness",
+      "covered": true,
+      "source": "striking-distance",
+      "gsc": {
+        "pos": 11.4,
+        "imp": 11,
+        "clicks": 1,
+        "as_of": "2026-07-09"
+      },
+      "note": "ambiguous with nature-pedagogy 'forest school'"
+    },
+    {
+      "term": "ecole forest",
+      "pillar": "brand",
+      "lang": "fr",
+      "intent": "1-awareness",
+      "covered": true,
+      "source": "striking-distance",
+      "gsc": {
+        "pos": 6.4,
+        "imp": 12,
+        "clicks": 0,
+        "as_of": "2026-07-09"
+      },
+      "note": "FR near-brand, page-1 zero clicks; FR pillar pending user decision"
+    },
+    {
       "term": "forest international school johor",
       "pillar": "brand",
       "lang": "en",

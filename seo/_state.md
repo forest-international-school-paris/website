@@ -5,6 +5,24 @@
 
 ## North star (latest measurement)
 
+**2026-07-09** — GSC 2026-06-09..07-07 (`seo/metrics/gsc-2026-07-09.json`). **27 clicks /
+616 imp / 102 queries** — big growth vs the 44-imp June baseline (site now indexed &
+shown widely). **The whole story is a click gap, and it splits in two:**
+- **Position problem (slow fix):** the high-volume generic terms are on page 3–4, so no
+  snippet edit earns a click yet. `choose-school` ("international school paris",
+  "international schools in paris", "…paris fees") = **204 imp / 0 clicks / pos 31.3**;
+  `camps` 44 imp / pos 29.1; `local` 10 imp / pos 25.1. These need ranking gains
+  (content depth + internal links + authority) — a months-long job, not a quick win.
+- **Snippet problem (fast fix, actioned this iter):** near-brand terms are already on
+  page 1 but barely clicked — "international forest school" pos 7.5 (59 imp, 1 clk),
+  "ecole forest" pos 6.4 (12 imp, **0 clk**), "forest school paris" pos 6.3 (22 imp,
+  2 clk), "forest school" pos 11.4. Homepage (1119 imp, pos 13.4) titled itself
+  "International **Nature** School in Paris West" — niche framing that buries recognition.
+- Brand cluster healthy: 23 clk / pos 4.3. Page-level: `/` 49clk/1119imp/pos13.4,
+  `/holiday-camps` 10clk/313imp/pos13.4, `/admissions` **0clk/200imp/pos16.2** (visible
+  but no clicks — next snippet target), `/tuition` 2clk/65imp/pos18.
+- Striking-distance (4) → backlog `source: striking-distance`.
+
 **Baseline 2026-07-02** — first credentialed pull (PostHog 28d; GSC 2026-06-02..06-30).
 Snapshots: `seo/metrics/gsc-2026-07-02.json`, `seo/metrics/posthog-2026-07-02.json`.
 
@@ -67,6 +85,11 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
   upgrade. Also T+7 GSC URL inspection (Bible #6) for the changed pages:
   `measure-gsc.mjs --inspect` on `/`, `/holiday-camps`, `/fr/admissions`,
   `/fr/stages-vacances`.
+- **ASAP after next deploy: verify homepage snippet live + IndexNow.** New `<title>` =
+  "English-Language School in West Paris, Ages 2–14"; confirm live SERP source, then
+  `node scripts/indexnow-submit.mjs https://forest-international.com/`. T+7 (2026-07-16)
+  GSC re-check: did near-brand CTR (international forest school, forest school paris,
+  ecole forest) lift on the homepage?
 - 2026-07-11: Summer 2026 camp week 1 (6–10 Jul) is over → freshness check on
   `/holiday-camps` + `/fr/stages-vacances` (expired week still shown as upcoming?
   fact change = user confirmation). Camp-recap post (P1) unblocks — ask user for real
@@ -141,7 +164,7 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 | Task | Cycle | Last run |
 |---|---|---|
-| Measure (PostHog/GSC) | 7d | 2026-07-02 (baseline) |
+| Measure (PostHog/GSC) | 7d | 2026-07-09 (GSC done; PostHog pending) |
 | Site health sweep | 7d | 2026-07-02 |
 | Keyword mining | 7d | 2026-07-02 (initial seed) |
 | Local/GEO sweep | 30d | 2026-07-02 |
@@ -151,7 +174,17 @@ reviewed below. FR-relaunch confirmation still pending — see User decisions.)
 
 ## Iteration log
 
-- 2026-07-03 (19) | Optimized `activities.png` on `/about`: 550KB→86KB JPEG (−84%,
+- 2026-07-09 (20) | Weekly measurement (due today) + acted on the finding. GSC 27clk/
+  616imp/102q — click gap diagnosed as position-problem (generic terms pos ~31, page 3-4,
+  no snippet fix helps) vs snippet-problem (near-brand terms page-1 but ~0 CTR). Fixed the
+  highest-leverage snippet: homepage `<title>` "International **Nature** School in Paris
+  West" → "English-Language School in West Paris, Ages 2–14" + rewrote meta description
+  (concrete: english-language, Mareil-Marly/west Paris, ages 2–14, nature-based,
+  transparent fees, forest campus since 2003). Metadata-only, non-money page, facts all
+  canonical. Build 21pp green, rendered snippet verified in dist. 4 striking-distance
+  queries → backlog. | Verify-live + IndexNow homepage after deploy (Scheduled).
+  Next snippet target: `/admissions` (200imp/0clk/pos16.2). Position-problem clusters need
+  a content/authority plan (not a one-iteration fix). Optimized `activities.png` on `/about`: 550KB→86KB JPEG (−84%,
   RGB no-alpha so JPEG is safe), added `loading=lazy`, removed the PNG, single ref
   updated. Build 21pp green, no dangling refs. Last standing image-payload monster gone.
   | Verify-live DONE ~05:26: activities.jpg 200, old .png 404, IndexNow 200. Autonomous

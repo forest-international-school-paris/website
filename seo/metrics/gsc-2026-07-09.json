@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-07-09T11:07:23.506Z",
+  "site": "sc-domain:forest-international.com",
+  "window": {
+    "start": "2026-06-09",
+    "end": "2026-07-07"
+  },
+  "clusters": {
+    "brand": {
+      "clicks": 23,
+      "impressions": 154,
+      "position": 4.3
+    },
+    "programs": {
+      "clicks": 4,
+      "impressions": 123,
+      "position": 15.9
+    },
+    "choose-school": {
+      "clicks": 0,
+      "impressions": 204,
+      "position": 31.3
+    },
+    "camps": {
+      "clicks": 0,
+      "impressions": 44,
+      "position": 29.1
+    },
+    "other": {
+      "clicks": 0,
+      "impressions": 81,
+      "position": 25.9
+    },
+    "local": {
+      "clicks": 0,
+      "impressions": 10,
+      "position": 25.1
+    }
+  },
+  "striking_distance": [
+    {
+      "query": "international forest school",
+      "cluster": "programs",
+      "clicks": 1,
+      "impressions": 59,
+      "position": 7.5
+    },
+    {
+      "query": "forest school paris",
+      "cluster": "brand",
+      "clicks": 2,
+      "impressions": 22,
+      "position": 6.3
+    },
+    {
+      "query": "ecole forest",
+      "cluster": "other",
+      "clicks": 0,
+      "impressions": 12,
+      "position": 6.4
+    },
+    {
+      "query": "forest school",
+      "cluster": "programs",
+      "clicks": 1,
+      "impressions": 11,
+      "position": 11.4
+    }
+  ],
+  "top_pages": [
+    {
+      "page": "https://forest-international.com/",
+      "clicks": 49,
+      "impressions": 1119,
+      "position": 13.4
+    },
+    {
+      "page": "https://forest-international.com/holiday-camps/",
+      "clicks": 10,
+      "impressions": 313,
+      "position": 13.4
+    },
+    {
+      "page": "https://forest-international.com/tuition/",
+      "clicks": 2,
+      "impressions": 65,
+      "position": 18
+    },
+    {
+      "page": "https://forest-international.com/about/",
+      "clicks": 1,
+      "impressions": 143,
+      "position": 13.9
+    },
+    {
+      "page": "https://forest-international.com/news/summer-school-paris-2026-english-camp/",
+      "clicks": 1,
+      "impressions": 40,
+      "position": 6.1
+    },
+    {
+      "page": "https://forest-international.com/team/",
+      "clicks": 1,
+      "impressions": 24,
+      "position": 5
+    },
+    {
+      "page": "https://forest-international.com/admissions/",
+      "clicks": 0,
+      "impressions": 200,
+      "position": 16.2
+    },
+    {
+      "page": "https://forest-international.com/contact/",
+      "clicks": 0,
+      "impressions": 37,
+      "position": 17.8
+    },
+    {
+      "page": "https://forest-international.com/early-years/",
+      "clicks": 0,
+      "impressions": 28,
+      "position": 16.7
+    },
+    {
+      "page": "https://forest-international.com/fr/admissions/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 21.7
+    },
+    {
+      "page": "https://forest-international.com/fr/news/ecole-anglaise-paris-maternelle-primaire/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6
+    },
+    {
+      "page": "https://forest-international.com/fr/stages-vacances/",
+      "clicks": 0,
+      "impressions": 62,
+      "position": 14.8
+    },
+    {
+      "page": "https://forest-international.com/middle-school/",
+      "clicks": 0,
+      "impressions": 48,
+      "position": 34.6
+    },
+    {
+      "page": "https://forest-international.com/news/english-school-paris-pre-elementary-primary/",
+      "clicks": 0,
+      "impressions": 87,
+      "position": 8.5
+    },
+    {
+      "page": "https://forest-international.com/primary/",
+      "clicks": 0,
+      "impressions": 43,
+      "position": 13.4
+    }
+  ],
+  "totals": {
+    "clicks": 27,
+    "impressions": 616,
+    "queries": 102
+  }
+}
