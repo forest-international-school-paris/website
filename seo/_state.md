@@ -107,6 +107,10 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 
 ## Scheduled
 
+- 2026-07-24: T+7 GSC inspection for `/tuition`, `/early-years`, `/primary`, and
+  `/middle-school` after the 2026-07-17 terminology/fee-clarity deployment. Check that
+  the canonical pages remain indexed and watch fee/programme queries for unexpected
+  snippet changes.
 - ~~2026-07-03 verify-live~~ DONE EARLY 2026-07-02 ~18:00: deploy landed same evening;
   all pages verified live, sitemap = 15 URLs (survey excluded), IndexNow 202 for 11
   URLs, homepage Lighthouse live: perf 84 / LCP 3.7s (was 66 / 14.9s).
@@ -226,6 +230,13 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 
 ## Iteration log
 
+- 2026-07-17 (25) | User-confirmed fee terminology fix shipped: `/tuition` now uses
+  Early Years as the umbrella, with Nursery (€12,500 tuition) and Pre-School (€15,000
+  tuition) as the two rows. Added a clear warning that annual tuition excludes other
+  applicable fees; removed stale duplicated fee ranges from all three programme pages
+  in favour of canonical `/tuition` links. Build 22pp green; committed `3c649e8`, pushed
+  to `main`, verified all four production pages + sitemap, IndexNow HTTP 200 for 4 URLs.
+  | Next: T+7 GSC inspection on 2026-07-24 (Scheduled).
 - 2026-07-09 (24) | Content/authority Phase 2 — WROTE + shipped the geo-authority guide
   `english-international-schools-west-paris-yvelines` (1369 words). Fact-pack from canonical
   pages; targets the winnable geo long-tail (yvelines / west-of-paris), differentiated on
