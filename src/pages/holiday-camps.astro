@@ -67,25 +67,6 @@ const campCards = [
     ],
   },
   {
-    key: 'summer-2026',
-    season: 'Summer 2026',
-    title: 'Holiday Summer Camp 2026',
-    icon: SunMedium,
-    registerUrl: 'https://forms.gle/Xxp1hi3qc8AdtAsCA',
-    description: 'Our Summer Camp offers a rich mix of outdoor activities, including splashy fun in our swimming pool, forest and orchard exploration, creative workshops, science, cooking, baking and group games.',
-    sessions: [
-      '6th – 10th July 2026',
-      '13th – 17th July 2026 (excl. 14th)',
-      '20th – 24th July 2026',
-    ],
-    facts: [
-      { label: 'Hours', value: 'Daily 10:00 am – 5:00 pm', icon: Clock },
-      { label: 'Rate', value: '425 €/week', icon: Euro },
-      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
-      { label: 'Early Drop-off / Late Pick-up', value: '9:30 am & 5:30 pm — 40 €/day', icon: BusFront },
-    ],
-  },
-  {
     key: 'summer-2027',
     season: 'Summer 2027',
     title: 'Holiday Summer Camp 2027',
@@ -243,17 +224,6 @@ const campCards = [
                   })}
                 </dl>
 
-                {camp.key === 'summer-2026' && (
-                  <p class="camp-card__note">
-                    Optional private swimming classes and transportation from Saint-Germain-en-Laye/Le Pecq and Paris 16 are available on a first-come-first-served basis.
-                    {' '}
-                    <a href="https://forms.gle/ZZJ8tFxyJnEQXpEf6" target="_blank" rel="noopener noreferrer">Request swimming or transportation</a>.
-                    {' '}
-                    Read more in our
-                    {' '}
-                    <a href="/news/summer-school-paris-2026-english-camp/">Summer School Paris 2026 article</a>.
-                  </p>
-                )}
               </div>
             </article>
           );
@@ -322,7 +292,6 @@ const campCards = [
     --camp-line: rgba(79, 135, 55, 0.18);
   }
 
-  .camp-card--summer-2026,
   .camp-card--summer-2027 {
     --camp-accent: #9b7a24;
     --camp-tint: #fff8dc;

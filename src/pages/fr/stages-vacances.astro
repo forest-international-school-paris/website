@@ -67,25 +67,6 @@ const campCards = [
     ],
   },
   {
-    key: 'summer-2026',
-    season: 'Été 2026',
-    title: 'Stage d\'été 2026',
-    icon: SunMedium,
-    registerUrl: 'https://forms.gle/Xxp1hi3qc8AdtAsCA',
-    description: 'Notre Summer Camp propose un programme riche d\'activités en plein air : piscine, exploration de la forêt et du verger, ateliers créatifs, sciences, cuisine, pâtisserie et jeux de groupe.',
-    sessions: [
-      '6 - 10 juillet 2026',
-      '13 - 17 juillet 2026 (sauf le 14)',
-      '20 - 24 juillet 2026',
-    ],
-    facts: [
-      { label: 'Horaires', value: 'Tous les jours 10h00 - 17h00', icon: Clock },
-      { label: 'Tarif', value: '425 €/semaine', icon: Euro },
-      { label: 'Repas', value: '40 €/semaine, collations incluses', icon: Utensils },
-      { label: 'Accueil anticipé / départ tardif', value: '9h30 et 17h30 — 40 €/jour', icon: BusFront },
-    ],
-  },
-  {
     key: 'summer-2027',
     season: 'Été 2027',
     title: 'Stage d\'été 2027',
@@ -250,17 +231,6 @@ const campCards = [
                   })}
                 </dl>
 
-                {camp.key === 'summer-2026' && (
-                  <p class="camp-card__note">
-                    Des cours particuliers de natation et un transport depuis Saint-Germain-en-Laye/Le Pecq et Paris 16 sont disponibles en option, selon l'ordre d'inscription.
-                    {' '}
-                    <a href="https://forms.gle/ZZJ8tFxyJnEQXpEf6" target="_blank" rel="noopener noreferrer">Demander la natation ou le transport</a>.
-                    {' '}
-                    Lire aussi notre
-                    {' '}
-                    <a href="/news/summer-school-paris-2026-english-camp/">article Summer School Paris 2026</a>.
-                  </p>
-                )}
               </div>
             </article>
           );
@@ -329,7 +299,6 @@ const campCards = [
     --camp-line: rgba(79, 135, 55, 0.18);
   }
 
-  .camp-card--summer-2026,
   .camp-card--summer-2027 {
     --camp-accent: #9b7a24;
     --camp-tint: #fff8dc;
