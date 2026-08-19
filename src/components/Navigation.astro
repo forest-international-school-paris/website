@@ -1,6 +1,5 @@
 ---
 import {
-  Building2,
   Mountain,
   School,
   Sprout,
@@ -22,7 +21,6 @@ const t = {
   tuition: 'Tuition',
   news: 'News',
   summerCamp: 'Holiday Camps',
-  campusRental: 'Campus Rental',
   contact: 'Contact',
   applyNow: 'Book a Visit',
   phone: '+33 6 32 72 51 45',
@@ -96,12 +94,6 @@ const t = {
                         <Users class="w-5 h-5 text-[#c9a962]" aria-hidden="true" />
                       </div>
                       <div class="font-semibold text-[#1e3d29]">{t.team}</div>
-                    </a>
-                    <a href="/campus-rental/" class="flex items-center gap-3 px-3 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#2d5a3d]/10 hover:to-transparent rounded-xl transition-all group/item">
-                      <div class="w-10 h-10 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center group-hover/item:bg-[#2d5a3d]/20 transition-colors">
-                        <Building2 class="w-5 h-5 text-[#2d5a3d]" aria-hidden="true" />
-                      </div>
-                      <div class="font-semibold text-[#1e3d29]">{t.campusRental}</div>
                     </a>
                   </div>
 
@@ -181,9 +173,6 @@ const t = {
         </a>
         <a href="/team/" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl">
           <Users class="w-5 h-5 text-[#2d5a3d] flex-shrink-0" aria-hidden="true" /> {t.team}
-        </a>
-        <a href="/campus-rental/" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl">
-          <Building2 class="w-5 h-5 text-[#2d5a3d] flex-shrink-0" aria-hidden="true" /> {t.campusRental}
         </a>
         <a href="/early-years/" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl">
           <Sprout class="w-5 h-5 text-[#2d5a3d] flex-shrink-0" aria-hidden="true" /> {t.earlyYears}
