@@ -1,5 +1,5 @@
 ---
-title: "Le Figaro Madame parle de nous !"
+title: "Madame Figaro parle de nous !"
 description: "Forest International School Paris is featured in Madame Figaro: a modern, nature-based vision of education in Mareil-Marly, west of Paris, led by Sophie Lovejoy."
 date: 2026-07-01
 author: "Madame Figaro"
