@@ -1,6 +1,6 @@
 # Forest International School — SEO Bible (read before touching any content)
 
-> **Single mission:** when a parent in west Paris searches for an English-language education for a child aged 2–14 — "international school paris", "english school near saint-germain-en-laye", "summer camp paris english" — Google and AI assistants should surface Forest International School Paris (forest-international.com).
+> **Single mission:** when a parent in west Paris searches for an English-language education for a child aged 2–15 — "international school paris", "english school near saint-germain-en-laye", "summer camp paris english" — Google and AI assistants should surface Forest International School Paris (forest-international.com).
 >
 > **One-line doctrine:** the moat is that this is a REAL school. Generic AI prose about education is worthless (anyone can generate it). What competitors and content farms cannot fake: our real campus in Mareil-Marly, real teachers, real term dates, real transparent fees, real photos, real events, first-hand knowledge of raising and schooling children in west Paris. Every content decision asks: **"does this page contain something only this school can say?"** If no → don't ship it.
 
@@ -34,7 +34,7 @@ Not raw traffic. **(a)** Organic-attributed inquiries: PostHog conversion events
 | Pillar | Head intents | Hub page(s) | Spokes (blog posts under `/news/`) |
 |---|---|---|---|
 | **Choosing a school in Paris West** | international school paris (west) / english school yvelines / admissions | `/admissions` (+ homepage) | school-choice guides, French vs international systems, relocation-with-kids guides, open-day posts |
-| **Programs by age (2–14)** | english preschool paris (2–5) / english primary school paris (6–11) / middle school (11–14) / forest school & nature-based learning | `/early-years`, `/primary`, `/middle-school` | curriculum explainers, nature-pedagogy posts, a-day-in-the-life posts |
+| **Programs by age (2–15)** | english preschool paris (2–5) / english primary school paris (6–11) / middle school (11–15) / forest school & nature-based learning | `/early-years`, `/primary`, `/middle-school` | curriculum explainers, nature-pedagogy posts, a-day-in-the-life posts |
 | **Camps & activities** | summer camp paris english / holiday camp kids paris / wednesday activities english | `/holiday-camps` | seasonal camp posts (each season), MasterClasses posts, camp-recap posts (real photos = proof) |
 
 Seasonality is strategy: admissions content peaks Sep–Mar, camp content must be live 2–3 months before each holiday, relocation queries peak Apr–Aug. The loop's calendar lives in skill `references/seo-strategy.md`.

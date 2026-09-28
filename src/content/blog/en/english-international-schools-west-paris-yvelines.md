@@ -44,7 +44,7 @@ The right school at three is rarely the right question to ask at eleven. It help
 
 **Primary (ages 6 to 11).** Here the curriculum starts to matter. Ask who teaches your child and how consistently. In our [primary years](/primary) each class has one teacher responsible for all academic subjects, which means someone knows your child's reading, their maths and their worries as one picture rather than six. Classes are capped at eleven children.
 
-**Middle school (ages 11 to 14).** This is where children need to become more independent without being thrown in at the deep end. Our [middle school](/middle-school) combines the English National Curriculum with the International Middle Years Curriculum, and keeps the project-based, outdoor thread running rather than dropping it the moment secondary work begins.
+**Middle school (ages 11 to 15).** This is where children need to become more independent without being thrown in at the deep end. Our [middle school](/middle-school) combines the English National Curriculum with the International Middle Years Curriculum, and keeps the project-based, outdoor thread running rather than dropping it the moment secondary work begins.
 
 ## What a smaller school can offer
 
@@ -77,7 +77,7 @@ Not to join us. We teach French every day, as a foreign language for children wh
 Fees vary widely across the area, and many schools ask you to enquire rather than publishing a figure. We publish ours in full: the fee for each year group, and exactly what it includes, is set out on our [tuition page](/tuition).
 
 ### What ages does Forest International School teach?
-We teach children aged 2 to 14, across early years, primary and middle school, on one forest campus in Mareil-Marly.
+We teach children aged 2 to 15, across early years, primary and middle school, on one forest campus in Mareil-Marly.
 
 ### Can we visit before applying?
 Yes, and we would encourage it. Seeing a morning in progress tells you more than any brochure. You can arrange a visit through our [admissions page](/admissions).

@@ -28,7 +28,7 @@ A modern, bilingual (English/French) website for Forest International School Par
 | About Our School | A Propos |
 | Early Years (2-5) | Maternelle |
 | Primary School (6-11) | Ecole Primaire |
-| Middle School (11-14) | College |
+| Middle School (11-15) | College |
 | Admissions | Admissions |
 | Tuition & Fees | Frais de Scolarite |
 | Summer Camp | Camp d'Ete |

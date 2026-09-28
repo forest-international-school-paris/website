@@ -1,6 +1,6 @@
 ---
 title: "International School Paris Visit Checklist"
-description: "What to ask when choosing an international school in Paris, with notes from our English-language campus in Mareil-Marly for ages 2-14."
+description: "What to ask when choosing an international school in Paris, with notes from our English-language campus in Mareil-Marly for ages 2-15."
 date: 2026-06-19
 author: "Forest International School"
 image: "/images/campus.jpg"
@@ -25,7 +25,7 @@ Use these questions during a visit, then compare your notes the same day while t
 
 | What to ask | What to look for | At Forest International School Paris |
 |---|---|---|
-| Which ages are taught here? | A clear route for siblings and future transitions | [Early Years](/early-years/) for ages 2-5, [Primary](/primary/) for ages 6-11 and [Middle School](/middle-school/) for ages 11-14 |
+| Which ages are taught here? | A clear route for siblings and future transitions | [Early Years](/early-years/) for ages 2-5, [Primary](/primary/) for ages 6-11 and [Middle School](/middle-school/) for ages 11-15 |
 | What curriculum does the school follow? | A named curriculum, not vague international wording | English National Curriculum, with IPC in Primary and IMYC in Middle School |
 | How much time do children spend outdoors? | Outdoor learning that is part of the school week, not a rare treat | Nature-based learning on a forest campus in Mareil-Marly |
 | How is French taught? | A plan for both non-francophone and French-speaking children | English-language learning with French included in the programme |
@@ -105,7 +105,7 @@ Forest International School Paris is west of Paris in Mareil-Marly, near Saint-G
 
 ### What ages does Forest International School Paris teach?
 
-The school offers Early Years for ages 2-5, Primary for ages 6-11 and Middle School for ages 11-14. If your child is near a transition point, ask admissions which group is the right fit.
+The school offers Early Years for ages 2-5, Primary for ages 6-11 and Middle School for ages 11-15. If your child is near a transition point, ask admissions which group is the right fit.
 
 ### Can we visit before applying?
 

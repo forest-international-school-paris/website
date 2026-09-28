@@ -11,7 +11,7 @@
 | `src/pages/index.astro` | international school paris west, forest school paris | positioning, hours summary |
 | `src/pages/early-years.astro` | english preschool/nursery paris, maternelle anglophone | ages 2–5 program |
 | `src/pages/primary.astro` | english primary school paris | ages 6–11 program |
-| `src/pages/middle-school.astro` | international middle school paris | ages 11–14 program |
+| `src/pages/middle-school.astro` | international middle school paris | ages 11–15 program |
 | `src/pages/holiday-camps.astro` | summer/holiday camp paris english | camp dates, hours, prices, eligibility |
 | `src/pages/admissions.astro` | admissions, apply, visit | process steps, application link |
 | `src/pages/tuition.astro` | international school paris fees | ALL fees |

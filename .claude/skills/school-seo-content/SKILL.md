@@ -1,7 +1,7 @@
 ---
 name: school-seo-content
 description: Plan, write, optimize, and publish SEO content for the Forest International
-  School Paris website (forest-international.com) so that parents of children aged 2-14
+  School Paris website (forest-international.com) so that parents of children aged 2-15
   in west Paris find the school for head terms like "international school paris",
   "english school saint-germain-en-laye", "english preschool paris", "summer camp paris
   english", and "forest school paris". Covers four surfaces - (1) blog/news articles
@@ -22,7 +22,7 @@ description: Plan, write, optimize, and publish SEO content for the Forest Inter
 # Forest International School SEO Engine
 
 End-to-end system for making forest-international.com the answer when west-Paris parents
-search for English-language schooling (ages 2–14) or English holiday camps. Built on the
+search for English-language schooling (ages 2–15) or English holiday camps. Built on the
 school's un-fakeable moat: **it is a real school** — real campus, teachers, fees, dates,
 photos, and first-hand knowledge of schooling expat and bilingual children in France.
 Generic AI education prose is commoditized; only ship pages that say something **only this

@@ -45,7 +45,7 @@ They are exempt from §A#1/#5/#7 but NOT from facts, tone, links, or privacy rul
 | Item | Rule |
 |---|---|
 | `title` | Main keyword phrase early, ≤ 60 chars where possible; no clickbait, no superlatives ("best", "#1") without a citable source; British English |
-| `description` | 110–160 chars; contains the query phrase; a concrete fact beats an adjective ("Ages 2–14, English curriculum, forest campus 20 min from Paris" beats "an amazing learning journey") |
+| `description` | 110–160 chars; contains the query phrase; a concrete fact beats an adjective ("Ages 2–15, English curriculum, forest campus 20 min from Paris" beats "an amazing learning journey") |
 | Opening | First paragraph answers the query directly (parents skim; AI Overviews extract). No throat-clearing ("Choosing a school is one of the most important decisions…" is banned throat-clearing) |
 | Freshness | Facts that expire (fees, dates) carry "as of <Month Year>" inline; `updated:` frontmatter only on real changes; expired event/camp posts get an update note or a redirect to the current season's post |
 | Schema | Site-wide `EducationalOrganization` JSON-LD lives in `Layout.astro` (don't duplicate per-post). Blog posts need no extra schema by default; FAQPage/Event schema only via mode E decisions in `site-pages-engine.md` |

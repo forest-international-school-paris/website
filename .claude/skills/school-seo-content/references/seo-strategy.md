@@ -5,7 +5,7 @@
 
 ## The audience (who actually types the queries)
 
-The searcher is never the student (ages 2–14) — it is the **parent**:
+The searcher is never the student (ages 2–15) — it is the **parent**:
 
 1. **Relocating expat parent** (EN queries, often from abroad): "international school
    paris", "english school west paris", "school for expat kids france". Time-critical,

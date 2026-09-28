@@ -185,8 +185,9 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 
 - **Camp ages:** resolved — `/holiday-camps`, FR camp pages, `llms.txt`, and the
   homepage camp promo now all use the canonical camp range: children aged 2-12.
-- **Admissions age ceiling:** `/admissions` Key Information says "up to 15 years";
-  `/about` and homepage say ages 2-14. Which is the real ceiling?
+- **Admissions age ceiling:** RESOLVED 2026-09-28 — user confirmed **15**. Site-wide aligned
+  to ages 2-15 (Middle School 11-15): EN+FR pages, nav, blog posts, llms.txt, registry
+  `canonical_blurb`, CLAUDE.md, skill docs.
 - **Phone NAP mismatch:** footer + README show +33 1 39 16 87 35; JSON-LD + WhatsApp
   button use +33 6 32 72 51 45. Both may be real (landline vs mobile) but the JSON-LD
   and GBP should use one consistent primary number.
@@ -205,16 +206,10 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
   (b) user gets deploy access (added to the school's CF account / API token),
   (c) status quo: school deploys on their rhythm, loop verifies afterwards.
 
-- **French section — EXPANDING (user-driven, 2026-07-03).** Beyond the two FR landing
-  pages, the user has committed a FR blog guide (`blog/fr/ecole-anglaise-paris-maternelle-
-  primaire.md`), a FR news route (`/fr/news/[...slug]`), and aligned `/fr/stages-vacances`
-  (commits `706e1bd`, `d4c2d82`). All live, hreflang-paired with EN twins, in sitemap.
-  This is a de-facto French relaunch by the user's own hand. **PENDING: explicit confirm**
-  (asked 2026-07-03) that the loop should treat FR as an approved ACTIVE pillar —
-  i.e. IndexNow FR pages, measure FR queries, keep FR facts in sync. Until confirmed:
-  loop indexes EN only (FR still gets organic crawl since live + in sitemap), and never
-  AUTHORS new FR pages autonomously. Note: FR fee/date facts must mirror the canonical
-  EN pages exactly (Bible #8) — verify on next FR touch.
+- **French section — ACTIVE PILLAR (user-confirmed 2026-09-28).** FR pages
+  (`/fr/admissions`, `/fr/stages-vacances`, `/fr/news/*`) are in scope for the loop:
+  IndexNow FR URLs, measure FR queries, keep FR facts in exact sync with the canonical EN
+  pages (Bible #8). New FR pages still go through the full quality gate.
 
 ## Periodic last-run
 
