@@ -92,7 +92,7 @@ const team: Person[] = [
           <figcaption><strong>Classrooms and library</strong> Interactive whiteboards and computers, and a library with books in English, French and Dutch.</figcaption>
         </figure>
       </div>
-      <div class="street-view">
+      <div id="school-3d" class="street-view">
         <div class="street-view-copy">
           <h3>Look around before you visit</h3>
           <p>Walk through the school grounds in Street View.</p>
@@ -150,11 +150,13 @@ const team: Person[] = [
   .team-layout .text-link { margin-top: 1.5rem; }
 
   @media (max-width: 900px) {
+    .team-layout, .street-view { grid-template-columns: 1fr; }
     .approach-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; align-items: start; }
     .approach-intro h2 { grid-column: 1 / -1; }
     .approach-intro img { margin-top: 0; }
   }
   @media (max-width: 640px) {
+    .street-view-frame iframe { height: 20rem; }
     .approach-intro { grid-template-columns: 1fr; }
     .approach-intro img { margin-top: 1.5rem; }
     .campus-grid { grid-template-columns: 1fr; }

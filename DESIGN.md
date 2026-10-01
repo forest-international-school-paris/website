@@ -125,7 +125,7 @@ Keyboard focus uses a 3px forest-green outline, a 4px offset and a white separat
 
 The solid white header stays at the top of the viewport. The School disclosure is a native `details` element, activated by click, touch or keyboard. Its links have current-page states. Escape closes it and returns focus; clicking outside or moving focus away closes it.
 
-Below 1024px, use the mobile disclosure. From 1024–1199px, tighten navigation spacing while keeping all desktop links visible. Keep a pale-green direct-dial phone button visible beside the navigation: show the full number on desktop and “Call” on mobile. The button exposes its expanded state and controlled region. The panel scrolls within the viewport, closes on Escape and resets when crossing the desktop breakpoint. The brand name remains visible on small screens.
+Below 820px, use the mobile disclosure. From 820–1199px, tighten navigation spacing while keeping all desktop links visible. The forest-dark contact strip with telephone and email links appears above the navigation at every width. On phones, it centres the two links and omits the location line. There is no separate call button beside the menu; the open mobile menu ends with a direct-dial link. The menu button exposes its expanded state and controlled region. The panel scrolls within the viewport, closes on Escape and resets when crossing the desktop breakpoint. The brand name remains visible on small screens.
 
 ### Content and media
 
@@ -168,7 +168,7 @@ The tuition comparison is a native table with a caption, column headers and row 
 
 The homepage campus photograph has AVIF and WebP variants at 640, 960, 1440 and 1829 pixels. Retain high fetch priority, explicit dimensions and the approved crop. Do not lazy-load the hero. The original PNG remains available as source material.
 
-The navigation row may wrap when text is enlarged, retaining both the direct-dial action and menu without horizontal overflow.
+The navigation row may wrap when text is enlarged, retaining the menu without horizontal overflow.
 
 ## Open House post-registration page — 1 October 2026
 
@@ -188,7 +188,7 @@ Google documents the confirmation-message setting at https://support.google.com/
 
 ### Embedded registration preview
 
-`/open-house/register/` embeds the existing form with `embedded=true&hl=en` in a full-viewport shell with the shared school Navigation component. The pinned bottom bar contains only the shared Add to calendar chooser. Visit details remain on the post-registration page, linked from the Google Form confirmation message after deployment. The regular site footer and contact bubbles are omitted. The mobile navigation opens above the form with its own bounded menu area. It is noindex and excluded from the sitemap. No iframe load event is treated as a successful submission or used to redirect visitors.
+`/open-house/register/` embeds the existing form with `embedded=true&hl=en` in a full-viewport shell without the school navigation or contact strip. Below 1000px, the form fills the space beneath a compact top row: the return link on the left and a calendar icon with “Save date” on the right. There is no bottom action bar. At 1000px and wider, the form sits beside a forest-dark sidebar with the event date, an Add to calendar chooser, directions and parking details from the shared event registry. Only one calendar trigger is visible at each width; an open chooser closes when its trigger becomes hidden at the breakpoint. The sidebar scrolls independently in short windows; its calendar popover follows internal scrolling. The separate thank-you page remains available after registration. No success wording is shown on the registration sidebar. A compact arrow link above the form returns to the referring same-origin school page, with the homepage as fallback; its destination survives reloads via history state. It navigates directly rather than stepping through Google Forms iframe history. Registration-page map and Google Calendar links use the current tab; Apple/Outlook remain ICS downloads. The regular site footer and contact bubbles are omitted. It is noindex and excluded from the sitemap. No iframe load event is treated as a successful submission or used to redirect visitors.
 
 Google's cross-origin document height is not available to the parent. Instead of guessing heights or disabling form scrolling, the shell uses viewport flex sizing: the iframe is the sole scroll surface and the action bar reserves its own space. Calendar links open an event draft/import that the visitor must save; they do not silently add an event.
 

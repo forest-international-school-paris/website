@@ -1,16 +1,16 @@
 ---
 import { CalendarDays, ChevronDown, Smartphone, Mail } from '@lucide/astro';
 import { openHouse, googleCalendarUrl } from '../lib/open-house';
-interface Props { id: string; }
-const { id } = Astro.props;
+interface Props { id: string; openInNewTab?: boolean; compact?: boolean; }
+const { id, openInNewTab = true, compact = false } = Astro.props;
 ---
 
 <div class="calendar-picker">
-  <button type="button" class="calendar-trigger" popovertarget={id} aria-expanded="false" aria-controls={id}>
-    <CalendarDays size={20} aria-hidden="true" />Add to calendar<ChevronDown size={16} aria-hidden="true" />
+  <button type="button" class:list={['calendar-trigger', { 'calendar-trigger-compact': compact }]} popovertarget={id} aria-expanded="false" aria-controls={id}>
+    <CalendarDays size={20} aria-hidden="true" />{compact ? 'Save date' : 'Add to calendar'}{!compact && <ChevronDown size={16} aria-hidden="true" />}
   </button>
   <div id={id} class="calendar-options" popover aria-label="Choose your calendar">
-    <a href={googleCalendarUrl} target="_blank" rel="noopener noreferrer" data-calendar-provider="google" data-calendar-event={openHouse.id}><CalendarDays size={20} aria-hidden="true" /><span>Google Calendar</span></a>
+    <a href={googleCalendarUrl} target={openInNewTab ? '_blank' : undefined} rel={openInNewTab ? 'noopener noreferrer' : undefined} data-calendar-provider="google" data-calendar-event={openHouse.id}><CalendarDays size={20} aria-hidden="true" /><span>Google Calendar</span></a>
     <a href="/open-house/calendar.ics" download={`${openHouse.id}.ics`} data-calendar-provider="apple" data-calendar-event={openHouse.id}><Smartphone size={20} aria-hidden="true" /><span>Apple Calendar</span></a>
     <a href="/open-house/calendar.ics" download={`${openHouse.id}.ics`} data-calendar-provider="outlook" data-calendar-event={openHouse.id}><Mail size={20} aria-hidden="true" /><span>Outlook</span></a>
   </div>
@@ -23,6 +23,7 @@ const { id } = Astro.props;
     const position = () => {
       if (!panel.matches(':popover-open')) return;
       const rect = trigger.getBoundingClientRect();
+      if (!rect.width || !rect.height) { panel.hidePopover(); return; }
       const bounds = panel.getBoundingClientRect();
       const below = innerHeight - rect.bottom;
       const top = below >= bounds.height + 16 ? rect.bottom + 8 : rect.top - bounds.height - 8;
@@ -38,7 +39,7 @@ const { id } = Astro.props;
       if ((event.target as Element).closest('a')) { panel.hidePopover(); trigger.focus(); }
     });
     window.addEventListener('resize', position);
-    window.addEventListener('scroll', position, { passive: true });
+    window.addEventListener('scroll', position, { passive: true, capture: true });
     // Clicks inside the cross-origin form do not bubble to this document.
     window.addEventListener('blur', () => {
       setTimeout(() => {
@@ -55,4 +56,6 @@ const { id } = Astro.props;
   .calendar-options a { display: flex; gap: .75rem; align-items: center; min-height: 48px; padding: .6rem .85rem; border-radius: 4px; font-size: 1rem; font-weight: 500; text-decoration: none; }
   .calendar-options a:hover, .calendar-options a:focus-visible { background: var(--color-surface); }
   @media (max-width: 380px) { .calendar-trigger { font-size: .875rem; padding-inline: .7rem; gap: .4rem; } }
+  .calendar-trigger-compact { min-height: 44px; padding: .5rem; gap: .4rem; background: transparent; color: var(--color-gold-nav); font-size: .875rem; white-space: nowrap; }
+  .calendar-trigger-compact:hover { background: var(--color-surface); }
 </style>

@@ -69,7 +69,7 @@ const eventWeekday = eventPart({ weekday: 'long' });
           </ul>
         )}
         <div class="popup-actions">
-          <a data-announcement-cta href={buttonLink} target="_blank" rel="noopener noreferrer" class="btn-primary">{buttonText}<span class="sr-only"> (opens in a new tab)</span></a>
+          <a data-announcement-cta href={buttonLink} target={buttonLink.startsWith('https://') ? '_blank' : undefined} rel={buttonLink.startsWith('https://') ? 'noopener noreferrer' : undefined} class="btn-primary">{buttonText}{buttonLink.startsWith('https://') && <span class="sr-only"> (opens in a new tab)</span>}</a>
           {secondaryButtonText && secondaryButtonLink && <a href={secondaryButtonLink} class="text-link">{secondaryButtonText}</a>}
         </div>
       </div>

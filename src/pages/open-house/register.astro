@@ -2,8 +2,8 @@
 import '../../styles/global.css';
 import CalendarButton from '../../components/CalendarButton.astro';
 import Analytics from '../../components/Analytics.astro';
-import Navigation from '../../components/Navigation.astro';
-import { openHouse } from '../../lib/open-house';
+import { CalendarDays, MapPin, CarFront, ArrowRight, ArrowLeft } from '@lucide/astro';
+import { openHouse, school, eventDate, eventDay, eventTime, directionsUrl } from '../../lib/open-house';
 const embedUrl = new URL(openHouse.registrationUrl);
 embedUrl.search = new URLSearchParams({ embedded: 'true', hl: 'en' }).toString();
 ---
@@ -20,32 +20,104 @@ embedUrl.search = new URLSearchParams({ embedded: 'true', hl: 'en' }).toString()
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to registration form</a>
-    <Navigation />
     <main id="main-content" tabindex="-1">
+      <div class="return-bar">
+        <a id="back-to-website" href="/"><ArrowLeft size={20} aria-hidden="true" />Back to website</a>
+        <div class="mobile-calendar">
+          <CalendarButton id="registration-calendar-mobile" openInNewTab={false} compact />
+        </div>
+      </div>
       <h1 class="sr-only">Open House registration</h1>
       <iframe src={embedUrl.href} title="Open House registration form" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </main>
-    <footer aria-label="Add your visit to your calendar">
-      <CalendarButton id="registration-calendar" />
-    </footer>
+    <aside class="visit-panel" aria-label="Your Open House visit">
+      <div class="desktop-details visit-heading">
+        <p class="school-name">{school.name}</p>
+        <h2>{openHouse.title}</h2>
+        <div class="detail-row event-date">
+          <CalendarDays size={22} aria-hidden="true" />
+          <div><strong>{eventDay}, {eventDate}</strong><p>{eventTime}<br /><span>Paris time</span></p></div>
+        </div>
+      </div>
+      <div class="calendar-action">
+        <CalendarButton id="registration-calendar" openInNewTab={false} />
+      </div>
+      <div class="desktop-details arrival-details">
+        <section aria-labelledby="arrival-title">
+          <div class="detail-row">
+            <MapPin size={22} aria-hidden="true" />
+            <div>
+              <h3 id="arrival-title">Getting here</h3>
+              <address>{school.address}</address>
+              <a href={directionsUrl}>Get directions <ArrowRight size={16} aria-hidden="true" /></a>
+            </div>
+          </div>
+        </section>
+        <section aria-labelledby="parking-title">
+          <div class="detail-row">
+            <CarFront size={22} aria-hidden="true" />
+            <div>
+              <h3 id="parking-title">Parking</h3>
+              <p>{openHouse.parkingNote}</p>
+              <a href={openHouse.parkingUrl}>View nearby car park <ArrowRight size={16} aria-hidden="true" /></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </aside>
   </body>
 </html>
+
+<script>
+  const backLink = document.querySelector<HTMLAnchorElement>('#back-to-website');
+  // Navigate to the referring school page directly: history.back() can instead
+  // move between steps inside the Google form's nested browsing history.
+  const previousPage = history.state?.openHouseReturnTo || document.referrer;
+  if (backLink && previousPage) {
+    try {
+      const destination = new URL(previousPage, location.origin);
+      if (destination.origin === location.origin && destination.pathname.replace(/\/$/, '') !== '/open-house/register') {
+        const returnTo = destination.pathname + destination.search + destination.hash;
+        backLink.href = returnTo;
+        history.replaceState({ ...history.state, openHouseReturnTo: returnTo }, '');
+      }
+    } catch { /* The home link remains available if no valid referring page exists. */ }
+  }
+</script>
 
 <style>
   :global(html) { height: 100%; }
   body { height: 100vh; height: 100dvh; overflow: hidden; display: flex; flex-direction: column; margin: 0; background: white; color: var(--color-forest-dark); }
-  :global(#main-nav) { flex: none; }
-  :global(#mobile-menu) { position: absolute; top: 100%; inset-inline: 0; max-height: 70dvh; overflow-y: auto; background: white; }
-  main { flex: 1; min-height: 0; }
-  /* Google does not expose document height across origins. One full-height
-     scroll surface avoids competing parent/iframe scrollbars without clipping
-     longer form sections or disabling keyboard access to their contents. */
-  iframe { display: block; width: 100%; height: 100%; border: 0; }
-  footer { flex: none; display: flex; align-items: center; justify-content: center; gap: clamp(1.25rem, 4vw, 3rem); padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: var(--color-forest-dark); color: white; }
-  @media (max-width: 600px) {
-    footer { align-items: flex-start; gap: 1.25rem; }
-  }
-  @media (max-width: 380px) {
-    footer { gap: .75rem; padding-inline: .75rem; }
+  main { flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+  .return-bar { flex: none; display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .25rem max(1rem, env(safe-area-inset-right)) .25rem max(1rem, env(safe-area-inset-left)); padding-top: max(.25rem, env(safe-area-inset-top)); }
+  .return-bar a { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; font-size: .875rem; font-weight: 600; }
+  .return-bar a:hover { text-decoration: underline; text-underline-offset: .25em; }
+  /* Google does not expose document height across origins. Keep the form in a
+     full-height scroll surface, without a competing page scrollbar. */
+  iframe { display: block; flex: 1; min-height: 0; width: 100%; border: 0; }
+  .visit-panel { display: none; background: var(--color-forest-dark); color: white; }
+  .calendar-action { display: flex; justify-content: center; }
+  .desktop-details { display: none; }
+  @media (min-width: 1000px) {
+    body { display: grid; grid-template-columns: minmax(0, 1fr) clamp(22rem, 32vw, 28rem); }
+    .mobile-calendar { display: none; }
+    .visit-panel { display: block; min-height: 0; overflow-y: auto; padding: clamp(2rem, 5vh, 4rem) clamp(1.5rem, 3vw, 3rem); }
+    .desktop-details { display: block; }
+    .school-name { max-width: 27ch; color: #d4dfd7; font-size: .875rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    h2 { font-size: clamp(2.25rem, 3vw, 3rem); line-height: 1.15; margin-bottom: 2rem; text-wrap: balance; }
+    .detail-row { display: flex; align-items: start; gap: .8rem; }
+    .detail-row > svg { flex-shrink: 0; margin-top: .15rem; color: var(--color-gold); }
+    .event-date strong { font-size: 1.0625rem; line-height: 1.6; }
+    .event-date p { margin-top: .35rem; }
+    .event-date span { color: #d4dfd7; font-size: .875rem; }
+    .calendar-action { justify-content: flex-start; margin-top: 1.5rem; }
+    .arrival-details { border-top: 1px solid rgb(255 255 255 / 25%); margin-top: 2rem; padding-top: 2rem; }
+    .arrival-details section + section { margin-top: 1.75rem; }
+    h3 { font-family: inherit; font-size: 1rem; font-weight: 600; margin-bottom: .5rem; }
+    p, address { line-height: 1.7; }
+    address { font-style: normal; }
+    .arrival-details p, address { color: #d4dfd7; font-size: .9375rem; }
+    .arrival-details a { display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; margin-top: .35rem; font-size: .9375rem; text-decoration: underline; text-underline-offset: .25em; }
+    .arrival-details a:hover { color: var(--color-gold); }
   }
 </style>

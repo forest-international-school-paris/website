@@ -118,7 +118,7 @@ const reviews = [
     <div class="container-main">
       <div class="section-heading">
         <h2 id="campus-title">Our campus in Mareil-Marly</h2>
-        <a href="/contact/" class="text-link">Arrange a visit <ArrowRight size={18} aria-hidden="true" /></a>
+        <a href="/about/#school-3d" class="text-link">See our school in 3D <ArrowRight size={18} aria-hidden="true" /></a>
       </div>
       <img src="/images/campus.jpg" alt="Campus overview showing the school buildings, garden, playground and swimming pool" class="campus-image" width="1920" height="1059" loading="lazy" />
     </div>
@@ -280,7 +280,8 @@ const reviews = [
     .programme-list, .camp-layout, .learning-intro { grid-template-columns: 1fr; }
     .programme-copy h3 { font-size: 1.75rem; }
     .programme-link { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--color-line); border-radius: 0; }
-    .programme-image img { aspect-ratio: 1; }
+    .programme-image { align-self: start; aspect-ratio: 1; }
+    .programme-image img { display: block; height: 100%; aspect-ratio: 1; }
     .programme-copy { padding: 0; }
     .programme-copy h3 { font-size: 1.25rem; }
     .programme-copy > p:last-child { font-size: .9375rem; }

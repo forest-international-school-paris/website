@@ -47,9 +47,6 @@ const isCurrent = (href: string) => Astro.url.pathname.replace(/\/$/, '') === hr
       {mainLinks.map((link) => <a href={link.href} class:list={['nav-link', { 'nav-camps': link.href === '/holiday-camps/' }]} aria-current={isCurrent(link.href) ? 'page' : undefined}>{link.href === '/holiday-camps/' && <Sun size={17} aria-hidden="true" />}<span class="nav-label">{link.label}</span></a>)}
     </div>
     <div class="nav-actions">
-      <a href={telHref} class="nav-phone" aria-label={`Call the school: ${school.phone}`}>
-        <Phone size={18} aria-hidden="true" /><span class="phone-number">{school.phone}</span><span class="phone-label">Call</span>
-      </a>
       <a href="/contact/" class="btn-primary nav-visit">Book a visit</a>
     <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
       <Menu id="menu-open-icon" size={22} aria-hidden="true" />
@@ -125,13 +122,21 @@ const isCurrent = (href: string) => Astro.url.pathname.replace(/\/$/, '') === hr
 
 <style>
   .nav-container { width: min(100%, 80rem); margin-inline: auto; padding-inline: clamp(1rem, 3vw, 2rem); }
-  .contact-strip { display: none; flex-shrink: 0; background: var(--color-forest-dark); color: white; font-size: .875rem; }
+  .contact-strip { flex-shrink: 0; background: var(--color-forest-dark); color: white; font-size: .875rem; }
   .contact-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .contact-strip-links { display: flex; align-items: center; gap: 1.5rem; }
   .contact-strip a { display: inline-flex; align-items: center; gap: .5rem; min-height: 40px; }
   .contact-strip a:hover { color: var(--color-gold); }
-  .contact-strip-inner > span { color: #d4dfd7; }
-  @media (min-width: 768px) { .contact-strip { display: block; } .nav-actions .nav-phone { display: none; } }
+  .contact-strip-inner > span { color: var(--color-line); }
+  /* Phones: phone and email stay visible (they replace the old Call button); the location line is dropped. */
+  @media (max-width: 767px) {
+    .contact-strip { font-size: .8125rem; }
+    .contact-strip-inner { justify-content: center; }
+    .contact-strip-inner > span { display: none; }
+    .contact-strip-links { flex-wrap: wrap; justify-content: center; gap: 0 1.25rem; }
+    .contact-strip-inner { padding-block: .25rem; }
+    .contact-strip a { min-height: 30px; gap: .375rem; }
+  }
   #main-nav { position: sticky; top: 0; z-index: var(--z-sticky); background: white; border-bottom: 1px solid var(--color-line); transition: box-shadow var(--duration-slow) var(--ease-out), border-color var(--duration-slow) var(--ease-out); }
   #main-nav.is-scrolled { border-bottom-color: transparent; box-shadow: 0 6px 8px -6px rgb(30 61 41 / 18%); }
   .nav-row { display: flex; flex-wrap: wrap; padding-block: .5rem; justify-content: space-between; align-items: center; gap: 1rem; min-height: 5.5rem; }
@@ -150,9 +155,6 @@ const isCurrent = (href: string) => Astro.url.pathname.replace(/\/$/, '') === hr
   .school-dropdown a:hover { background: var(--color-surface); color: var(--color-forest-green); }
   [aria-current="page"] { color: var(--color-forest-green); text-decoration: underline; text-underline-offset: .35em; }
   .nav-actions { display: flex; margin-inline-start: auto; align-items: center; gap: .5rem; flex-shrink: 0; }
-  .nav-phone { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem; background: var(--color-surface); color: var(--color-forest-dark); border-radius: var(--radius-control); font-size: .9375rem; font-weight: 600; white-space: nowrap; }
-  .nav-phone:hover { background: var(--color-line); }
-  .phone-number { display: none; }
   .nav-visit { display: none; font-size: .875rem; white-space: nowrap; padding-inline: 1rem; }
   .school-disclosure { position: relative; }
   summary { list-style: none; display: flex; align-items: center; gap: .375rem; cursor: pointer; }
@@ -232,7 +234,7 @@ const isCurrent = (href: string) => Astro.url.pathname.replace(/\/$/, '') === hr
     .nav-camps:hover svg, .dropdown-film:hover img { transform: none; }
   }
   [hidden] { display: none !important; }
-  @media (min-width: 820px) { .desktop-navigation { display: flex; margin-left: auto; } .phone-number, .nav-visit { display: inline-flex; } .phone-label { display: none; } #mobile-menu-btn, #mobile-menu { display: none; } }
+  @media (min-width: 820px) { .desktop-navigation { display: flex; margin-left: auto; } .nav-visit { display: inline-flex; } #mobile-menu-btn, #mobile-menu { display: none; } }
   @media (min-width: 820px) and (max-width: 1199px) {
     .nav-container { padding-inline: 1rem; }
     .nav-row { gap: .5rem; flex-wrap: nowrap; }
@@ -241,15 +243,9 @@ const isCurrent = (href: string) => Astro.url.pathname.replace(/\/$/, '') === hr
     .school-brand strong { font-size: .9375rem; }
     .nav-link, summary { padding-inline: .5rem; font-size: .875rem; }
     .desktop-navigation { gap: 0; }
-    .nav-phone { font-size: .875rem; padding-inline: .625rem; }
   }
   /* "Holidays & Wednesdays" is the longest link; the narrowest desktop widths drop its icon to stay on one line. */
   @media (min-width: 820px) and (max-width: 899px) { .nav-link.nav-camps svg { display: none; } }
-  @media (max-width: 380px) {
-    .school-brand strong { max-width: 6rem; }
-    .nav-phone { padding-inline: .5rem; }
-    .nav-actions { gap: .375rem; }
-  }
   @media (max-width: 420px) {
     .school-brand { gap: .5rem; }
     .school-brand img { width: 2.75rem; height: 2.75rem; }
