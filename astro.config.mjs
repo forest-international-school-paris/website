@@ -11,5 +11,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [sitemap({ filter: (page) => !page.includes('/survey/') })]
+  integrations: [sitemap({ filter: (page) => !page.includes('/survey/') && !page.includes('/open-house/') && !/\/(legal|privacy)\/$/.test(page) })]
 });

@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalPage from '../components/LegalPage.astro';
+import { legalEntity as entity, mailHref, school } from '../lib/site';
+---
+
+<Layout title="Privacy policy" description="How Forest International School Paris handles information from website visitors and families: enquiries, cookie-free visitor statistics and your data rights." noindex showPopup={false}>
+  <LegalPage title="Privacy policy" frenchTitle="Politique de confidentialité">
+    <p>This policy explains what information this website collects, why, and what you can ask us to do with it. We have written it for parents, so it is as plain as we can make it.</p>
+
+    <h2>Who is responsible</h2>
+    <p>{entity.name} ({entity.form}), operating as {school.name}, {school.address}, is responsible for the information described here. For any question about your data, email <a href={mailHref}>{school.email}</a>.</p>
+
+    <h2>Information you send us</h2>
+    <p>When you email us, call, message us on WhatsApp, book a visit, or fill in one of our enquiry or registration forms, we receive the details you choose to share. This usually means your name, contact details and information about your child, such as age and the year group you are considering.</p>
+    <p>We use this information only to reply to you, arrange visits and handle an application if you go ahead. We keep it for as long as we need it for that purpose. If you would like us to delete it sooner, just ask.</p>
+    <p>Our forms and visit booking are run by Google (Google Forms and Google Calendar), so what you enter there is also processed by Google under its own privacy terms. WhatsApp messages are handled by WhatsApp (Meta).</p>
+
+    <h2>Visitor statistics without cookies</h2>
+    <p>We use PostHog to understand which pages help families and how they find us, for example whether a visit started from a search engine. This lets us improve the site and is in our legitimate interest.</p>
+    <ul>
+      <li>We record the pages viewed, links and buttons clicked, the website you came from, your browser and device type, and an approximate location (country or city) derived from your IP address.</li>
+      <li>We use no cookies or other storage on your device for this. Visits are counted with an anonymous identifier calculated on PostHog's servers, which changes every day.</li>
+      <li>We do not record your screen or what you type, and we do not use this data for advertising.</li>
+    </ul>
+    <p>PostHog Inc. processes this data for us on servers in the United States.</p>
+
+    <h2>Content from other services</h2>
+    <p>Some features load content from other companies. They receive your IP address and may set their own cookies when they load:</p>
+    <ul>
+      <li><strong>Google Maps and Google Calendar</strong> on our contact and about pages: the maps and the visit booking calendar.</li>
+      <li><strong>Short surveys</strong> we occasionally send to families are submitted through FormSubmit, which forwards your answers to us by email.</li>
+      <li><strong>Our school film</strong> is streamed from Wix's servers when you press play.</li>
+      <li><strong>Links</strong> to Instagram, WhatsApp, Google Forms and other websites take you to services with their own privacy policies.</li>
+    </ul>
+    <p>Our fonts are hosted on our own website, so no font provider is contacted.</p>
+
+    <h2>Storage on your device</h2>
+    <p>The only thing this website stores itself is a note in your browser's session storage that you have already seen our announcement, so it does not appear again during the same visit. It is deleted when you close the tab and is not used to track you.</p>
+
+    <h2>Your rights</h2>
+    <p>You can ask to see the information we hold about you, correct it, delete it, limit how we use it, object to its use, or receive a copy. Email <a href={mailHref}>{school.email}</a> and we will reply within one month.</p>
+    <p>If you are unhappy with our answer, you can complain to the French data protection authority, the <a href="https://www.cnil.fr/" target="_blank" rel="noopener noreferrer" lang="fr">Commission nationale de l'informatique et des libertés (CNIL)<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+
+    <h2>Children</h2>
+    <p>This website is meant for parents and guardians. We do not ask children to send us information through it, and we never publish pupils' names alongside their photographs.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we change how we use information, we will update this page and the date at the top. The publisher's details are in our <a href="/legal/">legal notice</a>.</p>
+  </LegalPage>
+</Layout>

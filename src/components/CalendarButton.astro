@@ -1,0 +1,58 @@
+---
+import { CalendarDays, ChevronDown, Smartphone, Mail } from '@lucide/astro';
+import { openHouse, googleCalendarUrl } from '../lib/open-house';
+interface Props { id: string; }
+const { id } = Astro.props;
+---
+
+<div class="calendar-picker">
+  <button type="button" class="calendar-trigger" popovertarget={id} aria-expanded="false" aria-controls={id}>
+    <CalendarDays size={20} aria-hidden="true" />Add to calendar<ChevronDown size={16} aria-hidden="true" />
+  </button>
+  <div id={id} class="calendar-options" popover aria-label="Choose your calendar">
+    <a href={googleCalendarUrl} target="_blank" rel="noopener noreferrer" data-calendar-provider="google" data-calendar-event={openHouse.id}><CalendarDays size={20} aria-hidden="true" /><span>Google Calendar</span></a>
+    <a href="/open-house/calendar.ics" download={`${openHouse.id}.ics`} data-calendar-provider="apple" data-calendar-event={openHouse.id}><Smartphone size={20} aria-hidden="true" /><span>Apple Calendar</span></a>
+    <a href="/open-house/calendar.ics" download={`${openHouse.id}.ics`} data-calendar-provider="outlook" data-calendar-event={openHouse.id}><Mail size={20} aria-hidden="true" /><span>Outlook</span></a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.calendar-picker').forEach((picker) => {
+    const trigger = picker.querySelector<HTMLButtonElement>('button')!;
+    const panel = picker.querySelector<HTMLElement>('[popover]')!;
+    const position = () => {
+      if (!panel.matches(':popover-open')) return;
+      const rect = trigger.getBoundingClientRect();
+      const bounds = panel.getBoundingClientRect();
+      const below = innerHeight - rect.bottom;
+      const top = below >= bounds.height + 16 ? rect.bottom + 8 : rect.top - bounds.height - 8;
+      panel.style.left = `${Math.max(8, Math.min(rect.left, innerWidth - bounds.width - 8))}px`;
+      panel.style.top = `${Math.max(8, top)}px`;
+    };
+    panel.addEventListener('toggle', () => {
+      const open = panel.matches(':popover-open');
+      trigger.setAttribute('aria-expanded', String(open));
+      if (open) { position(); panel.querySelector<HTMLAnchorElement>('a')?.focus(); }
+    });
+    panel.addEventListener('click', (event) => {
+      if ((event.target as Element).closest('a')) { panel.hidePopover(); trigger.focus(); }
+    });
+    window.addEventListener('resize', position);
+    window.addEventListener('scroll', position, { passive: true });
+    // Clicks inside the cross-origin form do not bubble to this document.
+    window.addEventListener('blur', () => {
+      setTimeout(() => {
+        if (document.activeElement instanceof HTMLIFrameElement && panel.matches(':popover-open')) panel.hidePopover();
+      }, 0);
+    });
+  });
+</script>
+
+<style>
+  .calendar-trigger { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 48px; padding: .75rem 1rem; border: 0; border-radius: var(--radius-control); background: var(--color-gold); color: var(--color-forest-dark); font: inherit; font-weight: 600; cursor: pointer; }
+  .calendar-trigger:hover { background: white; }
+  .calendar-options { position: fixed; inset: auto; margin: 0; padding: .4rem; width: min(240px, calc(100vw - 16px)); max-height: calc(100dvh - 16px); overflow-y: auto; border: 1px solid var(--color-line); border-radius: var(--radius-control); background: white; color: var(--color-forest-dark); }
+  .calendar-options a { display: flex; gap: .75rem; align-items: center; min-height: 48px; padding: .6rem .85rem; border-radius: 4px; font-size: 1rem; font-weight: 500; text-decoration: none; }
+  .calendar-options a:hover, .calendar-options a:focus-visible { background: var(--color-surface); }
+  @media (max-width: 380px) { .calendar-trigger { font-size: .875rem; padding-inline: .7rem; gap: .4rem; } }
+</style>

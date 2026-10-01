@@ -1,0 +1,70 @@
+---
+// Interior-page hero. With an image it mirrors the homepage (photo + left-side shade);
+// without one it is a solid forest-dark band.
+interface HeroImage {
+  src: string;
+  alt?: string;
+  width: number;
+  height: number;
+  position?: string;
+}
+
+interface Props {
+  /** Plain title; or pass styled markup via the `title` slot instead. */
+  title?: string;
+  intro?: string;
+  /** Short factual line above the title, e.g. "Ages 6–11 · Mareil-Marly". Sentence case, not a section eyebrow. */
+  kicker?: string;
+  image?: HeroImage;
+  lang?: string;
+}
+
+const { title, intro, kicker, image, lang } = Astro.props;
+---
+
+<section class:list={['page-hero', { 'has-image': image }]} aria-labelledby="page-title" lang={lang}>
+  {image && (
+    <img src={image.src} alt={image.alt ?? ''} class="page-hero-image" width={image.width} height={image.height} style={{ objectPosition: image.position ?? 'center' }} fetchpriority="high" decoding="async" />
+  )}
+  <div class:list={['container-main', 'page-hero-content', { 'has-aside': Astro.slots.has('aside') }]}>
+    <div>
+      {kicker && <p class="page-hero-kicker">{kicker}</p>}
+      <h1 id="page-title">{title}<slot name="title" /></h1>
+      {(intro || Astro.slots.has('intro')) && <p class="page-hero-intro">{intro}<slot name="intro" /></p>}
+      {Astro.slots.has('default') && <div class="page-hero-actions"><slot /></div>}
+    </div>
+    {Astro.slots.has('aside') && <div class="page-hero-aside"><slot name="aside" /></div>}
+  </div>
+</section>
+
+<style>
+  .page-hero { position: relative; isolation: isolate; display: flex; align-items: center; background: var(--color-forest-dark); color: white; }
+  .page-hero.has-image { min-height: 32rem; }
+  .page-hero-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+  .page-hero.has-image::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(15 37 24 / 90%) 0%, rgb(15 37 24 / 78%) 38%, rgb(15 37 24 / 30%) 70%, rgb(15 37 24 / 10%) 100%); }
+  .page-hero-content { width: 100%; padding-block: clamp(3.5rem, 6vw, 6rem); }
+  /* Optional right-hand column, e.g. a SectionChooser that sends visitors straight to what they came for. */
+  .page-hero-content.has-aside { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 2rem clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  /* On one column the choices follow the title, so they are visible before the longer intro. */
+  @media (max-width: 900px) {
+    .page-hero-content.has-aside { grid-template-columns: 1fr; gap: 0; }
+    .has-aside > div:first-child { display: contents; }
+    .has-aside .page-hero-kicker { order: 1; }
+    .has-aside h1 { order: 2; }
+    .has-aside .page-hero-aside { order: 3; margin-top: 1.5rem; }
+    .has-aside .page-hero-intro { order: 4; }
+    .has-aside .page-hero-actions { order: 5; }
+  }
+  .page-hero-kicker { max-width: 60ch; font-size: .875rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--color-surface); font-weight: 600; }
+  h1 { max-width: 16ch; font-size: clamp(2.5rem, 4.8vw, 4.5rem); line-height: 1.12; letter-spacing: -0.025em; }
+  .page-hero-intro { max-width: 50ch; margin-top: 1.5rem; font-size: clamp(1rem, 1.25vw, 1.125rem); line-height: 1.75; color: var(--color-surface); }
+  .page-hero-actions { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; align-items: center; margin-top: 2rem; }
+  @media (max-width: 640px) {
+    .page-hero.has-image { min-height: 0; align-items: end; }
+    .page-hero-image { height: 18rem; }
+    .page-hero.has-image::before { background: linear-gradient(180deg, transparent 0, rgb(30 61 41 / 10%) 6rem, rgb(30 61 41 / 90%) 13rem, var(--color-forest-dark) 18rem); }
+    .page-hero.has-image .page-hero-content { padding-top: 13rem; padding-bottom: 3rem; }
+    .page-hero-actions { align-items: start; flex-direction: column; }
+    .page-hero-kicker { margin-bottom: 1rem; }
+  }
+</style>

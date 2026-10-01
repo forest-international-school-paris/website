@@ -13,6 +13,9 @@ interface Props {
   image?: string;
   badge?: string;
   programs?: { name: string; audience?: string; description: string; icon?: string }[];
+  /** ISO start of a one-off event; turns the reopen badge into a calendar page with a countdown. */
+  startsAt?: string;
+  timeZone?: string;
 }
 
 const {
@@ -28,245 +31,161 @@ const {
   secondaryButtonLink = "",
   image = "",
   badge = "",
-  programs = []
+  programs = [],
+  startsAt,
+  timeZone = 'Europe/Paris'
 } = Astro.props;
 
 const closeText = 'Close';
 const badgeText = badge || 'MasterClasses';
+const eventPart = (options: Intl.DateTimeFormatOptions) =>
+  startsAt && new Intl.DateTimeFormat('en-GB', { ...options, timeZone }).format(new Date(startsAt));
+const calendarMonth = eventPart({ month: 'short' });
+const calendarDay = eventPart({ day: 'numeric' });
+const eventWeekday = eventPart({ weekday: 'long' });
 ---
 
 {enabled && (
   <>
-    <!-- Full Popup Modal (shown only on first visit) -->
-    <div id="announcement-popup" class="fixed inset-0 z-[9999] hidden">
-      <!-- Backdrop -->
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="popup-backdrop"></div>
-
-      <!-- Popup Container -->
-      <div class="absolute inset-0 flex items-center justify-center p-4">
-        <div class="relative max-w-lg w-full max-h-[calc(100vh-2rem)]" id="popup-content">
-          <!-- Close Button -->
-          <button id="popup-close" class="absolute top-2 right-2 z-20 w-10 h-10 bg-white hover:bg-gray-100 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110" aria-label={closeText}>
-            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-
-          <!-- Scrollable content area -->
-          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden overflow-y-auto max-h-[calc(100vh-2rem)] transform transition-all">
-
-          <!-- Image Header -->
-          {image && (
-            <div class="relative h-48 overflow-hidden">
-              <img src={image} alt="Forest International School campus" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#1e3d29]/80 to-transparent"></div>
-              {badge && (
-                <span class="absolute bottom-4 left-4 px-3 py-1 bg-[#c9a962] text-[#1e3d29] text-sm font-bold rounded-full">
-                  {badge}
-                </span>
-              )}
-            </div>
-          )}
-
-          <!-- No Image - Decorative Header -->
-          {!image && (
-            <div class="relative h-24 bg-gradient-to-r from-[#2d5a3d] to-[#4a7c5c] overflow-hidden">
-              <div class="absolute inset-0 opacity-20">
-                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <defs>
-                    <pattern id="leaves" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <circle cx="10" cy="10" r="3" fill="white" opacity="0.3"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100" height="100" fill="url(#leaves)"/>
-                </svg>
-              </div>
-              {badge && (
-                <div class="absolute bottom-4 left-6">
-                  <span class="px-4 py-2 bg-[#c9a962] text-[#1e3d29] text-sm font-bold rounded-full">
-                    {badge}
-                  </span>
-                </div>
-              )}
-            </div>
-          )}
-
-          <!-- Content -->
-          <div class="p-8">
-            <div class="text-center mb-6">
-              <p class="text-sm font-semibold text-[#2d5a3d] uppercase tracking-wide mb-2">Forest International School Paris</p>
-              <h3 class="text-2xl md:text-3xl font-bold text-[#1e3d29] mb-2">{title}</h3>
-              {subtitle && <p class="text-[#c9a962] font-medium italic">{subtitle}</p>}
-            </div>
-
-            <!-- Date & Time -->
-            <div class="bg-[#faf8f5] rounded-2xl p-4 mb-6">
-              <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[#1e3d29]">
-                <div class="flex items-center gap-2 whitespace-nowrap">
-                  <svg class="w-5 h-5 text-[#2d5a3d] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                  </svg>
-                  <span class="font-semibold">{date}</span>
-                </div>
-                <div class="flex items-center gap-2 whitespace-nowrap">
-                  <svg class="w-5 h-5 text-[#2d5a3d] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                  <span class="font-semibold">{time}</span>
-                </div>
-              </div>
-            </div>
-
-            {message && <p class="text-gray-600 text-base leading-relaxed mb-6 text-center">{message}</p>}
-
-            {programs.length > 0 && (
-              <div class="space-y-3 mb-6">
-                {programs.map((p) => (
-                  <div class="flex items-start gap-3 bg-[#faf8f5] rounded-2xl p-4 border border-gray-100">
-                    {p.icon && <div class="text-2xl flex-shrink-0 leading-none mt-0.5" aria-hidden="true">{p.icon}</div>}
-                    <div>
-                      <div class="flex items-center gap-2 flex-wrap">
-                        <h4 class="font-bold text-[#1e3d29]">{p.name}</h4>
-                        {p.audience && (
-                          <span class="text-xs font-semibold text-[#c9a962] bg-[#c9a962]/10 px-2 py-0.5 rounded-full">{p.audience}</span>
-                        )}
-                      </div>
-                      <p class="text-gray-600 text-sm mt-1 leading-relaxed">{p.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-3">
-              <a href={buttonLink} target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-[#2d5a3d] to-[#4a7c5c] text-white font-bold rounded-xl hover:from-[#1e3d29] hover:to-[#2d5a3d] transition-all shadow-lg hover:shadow-xl">
-                {buttonText}
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                </svg>
-              </a>
-              {secondaryButtonText && secondaryButtonLink && (
-                <a href={secondaryButtonLink} class="flex-1 inline-flex items-center justify-center px-6 py-4 bg-gray-100 text-[#2d5a3d] font-bold rounded-xl hover:bg-gray-200 transition-all">
-                  {secondaryButtonText}
-                </a>
-              )}
-            </div>
-          </div>
-          </div><!-- end scrollable content area -->
+    <dialog data-event-name={title} data-event-date={date} id="announcement-popup" aria-labelledby="popup-title" aria-describedby="popup-message">
+      <button id="popup-close" type="button" aria-label={closeText} autofocus>
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      {image && <img src={image} alt="Forest International School campus overview" class="popup-image" width="640" height="240" />}
+      <div class="popup-body">
+        <h2 id="popup-title">{title}</h2>
+        {subtitle && <p class="popup-subtitle">{subtitle}</p>}
+        <div class="popup-schedule"><strong>{date}</strong><span>{time}</span></div>
+        <p id="popup-message">{message}</p>
+        {programs.length > 0 && (
+          <ul class="popup-programmes">
+            {programs.map((programme) => (
+              <li>
+                <h3>{programme.name}</h3>
+                {programme.audience && <p class="programme-audience">{programme.audience}</p>}
+                <p>{programme.description}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        <div class="popup-actions">
+          <a data-announcement-cta href={buttonLink} target="_blank" rel="noopener noreferrer" class="btn-primary">{buttonText}<span class="sr-only"> (opens in a new tab)</span></a>
+          {secondaryButtonText && secondaryButtonLink && <a href={secondaryButtonLink} class="text-link">{secondaryButtonText}</a>}
         </div>
       </div>
-    </div>
-
-    <!-- Mini Badge (shown after popup is closed) - Bottom Left -->
-    <div id="mini-badge" class="fixed bottom-6 left-6 z-40 hidden">
-      <button id="mini-badge-btn" class="group flex items-center gap-3 px-4 py-3 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 hover:-translate-y-1">
-        <div class="w-12 h-12 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-xl flex items-center justify-center flex-shrink-0 text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-          </svg>
-        </div>
-        <div class="text-left">
-          <div class="text-sm font-bold text-[#1e3d29]">{badgeText}</div>
-          <div class="text-xs text-[#c9a962] font-semibold">{date}</div>
-        </div>
-        <div class="w-2 h-2 bg-[#c9a962] rounded-full animate-pulse"></div>
-      </button>
-    </div>
+    </dialog>
+    <button id="mini-badge-btn" type="button" class="announcement-badge" aria-haspopup="dialog" aria-controls="announcement-popup" hidden>
+      {startsAt && (
+        <span class="badge-calendar" aria-hidden="true"><span>{calendarMonth}</span><span>{calendarDay}</span></span>
+      )}
+      <span class="badge-text">
+        <strong>{badgeText}</strong>
+        {startsAt
+          ? <span><span class="sr-only">{date}, </span>{eventWeekday}<span class="badge-countdown" data-starts-at={startsAt}></span></span>
+          : <span>{date}</span>}
+      </span>
+    </button>
   </>
 )}
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('announcement-popup');
-    const closeBtn = document.getElementById('popup-close');
-    const backdrop = document.getElementById('popup-backdrop');
-    const miniBadge = document.getElementById('mini-badge');
-    const miniBadgeBtn = document.getElementById('mini-badge-btn');
+  const popup = document.querySelector<HTMLDialogElement>('#announcement-popup');
+  const closeBtn = document.getElementById('popup-close');
+  const badgeBtn = document.getElementById('mini-badge-btn');
 
-    if (!popup || !miniBadge) return;
-
-    const popupShown = sessionStorage.getItem('popup-shown');
-
-    if (!popupShown) {
-      setTimeout(() => {
-        showPopup();
-        sessionStorage.setItem('popup-shown', 'true');
-      }, 15000);
-    } else {
-      miniBadge.classList.remove('hidden');
-    }
+  if (popup && badgeBtn) {
+    let seen = false;
+    let previousOverflow = '';
+    try { seen = sessionStorage.getItem('popup-shown') === 'true'; } catch { /* Storage may be unavailable in private browsing. */ }
 
     function showPopup() {
-      popup.classList.remove('hidden');
-      popup.classList.add('flex');
+      if (!popup || popup.open) return;
+      previousOverflow = document.body.style.overflow;
+      popup.showModal();
       document.body.style.overflow = 'hidden';
-
-      const content = document.getElementById('popup-content');
-      if (content) {
-        content.style.opacity = '0';
-        content.style.transform = 'scale(0.95) translateY(20px)';
-        requestAnimationFrame(() => {
-          content.style.transition = 'all 0.3s ease-out';
-          content.style.opacity = '1';
-          content.style.transform = 'scale(1) translateY(0)';
-        });
-      }
+      try { sessionStorage.setItem('popup-shown', 'true'); } catch { /* The dialog still works without storage. */ }
     }
 
-    function closePopup() {
-      const content = document.getElementById('popup-content');
-      if (content) {
-        content.style.opacity = '0';
-        content.style.transform = 'scale(0.95) translateY(20px)';
-      }
-
-      setTimeout(() => {
-        popup.classList.add('hidden');
-        popup.classList.remove('flex');
-        document.body.style.overflow = '';
-        miniBadge.classList.remove('hidden');
-      }, 200);
+    // "in 65 days" / "tomorrow" / "today", counted in whole calendar days.
+    const countdown = badgeBtn.querySelector<HTMLElement>('.badge-countdown');
+    if (countdown?.dataset.startsAt) {
+      const startOfDay = (value: Date) => new Date(value.getFullYear(), value.getMonth(), value.getDate()).getTime();
+      const dayMs = 24 * 60 * 60 * 1000;
+      const days = Math.round((startOfDay(new Date(countdown.dataset.startsAt)) - startOfDay(new Date())) / dayMs);
+      if (days >= 0) countdown.textContent = ` · ${new Intl.RelativeTimeFormat('en-GB', { numeric: 'auto' }).format(days, 'day')}`;
     }
 
-    closeBtn?.addEventListener('click', closePopup);
-    backdrop?.addEventListener('click', closePopup);
+    // Where the badge would cover page content, it rests as just the calendar page.
+    // It shows its full text for a few seconds whenever it appears, and on hover or focus.
+    const peekMs = 4000;
+    let peekTimer = 0;
+    function revealBadge() {
+      if (!badgeBtn) return;
+      badgeBtn.hidden = false;
+      badgeBtn.classList.add('is-peeking');
+      window.clearTimeout(peekTimer);
+      peekTimer = window.setTimeout(() => badgeBtn.classList.remove('is-peeking'), peekMs);
+    }
 
-    miniBadgeBtn?.addEventListener('click', () => {
-      miniBadge.classList.add('hidden');
-      showPopup();
-    });
+    if (seen) revealBadge();
+    else window.setTimeout(showPopup, 15000);
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !popup.classList.contains('hidden')) {
-        closePopup();
-      }
+    badgeBtn.addEventListener('click', showPopup);
+    closeBtn?.addEventListener('click', () => popup.close());
+    popup.addEventListener('close', () => {
+      document.body.style.overflow = previousOverflow;
+      revealBadge();
     });
-  });
+    popup.addEventListener('click', (event) => {
+      if (event.target !== popup) return;
+      const rect = popup.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) popup.close();
+    });
+  }
 </script>
 
 <style>
-  #announcement-popup {
-    animation: fadeIn 0.2s ease-out;
+  dialog { position: fixed; inset: 0; margin: auto; padding: 0; width: min(32rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); overflow-y: auto; border: 0; border-radius: var(--radius-media); color: var(--color-text); background: white; z-index: var(--z-modal); }
+  dialog::backdrop { background: rgb(15 37 24 / 70%); }
+  #popup-close { position: absolute; right: .75rem; top: .75rem; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: white; color: var(--color-forest-dark); cursor: pointer; }
+  #popup-close:hover { background: var(--color-surface); }
+  .popup-image { width: 100%; height: 11rem; object-fit: cover; }
+  .popup-body { padding: clamp(1.25rem, 4vw, 2rem); }
+  .popup-body h2 { font-size: 2rem; line-height: 1.2; color: var(--color-forest-dark); }
+  .popup-subtitle { margin-top: .75rem; color: var(--color-text-muted); }
+  .popup-schedule { display: flex; flex-wrap: wrap; gap: .375rem 1.25rem; padding-block: 1.25rem; margin-block: 1.25rem; border-block: 1px solid var(--color-line); color: var(--color-forest-dark); }
+  #popup-message { line-height: 1.65; }
+  .popup-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin-top: 1.5rem; }
+  .popup-programmes { margin-top: 1.25rem; }
+  .popup-programmes li { border-top: 1px solid var(--color-line); padding-block: 1rem; }
+  .popup-programmes h3 { font-weight: 700; }
+  .programme-audience { color: var(--color-text-muted); font-size: .875rem; }
+  .announcement-badge { position: fixed; bottom: 1.5rem; left: 1.5rem; z-index: var(--z-contact); display: flex; align-items: center; gap: .875rem; padding: .625rem 1.125rem .625rem .625rem; min-height: 48px; border: 1px solid var(--color-line); border-radius: var(--radius-media); background: white; color: var(--color-forest-dark); text-align: left; cursor: pointer; transition: background-color var(--duration-fast) var(--ease-out); animation: badge-arrive var(--duration-slow) var(--ease-out) both; }
+  .announcement-badge:hover { background: var(--color-surface); }
+  .announcement-badge[hidden] { display: none; }
+  .badge-text { display: flex; flex-direction: column; gap: .125rem; }
+  .badge-text > span { font-size: .875rem; color: var(--color-text-muted); }
+  .badge-countdown { color: var(--color-forest-green); font-weight: 600; }
+
+  /* A tear-off calendar page: month on the green binding strip, day below. */
+  .badge-calendar { display: grid; grid-template-rows: auto 1fr; width: 3rem; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-control); background: white; text-align: center; transform-origin: 50% 0; transition: transform var(--duration-fast) var(--ease-out); }
+  .badge-calendar span:first-child { padding-block: .125rem; background: var(--color-forest-green); color: white; font-size: .6875rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .badge-calendar span:last-child { padding-block: .125rem .25rem; font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; line-height: 1.15; color: var(--color-forest-dark); }
+  .announcement-badge:hover .badge-calendar, .announcement-badge:focus-visible .badge-calendar { transform: rotate(-4deg) translateY(-1px); }
+
+  /* Below 1600px the full badge would overlap the 72rem content column, so it rests compact. */
+  @media (max-width: 1599px) {
+    .announcement-badge:has(.badge-calendar) { gap: 0; padding: .5rem; transition: background-color var(--duration-fast) var(--ease-out), padding var(--duration-slow) var(--ease-out); }
+    .announcement-badge:has(.badge-calendar) .badge-text { max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0; transition: max-width var(--duration-slow) var(--ease-out), opacity var(--duration-fast) var(--ease-out), margin var(--duration-slow) var(--ease-out); }
+    .announcement-badge:has(.badge-calendar):is(:hover, :focus-visible, .is-peeking) { padding-right: 1.125rem; }
+    .announcement-badge:has(.badge-calendar):is(:hover, :focus-visible, .is-peeking) .badge-text { max-width: 15rem; margin-left: .875rem; opacity: 1; }
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  @keyframes badge-arrive { from { opacity: 0; transform: translateY(.75rem); } }
+  @media (prefers-reduced-motion: reduce) {
+    .announcement-badge { animation: none; }
+    .badge-calendar, .announcement-badge, .announcement-badge .badge-text { transition: none; }
+    .announcement-badge:hover .badge-calendar, .announcement-badge:focus-visible .badge-calendar { transform: none; }
   }
-
-  #mini-badge {
-    animation: slideIn 0.3s ease-out;
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+  @media (max-width: 640px) { .announcement-badge { bottom: 1rem; left: 1rem; } }
 </style>

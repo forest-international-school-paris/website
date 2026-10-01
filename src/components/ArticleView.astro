@@ -1,0 +1,88 @@
+---
+// Shared article page body for /news/<slug>/ and /fr/news/<slug>/; the pages keep routing, hreflang and closing copy.
+import ArticleTableEnhancer from './ArticleTableEnhancer.astro';
+import { ArrowLeft } from '@lucide/astro';
+import { render, type CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  backHref: string;
+  dateLocale: string;
+  labels: { back: string; footerBack: string; topics: string };
+}
+
+const { post, backHref, dateLocale, labels } = Astro.props;
+const { Content } = await render(post);
+// Show the post image as a lead photo only when the article body does not already include it.
+const leadImage = post.data.image && !post.body?.includes(post.data.image) ? post.data.image : undefined;
+---
+
+<header class="article-header">
+  <div class="article-column">
+    <a href={backHref} class="text-link back-link"><ArrowLeft size={18} aria-hidden="true" /> {labels.back}</a>
+    <h1>{post.data.title}</h1>
+    <p class="article-meta">
+      <time datetime={post.data.date.toISOString()}>
+        {post.data.date.toLocaleDateString(dateLocale, {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </time>
+      <span aria-hidden="true">·</span>
+      <span>{post.data.author}</span>
+    </p>
+  </div>
+</header>
+
+<section class="article-section">
+  {leadImage && (
+    <img src={leadImage} alt="" class="article-lead-image" width="1200" height="675" fetchpriority="high" />
+  )}
+  <article class="prose article-body">
+    <Content />
+  </article>
+  <ArticleTableEnhancer />
+
+  <footer class="article-column article-footer">
+    {post.data.tags && post.data.tags.length > 0 && (
+      <p class="article-tags"><span>{labels.topics}</span> {post.data.tags.join(' · ')}</p>
+    )}
+    <a href={backHref} class="text-link"><ArrowLeft size={18} aria-hidden="true" /> {labels.footerBack}</a>
+  </footer>
+</section>
+
+<style>
+  .article-column, .article-body, .article-lead-image { width: min(100% - 2rem, 44rem); margin-inline: auto; }
+
+  .article-header { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4vw, 3rem); background: var(--color-surface); border-bottom: 1px solid var(--color-line); }
+  .back-link { margin-bottom: 1.25rem; font-size: .9375rem; }
+  h1 { max-width: 22ch; font-size: clamp(2.25rem, 4.6vw, 3.5rem); line-height: 1.12; letter-spacing: -0.02em; color: var(--color-forest-dark); }
+  .article-meta { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: 1.25rem; font-size: .9375rem; color: var(--color-text-muted); }
+
+  .article-section { padding-block: clamp(2.5rem, 5vw, 4rem) var(--space-section); }
+  .article-lead-image { display: block; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-media); margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+  .article-body { font-size: 1.0625rem; line-height: 1.75; color: var(--color-text); }
+  .article-body > :global(* + *) { margin-top: 1.25rem; }
+  .article-body :global(:is(h2, h3, h4)) { color: var(--color-forest-dark); font-weight: 500; text-wrap: balance; }
+  .article-body :global(h2) { margin-top: 3rem; font-size: clamp(1.625rem, 2.6vw, 2rem); line-height: 1.25; }
+  .article-body :global(h3) { margin-top: 2.25rem; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.3; }
+  .article-body :global(h4) { margin-top: 1.75rem; font-family: inherit; font-size: 1.0625rem; font-weight: 600; }
+  .article-body :global(:is(h2, h3, h4) + *) { margin-top: .75rem; }
+  .article-body :global(:is(ul, ol)) { padding-left: 1.5rem; }
+  .article-body :global(ul) { list-style: disc; }
+  .article-body :global(ol) { list-style: decimal; }
+  .article-body :global(li + li) { margin-top: .5rem; }
+  .article-body :global(li::marker) { color: var(--color-forest-light); }
+  .article-body :global(strong) { color: var(--color-forest-dark); font-weight: 600; }
+  .article-body :global(a) { color: var(--color-forest-green); font-weight: 500; text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
+  .article-body :global(a:hover) { color: var(--color-forest-dark); }
+  .article-body :global(img) { width: 100%; height: auto; border-radius: var(--radius-media); }
+  .article-body :global(blockquote) { padding: 1.25rem 1.5rem; border-radius: var(--radius-media); background: var(--color-surface); font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; line-height: 1.5; color: var(--color-forest-dark); }
+  .article-body :global(hr) { margin-block: 2.5rem; border: 0; border-top: 1px solid var(--color-line); }
+
+  .article-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; margin-top: clamp(3rem, 6vw, 4.5rem); padding-top: 1.5rem; border-top: 1px solid var(--color-line); }
+  .article-tags { font-size: .9375rem; color: var(--color-text-muted); }
+  .article-tags span { font-weight: 600; color: var(--color-forest-dark); }
+</style>

@@ -1,254 +1,164 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import PortraitList from '../components/PortraitList.astro';
+import VisitBand from '../components/VisitBand.astro';
+import { ArrowRight, ArrowUpRight } from '@lucide/astro';
+import { mapsUrl, programmeLinks } from '../lib/site';
+import type { Person } from '../components/PortraitList.astro';
+
+const enquiryUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfMa-d1ZWAsQUoe6ximaoczCAw5CK7YS1CHOKs6NSV-M8AjCQ/viewform?usp=header';
+
+const approach = [
+  { title: 'Each child at the centre', text: 'Every child is different and learns best when they are happy. Teaching starts from the child in front of us.' },
+  { title: 'Learning through projects', text: 'Projects connect subjects to the real world and give children practice in asking questions, thinking critically and working together.' },
+  { title: 'The forest, all year round', text: 'In every season, the forest is an extension of the classroom, a place for exploration, observation and discovery.' },
+  { title: 'Small, mixed-age classes', text: 'Classes have no more than 15 pupils across combined age groups. Teachers adapt to each child, and children learn from one another while progressing at their own pace.' },
+  { title: 'Curiosity of their own', text: 'Children are given the freedom to follow what interests them, so the motivation to learn comes from within.' },
+  { title: 'A safe place to learn', text: 'Every pupil is valued, and learning happens without coercion, shame or humiliation.' },
+];
+
+const team: Person[] = [
+  { name: 'Ms. Sophie Lovejoy', role: 'Principal', image: '/images/team/sophie-lovejoy-2026.jpeg', position: '50% 10%' },
+  { name: 'Mr Kralka', role: 'Assistant Head', image: '/images/team/mr-kralka.avif', position: 'center' },
+  { name: 'Miss Hannah', role: 'EY Lead & DSL', image: '/images/team/miss-hannah.avif', position: 'center' },
+];
 ---
 
-<Layout title="About Our School" description="Forest International School Paris is an English-language school for children aged 2-15 in Mareil-Marly, west of Paris, with daily nature-based forest learning.">
-  <!-- Hero Section with Image -->
-  <section class="relative py-20 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="/images/campus.jpg" alt="Forest International School Campus" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/95 via-[#2d5a3d]/80 to-[#2d5a3d]/60"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">About Us</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Our School</h1>
-        <p class="text-xl text-white/90 leading-relaxed mb-8">
-          Discover what makes Forest International School Paris a unique place for your child to learn and grow.
-        </p>
-        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg">
-          Book a Visit
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
+<Layout title="About the school" description="Forest International School Paris is an English-language school for children aged 2-15 in Mareil-Marly, west of Paris, with daily nature-based forest learning.">
+  <PageHero title="A school at the edge of the forest" kicker="Mareil-Marly · Forêt de Marly · Since 2003" image={{ src: '/images/hero-banner.jpg', width: 1920, height: 1080, position: '70% 40%' }}>
+    <Fragment slot="intro">An English-language school for children aged 2–15, a short distance from <span class="place">Saint-Germain-en-Laye</span>, where learning moves between the classroom and the Forêt de Marly.</Fragment>
+    <a href="/contact/" class="btn-gold">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+    <a href="#approach" class="link-on-dark">How we teach <ArrowRight size={18} aria-hidden="true" /></a>
+  </PageHero>
 
-  <!-- Our Story with Image -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="relative">
-          <img src="/images/forest-walk.jpg" alt="Children exploring the forest" class="rounded-3xl shadow-2xl" />
-          <div class="absolute -bottom-6 -right-6 bg-[#2d5a3d] text-white rounded-2xl p-6 shadow-xl">
-            <div class="text-4xl font-bold">Since</div>
-            <div class="text-[#c9a962] text-2xl font-bold">2003</div>
+  <section class="page-section" aria-labelledby="story-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="story-title">Twenty years of learning outdoors</h2>
+        <p class="lead-copy">Forest International School Paris sits within the boundary of the historic Forêt de Marly, west of Paris.</p>
+        <p>Since 2003, we have taught through projects, and for over twenty years we have been part of the Forest School movement.</p>
+        <p>Children aged 2 to 15 follow the English National Curriculum, delivered through the Pearson iPrimary programme, and learn through exploration, creativity and direct contact with nature.</p>
+      </div>
+      <div class="glance" aria-labelledby="glance-title">
+        <h2 id="glance-title">The school at a glance</h2>
+        <dl class="fact-list">
+          <div><dt>Founded</dt><dd>2003</dd></div>
+          <div>
+            <dt>Ages</dt>
+            <dd>
+              <ul class="glance-programmes">
+                {programmeLinks.map((link) => <li><a href={link.href}>{link.label}</a> <span>{link.detail?.replace('Ages ', '')}</span></li>)}
+              </ul>
+            </dd>
           </div>
+          <div><dt>Curriculum</dt><dd>English National Curriculum, delivered through Pearson iPrimary</dd></div>
+          <div><dt>Early Years</dt><dd>Montessori principles for autonomy and the Reggio Emilia play-based approach</dd></div>
+          <div><dt>Languages</dt><dd>Taught in English, with French every day: as a foreign language (FLE) for non-francophones and following the French curriculum for native speakers</dd></div>
+          <div><dt>Class size</dt><dd>Up to 15 pupils, in mixed-age groups</dd></div>
+          <div><dt>Location</dt><dd>Mareil-Marly, near <span class="place">Saint-Germain-en-Laye</span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="page-section surface" aria-labelledby="approach-title">
+    <div class="container-main split-layout">
+      <div class="approach-intro prose-copy">
+        <h2 id="approach-title">How we teach</h2>
+        <p>The ideas that shape a day at Forest, from the first year of nursery to the last year of middle school.</p>
+        <img src="/images/outdoor-learning.jpg" alt="Pupils in school uniform holding large drawings on a lawn" width="1024" height="768" loading="lazy" />
+      </div>
+      <dl class="row-list">
+        {approach.map((item) => <div><dt>{item.title}</dt><dd>{item.text}</dd></div>)}
+      </dl>
+    </div>
+  </section>
+
+  <section class="page-section" aria-labelledby="campus-title">
+    <div class="container-main">
+      <h2 id="campus-title">Around the campus</h2>
+      <div class="campus-grid">
+        <figure class="campus-forest">
+          <img src="/images/gallery-2.jpg" alt="Young children exploring a fallen tree in the forest" width="1600" height="1067" loading="lazy" />
+          <figcaption><strong>Forest and gardens</strong> Large outdoor spaces for nature-based learning.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/school-life/swimming-pool.jpg" alt="The covered swimming pool at Forest" width="848" height="480" loading="lazy" />
+          <figcaption><strong>Indoor swimming pool</strong> Heated, for swimming lessons from April to November.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/school-life/classroom.jpg" alt="Children working together around a classroom table" width="848" height="480" loading="lazy" />
+          <figcaption><strong>Classrooms and library</strong> Interactive whiteboards and computers, and a library with books in English, French and Dutch.</figcaption>
+        </figure>
+      </div>
+      <div class="street-view">
+        <div class="street-view-copy">
+          <h3>Look around before you visit</h3>
+          <p>Walk through the school grounds in Street View.</p>
+          <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-link">Open in Google Maps <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
         </div>
-        <div>
-          <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-4">Our Story</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">A Beacon of Excellence</h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
-            Located within the boundary of the historic Foret de Marly, a short distance from Saint Germain en Laye to the west of Paris, Forest International School Paris (FISP) has been a beacon of excellence in project-based learning since 2003.
-          </p>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
-            Following the English National Curriculum, delivered through the Pearson iPrimary programme, we seek to empower children aged 2 to 15 years old to learn through exploration, creativity and a direct interaction with nature.
-          </p>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            For over twenty years, we have been a proud part of the Forest School movement, offering a wonderful education in the west of Paris.
-          </p>
+        <div class="street-view-frame">
+          <iframe title="Explore the Forest International School campus" src="https://www.google.com/maps/embed?pb=!4v1775085848328!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ20zZWk2eEFF!2m2!1d48.87457436890278!2d2.06500659414459!3f160!4f0!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location Map -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Our Location</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Explore Our Campus</h2>
+  <section class="page-section surface" aria-labelledby="team-title">
+    <div class="container-main team-layout">
+      <div class="prose-copy">
+        <h2 id="team-title">Meet our teachers</h2>
+        <p>Get to know the teachers at Forest, from Early Years to Middle School.</p>
+        <a href="/team/" class="text-link">Meet the full team <ArrowRight size={18} aria-hidden="true" /></a>
       </div>
-      <div class="rounded-3xl overflow-hidden shadow-2xl">
-        <iframe src="https://www.google.com/maps/embed?pb=!4v1775085848328!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ20zZWk2eEFF!2m2!1d48.87457436890278!2d2.06500659414459!3f160!4f0!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      <PortraitList people={team} />
     </div>
   </section>
 
-  <!-- Core Purpose -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Block 1 -->
-        <div class="flex flex-col items-start">
-          <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-6 text-[#2d5a3d]">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h2 class="text-3xl font-bold text-[#1e3d29] mb-4">Preparing for Real Life</h2>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            We equip children with more than just academic skills. We foster the curiosity, compassion, and purpose they need to navigate an ever-changing world.
-          </p>
-        </div>
-
-        <!-- Block 2 -->
-        <div class="flex flex-col items-start">
-          <div class="w-14 h-14 bg-[#c9a962]/10 rounded-xl flex items-center justify-center mb-6 text-[#c9a962]">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-            </svg>
-          </div>
-          <h2 class="text-3xl font-bold text-[#1e3d29] mb-4">Learning by Inquiry</h2>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            We believe leaders of tomorrow are those who ask the right questions. Our project-based approach connects learning to the real world, building critical thinkers and collaborators.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Values -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Our Approach</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Values & Educational Philosophy</h2>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#2d5a3d]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Child-Centered Education</h3>
-          <p class="text-gray-600">We prioritize a "child-centred approach" to education and pursue educational excellence, recognising that each child is unique and learns best when they are happy.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#4a7c5c]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Nature-Based Learning</h3>
-          <p class="text-gray-600">All year round, we use the forest as an extension of the classroom where children learn through exploration and discovery.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#c9a962]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Safe Learning Environment</h3>
-          <p class="text-gray-600">We value every student as unique, ensuring learning occurs in a safe environment, without coercion, shame or humiliation.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#c9a962]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Holistic Development</h3>
-          <p class="text-gray-600">We follow the British National Curriculum delivered through Pearson international standards. French is taught as FLE for non-francophones and aligned with the French curriculum for native speakers — with daily French for all. In Early Years, we draw on Montessori principles for autonomy and the Reggio Emilia play-based approach.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#8b7355]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Personalised Learning</h3>
-          <p class="text-gray-600">With a maximum of 15 students per class across combined age groups and grades, every child receives individual attention. Mixed-age groupings foster peer learning and allow each child to progress at their own pace, with teachers adapting to their unique needs and strengths.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#4a7c5c]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Intrinsic Motivation</h3>
-          <p class="text-gray-600">By allowing children the freedom to explore their curiosities, we nurture a love of learning that is intrinsic and self-motivated.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#2d5a3d]">
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Project-Based Approach</h3>
-          <p class="text-gray-600">We guide students through a project-based approach that fosters critical thinking, collaboration, and helps them uncover their full potential.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Meet Our Team CTA -->
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-    </div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-      <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Our People</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Meet Our Team</h2>
-      <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
-        Our dedicated team of educators brings passion, experience, and care to every child's learning journey. Get to know the people who make Forest International School special.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4 mb-10">
-        <div class="flex -space-x-3">
-          <img src="/images/team/sophie-lovejoy-2026.jpeg" alt="Ms. Sophie Lovejoy - Principal" class="w-14 h-14 rounded-full border-3 border-white object-cover" style="object-position: 50% 10%" />
-          <img src="/images/team/mr-kralka.avif" alt="Mr Kralka" class="w-14 h-14 rounded-full border-3 border-white object-cover" />
-          <img src="/images/team/miss-hannah.avif" alt="Miss Hannah" class="w-14 h-14 rounded-full border-3 border-white object-cover" />
-          <div class="w-14 h-14 rounded-full border-3 border-white bg-[#c9a962] flex items-center justify-center text-[#1e3d29] font-bold text-sm">+8</div>
-        </div>
-      </div>
-      <a href="/team/" class="group inline-flex items-center justify-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl">
-        Meet the Full Team
-        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Facilities with Image Grid -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-4">Our Campus</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Facilities</h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-[#2d5a3d] rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2">Indoor Swimming Pool</h3>
-          <p class="text-gray-600 text-sm">Heated pool for swimming lessons from April to November</p>
-        </div>
-
-        <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-[#4a7c5c] rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2">Forest & Gardens</h3>
-          <p class="text-gray-600 text-sm">Large outdoor spaces for nature-based learning</p>
-        </div>
-
-        <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-[#c9a962] rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2">Library</h3>
-          <p class="text-gray-600 text-sm">Books in English, French, and Dutch</p>
-        </div>
-
-        <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-[#8b7355] rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2">Smart Classrooms</h3>
-          <p class="text-gray-600 text-sm">Interactive whiteboards and computers</p>
-        </div>
-      </div>
-
-      <!-- Campus Gallery -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="/images/gallery-1.jpg" alt="Campus" class="rounded-2xl shadow-lg w-full h-40 object-cover" />
-        <img src="/images/activities.jpg" alt="Activities at Forest International School" loading="lazy" class="rounded-2xl shadow-lg w-full h-40 object-cover" />
-        <img src="/images/team.jpg" alt="Team" class="rounded-2xl shadow-lg w-full h-40 object-cover" />
-        <img src="/images/outdoor-learning.jpg" alt="Outdoor Learning" class="rounded-2xl shadow-lg w-full h-40 object-cover" />
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">Experience Our School</h2>
-      <p class="text-gray-600 text-lg mb-8">
-        Schedule a visit to see our beautiful campus and learn more about our approach to education.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-[#2d5a3d] text-white font-bold rounded-full hover:bg-[#1e3d29] transition-colors shadow-lg">
-          Schedule a Visit
-        </a>
-        <a href="/admissions/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2d5a3d] font-bold rounded-full border-2 border-[#2d5a3d] hover:bg-[#2d5a3d] hover:text-white transition-colors">
-          Inquire Now
-        </a>
-      </div>
-    </div>
-  </section>
+  <VisitBand title="Come and see the school">
+    <p>Fill out our enquiry form and our admissions team will contact you within 24–48 hours to schedule a visit.</p>
+    <p class="visit-note">No commitment required. Personal campus tours available.</p>
+    <Fragment slot="actions">
+      <a href={enquiryUrl} target="_blank" rel="noopener noreferrer" class="btn-gold">Make an enquiry <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="/admissions/" class="link-on-dark">How to apply <ArrowRight size={18} aria-hidden="true" /></a>
+    </Fragment>
+  </VisitBand>
 </Layout>
+
+<style>
+  .glance-programmes { display: grid; gap: .25rem; }
+  .glance-programmes a:hover { color: var(--color-forest-dark); }
+  .glance-programmes span { color: var(--color-text-muted); }
+
+  .approach-intro img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-media); margin-top: 2rem; }
+
+  .campus-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); grid-template-rows: auto auto; gap: 1.5rem 2rem; margin-top: 2.5rem; }
+  .campus-grid figure { min-width: 0; }
+  .campus-forest { grid-row: span 2; }
+  .campus-grid img { width: 100%; aspect-ratio: 2.1/1; object-fit: cover; object-position: top; border-radius: var(--radius-media); }
+  .campus-forest img { aspect-ratio: auto; height: calc(100% - 4.5rem); min-height: 20rem; object-position: center; }
+  .campus-grid figcaption { margin-top: .875rem; max-width: 52ch; font-size: .9375rem; line-height: 1.6; color: var(--color-text-muted); }
+  .campus-grid figcaption strong { display: block; margin-bottom: .125rem; font-size: 1rem; color: var(--color-forest-dark); }
+  .street-view { display: grid; grid-template-columns: minmax(0, .6fr) minmax(0, 1.4fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; margin-top: clamp(3rem, 6vw, 4.5rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--color-line); }
+  .street-view h3 { font-size: 1.5rem; line-height: 1.3; color: var(--color-forest-dark); margin-bottom: .5rem; }
+  .street-view .text-link { margin-top: 1rem; }
+  .street-view-frame { overflow: hidden; border-radius: var(--radius-media); background: var(--color-surface); }
+  .street-view-frame iframe { display: block; }
+
+  .team-layout { display: grid; grid-template-columns: .8fr 1.5fr; align-items: center; gap: 3rem; }
+  .team-layout .text-link { margin-top: 1.5rem; }
+
+  @media (max-width: 900px) {
+    .approach-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; align-items: start; }
+    .approach-intro h2 { grid-column: 1 / -1; }
+    .approach-intro img { margin-top: 0; }
+  }
+  @media (max-width: 640px) {
+    .approach-intro { grid-template-columns: 1fr; }
+    .approach-intro img { margin-top: 1.5rem; }
+    .campus-grid { grid-template-columns: 1fr; }
+    .campus-forest { grid-row: auto; }
+    .campus-forest img { height: auto; min-height: 0; aspect-ratio: 3/2; }
+  }
+</style>

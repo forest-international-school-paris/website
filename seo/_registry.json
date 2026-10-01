@@ -34,10 +34,14 @@
       "whatsapp_click",
       "email_click",
       "phone_click",
-      "popup_shown",
-      "popup_cta_click"
+      "event_register_click"
     ],
-    "data_since": "2026-07-01"
+    "data_since": "2026-07-01",
+    "exposure_events": ["popup_shown"],
+    "engagement_events": ["popup_cta_click", "calendar_option_click"],
+    "production_hosts": ["forest-international.com", "www.forest-international.com"],
+    "measurement_version": 2,
+    "conversion_note": "Intent clicks only, not completed inquiries, registrations or attendance. Historical masterclass_register_click includes announcement form clicks before event_register_click deployment."
   },
   "gsc": {
     "property": "sc-domain:forest-international.com",
@@ -57,5 +61,32 @@
     "email": "discover@forestinternationalschool.com"
   },
   "canonical_blurb": "Forest International School Paris is an English-language international school in Mareil-Marly, west of Paris, welcoming children aged 2 to 15. Learning combines an international curriculum with daily nature-based education on a forest campus near Saint-Germain-en-Laye.",
-  "content_counts": { "posts": 5, "guides": 3, "news": 2 }
+  "open_house": {
+    "id": "open-house-2026-12-05",
+    "title": "Open House",
+    "start": "2026-12-05T10:00:00+01:00",
+    "end": "2026-12-05T13:00:00+01:00",
+    "timeZone": "Europe/Paris",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdXSc59Sa2wKLm3K5HaitMRYA2yI8pOTgt-LM3V6Pr9g5Tumg/viewform?pli=1",
+    "parkingNote": "Spaces at the school entrance. Additional parking about 3 minutes away.",
+    "parkingUrl": "https://maps.app.goo.gl/4vN2Wg99WENBhhwX9",
+    "source": "Date, time and registration URL: existing Layout.astro popup. Parking at the entrance, an additional car park approximately three minutes away and its map link: explicit user confirmation on 2026-10-01. Travel mode not specified."
+  },
+  "content_counts": { "posts": 5, "guides": 3, "news": 2 },
+  "legal_entity": {
+    "name": "FOREST INTERNATIONAL SCHOOL",
+    "form": "SAS (société par actions simplifiée)",
+    "share_capital": "€63,000",
+    "siren": "478 528 797",
+    "siret": "478 528 797 00010",
+    "rcs": "478 528 797 RCS Versailles",
+    "vat": "FR80478528797",
+    "publication_director": "The President of FOREST INTERNATIONAL SCHOOL SAS",
+    "host": {
+      "name": "Cloudflare, Inc.",
+      "address": "101 Townsend Street, San Francisco, CA 94107, United States",
+      "phone": "+1 888 993 5273"
+    },
+    "updated": "2026-10-01"
+  }
 }

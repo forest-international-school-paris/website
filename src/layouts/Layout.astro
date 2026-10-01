@@ -4,9 +4,12 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import Popup from '../components/Popup.astro';
 import Analytics from '../components/Analytics.astro';
+import { openHouse, eventDate, eventTime } from '../lib/open-house';
+import { instagramUrl, phoneE164, school, whatsappHref } from '../lib/site';
 
 interface Props {
   title: string;
+  titleBrand?: string;
   description?: string;
   image?: string;
   showPopup?: boolean;
@@ -20,6 +23,7 @@ interface Props {
 
 const {
   title,
+  titleBrand = "Forest International School Paris",
   description = "Forest International School Paris - An International school nurturing young minds through nature-based learning",
   image = "/images/campus.jpg",
   showPopup = true,
@@ -31,20 +35,20 @@ const {
 const siteUrl = 'https://forest-international.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = new URL(image, siteUrl).href;
-const fullTitle = `${title} | Forest International School Paris`;
+const fullTitle = `${title} | ${titleBrand}`;
 const ogLocale = lang === 'fr' ? 'fr_FR' : 'en_GB';
 
 // Popup configuration
 const popupConfig = {
   enabled: true,
-  expiresDate: "2026-12-05",
+  expiresDate: openHouse.start.slice(0, 10),
   title: "Open House",
   subtitle: "Come and visit our forest campus",
-  date: "5 December 2026",
-  time: "10:00 AM - 1:00 PM",
+  date: eventDate,
+  time: eventTime,
   message: "Join us for a morning at Forest International School. Tour our forest campus, meet our teachers, and discover how nature-based learning nurtures every child.",
   buttonText: "Book Your Place",
-  buttonLink: "https://docs.google.com/forms/d/e/1FAIpQLSdXSc59Sa2wKLm3K5HaitMRYA2yI8pOTgt-LM3V6Pr9g5Tumg/viewform?pli=1",
+  buttonLink: openHouse.registrationUrl,
   secondaryButtonText: "Learn More",
   secondaryButtonLink: "/admissions/",
   badge: "Open House",
@@ -87,23 +91,20 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>{fullTitle}</title>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      "name": "Forest International School Paris",
+      "name": school.name,
       "alternateName": "Forest International",
       "url": siteUrl,
       "logo": `${siteUrl}/images/logo-header.png`,
       "image": `${siteUrl}/images/campus.jpg`,
       "description": "An International school nurturing young minds through nature-based learning in Paris west.",
-      "telephone": "+33632725145",
-      "email": "discover@forestinternationalschool.com",
+      "telephone": phoneE164,
+      "email": school.email,
       "foundingDate": "2003",
       "address": {
         "@type": "PostalAddress",
@@ -121,12 +122,12 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
         "@type": "Place",
         "name": "Paris West, Ile-de-France"
       },
-      "sameAs": ["https://www.instagram.com/the_forestinternational_school/"],
+      "sameAs": [instagramUrl],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+33632725145",
+        "telephone": phoneE164,
         "contactType": "admissions",
-        "email": "discover@forestinternationalschool.com",
+        "email": school.email,
         "availableLanguage": ["English", "French"]
       }
     })} />
@@ -135,8 +136,9 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
     <Analytics />
   </head>
   <body class="bg-[#faf8f5] text-gray-800 min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <Navigation />
-    <main class="flex-grow">
+    <main id="main-content" tabindex="-1" class="flex-grow">
       <slot />
     </main>
     <Footer />
@@ -156,18 +158,19 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
         secondaryButtonLink={popup.secondaryButtonLink}
         badge={popup.badge}
         image={popup.image}
-        programs={popup.programs}
+        startsAt={openHouse.start}
+        timeZone={openHouse.timeZone}
       />
     )}
 
     <!-- Floating Contact Button -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div class="contact-actions fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col gap-3">
       <!-- WhatsApp Button -->
       <a
-        href="https://wa.me/33632725145"
+        href={whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        class="group w-14 h-14 bg-[#25D366] hover:bg-[#1da851] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110"
+        class="group w-14 h-14 bg-[#2d5a3d] hover:bg-[#1e3d29] rounded-full flex items-center justify-center"
         aria-label="Chat on WhatsApp"
       >
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -175,16 +178,6 @@ const popup = { ...popupConfig, enabled: popupConfig.enabled && !isExpired };
         </svg>
       </a>
 
-      <!-- Email Button -->
-      <a
-        href="mailto:discover@forestinternationalschool.com"
-        class="group w-14 h-14 bg-[#c9a962] hover:bg-[#b8984f] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110"
-        aria-label="Email us"
-      >
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-      </a>
     </div>
   </body>
 </html>

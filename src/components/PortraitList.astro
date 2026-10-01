@@ -1,0 +1,51 @@
+---
+export interface Person {
+  name: string;
+  role: string;
+  detail?: string;
+  image: string;
+  position?: string;
+}
+
+interface Props {
+  people: Person[];
+  size?: 'feature' | 'compact';
+}
+
+const { people, size = 'feature' } = Astro.props;
+---
+
+<ul class:list={['portrait-list', size]}>
+  {people.map((person) => (
+    <li>
+      <figure>
+        <img src={person.image} alt={person.name} style={{ objectPosition: person.position ?? 'center' }} width="400" height="480" loading="lazy" decoding="async" />
+        <figcaption>
+          <strong>{person.name}</strong>
+          <span>{person.role}</span>
+          {person.detail && <span>{person.detail}</span>}
+        </figcaption>
+      </figure>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .portrait-list { display: grid; gap: 2rem 1.5rem; }
+  .portrait-list.feature { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* 6 / 4 / 3 / 2 columns divide a team of 12 into full rows at every width. */
+  .portrait-list.compact { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 2rem 1.25rem; }
+  @media (max-width: 1100px) { .portrait-list.compact { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (max-width: 800px) { .portrait-list.compact { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  figure { min-width: 0; }
+  img { width: 100%; aspect-ratio: 5/6; object-fit: cover; border-radius: var(--radius-media); background: var(--color-surface); }
+  figcaption { margin-top: 1rem; font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
+  strong, span { display: block; }
+  strong { color: var(--color-forest-dark); font-size: .9375rem; }
+  span { margin-top: .25rem; color: var(--color-text-muted); }
+  .feature strong { font-size: 1rem; }
+  @media (max-width: 640px) {
+    .portrait-list.feature { gap: .75rem; }
+    .portrait-list.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem .75rem; }
+  }
+</style>

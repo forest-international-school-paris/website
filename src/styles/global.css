@@ -1,4 +1,13 @@
 @import "tailwindcss";
+/* Self-hosted so no visitor data is sent to a font provider. */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
 
 /* Custom CSS Variables for Forest School branding */
 :root {
@@ -8,24 +17,39 @@
   --color-cream: #faf8f5;
   --color-warm-brown: #8b7355;
   --color-gold: #c9a962;
+  --color-gold-ink: #72591e;
+  --color-gold-nav: #947019;
+  --color-leaf: #a7d7b5;
+  --color-surface: #f1f5f2;
+  --color-text: #35483b;
+  --color-text-muted: #526258;
+  --color-line: #d9e2dc;
+  --radius-control: 8px;
+  --radius-media: 12px;
+  --space-section: clamp(3.5rem, 7vw, 6rem);
+  --duration-fast: 180ms;
+  --duration-slow: 350ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-contact: 30;
+  --z-modal: 40;
+  --z-skip-link: 50;
 }
 
 /* Custom utility classes */
 @layer components {
   .btn-primary {
-    @apply bg-[#2d5a3d] hover:bg-[#1e3d29] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300;
-  }
-
-  .btn-secondary {
-    @apply border-2 border-[#2d5a3d] text-[#2d5a3d] hover:bg-[#2d5a3d] hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300;
-  }
-
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-[#2d5a3d] mb-6;
-  }
-
-  .card {
-    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+    @apply text-white font-semibold py-3 px-6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    min-height: 48px;
+    border-radius: var(--radius-control);
+    background: var(--color-forest-green);
+    transition: background-color var(--duration-fast) var(--ease-out);
+    &:hover { background: var(--color-forest-dark); }
   }
 
   /* Main container - optimized for laptop screens */
@@ -33,15 +57,6 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Page header style */
-  .page-header {
-    @apply py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] text-white;
-  }
-
-  /* Section padding */
-  .section-padding {
-    @apply py-16 lg:py-24;
-  }
 }
 
 /* Long-form article tables generated from Markdown need more room than body copy. */
@@ -80,8 +95,8 @@
 
 .article-table-scroll th {
   padding: 1rem;
-  background: #eef6f0;
-  color: #1e3d29;
+  background: var(--color-surface);
+  color: var(--color-forest-dark);
   font-size: 0.92rem;
   font-weight: 700;
   line-height: 1.35;
@@ -89,7 +104,7 @@
 
 .article-table-scroll td {
   padding: 1rem;
-  color: #2f3b35;
+  color: var(--color-text);
   font-size: 0.95rem;
   line-height: 1.55;
 }
@@ -100,11 +115,11 @@
 }
 
 .article-table-scroll tbody tr:nth-child(even) td {
-  background: #fbfaf7;
+  background: var(--color-cream);
 }
 
 .article-table-scroll tbody tr:hover td {
-  background: #f3f8f4;
+  background: var(--color-surface);
 }
 
 .article-table-scroll tbody tr:last-child td {
@@ -112,7 +127,7 @@
 }
 
 .article-table-scroll a {
-  color: #2d5a3d;
+  color: var(--color-forest-green);
   font-weight: 600;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.16em;
@@ -123,7 +138,7 @@
 }
 
 .article-table-scroll::-webkit-scrollbar-track {
-  background: #f4f1eb;
+  background: var(--color-surface);
   border-radius: 999px;
 }
 
@@ -162,4 +177,152 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Shared actions use solid colour and consistent, keyboard-visible states. */
+@layer components {
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    min-height: 48px;
+    padding: .875rem 1.5rem;
+    border-radius: var(--radius-control);
+    background: var(--color-gold);
+    color: var(--color-forest-dark);
+    font-weight: 600;
+    transition: background-color var(--duration-fast) var(--ease-out);
+    &:hover { background: #e0c78f; }
+  }
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .625rem;
+    min-height: 44px;
+    color: var(--color-forest-green);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: .3em;
+    text-decoration-thickness: 1px;
+    &:hover { color: var(--color-forest-dark); }
+  }
+
+  /* Underlined action link for dark sections (heroes, visit bands). */
+  .link-on-dark {
+    display: inline-flex;
+    gap: .75rem;
+    align-items: center;
+    min-height: 48px;
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgb(255 255 255 / 55%);
+    text-underline-offset: .35em;
+    transition: color var(--duration-fast) var(--ease-out);
+    &:hover { color: var(--color-gold); }
+  }
+}
+
+/* Page sections shared by the refreshed interior pages (see DESIGN.md "Interior pages"). */
+@layer components {
+  .page-section { padding-block: var(--space-section); }
+  .page-section.surface { background: var(--color-surface); }
+  .page-section h2 { color: var(--color-forest-dark); font-size: clamp(2rem, 3.1vw, 2.75rem); line-height: 1.18; margin-bottom: 1.25rem; }
+  .page-section h3 { color: var(--color-forest-dark); }
+  .prose-copy p, .prose-copy li { max-width: 65ch; line-height: 1.75; }
+  .prose-copy p + p { margin-top: 1rem; }
+  .lead-copy { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.375rem, 2vw, 1.75rem); line-height: 1.45; color: var(--color-forest-dark); }
+
+  /* Label / value rows, e.g. "Ages — 6–11". */
+  .fact-list > div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: .25rem 1.5rem; padding-block: .875rem; border-top: 1px solid var(--color-line); }
+  .fact-list dt { font-weight: 600; color: var(--color-forest-dark); }
+  .fact-list dd { line-height: 1.6; }
+  .fact-list a { color: var(--color-forest-green); font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+  /* Phones keep label and value side by side, which halves the height of short fact lists. */
+  @media (max-width: 640px) { .fact-list > div { grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: .25rem 1rem; } }
+
+  /* Titled paragraphs separated by rules, instead of a grid of identical cards. */
+  .row-list > * { padding-block: 1.5rem; border-bottom: 1px solid var(--color-line); }
+  .row-list > :first-child { padding-top: 0; }
+  .row-list > :last-child { border-bottom: 0; }
+  .row-list :is(dt, h3) { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.3; color: var(--color-forest-dark); margin-bottom: .5rem; }
+  .row-list :is(dd, p) { max-width: 60ch; line-height: 1.75; }
+
+  /* Keeps hyphenated place names whole, except on the narrowest phones where the column cannot fit them. */
+  @media (min-width: 400px) { .place { white-space: nowrap; } }
+  .inline-link { color: var(--color-forest-green); font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+  .inline-link:hover { color: var(--color-forest-dark); }
+
+  /* A summary panel of .fact-list rows, e.g. "The school at a glance". */
+  .glance { padding: clamp(1.5rem, 3vw, 2.25rem); border-radius: var(--radius-media); background: var(--color-surface); }
+  .glance h2 { font-family: inherit; font-size: 1.125rem; font-weight: 600; margin-bottom: .75rem; }
+
+  /* A real sequence (e.g. admission steps): large step numbers, rule-separated. */
+  .step-list li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1.75rem; border-top: 1px solid var(--color-line); }
+  .step-list li:first-child { padding-top: 0; border-top: 0; }
+  .step-number { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.25rem, 3.5vw, 3rem); line-height: 1; color: var(--color-gold-ink); }
+  .step-list h3 { font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.3; margin-bottom: .5rem; }
+  .step-list p { max-width: 60ch; line-height: 1.75; }
+  .step-list .text-link { margin-top: .75rem; }
+  @media (max-width: 640px) { .step-list li { grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; } }
+
+  /* Stills from the school film carry burned-in subtitles near the bottom; this crop leaves them out. */
+  .film-still { aspect-ratio: 2.1/1; object-fit: cover; object-position: top; }
+
+  .split-layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+  @media (max-width: 900px) { .split-layout { grid-template-columns: 1fr; } }
+  .media-rounded { width: 100%; object-fit: cover; border-radius: var(--radius-media); }
+}
+
+body { color: var(--color-text); }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+:where(a, button, summary, input, select, textarea, video, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-forest-green);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px white;
+}
+[id] { scroll-margin-top: 7rem; }
+.skip-link {
+  position: fixed;
+  top: .75rem;
+  left: 1rem;
+  z-index: var(--z-skip-link);
+  padding: .75rem 1.25rem;
+  background: white;
+  color: var(--color-forest-dark);
+  border-radius: var(--radius-control);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+.contact-actions { z-index: var(--z-contact); }
+.contact-actions a { transition: background-color var(--duration-fast) var(--ease-out); }
+body:has(#mobile-menu-btn[aria-expanded="true"]) :is(.contact-actions, .announcement-badge) { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* One semantic table supports touch, keyboard navigation and assistive technology. */
+.fees-scroll-hint { margin: 0 0 1rem; color: var(--color-text-muted); font-size: .875rem; }
+.fees-scroll { overflow-x: auto; border: 1px solid var(--color-line); border-radius: var(--radius-media); overscroll-behavior-inline: contain; }
+.fees-table { width: 100%; min-width: 68.75rem; border-collapse: separate; border-spacing: 0; font-size: .9375rem; }
+.fees-table th, .fees-table td { padding: 1rem; text-align: center; vertical-align: middle; border-bottom: 1px solid var(--color-line); }
+.fees-table thead th { background: var(--color-forest-green); color: white; font-size: .875rem; font-weight: 600; }
+.fees-table th:first-child { text-align: left; }
+.fees-table tbody tr { background: white; }
+.fees-table tbody tr:nth-child(even) { background: var(--color-cream); }
+.fees-table tbody th[scope="row"] { position: sticky; left: 0; z-index: 1; background: inherit; min-width: 8rem; max-width: 10rem; border-right: 1px solid var(--color-line); }
+.fees-table .fees-group th { background: var(--color-surface); text-align: left; }
+.fees-table tbody tr:last-child > * { border-bottom: 0; }
+.fees-table .text-xs { font-size: .875rem; }
+@media (max-width: 640px) {
+  .fees-table th, .fees-table td { padding: .875rem .75rem; }
 }

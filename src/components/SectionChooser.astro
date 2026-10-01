@@ -1,0 +1,58 @@
+---
+// "Which one are you here for?" — large jump links to the sections of a page that serves more than one need.
+// Designed for the PageHero `aside` slot: light panels on the dark hero.
+import { ArrowDown, CalendarDays, Sun } from '@lucide/astro';
+
+// Each tone pairs with a hero title colour, so the visitor can match a choice to its heading.
+const toneIcons = { gold: Sun, leaf: CalendarDays };
+
+interface Choice {
+  href: string;
+  title: string;
+  detail: string;
+  action: string;
+  tone: keyof typeof toneIcons;
+  lang?: string;
+}
+
+interface Props {
+  label: string;
+  choices: Choice[];
+}
+
+const { label, choices } = Astro.props;
+---
+
+<nav class="section-chooser" aria-label={label}>
+  <ul>
+    {choices.map((choice) => (
+      <li>
+        <a href={choice.href} class:list={['chooser', `tone-${choice.tone}`]}>
+          {(() => { const Icon = toneIcons[choice.tone]; return <span class="chooser-icon" aria-hidden="true"><Icon size={20} /></span>; })()}
+          <span class="chooser-title" lang={choice.lang}>{choice.title}</span>
+          <span class="chooser-detail">{choice.detail}</span>
+          <span class="chooser-action">{choice.action} <ArrowDown size={18} aria-hidden="true" /></span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  ul { display: grid; gap: .75rem; }
+  a { display: grid; gap: .375rem; height: 100%; padding: clamp(1.25rem, 2.5vw, 1.75rem); border: 1px solid transparent; border-radius: var(--radius-media); background: white; color: var(--color-text); transition: background-color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out); }
+  .tone-gold { --tone-bg: color-mix(in oklab, var(--color-gold) 16%, white); --tone-ink: var(--color-gold-ink); --tone-chip: var(--color-gold); }
+  .tone-leaf { --tone-bg: color-mix(in oklab, var(--color-leaf) 30%, white); --tone-ink: var(--color-forest-green); --tone-chip: var(--color-leaf); }
+  .chooser { background: var(--tone-bg); }
+  .chooser:hover { border-color: var(--tone-ink); }
+  .chooser-icon { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin-bottom: .25rem; border-radius: 50%; background: var(--tone-chip); color: var(--color-forest-dark); }
+  .chooser-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.375rem, 2.2vw, 1.75rem); line-height: 1.25; color: var(--tone-ink); }
+  .chooser-detail { line-height: 1.6; color: var(--color-text); }
+  .chooser-action { display: inline-flex; align-items: center; gap: .5rem; margin-top: .5rem; font-weight: 600; color: var(--tone-ink); }
+  .chooser-action :global(svg) { transition: transform var(--duration-fast) var(--ease-out); }
+  a:hover .chooser-action :global(svg) { transform: translateY(3px); }
+  @media (prefers-reduced-motion: reduce) {
+    a, .chooser-action :global(svg) { transition: none; }
+    a:hover .chooser-action :global(svg) { transform: none; }
+  }
+</style>

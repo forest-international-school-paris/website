@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T08:21:51.815372+00:00",
+  "title": "Design System: Forest International School Paris",
+  "extensions": {
+    "colorMeta": {
+      "forest-green": {
+        "displayName": "Forest green",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.0698 153.99)",
+          "oklch(25% 0.0698 153.99)",
+          "oklch(35% 0.0698 153.99)",
+          "oklch(45% 0.0698 153.99)",
+          "oklch(60% 0.0698 153.99)",
+          "oklch(75% 0.0698 153.99)",
+          "oklch(85% 0.0698 153.99)",
+          "oklch(95% 0.0698 153.99)"
+        ]
+      },
+      "forest-light": {
+        "displayName": "Forest light",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.0742 155.00)",
+          "oklch(25% 0.0742 155.00)",
+          "oklch(35% 0.0742 155.00)",
+          "oklch(45% 0.0742 155.00)",
+          "oklch(60% 0.0742 155.00)",
+          "oklch(75% 0.0742 155.00)",
+          "oklch(85% 0.0742 155.00)",
+          "oklch(95% 0.0742 155.00)"
+        ]
+      },
+      "forest-dark": {
+        "displayName": "Forest dark",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.0516 154.19)",
+          "oklch(25% 0.0516 154.19)",
+          "oklch(35% 0.0516 154.19)",
+          "oklch(45% 0.0516 154.19)",
+          "oklch(60% 0.0516 154.19)",
+          "oklch(75% 0.0516 154.19)",
+          "oklch(85% 0.0516 154.19)",
+          "oklch(95% 0.0516 154.19)"
+        ]
+      },
+      "cream": {
+        "displayName": "Cream",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0045 78.30)",
+          "oklch(25% 0.0045 78.30)",
+          "oklch(35% 0.0045 78.30)",
+          "oklch(45% 0.0045 78.30)",
+          "oklch(60% 0.0045 78.30)",
+          "oklch(75% 0.0045 78.30)",
+          "oklch(85% 0.0045 78.30)",
+          "oklch(95% 0.0045 78.30)"
+        ]
+      },
+      "gold": {
+        "displayName": "Gold",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0976 85.80)",
+          "oklch(25% 0.0976 85.80)",
+          "oklch(35% 0.0976 85.80)",
+          "oklch(45% 0.0976 85.80)",
+          "oklch(60% 0.0976 85.80)",
+          "oklch(75% 0.0976 85.80)",
+          "oklch(85% 0.0976 85.80)",
+          "oklch(95% 0.0976 85.80)"
+        ]
+      },
+      "gold-ink": {
+        "displayName": "Gold ink",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0823 85.33)",
+          "oklch(25% 0.0823 85.33)",
+          "oklch(35% 0.0823 85.33)",
+          "oklch(45% 0.0823 85.33)",
+          "oklch(60% 0.0823 85.33)",
+          "oklch(75% 0.0823 85.33)",
+          "oklch(85% 0.0823 85.33)",
+          "oklch(95% 0.0823 85.33)"
+        ]
+      },
+      "surface": {
+        "displayName": "Surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0058 153.78)",
+          "oklch(25% 0.0058 153.78)",
+          "oklch(35% 0.0058 153.78)",
+          "oklch(45% 0.0058 153.78)",
+          "oklch(60% 0.0058 153.78)",
+          "oklch(75% 0.0058 153.78)",
+          "oklch(85% 0.0058 153.78)",
+          "oklch(95% 0.0058 153.78)"
+        ]
+      },
+      "text": {
+        "displayName": "Text",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0326 154.71)",
+          "oklch(25% 0.0326 154.71)",
+          "oklch(35% 0.0326 154.71)",
+          "oklch(45% 0.0326 154.71)",
+          "oklch(60% 0.0326 154.71)",
+          "oklch(75% 0.0326 154.71)",
+          "oklch(85% 0.0326 154.71)",
+          "oklch(95% 0.0326 154.71)"
+        ]
+      },
+      "text-muted": {
+        "displayName": "Text muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0252 157.88)",
+          "oklch(25% 0.0252 157.88)",
+          "oklch(35% 0.0252 157.88)",
+          "oklch(45% 0.0252 157.88)",
+          "oklch(60% 0.0252 157.88)",
+          "oklch(75% 0.0252 157.88)",
+          "oklch(85% 0.0252 157.88)",
+          "oklch(95% 0.0252 157.88)"
+        ]
+      },
+      "line": {
+        "displayName": "Line",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0126 156.98)",
+          "oklch(25% 0.0126 156.98)",
+          "oklch(35% 0.0126 156.98)",
+          "oklch(45% 0.0126 156.98)",
+          "oklch(60% 0.0126 156.98)",
+          "oklch(75% 0.0126 156.98)",
+          "oklch(85% 0.0126 156.98)",
+          "oklch(95% 0.0126 156.98)"
+        ]
+      },
+      "white": {
+        "displayName": "White",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(25% 0.0000 89.88)",
+          "oklch(35% 0.0000 89.88)",
+          "oklch(45% 0.0000 89.88)",
+          "oklch(60% 0.0000 89.88)",
+          "oklch(75% 0.0000 89.88)",
+          "oklch(85% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      }
+    },
+    "shadows": [
+      {
+        "name": "article-table",
+        "value": "0 4px 8px rgba(30,61,41,0.08)",
+        "purpose": "Existing article table wrapper only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "duration-fast",
+        "value": "180ms",
+        "purpose": "Control state changes."
+      },
+      {
+        "name": "duration-slow",
+        "value": "350ms",
+        "purpose": "Programme image hover."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Shared easing; reduced motion disables movement."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "home-layout",
+        "value": "900px"
+      },
+      {
+        "name": "desktop-navigation",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action on a light surface.",
+      "html": "<button class=\"ds-primary\">Book a visit</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;min-height:48px;border-radius:var(--radius-control);font-family:Inter,system-ui,sans-serif;font-size:16px;font-weight:600;text-decoration:none;transition:background-color var(--duration-fast) var(--ease-out);background:var(--color-forest-green);color:white;border:0;padding:12px 24px}.ds-primary:hover{background:var(--color-forest-dark)}.ds-primary:focus-visible { outline: 3px solid var(--color-forest-green); outline-offset: 4px; box-shadow: 0 0 0 4px white; }"
+    },
+    {
+      "name": "Gold button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "Primary action on the dark hero or visit section.",
+      "html": "<button class=\"ds-gold\">Book a visit</button>",
+      "css": ".ds-gold{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;min-height:48px;border-radius:var(--radius-control);font-family:Inter,system-ui,sans-serif;font-size:16px;font-weight:600;text-decoration:none;transition:background-color var(--duration-fast) var(--ease-out);background:var(--color-gold);color:var(--color-forest-dark);border:0;padding:14px 24px}.ds-gold:hover{background:#e0c78f}.ds-gold:focus-visible { outline: 3px solid var(--color-forest-green); outline-offset: 4px; box-shadow: 0 0 0 4px white; }"
+    },
+    {
+      "name": "Text link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Supporting navigation with a persistent underline.",
+      "html": "<a class=\"ds-link\" href=\"/tuition/\">View school fees</a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;min-height:44px;gap:.625rem;color:var(--color-forest-green);font:600 16px Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1px}.ds-link:hover{color:var(--color-forest-dark)}.ds-link:focus-visible { outline: 3px solid var(--color-forest-green); outline-offset: 4px; box-shadow: 0 0 0 4px white; }"
+    },
+    {
+      "name": "Navigation link",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "A single navigation destination with a clear current-page state.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"/admissions/\" aria-current=\"page\">Admissions</a><a href=\"/tuition/\">Tuition</a></nav>",
+      "css": ".ds-nav{display:flex;background:white;gap:.25rem;font:500 15px Inter,system-ui,sans-serif}.ds-nav a{display:flex;align-items:center;min-height:48px;box-sizing:border-box;padding:12px;color:var(--color-text);border-radius:var(--radius-control);text-decoration:none}.ds-nav a:hover{background:var(--color-surface);color:var(--color-forest-green)}.ds-nav [aria-current]{color:var(--color-forest-green);text-decoration:underline;text-underline-offset:.35em}.ds-nav a:focus-visible { outline: 3px solid var(--color-forest-green); outline-offset: 4px; box-shadow: 0 0 0 4px white; }"
+    },
+    {
+      "name": "Announcement button",
+      "kind": "button",
+      "refersTo": "announcement",
+      "description": "Compact control for reopening the announcement dialog. Dates remain in Layout.astro.",
+      "html": "<button class=\"ds-announcement\">Open House</button>",
+      "css": ".ds-announcement{display:flex;align-items:center;min-height:48px;padding:12px 16px;background:white;color:var(--color-forest-dark);border:1px solid var(--color-line);border-radius:var(--radius-control);font:600 16px Inter,system-ui,sans-serif;cursor:pointer;transition:background-color var(--duration-fast) var(--ease-out)}.ds-announcement:hover{background:var(--color-surface)}.ds-announcement:focus-visible { outline: 3px solid var(--color-forest-green); outline-offset: 4px; box-shadow: 0 0 0 4px white; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The school prospectus",
+    "overview": "A parent is comparing schools on a phone during the day, looking for the age range, location, curriculum, fees and a way to visit. Clear light surfaces support that reading; the established forest green gives the school a recognisable presence. The reference is this site's published school material and existing identity, rather than a borrowed marketing template.\n\nThe voice is warm, grounded and expert, as defined in `PRODUCT.md`. Lead with information a family can use. Use the school's existing photographs, video, staff portraits and campus overview with accurate descriptions. An illustration is not evidence of a photographed place.\n\nThe homepage uses a maximum 72rem container, fluid section spacing, short introductory text and varied layouts suited to each subject. Programme links use images with copy beneath them; teaching details use a definition list; parent quotations remain verbatim. Shared navigation uses an 80rem container to accommodate its links.",
+    "keyCharacteristics": [
+      "School information before promotional language.",
+      "Published imagery with clear, readable captions and supporting text.",
+      "Solid actions, flat surfaces and restrained motion.",
+      "Keyboard access and readable text at every viewport."
+    ],
+    "rules": [],
+    "dos": [
+      "Do build trust with concrete school evidence, published material and practical details.",
+      "Do structure information around age fit, curriculum, location, fees and how to visit.",
+      "Do preserve school facts, parent quotations, names, links and policy commitments.",
+      "Do keep the school warm, grounded and expert, with natural British English.",
+      "Do test navigation, dialogs, focus, reduced motion and widths from 320px through desktop.",
+      "Do review the rendered page as well as the automated detector results."
+    ],
+    "donts": [
+      "Don't use generic AI school marketing, vague benefits of bilingual education, abstract claims about nurturing potential, stock-sounding education copy or unsupported superlatives.",
+      "Don't use repeated identical card grids, pill labels above every section, oversized rounded cards, soft-shadow decoration, generic green nature branding or design flourishes that do not help a parent make a decision.",
+      "Don't invent facts, retain stale dates as current, introduce inconsistent contact details, add new photos of children without explicit approval, expose pupil personal data or make claims without a canonical source.",
+      "Don't make the site feel like a luxury school brochure, a corporate SaaS landing page, a playful children's brand or a formal government institution.",
+      "Don't use decorative leaf motifs, glass panels, metric tiles, animated bouncing arrows, gradient text or coloured side-stripe borders.",
+      "Don't silently change fees, dates, staff, ages, hours or policies during a visual cleanup. Follow `CLAUDE.md`."
+    ]
+  }
+}

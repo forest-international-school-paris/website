@@ -1,18 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {
-  ArrowRight,
-  BusFront,
-  CalendarDays,
-  Clock,
-  Euro,
-  Flower2,
-  Leaf,
-  MapPin,
-  Snowflake,
-  SunMedium,
-  Utensils,
-} from '@lucide/astro';
+import PageHero from '../components/PageHero.astro';
+import SectionChooser from '../components/SectionChooser.astro';
+import CampList, { type Camp, type CampFact } from '../components/CampList.astro';
+import '../styles/camps.css';
+import VisitBand from '../components/VisitBand.astro';
+import { ArrowRight, ArrowUpRight } from '@lucide/astro';
 
 const alternates = [
   { hreflang: 'en', href: '/holiday-camps/' },
@@ -24,496 +17,124 @@ const masterClassRegisterUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSenMtdB
 const bookVisitUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
 const campRegisterUrl = 'https://forms.gle/6y8k9xULoLzSCt7n7';
 
-const campCards = [
+const PHOTO_ALT = 'Summer camp collage: children running on a lawn, a swimming session in the school pool, smiling children outdoors and a child climbing a tree';
+
+// Facts that are identical for every camp are listed once, above the schedule.
+const sharedFacts: CampFact[] = [
+  { label: 'Food', value: '40 €/week, snacks included' },
+  { label: 'Transport', value: 'On request — Saint-Germain-en-Laye, Le Pecq & Paris 16' },
+];
+
+const camps: Camp[] = [
   {
     key: 'autumn',
     season: 'Autumn',
     title: 'October Toussaint Camp',
-    icon: Leaf,
     registerUrl: campRegisterUrl,
-    description: 'An action-packed autumn week of nature adventures, creative workshops, and outdoor exploration.',
-    facts: [
-      { label: 'Dates', value: '19th – 23rd October 2026', icon: CalendarDays },
-      { label: 'Hours', value: 'Daily 10:00 am – 4:00 pm', icon: Clock },
-      { label: 'Rate', value: '450 €/week', icon: Euro },
-      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
-      { label: 'Transport', value: 'On request — Saint-Germain-en-Laye, Le Pecq & Paris 16', icon: MapPin },
-    ],
+    description: 'An autumn week of nature, creative workshops and outdoor exploration.',
+    dates: '19th – 23rd October 2026',
+    hours: 'Daily 10:00 am – 4:00 pm',
+    rate: '450 €/week',
   },
   {
     key: 'winter',
     season: 'Winter',
     title: 'February Winter Camp',
-    icon: Snowflake,
     registerUrl: campRegisterUrl,
-    description: 'Beat the winter blues with a week of nature-based learning, creative projects, and fun outdoor activities.',
-    facts: [
-      { label: 'Dates', value: '8th – 12th February 2027', icon: CalendarDays },
-      { label: 'Hours', value: 'Daily 10:00 am – 4:00 pm', icon: Clock },
-      { label: 'Rate', value: '450 €/week', icon: Euro },
-      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
-      { label: 'Transport', value: 'On request — Saint-Germain-en-Laye, Le Pecq & Paris 16', icon: MapPin },
-    ],
+    description: 'A winter week of nature-based learning, creative projects and outdoor activities.',
+    dates: '8th – 12th February 2027',
+    hours: 'Daily 10:00 am – 4:00 pm',
+    rate: '450 €/week',
   },
   {
     key: 'spring',
     season: 'Spring',
     title: 'Spring Holiday Camp',
-    icon: Flower2,
     registerUrl: campRegisterUrl,
-    description: 'Celebrate spring with our holiday camp full of flowers, fun activities, and lots of nature!',
-    facts: [
-      { label: 'Dates', value: '5th – 9th April 2027', icon: CalendarDays },
-      { label: 'Hours', value: 'Daily 10:00 am – 4:00 pm', icon: Clock },
-      { label: 'Rate', value: '450 €/week', icon: Euro },
-      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
-      { label: 'Transport', value: 'On request — Saint-Germain-en-Laye, Le Pecq & Paris 16', icon: MapPin },
-    ],
+    description: 'A spring week of flowers, activities and plenty of time in nature.',
+    dates: '5th – 9th April 2027',
+    hours: 'Daily 10:00 am – 4:00 pm',
+    rate: '450 €/week',
   },
   {
     key: 'summer-2027',
-    season: 'Summer 2027',
+    season: 'Summer',
     title: 'Holiday Summer Camp 2027',
-    icon: SunMedium,
     registerUrl: 'https://forms.gle/5JfDd3U13ZTYMvK76',
-    description: 'Our Summer Camp offers a rich mix of outdoor activities, including splashy fun in our swimming pool and chill-out forest time in the shadows of its trees.',
-    sessions: [
-      '5th – 9th July 2027',
-      '12th – 16th July 2027',
-      '19th – 23rd July 2027',
-    ],
-    facts: [
-      { label: 'Hours', value: 'Daily 10:00 am – 5:00 pm', icon: Clock },
-      { label: 'Rate', value: '480 €/week', icon: Euro },
-      { label: 'Food', value: '40 €/week, snacks included', icon: Utensils },
-      { label: 'Transport', value: 'On request — Saint-Germain-en-Laye, Le Pecq & Paris 16', icon: MapPin },
-      { label: 'Early Drop-off / Late Pick-up', value: '9:00 am & 6:00 pm — 40 €/day', icon: BusFront },
-    ],
+    description: 'A mix of outdoor activities, including time in our swimming pool and quieter hours in the shade of the forest trees.',
+    sessions: { month: 'July 2027', weeks: ['5th – 9th', '12th – 16th', '19th – 23rd'] },
+    hours: 'Daily 10:00 am – 5:00 pm',
+    rate: '480 €/week',
+    extra: { label: 'Early Drop-off / Late Pick-up', value: '9:00 am & 6:00 pm — 40 €/day' },
+    photo: { src: '/images/summer-camp.jpg', alt: PHOTO_ALT, width: 572, height: 459 },
   },
 ];
 ---
 
-<Layout title="Holiday Camps in English near Paris" description="English-language holiday and summer camps for children aged 2-12 on our forest campus near Saint-Germain-en-Laye, west of Paris." alternates={alternates}>
-  <!-- Hero Section with Image -->
-  <section class="relative min-h-[60vh] flex items-center">
-    <div class="absolute inset-0">
-      <img
-        src="/images/summer-camp.jpg"
-        alt="Holiday camps at Forest International School Paris in Mareil-Marly"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/90 to-[#2d5a3d]/70"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="max-w-2xl">
-        <div class="mb-4">
-          <a href="/fr/stages-vacances/" lang="fr" hreflang="fr" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/25 hover:bg-white/20 transition-colors">
-            🇫🇷 Voir cette page en français
-          </a>
-        </div>
-        <span class="inline-block px-4 py-2 bg-[#c9a962] text-[#1e3d29] rounded-full font-bold text-sm mb-6">
-          OPEN TO ALL CHILDREN
-        </span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Holiday Camps in English, West of Paris
-        </h1>
-        <p class="text-xl text-white/90 mb-8">
-          Spark curiosity, creativity, and connection with nature during school holidays. Fun-filled adventures for ages 2-12!
-        </p>
-        <p class="text-sm text-white/70 mb-8">
-          English-language camps on our forest campus in Mareil-Marly, near Saint-Germain-en-Laye — open to all children aged 2-12, whether or not they attend Forest during the school year.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#camps" class="inline-flex items-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
-            View Camps
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </a>
-          <a href="/contact/" class="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full border-2 border-white/30 hover:bg-white/20 transition-colors">
-            Contact Us
-          </a>
+<Layout title="Holiday Camps & Wednesday MasterClasses near Paris" description="English-language holiday and summer camps for children aged 2-12, and Wednesday MasterClasses, on our forest campus near Saint-Germain-en-Laye, west of Paris." alternates={alternates}>
+  <PageHero kicker="Holiday camps · Wednesday MasterClasses · Mareil-Marly">
+    <Fragment slot="title"><span class="title-holidays">Holidays</span> <span class="title-amp">&amp;</span> <span class="title-wednesdays">Wednesdays</span></Fragment>
+    <Fragment slot="intro">During the school holidays, children spend their days outdoors and in English on our forest campus. Camps are open to all children aged 2–12, whether or not they attend Forest during the school year. On Wednesdays, MasterClasses offer hands-on English enrichment workshops.</Fragment>
+    <a href="/contact/" class="link-on-dark">Contact us <ArrowRight size={18} aria-hidden="true" /></a>
+    <a href="/fr/stages-vacances/" lang="fr" hreflang="fr" class="link-on-dark">Voir cette page en français</a>
+    <SectionChooser slot="aside" label="On this page" choices={[
+      { href: '#camps', title: 'Holiday camps', detail: 'Autumn, winter, spring and summer weeks · Ages 2–12 · Open to all children', action: 'See camp dates', tone: 'gold' },
+      { href: '#masterclasses', title: 'Wednesday MasterClasses', detail: 'Every Wednesday · Early Years & Lower Primary · Waitlist only', action: 'See MasterClasses', tone: 'leaf' },
+    ]} />
+  </PageHero>
+
+  <section id="camps" class="page-section" aria-labelledby="camps-title">
+    <div class="container-main">
+      <div class="camps-intro">
+        <div class="prose-copy">
+          <h2 id="camps-title">Camp dates, hours and rates</h2>
+          <p>The 2026/27 programme, from the October holidays to July.</p>
         </div>
       </div>
+
+      <CampList camps={camps} sharedFacts={sharedFacts} labels={{ shared: "For every camp", sessions: "Weekly sessions", register: "Register", registerHint: (title) => ` for the ${title} (opens in a new tab)` }} />
     </div>
   </section>
 
-  <!-- Wednesday MasterClasses Banner -->
-  <section id="masterclasses" class="bg-[#c9a962] py-10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-block px-4 py-1.5 bg-[#1e3d29] text-white rounded-full font-semibold text-sm mb-4">Every Wednesday</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-3">Wednesday MasterClasses</h2>
-      <p class="text-[#1e3d29]/70 mb-4 max-w-2xl mx-auto">
-        Hands-on English enrichment workshops every Wednesday, designed to spark creativity, curiosity, and a love of learning outside the classroom.
-      </p>
-      <p class="text-[#1e3d29]/80 font-semibold mb-6">
-        🎟️ Early Years &amp; Lower Primary — <span class="underline">Waitlist only</span>
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-3">
-        <a href={masterClassRegisterUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 bg-[#1e3d29] text-white font-bold rounded-full hover:bg-[#2d5a3d] transition-colors shadow-lg">
-          Register Now
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-          </svg>
-        </a>
-        <a href={bookVisitUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 bg-white text-[#1e3d29] font-bold rounded-full border-2 border-[#1e3d29]/15 hover:bg-[#faf8f5] transition-colors shadow-sm">
-          Book a Visit
-        </a>
+  <section id="masterclasses" class="page-section surface" aria-labelledby="masterclasses-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="masterclasses-title">Wednesday MasterClasses</h2>
+        <p>Hands-on English enrichment workshops every Wednesday, for creative, curious learning outside the classroom.</p>
+      </div>
+      <div>
+        <dl class="fact-list">
+          <div><dt>When</dt><dd>Every Wednesday</dd></div>
+          <div><dt>For</dt><dd>Early Years &amp; Lower Primary</dd></div>
+          <div><dt>Places</dt><dd>Waitlist only</dd></div>
+          <div><dt>Fees</dt><dd><a href="/tuition/">See the Wednesday MasterClass column on the tuition page</a></dd></div>
+        </dl>
+        <div class="masterclass-actions">
+          <a href={masterClassRegisterUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Register<span class="sr-only"> for Wednesday MasterClasses (opens in a new tab)</span>
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+          <a href={bookVisitUrl} target="_blank" rel="noopener noreferrer" class="text-link">
+            Book a visit<span class="sr-only"> (opens in a new tab)</span>
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Holiday Camps -->
-  <section id="camps" class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">2026/27 Programs</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Camp dates, hours and rates</h2>
-      </div>
-
-      <div class="camp-list" aria-label="Holiday camp programmes">
-        {campCards.map((camp) => {
-          const SeasonIcon = camp.icon;
-
-          return (
-            <article class={`camp-card camp-card--${camp.key}`}>
-              <div class="camp-card__content">
-                <div class="camp-card__header">
-                  <div class="camp-card__title-group">
-                    <div class="camp-card__season">
-                      <span class="camp-card__mark" aria-hidden="true">
-                        <SeasonIcon size={22} strokeWidth={2.2} />
-                      </span>
-                      <span>{camp.season}</span>
-                    </div>
-                    <h3>{camp.title}</h3>
-                  </div>
-
-                  <a
-                    href={camp.registerUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="camp-card__cta"
-                    aria-label={`Register for ${camp.title}`}
-                  >
-                    Register
-                    <ArrowRight size={17} strokeWidth={2.4} aria-hidden="true" />
-                  </a>
-                </div>
-                <p class="camp-card__description">{camp.description}</p>
-
-                {camp.sessions && (
-                  <div class="camp-card__sessions">
-                    <p>Weekly Sessions</p>
-                    <div>
-                      {camp.sessions.map((session) => (
-                        <span>{session}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                <dl class="camp-card__facts">
-                  {camp.facts.map((fact) => {
-                    const FactIcon = fact.icon;
-
-                    return (
-                      <div class="camp-fact">
-                        <dt>
-                          <FactIcon size={16} strokeWidth={2.2} aria-hidden="true" />
-                          <span>{fact.label}</span>
-                        </dt>
-                        <dd>{fact.value}</dd>
-                      </div>
-                    );
-                  })}
-                </dl>
-
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </div>
-  </section>
-
-  <!-- Beyond the holidays -->
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-4">Beyond the holidays</h2>
-      <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-        If your child loves camp, school here feels much the same — outdoors, in English, every day. Explore
-        <a href="/early-years/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Early Years (ages 2-5)</a>,
-        <a href="/primary/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Primary (ages 6-11)</a> and
-        <a href="/middle-school/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Middle School (ages 11-15)</a>,
-        see <a href="/tuition/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">tuition fees</a>,
-        or visit <a href="/admissions/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">admissions</a> — applications are open year-round.
-      </p>
-      <a href="/admissions/" class="inline-flex items-center px-8 py-4 bg-[#2d5a3d] text-white font-bold rounded-full hover:bg-[#1e3d29] transition-colors shadow-lg">
-        Learn about admissions
-      </a>
-    </div>
-  </section>
+  <VisitBand title="Beyond the holidays">
+    <p class="beyond-copy">
+      If your child loves camp, school here feels much the same — outdoors, in English, every day. Explore
+      <a href="/early-years/">Early Years (ages 2–5)</a>,
+      <a href="/primary/">Primary (ages 6–11)</a> and
+      <a href="/middle-school/">Middle School (ages 11–15)</a>,
+      see <a href="/tuition/">tuition fees</a>,
+      or visit <a href="/admissions/">admissions</a> — applications are open year-round.
+    </p>
+    <Fragment slot="actions">
+      <a href="/admissions/" class="btn-gold">Learn about admissions <ArrowRight size={18} aria-hidden="true" /></a>
+      <a href="/contact/" class="link-on-dark">Contact us <ArrowRight size={18} aria-hidden="true" /></a>
+    </Fragment>
+  </VisitBand>
 </Layout>
-
-<style>
-  .camp-list {
-    display: grid;
-    gap: clamp(1.25rem, 2vw, 1.75rem);
-  }
-
-  .camp-card {
-    --camp-accent: #2d5a3d;
-    --camp-tint: #f4f9f5;
-    --camp-chip: rgba(45, 90, 61, 0.1);
-    --camp-line: rgba(45, 90, 61, 0.16);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid var(--camp-line);
-    border-radius: 16px;
-    background:
-      linear-gradient(135deg, var(--camp-tint) 0%, #ffffff 46%, #ffffff 100%);
-    box-shadow: 0 4px 8px rgba(30, 61, 41, 0.08);
-  }
-
-  .camp-card--autumn {
-    --camp-accent: #b85f2c;
-    --camp-tint: #fff3ea;
-    --camp-chip: rgba(184, 95, 44, 0.11);
-    --camp-line: rgba(184, 95, 44, 0.18);
-  }
-
-  .camp-card--winter {
-    --camp-accent: #2d719f;
-    --camp-tint: #eef8ff;
-    --camp-chip: rgba(45, 113, 159, 0.11);
-    --camp-line: rgba(45, 113, 159, 0.18);
-  }
-
-  .camp-card--spring {
-    --camp-accent: #4f8737;
-    --camp-tint: #f1faec;
-    --camp-chip: rgba(79, 135, 55, 0.12);
-    --camp-line: rgba(79, 135, 55, 0.18);
-  }
-
-  .camp-card--summer-2027 {
-    --camp-accent: #9b7a24;
-    --camp-tint: #fff8dc;
-    --camp-chip: rgba(201, 169, 98, 0.16);
-    --camp-line: rgba(155, 122, 36, 0.2);
-  }
-
-  .camp-card__content {
-    padding: clamp(1.35rem, 3vw, 2.35rem);
-  }
-
-  .camp-card__header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1.25rem;
-    align-items: start;
-  }
-
-  .camp-card__title-group {
-    max-width: 76ch;
-  }
-
-  .camp-card__season {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.65rem;
-    color: var(--camp-accent);
-    font-size: 0.88rem;
-    font-weight: 800;
-  }
-
-  .camp-card__mark {
-    display: inline-flex;
-    width: 2.7rem;
-    height: 2.7rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    background: var(--camp-accent);
-    color: #ffffff;
-  }
-
-  .camp-card h3 {
-    margin-top: 0.85rem;
-    color: #1e3d29;
-    font-size: clamp(1.55rem, 2.4vw, 2.15rem);
-    font-weight: 800;
-    line-height: 1.08;
-    text-wrap: balance;
-  }
-
-  .camp-card__description {
-    max-width: 76ch;
-    margin-top: 1rem;
-    color: #33483b;
-    font-size: 1.02rem;
-    line-height: 1.65;
-    text-wrap: pretty;
-  }
-
-  .camp-card__cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem;
-    min-height: 2.85rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 999px;
-    background: #2d5a3d;
-    color: #ffffff;
-    font-size: 0.94rem;
-    font-weight: 800;
-    white-space: nowrap;
-  }
-
-  .camp-card__cta:hover {
-    background: #1e3d29;
-  }
-
-  .camp-card__sessions {
-    margin-top: 1.5rem;
-  }
-
-  .camp-card__sessions p {
-    color: #516356;
-    font-size: 0.8rem;
-    font-weight: 800;
-    margin-bottom: 0.6rem;
-  }
-
-  .camp-card__sessions div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-  }
-
-  .camp-card__sessions span {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.25rem;
-    padding: 0.45rem 0.8rem;
-    border: 1px solid var(--camp-line);
-    border-radius: 999px;
-    background: var(--camp-chip);
-    color: #1e3d29;
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 1.25;
-  }
-
-  .camp-card__facts {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(1rem, 2.2vw, 1.5rem);
-    margin-top: 1.5rem;
-    padding-top: 1.35rem;
-    border-top: 1px solid var(--camp-line);
-  }
-
-  .camp-fact dt {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: #526558;
-    font-size: 0.78rem;
-    font-weight: 800;
-  }
-
-  .camp-fact dt svg {
-    color: var(--camp-accent);
-    flex: 0 0 auto;
-  }
-
-  .camp-fact dd {
-    margin-top: 0.5rem;
-    color: #173723;
-    font-size: 0.96rem;
-    font-weight: 800;
-    line-height: 1.4;
-  }
-
-  .camp-card__note {
-    margin-top: 1.25rem;
-    color: #3b4d40;
-    font-size: 0.94rem;
-    line-height: 1.65;
-  }
-
-  .camp-card__note a {
-    color: #2d5a3d;
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.16em;
-  }
-
-  .camp-card__note a:hover {
-    color: #1e3d29;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .camp-card,
-    .camp-card__mark,
-    .camp-card__cta,
-    .camp-card__cta svg {
-      transition:
-        transform 220ms cubic-bezier(0.25, 1, 0.5, 1),
-        background-color 180ms ease,
-        box-shadow 220ms cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    .camp-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(30, 61, 41, 0.1);
-    }
-
-    .camp-card:hover .camp-card__mark {
-      transform: rotate(-4deg) scale(1.03);
-    }
-
-    .camp-card__cta:hover svg {
-      transform: translateX(3px);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .camp-card__header {
-      grid-template-columns: 1fr;
-    }
-
-    .camp-card__cta {
-      justify-self: start;
-    }
-
-    .camp-card__facts {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 560px) {
-    .camp-card__content {
-      padding: 1.15rem;
-    }
-
-    .camp-card__mark {
-      width: 2.45rem;
-      height: 2.45rem;
-      border-radius: 12px;
-    }
-
-    .camp-card__facts {
-      grid-template-columns: 1fr;
-      gap: 0.95rem;
-    }
-
-    .camp-card__cta {
-      width: 100%;
-    }
-  }
-</style>

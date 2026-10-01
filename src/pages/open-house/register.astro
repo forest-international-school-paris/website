@@ -1,0 +1,51 @@
+---
+import '../../styles/global.css';
+import CalendarButton from '../../components/CalendarButton.astro';
+import Analytics from '../../components/Analytics.astro';
+import Navigation from '../../components/Navigation.astro';
+import { openHouse } from '../../lib/open-house';
+const embedUrl = new URL(openHouse.registrationUrl);
+embedUrl.search = new URLSearchParams({ embedded: 'true', hl: 'en' }).toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Open House registration | Forest International School Paris</title>
+    <link rel="icon" type="image/png" href="/images/logo-header.png" />
+    <Analytics />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to registration form</a>
+    <Navigation />
+    <main id="main-content" tabindex="-1">
+      <h1 class="sr-only">Open House registration</h1>
+      <iframe src={embedUrl.href} title="Open House registration form" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </main>
+    <footer aria-label="Add your visit to your calendar">
+      <CalendarButton id="registration-calendar" />
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(html) { height: 100%; }
+  body { height: 100vh; height: 100dvh; overflow: hidden; display: flex; flex-direction: column; margin: 0; background: white; color: var(--color-forest-dark); }
+  :global(#main-nav) { flex: none; }
+  :global(#mobile-menu) { position: absolute; top: 100%; inset-inline: 0; max-height: 70dvh; overflow-y: auto; background: white; }
+  main { flex: 1; min-height: 0; }
+  /* Google does not expose document height across origins. One full-height
+     scroll surface avoids competing parent/iframe scrollbars without clipping
+     longer form sections or disabling keyboard access to their contents. */
+  iframe { display: block; width: 100%; height: 100%; border: 0; }
+  footer { flex: none; display: flex; align-items: center; justify-content: center; gap: clamp(1.25rem, 4vw, 3rem); padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: var(--color-forest-dark); color: white; }
+  @media (max-width: 600px) {
+    footer { align-items: flex-start; gap: 1.25rem; }
+  }
+  @media (max-width: 380px) {
+    footer { gap: .75rem; padding-inline: .75rem; }
+  }
+</style>

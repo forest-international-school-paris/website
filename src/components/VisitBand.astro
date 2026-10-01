@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const titleId = `visit-${title.toLowerCase().replace(/[^a-z]+/g, '-')}`;
+---
+
+<section class="visit-band" aria-labelledby={titleId}>
+  <div class="container-main visit-layout">
+    <div class="visit-copy">
+      <h2 id={titleId}>{title}</h2>
+      <slot />
+    </div>
+    <div class="visit-actions">
+      <slot name="actions" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .visit-band { padding-block: var(--space-section); background: var(--color-forest-dark); color: white; }
+  h2 { color: white; font-size: clamp(2rem, 3.1vw, 2.75rem); line-height: 1.18; margin-bottom: 1.25rem; }
+  .visit-layout { display: flex; align-items: center; justify-content: space-between; gap: 2rem 4rem; }
+  .visit-copy { max-width: 38rem; }
+  .visit-copy :global(p) { line-height: 1.75; }
+  .visit-copy :global(p + p) { margin-top: 1rem; }
+  .visit-copy :global(.visit-note) { color: var(--color-line); font-size: .9375rem; }
+  .visit-actions { display: flex; flex-direction: column; align-items: start; gap: .75rem; flex-shrink: 0; }
+  @media (max-width: 900px) {
+    .visit-layout { align-items: start; flex-direction: column; }
+  }
+</style>

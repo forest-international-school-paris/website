@@ -1,281 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import PortraitList, { type Person } from '../components/PortraitList.astro';
+import VisitBand from '../components/VisitBand.astro';
+import { ArrowRight } from '@lucide/astro';
+
+const leadership: Person[] = [
+  { name: 'Ms. Sophie Lovejoy', role: 'Principal', image: '/images/team/sophie-lovejoy-2026.jpeg', position: '50% 10%' },
+  { name: 'Mr. Kralka', role: 'STEM Teacher', image: '/images/team/mr-kralka.avif' },
+  { name: 'Ms. Hannah', role: 'EY Lead & DSL', image: '/images/team/miss-hannah.avif' },
+];
+
+const staff: Person[] = [
+  { name: 'Ms. Marie', role: 'Teacher', detail: 'French Lead', image: '/images/team/miss-marie.avif' },
+  { name: 'Ms. Chloe', role: 'Teacher', image: '/images/team/miss-chloe.avif' },
+  { name: 'Ms. Delphine', role: 'Teaching Assistant', image: '/images/team/miss-daulphine.avif' },
+  { name: 'Mr. Elliot', role: 'LSS and EAL Teacher', image: '/images/team/mr-elliot.avif' },
+  { name: 'Ms. Susanne Shamir', role: 'Administration', image: '/images/team/susanne-shamir.avif' },
+  { name: 'Mr. Florent', role: 'Swimming Instructor', image: '/images/team/mr-florent.jpeg', position: 'top' },
+  { name: 'Mr. John', role: 'Facilities Manager', image: '/images/team/mr-john.jpg', position: 'top' },
+  { name: 'Ms. Felicity', role: 'Art Teacher', image: '/images/team/felicity-kelham.jpeg', position: 'top' },
+  { name: 'Ms. Reena', role: 'Teaching Assistant', image: '/images/team/reena.jpg', position: '50% 25%' },
+  { name: 'Ms. Hannah', role: 'EY Teacher', image: '/images/team/miss-hannah.avif' },
+  { name: 'Mr. Kralka', role: 'STEM Teacher', image: '/images/team/mr-kralka.avif' },
+  { name: 'Ms. Charlotte', role: 'English Teacher', image: '/images/team/charlotte.jpg', position: '50% 15%' },
+];
 ---
 
-<Layout title="Our Team" description="Meet the dedicated team at Forest International School Paris - passionate educators nurturing young minds through nature-based learning.">
-  <!-- Hero Section -->
-  <section class="relative py-20 lg:py-28 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-      <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">
-        Our People
-      </span>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-        Meet Our Team
-      </h1>
-      <p class="text-xl text-white/80 max-w-2xl mx-auto">
-        Dedicated educators nurturing young minds through nature-based learning and academic excellence.
-      </p>
+<Layout title="Our team" description="Meet the teachers and staff at Forest International School Paris, an English-language school for children aged 2–15 in Mareil-Marly, west of Paris.">
+  <PageHero title="The people your child will know" intro="The teachers, assistants and staff of Forest International School Paris, from Early Years to Middle School." />
+
+  <section class="page-section" aria-labelledby="leadership-title">
+    <div class="container-main leadership-layout">
+      <h2 id="leadership-title">Leadership</h2>
+      <PortraitList people={leadership} />
     </div>
   </section>
 
-  <!-- Leadership Team Section -->
-  <section class="py-20 lg:py-28 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">School Leadership</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-4">Leadership Team</h2>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-          The leadership team guiding Forest International School towards excellence in education.
-        </p>
-      </div>
-
-      <div class="flex flex-wrap justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
-        <!-- Sophie Lovejoy -->
-        <div class="group text-center w-56 lg:w-60">
-          <div class="relative mb-4 mx-auto w-36 h-36 lg:w-44 lg:h-44">
-            <img
-              src="/images/team/sophie-lovejoy-2026.jpeg"
-              alt="Ms. Sophie Lovejoy"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-              style="object-position: 50% 10%"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-xl">Ms. Sophie Lovejoy</h3>
-          <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] text-sm mt-2 font-semibold">Principal</span>
-        </div>
-
-        <!-- Mr. Kralka -->
-        <div class="group text-center w-56 lg:w-60">
-          <div class="relative mb-4 mx-auto w-36 h-36 lg:w-44 lg:h-44">
-            <img
-              src="/images/team/mr-kralka.avif"
-              alt="Mr. Kralka"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-xl">Mr. Kralka</h3>
-          <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] text-sm mt-2 font-semibold">STEM Teacher</span>
-        </div>
-
-        <!-- Ms. Hannah -->
-        <div class="group text-center w-56 lg:w-60">
-          <div class="relative mb-4 mx-auto w-36 h-36 lg:w-44 lg:h-44">
-            <img
-              src="/images/team/miss-hannah.avif"
-              alt="Ms. Hannah"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-xl">Ms. Hannah</h3>
-          <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] text-sm mt-2 font-semibold">EY Lead &amp; DSL</span>
-        </div>
-      </div>
+  <section class="page-section surface staff-section" aria-labelledby="staff-title">
+    <div class="container-main">
+      <h2 id="staff-title">Teachers and staff</h2>
+      <PortraitList people={staff} size="compact" />
     </div>
   </section>
 
-  <!-- Teaching Team Section -->
-  <section class="py-20 lg:py-28 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Our Educators</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-4">Faculty and Staff</h2>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-          Passionate educators committed to nurturing every child's potential through nature-based learning.
-        </p>
-      </div>
-
-      <!-- Teaching Team Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
-        <!-- Ms. Marie -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/miss-marie.avif"
-              alt="Ms. Marie"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Marie</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Teacher</span>
-          <p class="text-gray-500 text-xs mt-1">French Lead</p>
-        </div>
-
-        <!-- Ms. Chloe -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/miss-chloe.avif"
-              alt="Ms. Chloe"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Chloe</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Teacher</span>
-        </div>
-
-        <!-- Ms. Delphine -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/miss-daulphine.avif"
-              alt="Ms. Delphine"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Delphine</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Teaching Assistant</span>
-        </div>
-
-        <!-- Mr. Elliot -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/mr-elliot.avif"
-              alt="Mr. Elliot"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Mr. Elliot</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">LSS and EAL Teacher</span>
-        </div>
-
-        <!-- Ms. Susanne Shamir -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/susanne-shamir.avif"
-              alt="Ms. Susanne Shamir"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Susanne Shamir</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Administration</span>
-        </div>
-
-        <!-- Mr. Florent -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/mr-florent.jpeg"
-              alt="Mr. Florent"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Mr. Florent</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Swimming Instructor</span>
-        </div>
-
-        <!-- Mr. John -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/mr-john.jpg"
-              alt="Mr. John"
-              class="w-full h-full object-cover object-top rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Mr. John</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Facilities Manager</span>
-        </div>
-
-        <!-- Ms. Felicity -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/felicity-kelham.jpeg"
-              alt="Ms. Felicity"
-              class="w-full h-full object-cover object-top rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Felicity</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Art Teacher</span>
-        </div>
-
-        <!-- Reena -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/reena.jpg"
-              alt="Ms. Reena"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-              style="object-position: 50% 25%"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Reena</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">Teaching Assistant</span>
-        </div>
-
-        <!-- Ms. Hannah (EY Teacher) -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/miss-hannah.avif"
-              alt="Ms. Hannah"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Hannah</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">EY Teacher</span>
-        </div>
-
-        <!-- Mr. Kralka (STEM Teacher) -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/mr-kralka.avif"
-              alt="Mr. Kralka"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Mr. Kralka</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">STEM Teacher</span>
-        </div>
-
-        <!-- Charlotte -->
-        <div class="group text-center">
-          <div class="relative mb-4 mx-auto w-28 h-28 lg:w-32 lg:h-32">
-            <img
-              src="/images/team/charlotte.jpg"
-              alt="Ms. Charlotte"
-              class="w-full h-full object-cover rounded-full border-4 border-[#c9a962]/20 group-hover:border-[#c9a962]/50 transition-all duration-300 group-hover:scale-105 shadow-lg group-hover:shadow-xl"
-              style="object-position: 50% 15%"
-            />
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-base lg:text-lg">Ms. Charlotte</h3>
-          <span class="inline-block px-3 py-1 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] text-xs lg:text-sm mt-2">English Teacher</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-20 lg:py-28 bg-white relative overflow-hidden">
-    <div class="absolute inset-0">
-      <img
-        src="/images/promo-2023.jpg"
-        alt="Forest International School"
-        class="w-full h-full object-cover opacity-10"
-      />
-    </div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">Join Our Community</h2>
-      <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
-        Experience the warmth and dedication of our team firsthand. Schedule a visit to see how we nurture each child's potential.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="/admissions/" class="inline-flex items-center justify-center px-8 py-4 bg-[#2d5a3d] text-white font-bold rounded-full hover:bg-[#1e3d29] transition-colors shadow-lg hover:shadow-xl">
-          Start Your Application
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2d5a3d] font-bold rounded-full border-2 border-[#2d5a3d] hover:bg-[#2d5a3d] hover:text-white transition-colors shadow-lg">
-          Schedule a Visit
-        </a>
-      </div>
-    </div>
-  </section>
+  <VisitBand title="Meet the team in person">
+    <p>Book a visit to meet the team and see the campus.</p>
+    <Fragment slot="actions">
+      <a href="/contact/" class="btn-gold">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+      <a href="/admissions/" class="link-on-dark">Start your application <ArrowRight size={18} aria-hidden="true" /></a>
+    </Fragment>
+  </VisitBand>
 </Layout>
+
+<style>
+  .leadership-layout { display: grid; grid-template-columns: .8fr 1.5fr; gap: 1rem 3rem; align-items: start; }
+  .staff-section h2 { margin-bottom: 2.5rem; }
+  @media (max-width: 900px) { .leadership-layout { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalPage from '../components/LegalPage.astro';
+import { legalEntity as entity, mailHref, school, telHref } from '../lib/site';
+---
+
+<Layout title="Legal notice" description="Legal notice (mentions légales) for the Forest International School Paris website: publisher, registration details and hosting." noindex showPopup={false}>
+  <LegalPage title="Legal notice" frenchTitle="Mentions légales">
+    <h2>Publisher</h2>
+    <p>This website is published by <strong>{entity.name}</strong>, {entity.form} with share capital of {entity.share_capital}, operating as {school.name}.</p>
+    <dl>
+      <div><dt>Registered office</dt><dd>{school.address}</dd></div>
+      <div><dt>RCS</dt><dd>{entity.rcs}</dd></div>
+      <div><dt>SIRET</dt><dd>{entity.siret}</dd></div>
+      <div><dt>VAT number</dt><dd>{entity.vat}</dd></div>
+      <div><dt>Telephone</dt><dd><a href={telHref}>{school.phone}</a></dd></div>
+      <div><dt>Email</dt><dd><a href={mailHref}>{school.email}</a></dd></div>
+      <div><dt>Director of publication</dt><dd>{entity.publication_director}</dd></div>
+    </dl>
+
+    <h2>Hosting</h2>
+    <p>{entity.host.name}, {entity.host.address}. Telephone: {entity.host.phone}.</p>
+
+    <h2>Photographs, text and logos</h2>
+    <p>Unless stated otherwise, the text and photographs on this website belong to {school.name}. Please ask us before reusing them. Partner and curriculum logos belong to their respective owners.</p>
+
+    <h2>Personal data</h2>
+    <p>How we handle information about visitors and families is explained in our <a href="/privacy/">privacy policy</a>.</p>
+  </LegalPage>
+</Layout>

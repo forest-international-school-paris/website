@@ -1,135 +1,88 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import VisitBand from '../components/VisitBand.astro';
+import { ArrowRight } from '@lucide/astro';
+import { programmeLinks } from '../lib/site';
+
+const currentPath = '/middle-school/';
+const otherProgrammes = programmeLinks.filter((link) => link.href !== currentPath);
+
+const skills = [
+  { title: 'Independent thinking', text: 'Helping children become independent thinkers who solve problems by asking questions.' },
+  { title: 'Critical thinking', text: 'Critical thinking skills developed through project-based learning and real-world applications.' },
+  { title: 'Literacy, numeracy and communication', text: 'Developing the literacy, numeracy and communication skills pupils will need later on.' },
+  { title: 'French and English', text: '6.5 hours of French lessons each week, with constant use of English, building confidence through reading and speaking.' },
+  { title: 'Technology', text: 'All Middle School pupils learn to use a wide range of technologies to present their work.' },
+  { title: 'Resilience and creativity', text: 'Pupils grow in resilience, creativity and curiosity.' },
+];
 ---
 
 <Layout title="International Middle School near Paris" description="International middle school for ages 11-15 in Mareil-Marly, west of Paris — English National Curriculum and IMYC, project-based and rooted in the forest.">
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] text-white py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <span class="text-[#c9a962] font-semibold text-sm uppercase tracking-wider">Ages 11-15</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-6">Middle School</h1>
-        <p class="text-xl text-white/90 mb-8">
-          Helping children become independent thinkers — an English-language middle school on our forest campus in Mareil-Marly, west of Paris.
-        </p>
-        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg">
-          Book a Visit
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
+  <PageHero title="Middle School" kicker="Ages 11–15 · English National Curriculum and IMYC">
+    <Fragment slot="intro">Helping children become independent thinkers, in an English-language middle school on our forest campus in Mareil-Marly, west of Paris.</Fragment>
+    <a href="/contact/" class="btn-gold">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+    <a href="/tuition/" class="link-on-dark">Middle School fees <ArrowRight size={18} aria-hidden="true" /></a>
+  </PageHero>
+
+  <section class="page-section" aria-labelledby="overview-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="overview-title">Learning to think independently</h2>
+        <p class="lead-copy">Middle School is for pupils aged 11 to 15, and focuses on helping children become independent thinkers.</p>
+        <p>It is designed to inspire pupils and develop their critical thinking skills.</p>
+        <p>Teaching combines the English National Curriculum with the International Middle Years Curriculum (IMYC), covering science, history, geography, arts and music through thematic learning units.</p>
+        <p>Pupils build on the foundations laid from Key Stage 1, with structured, project-based lessons in which the forest plays a large part.</p>
+      </div>
+      <div class="glance" aria-labelledby="glance-title">
+        <h2 id="glance-title">Middle School at a glance</h2>
+        <dl class="fact-list">
+          <div><dt>Age range</dt><dd>11–15 years old</dd></div>
+          <div><dt>Curriculum</dt><dd>English National Curriculum and International Middle Years Curriculum</dd></div>
+          <div><dt>French</dt><dd>6.5 hours per week</dd></div>
+          <div><dt>Technology</dt><dd>A wide range of technologies, used to present work</dd></div>
+          <div><dt>Fees</dt><dd><a href="/tuition/">See current Middle School fees</a></dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <!-- Overview -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="text-[#c9a962] font-semibold text-sm uppercase tracking-wider">Program Overview</span>
-          <h2 class="section-title mt-2">Preparing Future Leaders</h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
-            The Middle School program is for 11 to 15 year old students and focuses on helping children become independent thinkers, designed to inspire, develop critical thinking skills, and educate young minds.
-          </p>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
-            Our curriculum combines the <strong>English National Curriculum</strong> with the <strong>International Middle Years Curriculum (IMYC)</strong>, covering science, history, geography, arts, and music through thematic learning units.
-          </p>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            Students build on strong foundations from Key Stage 1 with structured lessons that are project-based, ensuring the forest features highly in their learning experience.
-          </p>
-        </div>
-        <div class="bg-gradient-to-br from-[#4a7c5c] to-[#2d5a3d] rounded-2xl p-8 text-white">
-          <h3 class="text-2xl font-bold mb-6">Program Details</h3>
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span><strong>Age Range:</strong> 11-15 years old</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span><strong>Curriculum:</strong> ENC + IMYC</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span><strong>French:</strong> 6.5 hours per week</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span><strong>Technology:</strong> Wide range of technologies</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span><strong>Fees:</strong> <a href="/tuition/" class="underline decoration-white/50 underline-offset-2 hover:decoration-white">See current Middle School fees</a></span>
-            </li>
-          </ul>
-        </div>
+  <section class="page-section surface" aria-labelledby="skills-title">
+    <div class="container-main split-layout">
+      <div class="skills-intro prose-copy">
+        <h2 id="skills-title">The skills we work on</h2>
+        <p>Middle School develops the skills and habits pupils need for secondary education and beyond.</p>
+        <img src="/images/school-life/classroom.jpg" alt="Pupils working on drawings together around a classroom table" width="848" height="480" loading="lazy" decoding="async" class="media-rounded film-still" />
       </div>
+      <dl class="row-list">
+        {skills.map((item) => <div><dt>{item.title}</dt><dd>{item.text}</dd></div>)}
+      </dl>
     </div>
   </section>
 
-  <!-- Focus Areas -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-[#c9a962] font-semibold text-sm uppercase tracking-wider">Focus Areas</span>
-        <h2 class="section-title mt-2">Developing Essential Skills</h2>
+  <section class="page-section" aria-labelledby="next-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="next-title">Brothers, sisters and holiday camps</h2>
+        <p>Full fees are on the tuition page. Younger siblings are welcome in Early Years and Primary, and our holiday camps are open to all children aged 2–12.</p>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Independent Thinking</h3>
-          <p class="text-gray-600">Focus on helping children become independent thinkers who solve problems by asking questions.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Critical Thinking</h3>
-          <p class="text-gray-600">Developing critical thinking skills through project-based learning and real-world applications.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Communication Skills</h3>
-          <p class="text-gray-600">Developing literacy, numeracy, and communication skills essential for future success.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Language Mastery</h3>
-          <p class="text-gray-600">6.5 hours of French lessons each week with constant English use, building confidence through reading and speaking.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Technology Skills</h3>
-          <p class="text-gray-600">All Middle School students learn to use a wide range of technologies to present their work.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Resilience & Creativity</h3>
-          <p class="text-gray-600">Students grow in resilience, creativity and curiosity through our unique approach.</p>
-        </div>
-      </div>
+      <dl class="fact-list">
+        {otherProgrammes.map((link) => <div><dt><a href={link.href}>{link.label}</a></dt><dd>{link.detail}, for younger siblings</dd></div>)}
+        <div><dt><a href="/holiday-camps/">Holiday camps</a></dt><dd>Open to all children aged 2–12</dd></div>
+        <div><dt><a href="/tuition/">Tuition</a></dt><dd>Full fees for Middle School</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-16 lg:py-24 bg-[#f0f7f2]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="section-title">Prepare Your Child for the Future</h2>
-      <p class="text-gray-600 text-lg mb-8">
-        Our Middle School program develops the skills and mindset needed for success in secondary education and beyond. Full fees are on the
-        <a href="/tuition/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">tuition page</a>, younger siblings are welcome in
-        <a href="/early-years/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Early Years</a> and
-        <a href="/primary/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">Primary</a>, and our
-        <a href="/holiday-camps/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">holiday camps</a>
-        are open to all children aged 2-12.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="/contact/" class="btn-primary">Book a Visit</a>
-        <a href="/admissions/" class="btn-secondary">Inquire Now</a>
-      </div>
-    </div>
-  </section>
+  <VisitBand title="Come and see Middle School">
+    <p>Contact us to learn more about our Middle School programme and to arrange a visit.</p>
+    <Fragment slot="actions">
+      <a href="/contact/" class="btn-gold">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+      <a href="/admissions/" class="link-on-dark">How to apply <ArrowRight size={18} aria-hidden="true" /></a>
+    </Fragment>
+  </VisitBand>
 </Layout>
+
+<style>
+  .skills-intro img { margin-top: 2rem; }
+</style>

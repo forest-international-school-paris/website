@@ -1,87 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { ArrowDown, ArrowUpRight } from '@lucide/astro';
+import { mailHref, mapsUrl, school, schoolHours, whatsappHref } from '../lib/site';
+
+const [street, ...locality] = school.address.split(', ');
+const bookingUrl = 'https://calendar.app.google/4Pur5YQjQC8tXjdj7';
+const enquiryUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfMa-d1ZWAsQUoe6ximaoczCAw5CK7YS1CHOKs6NSV-M8AjCQ/viewform?usp=header';
 ---
 
 <Layout title="Contact Us" description="Contact Forest International School Paris in Mareil-Marly, west of Paris — book a visit, ask about admissions, or find our campus near Saint-Germain-en-Laye.">
-  <!-- Hero Section with Image -->
-  <section class="relative py-20 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="/images/campus.jpg" alt="Forest International School Campus" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/95 via-[#2d5a3d]/80 to-[#2d5a3d]/60"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Get in Touch</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Contact Us</h1>
-        <p class="text-xl text-white/90 leading-relaxed">
-          We'd love to hear from you. Reach out to learn more about our school or schedule a visit.
-        </p>
-      </div>
-    </div>
-  </section>
+  <PageHero title="Visit or contact the school" kicker="Mareil-Marly · near Saint-Germain-en-Laye" image={{ src: '/images/campus.jpg', width: 1920, height: 1059, position: 'center' }}>
+    <Fragment slot="intro">Book a tour with our Principal, send us a question, or find our campus in Mareil-Marly, just outside Paris.</Fragment>
+    <a href="#visit" class="btn-gold">Book a visit <ArrowDown size={18} aria-hidden="true" /></a>
+    <a href="#enquiry" class="link-on-dark">Ask a question <ArrowDown size={18} aria-hidden="true" /></a>
+  </PageHero>
 
-  <!-- Section 1: Schedule Your Visit (Priority 1) -->
-  <section class="py-16 lg:py-20 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-4">Book a Visit</span>
-        <h2 class="text-3xl lg:text-4xl font-bold text-[#1e3d29] mb-4">Schedule Your Visit</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Experience Forest International School firsthand. Book a personalized tour with our Principal.
-        </p>
+  <section id="visit" class="page-section" aria-labelledby="visit-title">
+    <div class="container-main visit-layout">
+      <div class="principal">
+        <h2 id="visit-title">Schedule your visit</h2>
+        <p class="visit-intro">See Forest International School for yourself. Book a personal tour with our Principal.</p>
+        <figure class="principal-card">
+          <img src="/images/team/sophie-lovejoy-2026.jpeg" alt="Ms. Sophie Lovejoy, Principal" width="988" height="1595" loading="lazy" />
+          <figcaption>
+            <h3>Ms. Sophie Lovejoy</h3>
+            <p class="principal-role">Principal</p>
+            <p class="principal-note">Schedule a personal tour with our Principal to discover what makes Forest International School unique.</p>
+          </figcaption>
+        </figure>
+        <!-- Phones and tablets: the booking page opens in a new tab instead of the embedded calendar. -->
+        <a href={bookingUrl} target="_blank" rel="noopener noreferrer" class="btn-gold booking-link lg:hidden">Book a visit <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
       </div>
 
-      <!-- Mobile: Single card with Sophie + Button -->
-      <div class="lg:hidden max-w-sm mx-auto">
-        <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
-          <div class="relative mb-5 mx-auto w-28 h-28">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#c9a962] to-[#d4b872] rounded-full opacity-20"></div>
-            <img
-              src="/images/team/sophie-lovejoy-2026.jpeg"
-              alt="Ms. Sophie Lovejoy - Principal"
-              class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl relative z-10"
-              style="object-position: 50% 10%"
-            />
-          </div>
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-1">Ms. Sophie Lovejoy</h3>
-          <span class="inline-block px-3 py-1 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-xs mb-4">Principal</span>
-          <p class="text-gray-600 text-sm mb-6">
-            Schedule a personal tour to discover what makes our school unique.
-          </p>
-          <a href="https://calendar.app.google/4Pur5YQjQC8tXjdj7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-[#c9a962] to-[#d4b872] text-white font-bold rounded-xl hover:from-[#b8963d] hover:to-[#c9a962] transition-all shadow-lg">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-            Book a Visit
-          </a>
-        </div>
-      </div>
-
-      <!-- Desktop: Grid layout with Sophie card + Calendar iframe -->
-      <div class="hidden lg:grid lg:grid-cols-3 gap-8 items-start">
-        <!-- Ms. Sophie Lovejoy Card -->
-        <div class="lg:col-span-1">
-          <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
-            <div class="relative mb-6 mx-auto w-40 h-40">
-              <div class="absolute inset-0 bg-gradient-to-br from-[#c9a962] to-[#d4b872] rounded-full opacity-20"></div>
-              <img
-                src="/images/team/sophie-lovejoy-2026.jpeg"
-                alt="Ms. Sophie Lovejoy - Principal"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl relative z-10"
-                style="object-position: 50% 10%"
-              />
-            </div>
-            <h3 class="text-2xl font-bold text-[#1e3d29] mb-2">Ms. Sophie Lovejoy</h3>
-            <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-4">Principal</span>
-            <p class="text-gray-600 text-sm">
-              Schedule a personal tour with our Principal to discover what makes Forest International School unique.
-            </p>
-          </div>
-        </div>
-
-        <!-- Calendar Iframe -->
-        <div class="lg:col-span-2">
-          <div class="bg-white rounded-3xl p-4 shadow-lg overflow-hidden">
+      <div class="booking-frame hidden lg:block">
             <iframe
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3BwRc8i2hXQXTgyvaJzbbEI_OfumEfJ1j-kzQily4y2LtMOEhEclgDQbsIGfIVZlTwicpRubMa?gv=true"
               width="100%"
@@ -92,106 +44,51 @@ import Layout from '../layouts/Layout.astro';
               loading="lazy"
               title="Book a Visit - Forest International School">
             </iframe>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Get in Touch (Priority 2) -->
-  <section class="py-16 lg:py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Send a Message</span>
-        <h2 class="text-3xl lg:text-4xl font-bold text-[#1e3d29] mb-4">Get in Touch</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Have questions about our programs? We're here to help. Fill out our inquiry form and we'll respond within 24-48 hours.
-        </p>
+  <section id="enquiry" class="page-section surface" aria-labelledby="enquiry-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="enquiry-title">Ask us a question</h2>
+        <p>Whether your question is about admissions, the curriculum or school life, fill out our enquiry form and we will reply within 24–48 hours.</p>
+        <a href={enquiryUrl} target="_blank" rel="noopener noreferrer" class="btn-primary enquiry-link">Make an enquiry <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
       </div>
 
-      <div class="bg-[#faf8f5] rounded-3xl p-8 lg:p-12 shadow-xl text-center">
-        <div class="w-20 h-20 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl mx-auto mb-6 flex items-center justify-center">
-          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold text-[#1e3d29] mb-4">Contact Us Online</h3>
-        <p class="text-gray-600 mb-8 max-w-lg mx-auto">
-          Whether you're interested in admissions, have questions about our curriculum, or want to learn more about our community, we'd love to hear from you.
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMa-d1ZWAsQUoe6ximaoczCAw5CK7YS1CHOKs6NSV-M8AjCQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#2d5a3d] to-[#4a7c5c] text-white font-bold rounded-xl hover:from-[#1e3d29] hover:to-[#2d5a3d] transition-all shadow-lg text-lg">
-          Inquire Now
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-          </svg>
-        </a>
+      <div>
+        <h2 class="details-title">Contact details</h2>
+        <dl class="fact-list">
+          <div>
+            <dt>Address</dt>
+            <dd>
+              {street}<br />{locality.join(', ')}<br />
+              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="detail-link">View map<span class="sr-only"> (opens in a new tab)</span></a>
+            </dd>
+          </div>
+          <div>
+            <dt>WhatsApp</dt>
+            <dd><a href={whatsappHref} target="_blank" rel="noopener noreferrer" class="detail-link">{school.phone}<span class="sr-only"> (opens WhatsApp in a new tab)</span></a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href={mailHref} class="detail-link email">{school.email}</a></dd>
+          </div>
+          <div>
+            <dt>Hours</dt>
+            <dd>
+              <ul class="hours">
+                {schoolHours.map((row) => <li><span>{row.label}:</span> {row.value}</li>)}
+              </ul>
+            </dd>
+          </div>
+        </dl>
       </div>
     </div>
-  </section>
 
-  <!-- Section 3: Contact Information (Priority 3) -->
-  <section class="py-16 lg:py-20 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Contact Details</span>
-        <h2 class="text-3xl lg:text-4xl font-bold text-[#1e3d29] mb-4">Contact Information</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Find us in the beautiful town of Mareil-Marly, just outside of Paris.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
-          <div class="w-14 h-14 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2 text-lg">Address</h3>
-          <p class="text-gray-600 text-sm">28 Rue de Tour d'Echelle<br/>78750 Mareil-Marly, France</p>
-          <a href="https://maps.app.goo.gl/ehdBdRjg7isVTQDX7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[#2d5a3d] font-semibold text-sm mt-3 hover:text-[#c9a962] transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-            View Map
-          </a>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
-          <div class="w-14 h-14 bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2 text-lg">WhatsApp</h3>
-          <a href="https://wa.me/33632725145" target="_blank" rel="noopener noreferrer" class="text-gray-600 text-sm hover:text-[#25D366] transition-colors">+33 6 32 72 51 45</a>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
-          <div class="w-14 h-14 bg-gradient-to-br from-[#c9a962] to-[#d4b872] rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2 text-lg">Email</h3>
-          <p class="text-gray-600 text-sm break-all">discover@forestinternationalschool.com</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
-          <div class="w-14 h-14 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] mb-2 text-lg">Hours</h3>
-          <p class="text-gray-600 text-sm">Office: 7:30 AM – 7:30 PM<br/>School: 8:45 AM – 3:45 PM<br/>After-school Club until 5:00 PM<br/>Late Pick-up until 6:00 PM</p>
-        </div>
-      </div>
-
-      <!-- Google Map -->
-      <div class="bg-white rounded-3xl p-4 shadow-lg overflow-hidden max-w-4xl mx-auto">
-        <div class="rounded-2xl overflow-hidden">
+    <div class="container-main">
+      <div class="map-block">
+        <div class="map-frame">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.12827643040475!2d2.0651507206890485!3d48.87420047615408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e688659cd65379%3A0xa8d0df24e2c7603!2sForest%20International%20School%20Paris!5e0!3m2!1sen!2sfr!4v1768251485011!5m2!1sen!2sfr"
             width="100%"
@@ -200,19 +97,47 @@ import Layout from '../layouts/Layout.astro';
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            class="rounded-2xl"
+            class="rounded-[var(--radius-media)]"
             title="Forest International School Paris Location">
           </iframe>
         </div>
-        <div class="text-center mt-3">
-          <a href="https://maps.app.goo.gl/ehdBdRjg7isVTQDX7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#2d5a3d] font-semibold text-sm hover:text-[#c9a962] transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-            Open in Google Maps
-          </a>
-        </div>
+        <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-link">Open in Google Maps <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  .visit-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .visit-intro { max-width: 40ch; line-height: 1.75; }
+
+  .principal-card { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.5rem; align-items: start; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-line); }
+  .principal-card img { width: 100%; aspect-ratio: 5/6; object-fit: cover; object-position: 50% 10%; border-radius: var(--radius-media); }
+  .principal-card h3 { font-size: 1.375rem; line-height: 1.3; }
+  .principal-role { margin-top: .125rem; font-size: .9375rem; font-weight: 600; color: var(--color-gold-ink); }
+  .principal-note { margin-top: .75rem; font-size: .9375rem; line-height: 1.65; color: var(--color-text-muted); }
+  .booking-link { margin-top: 2rem; }
+
+  .booking-frame { overflow: hidden; padding: 1rem; border: 1px solid var(--color-line); border-radius: var(--radius-media); background: white; }
+  .booking-frame iframe { display: block; }
+
+  .enquiry-link { margin-top: 1.75rem; }
+  .details-title { font-size: 1.5rem; line-height: 1.3; margin-bottom: 1rem; }
+  .detail-link { display: inline-flex; align-items: center; min-height: 44px; }
+  .email { overflow-wrap: anywhere; }
+  .hours { display: grid; gap: .25rem; }
+  .hours span { font-weight: 600; color: var(--color-forest-dark); }
+
+  .map-block { margin-top: clamp(2.5rem, 5vw, 4rem); }
+  .map-frame { overflow: hidden; border-radius: var(--radius-media); background: white; }
+  .map-frame iframe { display: block; }
+  .map-block .text-link { margin-top: .75rem; }
+
+  @media (max-width: 1023px) {
+    .visit-layout { grid-template-columns: 1fr; }
+    .principal { max-width: 36rem; }
+  }
+  @media (max-width: 400px) {
+    .principal-card { grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; }
+  }
+</style>

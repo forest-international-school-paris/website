@@ -1,400 +1,211 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import VisitBand from '../components/VisitBand.astro';
+import { ArrowDown, ArrowRight } from '@lucide/astro';
+
+/** A fee cell: the standard amount, then the employer-covered amount (marked *) where one applies. `null` = not applicable. */
+type FeeCell = readonly string[] | null;
+
+interface FeeRow {
+  section: string;
+  group?: { name: string; detail: string };
+  fees: readonly FeeCell[];
+}
+
+const feeColumns = [
+  { label: 'Application fee' },
+  { label: 'Re-enrolment fee' },
+  { label: 'FLE / EAL / LSS' },
+  { label: 'Annual tuition', note: '(excludes other fees)' },
+  { label: 'Development fee' },
+  { label: 'Cantine fee**' },
+  { label: 'Wednesday MasterClass', note: '(Externals only)' },
+];
+
+const applicationFee = ['500 €', '750 €*'];
+const reenrolmentFee = ['350 €', '500 €*'];
+const languageSupportFee = ['7,000 €', '12,000 €*'];
+const developmentFee = ['2,500 €', '7,500 €*'];
+const cantineFee = ['2,500 €', '2,500 €*'];
+
+const feeRows: FeeRow[] = [
+  {
+    section: 'Nursery',
+    group: { name: 'Early Years', detail: 'Nursery and Pre-School' },
+    fees: [['0 €', '500 €*'], ['0 €', '500 €*'], null, ['12,500 €', '18,000 €*'], developmentFee, cantineFee, null],
+  },
+  { section: 'Pre-School', fees: [applicationFee, reenrolmentFee, null, ['15,000 €', '19,500 €*'], developmentFee, cantineFee, ['3,500 €']] },
+  { section: 'Lower Primary', fees: [applicationFee, reenrolmentFee, languageSupportFee, ['17,500 €', '23,000 €*'], developmentFee, cantineFee, ['4,100 €']] },
+  { section: 'Upper Primary', fees: [applicationFee, reenrolmentFee, languageSupportFee, ['19,000 €', '25,500 €*'], developmentFee, cantineFee, ['4,500 €']] },
+  { section: 'Middle School', fees: [applicationFee, reenrolmentFee, languageSupportFee, ['23,000 €', '28,500 €*'], developmentFee, cantineFee, ['5,500 €']] },
+];
+
+const feeTypes = [
+  { title: 'Enrolment fee', text: "The enrolment fee is a non-refundable fee required to secure a child's spot for the school year. It is payable upon formal acceptance of a place at the school." },
+  { title: 'Tuition fee', text: 'The annual tuition fee covers curriculum, classroom resources, books, forest activities and operational expenses. Payment plans and scholarships are available based on financial assessment.' },
+  { title: 'Development fee', text: 'The development fee is for all students. It supports the growth of our campus and enhances school-wide programmes and activities.' },
+];
+
+const extras = [
+  { title: 'Breakfast club', detail: 'Monday to Friday, 08:00–08:45', price: '170 €', unit: 'per term' },
+  { title: 'After-school clubs', detail: 'Monday to Friday, 16:00–17:00', price: '170 €', unit: 'per term' },
+  { title: 'Bus service', detail: 'Door-to-door service', price: '4,850–9,850 €', unit: 'Depending on location' },
+  { title: 'Annual school trip', detail: 'One trip per school year for primary and middle school students', price: '750 €', unit: 'per year' },
+];
 ---
 
-<Layout title="Tuition Fees" description="Annual tuition fees for Forest International School Paris on one transparent page — what the fee covers, with payment plans and scholarships available.">
-  <!-- Hero Section with Image -->
-  <section class="relative py-20 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="/images/campus.jpg" alt="Forest International School Campus" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/95 via-[#2d5a3d]/80 to-[#2d5a3d]/60"></div>
-    </div>
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Fees</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Fees at Forest International</h1>
-        <p class="text-xl text-white/90 leading-relaxed">
-          The annual tuition fee covers curriculum, classroom resources, books, forest activities and operational expenses. Payment plans and scholarships are available based on financial assessment.
-        </p>
-      </div>
-    </div>
-  </section>
+<Layout title="Tuition Fees" description="Annual tuition fees for Forest International School Paris, Nursery to Middle School, on one page: what each fee covers, with payment plans and scholarships.">
+  <PageHero title="Fees at Forest International" kicker="Nursery to Middle School · Annual fees in euros">
+    <Fragment slot="intro">Each charge for each school section, set out in one table. Payment plans and scholarships are available based on financial assessment.</Fragment>
+    <a href="#fees" class="btn-gold">See the fees <ArrowDown size={18} aria-hidden="true" /></a>
+    <a href="/contact/" class="link-on-dark">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+  </PageHero>
 
-  <!-- Fee Type Descriptions -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Enrollment Fee -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Enrollment Fee</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">The enrollment fee is a non-refundable fee required to secure a child's spot for the school year. It is payable upon formal acceptance of a place at the school.</p>
-        </div>
-
-        <!-- Tuition Fee -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Tuition Fee</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">The annual tuition fee covers curriculum, classroom resources, books, forest activities and operational expenses. Payment plans and scholarships are available based on financial assessment.</p>
-        </div>
-
-        <!-- Development Fee -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <div class="w-12 h-12 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-[#1e3d29] mb-3">Development Fee</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">The development fee is for all students. It supports the growth of our campus and enhances school-wide programs and activities.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tuition Fees Schedule -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Annual Fees</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Tuition Fees Schedule</h2>
-        <p class="max-w-3xl mx-auto mt-4 text-gray-600 leading-relaxed">
-          Each column shows a separate charge. Annual tuition is not the total annual cost; application or re-enrollment, development, cantine and support fees are listed separately and apply where relevant.
-        </p>
+  <section id="fees" class="page-section" aria-labelledby="fees-title">
+    <div class="container-main">
+      <div class="prose-copy fees-intro">
+        <h2 id="fees-title">Fees by school section</h2>
+        <p>Each column shows a separate charge. Annual tuition is not the total annual cost; application or re-enrolment, development, cantine and support fees are listed separately and apply where relevant.</p>
+        <p>Where a cell shows two amounts, the second, marked *, is the employer-covered fee.</p>
       </div>
 
-      <div class="overflow-x-auto rounded-3xl shadow-lg">
-        <div class="min-w-[1100px]">
-          <!-- Header -->
-          <div class="grid grid-cols-8 bg-[#2d5a3d] text-white text-xs font-semibold uppercase tracking-wider">
-            <div class="p-4">Section</div>
-            <div class="p-4 text-center">Application Fee</div>
-            <div class="p-4 text-center">Re-enrollment Fee</div>
-            <div class="p-4 text-center">FLE / EAL / LSS</div>
-            <div class="p-4 text-center">Annual Tuition<br/><span class="normal-case font-normal text-white/70">(excludes other fees)</span></div>
-            <div class="p-4 text-center">Development Fee</div>
-            <div class="p-4 text-center">Cantine Fee**</div>
-            <div class="p-4 text-center">Wednesday MasterClass<br/><span class="normal-case font-normal text-white/70">(Externals only)</span></div>
-          </div>
-
-          <div class="px-4 py-3 bg-[#e9f2ec] border-b border-gray-200">
-            <p class="font-bold text-[#1e3d29]">Early Years</p>
-            <p class="text-xs text-gray-600 mt-0.5">Nursery and Pre-School</p>
-          </div>
-
-          <!-- Nursery -->
-          <div class="grid grid-cols-8 border-b border-gray-200 items-center bg-[#faf8f5]">
-            <div class="p-4">
-              <p class="font-bold text-[#1e3d29]">Nursery</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">0 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">0 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-gray-400">N/A</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">12,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">18,000 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">7,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">2,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-gray-400">N/A</p>
-            </div>
-          </div>
-
-          <!-- Pre-School -->
-          <div class="grid grid-cols-8 border-b border-gray-200 items-center bg-white">
-            <div class="p-4">
-              <p class="font-bold text-[#1e3d29]">Pre-School</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">750 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">350 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-gray-400">N/A</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">15,000 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">19,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">7,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">2,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">3,500 €</p>
-            </div>
-          </div>
-
-          <!-- Lower Primary -->
-          <div class="grid grid-cols-8 border-b border-gray-200 items-center bg-[#faf8f5]">
-            <div class="p-4">
-              <p class="font-bold text-[#1e3d29]">Lower Primary</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">750 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">350 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">7,000 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">12,000 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">17,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">23,000 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">7,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">2,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">4,100 €</p>
-            </div>
-          </div>
-
-          <!-- Upper Primary -->
-          <div class="grid grid-cols-8 border-b border-gray-200 items-center bg-white">
-            <div class="p-4">
-              <p class="font-bold text-[#1e3d29]">Upper Primary</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">750 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">350 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">7,000 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">12,000 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">19,000 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">25,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">7,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">2,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">4,500 €</p>
-            </div>
-          </div>
-
-          <!-- Middle School -->
-          <div class="grid grid-cols-8 items-center bg-[#faf8f5]">
-            <div class="p-4">
-              <p class="font-bold text-[#1e3d29]">Middle School</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">750 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">350 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">7,000 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">12,000 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">23,000 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">28,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">7,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">2,500 €</p>
-              <p class="text-xs text-[#c9a962] font-medium mt-1">2,500 €*</p>
-            </div>
-            <div class="p-4 text-center">
-              <p class="font-semibold text-[#1e3d29]">5,500 €</p>
-            </div>
-          </div>
-        </div>
+      <p id="fees-scroll-hint" class="fees-scroll-hint">Swipe to see all fees, or focus the table and use the left and right arrow keys.</p>
+      <div class="fees-scroll" role="region" aria-labelledby="fees-title" aria-describedby="fees-scroll-hint" tabindex="0">
+        <table class="fees-table">
+          <caption class="sr-only">Tuition fees by school section. Employer-covered fees are marked with an asterisk.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Section</th>
+              {feeColumns.map((column) => (
+                <th scope="col">{column.label}{column.note && <><br /><span class="th-note">{column.note}</span></>}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {feeRows.map((row) => (
+              <>
+                {row.group && (
+                  <tr class="fees-group">
+                    <th colspan={feeColumns.length + 1}>
+                      <span class="group-label"><strong>{row.group.name}</strong> <span>{row.group.detail}</span></span>
+                    </th>
+                  </tr>
+                )}
+                <tr>
+                  <th scope="row">{row.section}</th>
+                  {row.fees.map((cell) => (
+                    <td>
+                      {cell
+                        ? cell.map((amount, i) => <span class:list={['amount', { 'amount-employer': i > 0 }]}>{amount}</span>)
+                        : <span class="amount amount-none">N/A</span>}
+                    </td>
+                  ))}
+                </tr>
+              </>
+            ))}
+          </tbody>
+        </table>
       </div>
 
-      <!-- Notes -->
-      <div class="mt-8 space-y-3 text-sm text-gray-600">
-        <p><span class="font-semibold">*Employer-covered fees:</span> Charged at the full, non-discounted rate benchmarked for international organisations in France.</p>
-        <p><span class="font-semibold">**Cantine fee:</span> Includes organic lunches and snacks. There is no charge for children wishing to bring a lunch box.</p>
-      </div>
+      <dl class="fees-notes">
+        <div><dt>*Employer-covered fees:</dt> <dd>Charged at the full, non-discounted rate benchmarked for international organisations in France.</dd></div>
+        <div><dt>**Cantine fee:</dt> <dd>Includes organic lunches and snacks. There is no charge for children wishing to bring a lunch box.</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- Additional Fees -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">Optional Extras</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Additional Fees</h2>
+  <section class="page-section surface" aria-labelledby="fee-types-title">
+    <div class="container-main split-layout">
+      <h2 id="fee-types-title">What each fee is for</h2>
+      <dl class="row-list">
+        {feeTypes.map((item) => <div><dt>{item.title}</dt><dd>{item.text}</dd></div>)}
+      </dl>
+    </div>
+  </section>
+
+  <section class="page-section" aria-labelledby="extras-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="extras-title">Additional fees</h2>
+        <p>Optional extras, and support for children with additional needs.</p>
       </div>
-      <div class="max-w-3xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <!-- Breakfast Club -->
-          <div class="flex items-center justify-between p-6 border-b border-gray-200">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-[#c9a962] rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-[#1e3d29]">Breakfast Club</h3>
-                <p class="text-gray-600 text-sm">Monday to Friday, 08:00 - 08:45</p>
-              </div>
+      <div>
+        <dl class="extras-list">
+          {extras.map((item) => (
+            <div>
+              <dt>{item.title}</dt>
+              <dd class="extra-detail">{item.detail}</dd>
+              <dd class="extra-price"><strong>{item.price}</strong> <span>{item.unit}</span></dd>
             </div>
-            <div class="text-right">
-              <span class="text-2xl font-bold text-[#2d5a3d]">170 €</span>
-              <span class="text-gray-600 ml-1">per term</span>
-            </div>
-          </div>
-
-          <!-- After School Clubs -->
-          <div class="flex items-center justify-between p-6 border-b border-gray-200">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-[#4a7c5c] rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-[#1e3d29]">After School Clubs</h3>
-                <p class="text-gray-600 text-sm">Monday to Friday, 16:00 - 17:00</p>
-              </div>
-            </div>
-            <div class="text-right">
-              <span class="text-2xl font-bold text-[#2d5a3d]">170 €</span>
-              <span class="text-gray-600 ml-1">per term</span>
-            </div>
-          </div>
-
-          <!-- Bus Service -->
-          <div class="flex items-center justify-between p-6 border-b border-gray-200">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-[#2d5a3d] rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-[#1e3d29]">Bus Service</h3>
-                <p class="text-gray-600 text-sm">Door-to-door service</p>
-              </div>
-            </div>
-            <div class="text-right">
-              <span class="text-2xl font-bold text-[#2d5a3d]">4,850 - 9,850 €</span>
-              <p class="text-gray-500 text-sm">Depending on location</p>
-            </div>
-          </div>
-
-          <!-- Annual School Trip -->
-          <div class="flex items-center justify-between p-6 border-b border-gray-200">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-[#8b7355] rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-[#1e3d29]">Annual School Trip</h3>
-                <p class="text-gray-600 text-sm">One trip per school year for primary and middle school students</p>
-              </div>
-            </div>
-            <div class="text-right">
-              <span class="text-2xl font-bold text-[#2d5a3d]">750 €</span>
-              <span class="text-gray-600 ml-1">/year</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- SEN Support -->
-        <div class="mt-8 bg-[#2d5a3d]/5 border border-[#2d5a3d]/15 rounded-2xl p-6 flex items-start gap-4">
-          <div class="w-10 h-10 bg-[#6b8e7a] rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-bold text-[#1e3d29] mb-1">SEN Support (Special Educational Needs)</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">We enrol children with additional needs on a case-by-case basis and offer specialised support as needed, with additional charges. Please request the "SEN Support Fees" document for details.</p>
-          </div>
+          ))}
+        </dl>
+        <div class="sen-note">
+          <h3>SEN support (special educational needs)</h3>
+          <p>We enrol children with additional needs on a case-by-case basis and offer specialised support as needed, with additional charges. Please request the "SEN Support Fees" document for details.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Financial Assistance -->
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="flex justify-center">
-        <img src="/images/inst_savio.png" alt="SAVIO Education" class="h-48 bg-white rounded-lg p-4" />
+  <section class="page-section surface" aria-labelledby="assistance-title">
+    <div class="container-main assistance-layout">
+      <div class="prose-copy">
+        <h2 id="assistance-title">Financial assistance</h2>
+        <p>Payment plans and scholarships are available based on financial assessment.</p>
       </div>
+      <img src="/images/inst_savio.png" alt="SAVIO Education" width="362" height="242" loading="lazy" decoding="async" class="savio-logo" />
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">Ready to Learn More?</h2>
-      <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-        Schedule a visit to see our campus and discuss tuition options with our admissions team.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-[#2d5a3d] text-white font-bold rounded-full hover:bg-[#1e3d29] transition-colors shadow-lg">
-          Book a Visit
-        </a>
-        <a href="/admissions/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2d5a3d] font-bold rounded-full border-2 border-[#2d5a3d] hover:bg-[#2d5a3d] hover:text-white transition-colors">
-          Inquire Now
-        </a>
-      </div>
-    </div>
-  </section>
+  <VisitBand title="Talk to us about fees">
+    <p>Schedule a visit to see our campus and discuss tuition options with our admissions team.</p>
+    <Fragment slot="actions">
+      <a href="/contact/" class="btn-gold">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+      <a href="/admissions/" class="link-on-dark">Make an enquiry <ArrowRight size={18} aria-hidden="true" /></a>
+    </Fragment>
+  </VisitBand>
 </Layout>
+
+<style>
+  .fees-intro { margin-bottom: 2rem; }
+
+  /* Fee table: global .fees-* rules supply the accessible structure; these refine the look. */
+  .fees-scroll { background: white; }
+  .fees-table thead th { vertical-align: bottom; line-height: 1.4; }
+  .fees-table thead th:first-child { position: sticky; left: 0; z-index: 2; }
+  .th-note { font-weight: 400; color: var(--color-line); }
+  .fees-table tbody th[scope="row"] { font-weight: 600; color: var(--color-forest-dark); }
+  .group-label { position: sticky; left: 1rem; display: inline-flex; flex-wrap: wrap; gap: .25rem .75rem; align-items: baseline; }
+  .group-label strong { color: var(--color-forest-dark); }
+  .group-label span { font-size: .875rem; font-weight: 400; color: var(--color-text-muted); }
+  .amount { display: block; font-weight: 600; color: var(--color-forest-dark); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .amount-employer { margin-top: .25rem; font-size: .875rem; font-weight: 500; color: var(--color-gold-ink); }
+  .amount-none { color: var(--color-text-muted); }
+
+  .fees-notes { display: grid; gap: .5rem; margin-top: 1.5rem; font-size: .9375rem; line-height: 1.6; color: var(--color-text-muted); }
+  .fees-notes > div { max-width: 75ch; }
+  .fees-notes :is(dt, dd) { display: inline; }
+  .fees-notes dt { font-weight: 600; color: var(--color-text); }
+
+  .extras-list > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .25rem 2rem; padding-block: 1.25rem; border-bottom: 1px solid var(--color-line); }
+  .extras-list > :first-child { padding-top: 0; }
+  .extras-list dt { grid-column: 1; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.3; color: var(--color-forest-dark); }
+  .extra-detail { grid-column: 1; line-height: 1.6; color: var(--color-text-muted); }
+  .extra-price { grid-column: 2; grid-row: 1 / span 2; text-align: right; line-height: 1.4; }
+  .extra-price strong { display: block; font-size: 1.25rem; font-weight: 600; color: var(--color-forest-green); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .extra-price span { font-size: .875rem; color: var(--color-text-muted); }
+  .sen-note { margin-top: 2rem; padding: clamp(1.25rem, 3vw, 1.75rem); border-radius: var(--radius-media); background: var(--color-surface); }
+  .sen-note h3 { font-size: 1.25rem; line-height: 1.3; margin-bottom: .5rem; }
+  .sen-note p { max-width: 60ch; line-height: 1.75; }
+
+  .assistance-layout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem 4rem; }
+  .assistance-layout h2 { margin-bottom: .75rem; }
+  .savio-logo { width: min(100%, 15rem); height: auto; padding: 1rem; border-radius: var(--radius-media); background: white; }
+
+  @media (max-width: 640px) {
+    .extras-list > div { grid-template-columns: 1fr; }
+    .extra-price { grid-column: 1; grid-row: auto; text-align: left; margin-top: .25rem; }
+    .extra-price strong { display: inline; }
+  }
+</style>

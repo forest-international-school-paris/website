@@ -1,167 +1,90 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import VisitBand from '../components/VisitBand.astro';
+import { ArrowRight, ArrowUpRight } from '@lucide/astro';
 
 const alternates = [
   { hreflang: 'en', href: '/admissions/' },
   { hreflang: 'fr', href: '/fr/admissions/' },
   { hreflang: 'x-default', href: '/admissions/' },
 ];
+
+const applicationUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdzobNF-7dTwJnfd8-poukuc0ICQ0o_-AAdhsxRJ2KPhg_VGA/viewform';
+
+const steps = [
+  { title: 'Submit your application', text: 'Fill out our application form to express your interest, and register for an Open Day to visit the school and meet our team.' },
+  { title: 'Schedule a tour', text: 'Come for an in-person visit, arrange a virtual meeting, or join an upcoming Open Day.' },
+  { title: 'Apply', text: 'If Forest International is the right fit, submit your application with the required documentation.' },
+  { title: 'Acceptance', text: 'Once your child is accepted, we confirm their place at FISP. A dedicated member of the admissions team guides you through the process.' },
+];
 ---
 
-<Layout title="Admissions — Apply to an English School in West Paris" description="Apply to Forest International School Paris, an English-language school in Mareil-Marly, west of Paris. Year-round admissions with no birthday cut-off — book a visit." alternates={alternates}>
-  <!-- Hero Section with Image -->
-  <section class="relative py-20 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="/images/children-diversity.jpg" alt="Children at Forest International School" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/95 via-[#2d5a3d]/80 to-[#2d5a3d]/60"></div>
+<Layout title="Admissions — Apply to an English School in West Paris" description="How to apply to Forest International School Paris, an English-language school in Mareil-Marly, west of Paris. Admissions all year, no birthday cut-off." alternates={alternates}>
+  <PageHero
+    title="Admissions"
+    kicker="Ages 2–15 · Applications open all year · Mareil-Marly"
+    intro="We welcome families from around the world to our school in Mareil-Marly, near Saint-Germain-en-Laye. Here is how to apply, from your first visit to a confirmed place."
+    image={{ src: '/images/children-diversity.jpg', alt: 'Pupils in Forest uniforms holding tall drawn balloons on the school lawn', width: 1024, height: 768, position: '50% 35%' }}
+  >
+    <a href={applicationUrl} target="_blank" rel="noopener noreferrer" class="btn-gold">Apply <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+    <a href="/contact/" class="link-on-dark">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+    <a href="/fr/admissions/" lang="fr" hreflang="fr" class="link-on-dark">Voir cette page en français</a>
+  </PageHero>
+
+  <section class="page-section" aria-labelledby="process-title">
+    <div class="container-main split-layout">
+      <div class="prose-copy">
+        <h2 id="process-title">How to apply</h2>
+        <p class="lead-copy">Applications are open all year round.</p>
+        <p>Our admissions process is there to make sure the school and your child are a good fit. Our annual fees are published on the <a href="/tuition/" class="inline-link">tuition page</a>.</p>
+      </div>
+      <ol class="step-list">
+        {steps.map((step, index) => (
+          <li>
+            <span class="step-number" aria-hidden="true">{index + 1}</span>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+              {index === 0 && (
+                <a href={applicationUrl} target="_blank" rel="noopener noreferrer" class="text-link">Open the application form <ArrowUpRight size={18} aria-hidden="true" /><span class="sr-only"> (opens in a new tab)</span></a>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <div class="mb-4">
-          <a href="/fr/admissions/" lang="fr" hreflang="fr" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/25 hover:bg-white/20 transition-colors">
-            🇫🇷 Voir cette page en français
-          </a>
-        </div>
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Join Us</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Admissions</h1>
-        <p class="text-xl text-white/90 leading-relaxed">
-          We welcome families from around the world to our school in Mareil-Marly, near Saint-Germain-en-Laye. Learn about our admissions process and how to apply.
-        </p>
+  </section>
+
+  <section class="page-section surface" aria-labelledby="key-info-title">
+    <div class="container-main split-layout">
+      <div>
+        <h2 id="key-info-title">Good to know</h2>
+        <dl class="fact-list">
+          <div><dt>Applications</dt><dd>Accepted throughout the school year</dd></div>
+          <div><dt>Waiting lists</dt><dd>We prefer not to operate waiting lists. <a href="/contact/">Contact us</a> to check availability.</dd></div>
+          <div><dt>Ages</dt><dd>Early Years (from 2 years) to Middle School (up to 15 years)</dd></div>
+          <div><dt>Birthday cut-off</dt><dd>None</dd></div>
+          <div><dt>Fees</dt><dd>Published on the <a href="/tuition/">tuition page</a></dd></div>
+        </dl>
+      </div>
+      <div class="prose-copy">
+        <h2 id="compare-title">Comparing schools?</h2>
+        <p>Our <a href="/news/international-school-paris-visit-checklist/" class="inline-link">international school visit checklist</a> can help you prepare useful questions before you book a tour.</p>
+        <p>If you are looking from west Paris, Saint-Germain-en-Laye, L'Étang-la-Ville or nearby communes, our <a href="/news/english-school-paris-pre-elementary-primary/" class="inline-link">English pre-elementary and primary school comparison</a> is a useful read.</p>
       </div>
     </div>
   </section>
 
-  <!-- Admissions Process -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#2d5a3d]/10 rounded-full text-[#2d5a3d] font-semibold text-sm mb-4">How to Apply</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Admissions Process</h2>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto mt-4">
-          Our admissions process is designed to ensure a good fit between the school and the student.
-          Applications are open year-round, and our annual fees are published on the
-          <a href="/tuition/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">tuition page</a>.
-          If you are comparing schools, our
-          <a href="/news/international-school-paris-visit-checklist/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">international school visit checklist</a>
-          can help you prepare useful questions before you book a tour, and our
-          <a href="/news/english-school-paris-pre-elementary-primary/" class="text-[#2d5a3d] font-semibold underline hover:text-[#1e3d29]">English pre-elementary and primary school comparison</a>
-          is useful if you are looking from west Paris, Saint-Germain-en-Laye, L'Étang-la-Ville or nearby communes.
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto">
-        <div class="space-y-6">
-          <!-- Step 1 -->
-          <div class="flex items-start gap-6 group">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
-              1
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow flex-grow">
-              <h3 class="text-xl font-bold text-[#1e3d29] mb-2">Submit Your Application</h3>
-              <p class="text-gray-600 mb-4">Fill out our application form to express your interest and register for an Open Day to visit the school and meet our team.</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzobNF-7dTwJnfd8-poukuc0ICQ0o_-AAdhsxRJ2KPhg_VGA/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-[#2d5a3d] text-white font-semibold rounded-full hover:bg-[#1e3d29] transition-colors shadow-md">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-                Apply
-              </a>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="flex items-start gap-6 group">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
-              2
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow flex-grow">
-              <h3 class="text-xl font-bold text-[#1e3d29] mb-2">Schedule a Tour</h3>
-              <p class="text-gray-600">Join us for an in-person visit, virtual meeting, or register for an upcoming Open Day.</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="flex items-start gap-6 group">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
-              3
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow flex-grow">
-              <h3 class="text-xl font-bold text-[#1e3d29] mb-2">Apply</h3>
-              <p class="text-gray-600">If Forest International is the right fit, submit your application with the required documentation.</p>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="flex items-start gap-6 group">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#c9a962] to-[#d4b872] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
-              4
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow flex-grow border-2 border-[#c9a962]">
-              <h3 class="text-xl font-bold text-[#1e3d29] mb-2">Acceptance</h3>
-              <p class="text-gray-600">Upon acceptance, we confirm your child's place at FISP. Your dedicated admission team member will guide you through the process.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Information -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-4">Good to Know</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29]">Key Information</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="bg-[#faf8f5] rounded-3xl p-8 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#2d5a3d] to-[#4a7c5c] rounded-2xl mx-auto mb-6 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-lg mb-3">Year-Round Applications</h3>
-          <p class="text-gray-600">Applications for admission can be submitted throughout the school year.</p>
-        </div>
-
-        <div class="bg-[#faf8f5] rounded-3xl p-8 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#4a7c5c] to-[#2d5a3d] rounded-2xl mx-auto mb-6 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-lg mb-3">No Waiting Lists</h3>
-          <p class="text-gray-600">We prefer not to operate waiting lists. Contact us to check availability.</p>
-        </div>
-
-        <div class="bg-[#faf8f5] rounded-3xl p-8 text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#c9a962] to-[#d4b872] rounded-2xl mx-auto mb-6 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1e3d29] text-lg mb-3">Age Range</h3>
-          <p class="text-gray-600">Early Years (2 years) to Middle School (up to 15 years). No birthday cut-off date.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">Get Started</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Apply?</h2>
-      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-        Contact our admissions team to start the application process or schedule a visit.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2d5a3d] font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-          Book a Visit
-        </a>
-        <a href="/tuition/" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-bold rounded-full border-2 border-white hover:bg-white hover:text-[#2d5a3d] transition-colors">
-          View Tuition
-        </a>
-      </div>
-    </div>
-  </section>
+  <VisitBand title="Talk to the admissions team">
+    <p>Contact our admissions team to start the application process or schedule a visit.</p>
+    <Fragment slot="actions">
+      <a href="/contact/" class="btn-gold">Book a visit <ArrowRight size={18} aria-hidden="true" /></a>
+      <a href="/tuition/" class="link-on-dark">View tuition <ArrowRight size={18} aria-hidden="true" /></a>
+    </Fragment>
+  </VisitBand>
 </Layout>
+
+<style>
+  #compare-title { font-size: clamp(1.5rem, 2.2vw, 1.875rem); }
+</style>

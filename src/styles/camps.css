@@ -1,0 +1,14 @@
+/* Page styles shared by /holiday-camps/ and /fr/stages-vacances/ (the schedule itself lives in CampList.astro). */
+
+.camps-intro { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+
+/* Hero title: each word takes the colour of its choice below (gold = holidays, leaf = Wednesdays). */
+.title-holidays { color: var(--color-gold); }
+.title-wednesdays { color: var(--color-leaf); }
+.title-amp { font-style: italic; font-weight: 400; color: var(--color-surface); opacity: .8; }
+
+.masterclass-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin-top: 1.5rem; }
+
+.beyond-copy a { color: white; font-weight: 600; text-decoration: underline; text-decoration-color: rgb(255 255 255 / 55%); text-underline-offset: .25em; }
+.beyond-copy a:hover { color: var(--color-gold); }
+

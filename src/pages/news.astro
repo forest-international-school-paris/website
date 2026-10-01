@@ -1,106 +1,123 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { ArrowRight } from '@lucide/astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
   .filter(post => post.data.lang === 'en')
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const [featured, ...others] = posts;
+const postHref = (post: (typeof posts)[number]) => `/news/${post.id.replace('en/', '')}/`;
+const formatDate = (date: Date) => date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
 <Layout title="News & Updates" description="News, events and stories from Forest International School Paris — an English-language school for children aged 2-15 in Mareil-Marly, west of Paris.">
-  <!-- Hero Section -->
-  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 backdrop-blur-sm rounded-full text-[#c9a962] font-semibold text-sm mb-6 border border-[#c9a962]/30">News & Updates</span>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">School News</h1>
-        <p class="text-xl text-white/80 max-w-2xl mx-auto">
-          Stay updated with the latest announcements, events, and stories from our school community.
-        </p>
-      </div>
-    </div>
-  </section>
+  <PageHero title="School news" intro="Announcements, events, press coverage and guides for parents from Forest International School Paris in Mareil-Marly." />
 
-  <!-- As Featured In (Press) -->
-  <section class="py-12 lg:py-16 bg-white border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 mb-6">As featured in</p>
+  <section class="press" aria-labelledby="press-title">
+    <div class="container-main press-layout">
+      <h2 id="press-title" class="press-label">As featured in</h2>
       <a
         href="/news/forest-international-school-madame-figaro/"
-        class="inline-flex flex-col items-center gap-4 group"
+        class="press-link"
         aria-label="Madame Figaro parle de nous — read the article"
       >
         <!-- Placeholder wordmark: swap for the Madame Figaro logo <img src="/images/madame-figaro-logo.png" /> when available -->
-        <span class="text-3xl md:text-4xl text-[#1e3d29] leading-none" style="font-family: 'Playfair Display', serif;">
-          <span class="italic font-medium">Madame</span> <span class="font-bold tracking-tight uppercase">Figaro</span>
-        </span>
-        <span class="inline-flex items-center gap-1 text-[#2d5a3d] font-semibold group-hover:gap-2 transition-all">
-          « Madame Figaro parle de nous ! » — lire l'article
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </span>
+        <span class="press-wordmark"><span class="italic font-medium">Madame</span> <span class="font-bold tracking-tight uppercase">Figaro</span></span>
+        <span class="press-cta">« Madame Figaro parle de nous ! » — lire l'article <ArrowRight size={18} aria-hidden="true" /></span>
       </a>
     </div>
   </section>
 
-  <!-- Blog Posts Grid -->
-  <section class="py-16 lg:py-24 bg-[#faf8f5]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="page-section" aria-labelledby="posts-title">
+    <div class="container-main">
+      <h2 id="posts-title">Latest posts</h2>
       {posts.length === 0 ? (
-        <div class="text-center py-16">
-          <div class="w-20 h-20 bg-[#2d5a3d]/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-            <svg class="w-10 h-10 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
-            </svg>
-          </div>
-          <h2 class="text-2xl font-bold text-[#1e3d29] mb-4">No posts yet</h2>
-          <p class="text-gray-600">Check back soon for updates from our school!</p>
-        </div>
+        <p class="empty">No posts yet. Check back soon for updates from the school.</p>
       ) : (
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <a href={`/news/${post.id.replace('en/', '')}/`} class="group">
-              <article class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                {post.data.image && (
-                  <div class="aspect-video overflow-hidden">
-                    <img
-                      src={post.data.image}
-                      alt={post.data.title}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                )}
-                <div class="p-6 flex-1 flex flex-col">
-                  <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
-                    <time datetime={post.data.date.toISOString()}>
-                      {post.data.date.toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
-                    </time>
-                    {post.data.tags && post.data.tags.length > 0 && (
-                      <>
-                        <span>•</span>
-                        <span class="text-[#c9a962]">{post.data.tags[0]}</span>
-                      </>
+        <>
+          <article class="featured">
+            {featured.data.image && (
+              <img src={featured.data.image} alt="" class="featured-image" width="1200" height="675" />
+            )}
+            <div class="featured-copy">
+              <p class="post-meta">
+                <time datetime={featured.data.date.toISOString()}>{formatDate(featured.data.date)}</time>
+                {featured.data.tags && featured.data.tags.length > 0 && <span class="post-tag">{featured.data.tags[0]}</span>}
+              </p>
+              <h3><a href={postHref(featured)} class="post-link">{featured.data.title}</a></h3>
+              <p class="post-description">{featured.data.description}</p>
+              <span class="read-on" aria-hidden="true">Read the post <ArrowRight size={18} /></span>
+            </div>
+          </article>
+
+          {others.length > 0 && (
+            <ul class="post-rows">
+              {others.map((post) => (
+                <li>
+                  <article class="post-row">
+                    <div class="post-row-copy">
+                      <p class="post-meta">
+                        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+                        {post.data.tags && post.data.tags.length > 0 && <span class="post-tag">{post.data.tags[0]}</span>}
+                      </p>
+                      <h3><a href={postHref(post)} class="post-link">{post.data.title}</a></h3>
+                      <p class="post-description">{post.data.description}</p>
+                    </div>
+                    {post.data.image && (
+                      <img src={post.data.image} alt="" class="post-thumb" width="320" height="240" loading="lazy" decoding="async" />
                     )}
-                  </div>
-                  <h2 class="text-xl font-bold text-[#1e3d29] mb-3 group-hover:text-[#2d5a3d] transition-colors">
-                    {post.data.title}
-                  </h2>
-                  <p class="text-gray-600 mb-4 flex-1">{post.data.description}</p>
-                  <span class="inline-flex items-center text-[#2d5a3d] font-semibold group-hover:gap-2 transition-all">
-                    Read More
-                    <svg class="w-5 h-5 ml-1 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </span>
-                </div>
-              </article>
-            </a>
-          ))}
-        </div>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
       )}
     </div>
   </section>
 </Layout>
+
+<style>
+  .press { padding-block: 2.5rem; background: white; border-bottom: 1px solid var(--color-line); }
+  .press-layout { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2.5rem; }
+  .press-label { font-family: inherit; font-size: .9375rem; font-weight: 600; color: var(--color-text-muted); }
+  .press-link { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.5rem; min-height: 44px; }
+  .press-wordmark { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1; color: var(--color-forest-dark); }
+  .press-cta { display: inline-flex; align-items: center; gap: .5rem; color: var(--color-forest-green); font-weight: 600; text-decoration: underline; text-underline-offset: .3em; text-decoration-thickness: 1px; }
+  .press-link:hover .press-cta { color: var(--color-forest-dark); }
+
+  .empty { max-width: 60ch; line-height: 1.75; }
+
+  .post-meta { display: flex; flex-wrap: wrap; gap: .25rem 1rem; font-size: .875rem; color: var(--color-text-muted); }
+  .post-tag { color: var(--color-gold-ink); font-weight: 600; }
+  .post-tag::first-letter { text-transform: uppercase; }
+  .post-link { color: var(--color-forest-dark); text-decoration: none; }
+  .post-link::after { content: ''; position: absolute; inset: 0; }
+  .post-link:hover { color: var(--color-forest-green); text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+  .post-link:focus-visible { outline: none; box-shadow: none; }
+  article:has(.post-link:focus-visible) { outline: 3px solid var(--color-forest-green); outline-offset: 4px; border-radius: var(--radius-media); }
+  .post-description { max-width: 62ch; margin-top: .5rem; line-height: 1.7; }
+
+  .featured { position: relative; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; margin-top: 1.5rem; }
+  .featured-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-media); }
+  .featured h3 { margin-top: .75rem; font-size: clamp(1.625rem, 2.6vw, 2.25rem); line-height: 1.2; }
+  .featured .post-description { font-size: 1.0625rem; }
+  .read-on { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.25rem; color: var(--color-forest-green); font-weight: 600; text-decoration: underline; text-underline-offset: .3em; text-decoration-thickness: 1px; }
+
+  .post-rows { margin-top: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--color-line); }
+  .post-rows > li { border-bottom: 1px solid var(--color-line); }
+  .post-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: 2rem; align-items: center; padding-block: 1.75rem; }
+  .post-row h3 { margin-top: .375rem; font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.3; }
+  .post-thumb { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-media); }
+
+  @media (max-width: 900px) {
+    .featured { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .post-row { grid-template-columns: minmax(0, 1fr) 6rem; gap: 1rem; align-items: start; }
+    .post-row .post-description { font-size: .9375rem; }
+  }
+</style>

@@ -13,3 +13,10 @@ Hard rails for any agent (full text in CLAUDE.md):
 - Child safety & privacy beat SEO: no new photos of children, no pupil personal data.
 - This repo is PUBLIC: secrets only in `.env` (gitignored).
 - Push to origin/main deploys to production.
+
+## Design context
+
+Read `PRODUCT.md` and `DESIGN.md` before interface work. Reuse the existing school
+identity and shared tokens in `src/styles/global.css`. Prefer concrete school
+information and published material to generic marketing copy or decorative cards.
+`CLAUDE.md` remains the source of truth for facts, safeguarding and publication.
