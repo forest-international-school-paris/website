@@ -132,7 +132,7 @@ if (inspectIdx !== -1) {
 
 // --- performance pull ---------------------------------------------------------
 const end = new Date(Date.now() - 2 * 864e5).toISOString().slice(0, 10); // GSC lags ~2d
-const start = new Date(Date.now() - 30 * 864e5).toISOString().slice(0, 10);
+const start = new Date(Date.now() - 29 * 864e5).toISOString().slice(0, 10);
 console.log(`[measure-gsc] site=${SITE} window=${start}..${end}`);
 
 const registry = JSON.parse(readFileSync(join(ROOT, 'seo/_registry.json'), 'utf8'));
@@ -147,9 +147,9 @@ async function pull(dimensions) {
   return rows;
 }
 
-let byQuery, byPage;
+let byQuery, byPage, siteTotals;
 try {
-  [byQuery, byPage] = await Promise.all([pull(['query']), pull(['page'])]);
+  [byQuery, byPage, siteTotals] = await Promise.all([pull(['query']), pull(['page']), pull([])]);
 } catch (e) {
   console.error(`[measure-gsc] ${e.message}`);
   if (String(e.message).includes('403')) {
@@ -186,7 +186,8 @@ const out = {
   clusters: clusterAgg, striking_distance: striking,
   top_pages: byPage.sort((a, b) => b.clicks - a.clicks).slice(0, 30)
     .map((r) => ({ page: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: +r.position.toFixed(1) })),
-  totals: {
+  totals: siteTotals[0] || { clicks: 0, impressions: 0, ctr: 0, position: null },
+  disclosed_query_totals: {
     clicks: byQuery.reduce((s, r) => s + r.clicks, 0),
     impressions: byQuery.reduce((s, r) => s + r.impressions, 0),
     queries: byQuery.length,
@@ -197,6 +198,6 @@ const file = join(ROOT, 'seo/metrics', `gsc-${new Date().toISOString().slice(0, 
 mkdirSync(dirname(file), { recursive: true });
 writeFileSync(file, JSON.stringify(out, null, 2));
 console.log(`→ wrote ${file}`);
-console.log(`totals: ${out.totals.clicks} clicks / ${out.totals.impressions} impressions / ${out.totals.queries} queries`);
+console.log(`totals: ${out.totals.clicks} clicks / ${out.totals.impressions} impressions / ${out.disclosed_query_totals.queries} disclosed queries`);
 console.log('clusters:', JSON.stringify(clusterAgg));
 console.log(`striking-distance queries: ${striking.length}`);

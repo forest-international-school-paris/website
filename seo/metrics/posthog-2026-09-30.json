@@ -1,0 +1,415 @@
+{
+  "generated_at": "2026-09-30T09:31:36.029Z",
+  "window_days": 28,
+  "measurement_version": 2,
+  "production_hosts": [
+    "forest-international.com",
+    "www.forest-international.com"
+  ],
+  "conversion_note": "Intent clicks only, not completed inquiries, registrations or attendance. Historical masterclass_register_click includes announcement form clicks before event_register_click deployment.",
+  "project": "493129",
+  "data": {
+    "sessions_by_channel": {
+      "columns": [
+        "channel",
+        "sessions"
+      ],
+      "results": [
+        [
+          "Direct",
+          672
+        ],
+        [
+          "Organic Search",
+          558
+        ],
+        [
+          "Referral",
+          156
+        ],
+        [
+          "AI",
+          63
+        ],
+        [
+          "Organic Social",
+          41
+        ],
+        [
+          "Email",
+          2
+        ],
+        [
+          "Organic Video",
+          2
+        ]
+      ]
+    },
+    "organic_entry_pages": {
+      "columns": [
+        "path",
+        "sessions"
+      ],
+      "results": [
+        [
+          "/",
+          406
+        ],
+        [
+          "/holiday-camps/",
+          44
+        ],
+        [
+          "/tuition/",
+          33
+        ],
+        [
+          "/team/",
+          20
+        ],
+        [
+          "/fr/admissions/",
+          14
+        ],
+        [
+          "/fr/stages-vacances/",
+          14
+        ],
+        [
+          "/about/",
+          5
+        ],
+        [
+          "/admissions/",
+          5
+        ],
+        [
+          "/news/",
+          4
+        ],
+        [
+          "/early-years/",
+          3
+        ],
+        [
+          "/contact/",
+          3
+        ],
+        [
+          "/fr/news/ecole-anglaise-paris-maternelle-primaire/",
+          3
+        ],
+        [
+          "/news/forest-international-school-madame-figaro/",
+          2
+        ],
+        [
+          "/middle-school/",
+          1
+        ],
+        [
+          "/news/english-international-schools-west-paris-yvelines/",
+          1
+        ]
+      ]
+    },
+    "conversions_by_channel": {
+      "columns": [
+        "event",
+        "channel",
+        "n"
+      ],
+      "results": [
+        [
+          "masterclass_register_click",
+          "Organic Search",
+          24
+        ],
+        [
+          "whatsapp_click",
+          "Organic Search",
+          13
+        ],
+        [
+          "email_click",
+          "Organic Search",
+          11
+        ],
+        [
+          "apply_click",
+          "Organic Search",
+          9
+        ],
+        [
+          "whatsapp_click",
+          "Direct",
+          6
+        ],
+        [
+          "masterclass_register_click",
+          "Direct",
+          6
+        ],
+        [
+          "masterclass_register_click",
+          "Referral",
+          5
+        ],
+        [
+          "email_click",
+          "Direct",
+          5
+        ],
+        [
+          "contact_form_click",
+          "Organic Search",
+          4
+        ],
+        [
+          "contact_form_click",
+          "Referral",
+          3
+        ],
+        [
+          "whatsapp_click",
+          "AI",
+          3
+        ],
+        [
+          "masterclass_register_click",
+          "AI",
+          3
+        ],
+        [
+          "email_click",
+          "AI",
+          2
+        ],
+        [
+          "apply_click",
+          "Referral",
+          2
+        ],
+        [
+          "apply_click",
+          "Organic Social",
+          1
+        ],
+        [
+          "apply_click",
+          "Direct",
+          1
+        ],
+        [
+          "phone_click",
+          "Direct",
+          1
+        ],
+        [
+          "masterclass_register_click",
+          "Organic Video",
+          1
+        ],
+        [
+          "contact_form_click",
+          "AI",
+          1
+        ],
+        [
+          "email_click",
+          "Organic Social",
+          1
+        ],
+        [
+          "whatsapp_click",
+          "Organic Social",
+          1
+        ],
+        [
+          "contact_form_click",
+          "Direct",
+          1
+        ]
+      ]
+    },
+    "organic_conversions_by_page": {
+      "columns": [
+        "path",
+        "event",
+        "n"
+      ],
+      "results": [
+        [
+          "/",
+          "masterclass_register_click",
+          14
+        ],
+        [
+          "/admissions/",
+          "apply_click",
+          5
+        ],
+        [
+          "/",
+          "email_click",
+          4
+        ],
+        [
+          "/contact/",
+          "contact_form_click",
+          4
+        ],
+        [
+          "/",
+          "apply_click",
+          3
+        ],
+        [
+          "/",
+          "whatsapp_click",
+          3
+        ],
+        [
+          "/tuition/",
+          "whatsapp_click",
+          3
+        ],
+        [
+          "/admissions/",
+          "email_click",
+          3
+        ],
+        [
+          "/tuition/",
+          "masterclass_register_click",
+          2
+        ],
+        [
+          "/holiday-camps/",
+          "whatsapp_click",
+          2
+        ],
+        [
+          "/holiday-camps/",
+          "masterclass_register_click",
+          2
+        ],
+        [
+          "/early-years/",
+          "masterclass_register_click",
+          2
+        ],
+        [
+          "/contact/",
+          "whatsapp_click",
+          2
+        ],
+        [
+          "/admissions/",
+          "masterclass_register_click",
+          2
+        ],
+        [
+          "/primary/",
+          "whatsapp_click",
+          2
+        ],
+        [
+          "/contact/",
+          "email_click",
+          1
+        ],
+        [
+          "/primary/",
+          "masterclass_register_click",
+          1
+        ],
+        [
+          "/tuition/",
+          "email_click",
+          1
+        ],
+        [
+          "/holiday-camps/",
+          "email_click",
+          1
+        ],
+        [
+          "/primary/",
+          "email_click",
+          1
+        ],
+        [
+          "/admissions/",
+          "whatsapp_click",
+          1
+        ],
+        [
+          "/fr/admissions/",
+          "apply_click",
+          1
+        ],
+        [
+          "/fr/stages-vacances/",
+          "masterclass_register_click",
+          1
+        ]
+      ]
+    },
+    "exposures_by_channel": {
+      "columns": [
+        "event",
+        "channel",
+        "n"
+      ],
+      "results": [
+        [
+          "popup_shown",
+          "Organic Search",
+          494
+        ],
+        [
+          "popup_shown",
+          "Direct",
+          279
+        ],
+        [
+          "popup_shown",
+          "Referral",
+          82
+        ],
+        [
+          "popup_shown",
+          "AI",
+          54
+        ],
+        [
+          "popup_shown",
+          "Organic Social",
+          38
+        ],
+        [
+          "popup_shown",
+          "Email",
+          2
+        ],
+        [
+          "popup_shown",
+          "Organic Video",
+          1
+        ]
+      ]
+    },
+    "organic_intent_sessions": {
+      "columns": [
+        "sessions"
+      ],
+      "results": [
+        [
+          42
+        ]
+      ]
+    }
+  },
+  "errors": {}
+}

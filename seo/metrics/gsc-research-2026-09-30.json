@@ -1,0 +1,5727 @@
+{
+  "window": {
+    "startDate": "2026-08-31",
+    "endDate": "2026-09-28",
+    "rowLimit": 25000
+  },
+  "totals": {
+    "rows": [
+      {
+        "clicks": 328,
+        "impressions": 12529,
+        "ctr": 0.02617926410727113,
+        "position": 10.28150690398276
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "home": {
+    "rows": [
+      {
+        "clicks": 231,
+        "impressions": 9763,
+        "ctr": 0.023660760012291303,
+        "position": 8.89654819215405
+      }
+    ],
+    "responseAggregationType": "byPage"
+  },
+  "home_queries": {
+    "rows": [
+      {
+        "keys": [
+          "forest international school paris"
+        ],
+        "clicks": 58,
+        "impressions": 163,
+        "ctr": 0.3558282208588957,
+        "position": 1.7607361963190185
+      },
+      {
+        "keys": [
+          "forest international school"
+        ],
+        "clicks": 45,
+        "impressions": 166,
+        "ctr": 0.2710843373493976,
+        "position": 2.6566265060240966
+      },
+      {
+        "keys": [
+          "forest school paris"
+        ],
+        "clicks": 18,
+        "impressions": 85,
+        "ctr": 0.21176470588235294,
+        "position": 1.6941176470588235
+      },
+      {
+        "keys": [
+          "forest school"
+        ],
+        "clicks": 5,
+        "impressions": 90,
+        "ctr": 0.05555555555555555,
+        "position": 9.955555555555556
+      },
+      {
+        "keys": [
+          "forest school france"
+        ],
+        "clicks": 3,
+        "impressions": 13,
+        "ctr": 0.23076923076923078,
+        "position": 3.076923076923077
+      },
+      {
+        "keys": [
+          "nature school paris"
+        ],
+        "clicks": 2,
+        "impressions": 10,
+        "ctr": 0.2,
+        "position": 1.7
+      },
+      {
+        "keys": [
+          "fisp paris"
+        ],
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 0.09090909090909091,
+        "position": 7.7272727272727275
+      },
+      {
+        "keys": [
+          "forest language school"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forest school yvelines"
+        ],
+        "clicks": 1,
+        "impressions": 12,
+        "ctr": 0.08333333333333333,
+        "position": 2.75
+      },
+      {
+        "keys": [
+          "forrest school"
+        ],
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "sophie lovejoy"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 4.285714285714286
+      },
+      {
+        "keys": [
+          "7 years old"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "alma forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "alma forest school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "best international school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "bilingual school port marly"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 98
+      },
+      {
+        "keys": [
+          "boarding school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "keys": [
+          "boarding schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "college international"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "dolomite forest international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "early years international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 18.2
+      },
+      {
+        "keys": [
+          "earth schools"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 58.5
+      },
+      {
+        "keys": [
+          "ecole du parc"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "ecole ferdinand flocon"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "ecole forest"
+        ],
+        "clicks": 0,
+        "impressions": 44,
+        "ctr": 0,
+        "position": 8.613636363636363
+      },
+      {
+        "keys": [
+          "ecole forest trail"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "ecole foret"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "ecole internationale"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "ecole internationale ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
+          "ecole la foret"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "ecole maternelle forest"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "ecoles internationales france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "education paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "en français stp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "english middle school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 26.666666666666668
+      },
+      {
+        "keys": [
+          "english nursery near paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "keys": [
+          "english nursery west paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "english preschool paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 26.5
+      },
+      {
+        "keys": [
+          "english school for kids near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "english school france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "english school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "english school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 2.7777777777777777
+      },
+      {
+        "keys": [
+          "english school near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "english school paris"
+        ],
+        "clicks": 0,
+        "impressions": 46,
+        "ctr": 0,
+        "position": 31.52173913043478
+      },
+      {
+        "keys": [
+          "english school paris 15"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 29.75
+      },
+      {
+        "keys": [
+          "english schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 55,
+        "ctr": 0,
+        "position": 24.89090909090909
+      },
+      {
+        "keys": [
+          "english schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "english speaking schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 47,
+        "ctr": 0,
+        "position": 30.404255319148938
+      },
+      {
+        "keys": [
+          "english summer camp in paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "escuela internacional en paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 20.25
+      },
+      {
+        "keys": [
+          "escuela internacional paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "fisp school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "forel international school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "forest camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 3.25
+      },
+      {
+        "keys": [
+          "forest camp saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 13.666666666666666
+      },
+      {
+        "keys": [
+          "forest campus"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 18.666666666666668
+      },
+      {
+        "keys": [
+          "forest ecole"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forest farm nursery"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "forest hill international delivery"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 21.5
+      },
+      {
+        "keys": [
+          "forest hill schools"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "forest international"
+        ],
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 3.3488372093023258
+      },
+      {
+        "keys": [
+          "forest international school france"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 1.5384615384615383
+      },
+      {
+        "keys": [
+          "forest international school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 2.571428571428571
+      },
+      {
+        "keys": [
+          "forest international school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "forest junior"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "forest paris"
+        ],
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 8.263157894736842
+      },
+      {
+        "keys": [
+          "forest park school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest primary school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "forest school admissions"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forest school education"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 3.25
+      },
+      {
+        "keys": [
+          "forest school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 1.875
+      },
+      {
+        "keys": [
+          "forest school portal"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "forest school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "forest school teacher"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "forest school webmail"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "forest school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 1.625
+      },
+      {
+        "keys": [
+          "forest schooling"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "forest schools"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "forest shcool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "forest shool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forest sxhool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest trail academy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "forest+international"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "keys": [
+          "forestschool"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "forrst school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "french international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 43.5
+      },
+      {
+        "keys": [
+          "ife paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "in france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "international curriculum paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "international elementary schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "international forest school"
+        ],
+        "clicks": 0,
+        "impressions": 6211,
+        "ctr": 0,
+        "position": 6.829979069393012
+      },
+      {
+        "keys": [
+          "international high school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 33.6
+      },
+      {
+        "keys": [
+          "international middle school paris"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 22.523809523809526
+      },
+      {
+        "keys": [
+          "international middle school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "international middle schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 18.5
+      },
+      {
+        "keys": [
+          "international nursery paris"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 15.363636363636363
+      },
+      {
+        "keys": [
+          "international nursery west paris"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 3.1
+      },
+      {
+        "keys": [
+          "international paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "international preschool"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 73.18518518518519
+      },
+      {
+        "keys": [
+          "international preschool paris"
+        ],
+        "clicks": 0,
+        "impressions": 83,
+        "ctr": 0,
+        "position": 29.6144578313253
+      },
+      {
+        "keys": [
+          "international preschool west paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "keys": [
+          "international primary school paris"
+        ],
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 18.1875
+      },
+      {
+        "keys": [
+          "international private school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "international school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "international school france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "international school ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "international school in france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "international school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 22.24
+      },
+      {
+        "keys": [
+          "international school l'étang-la-ville"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "international school le pecq"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "international school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 1.7272727272727273
+      },
+      {
+        "keys": [
+          "international school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 23.8
+      },
+      {
+        "keys": [
+          "international school outdoor learning"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 15.5
+      },
+      {
+        "keys": [
+          "international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 268,
+        "ctr": 0,
+        "position": 22.91417910447761
+      },
+      {
+        "keys": [
+          "international school paris expat families"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39.5
+      },
+      {
+        "keys": [
+          "international school port marly"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 30.333333333333332
+      },
+      {
+        "keys": [
+          "international school rueil malmaison"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "international school saint germain en laye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "international school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 13.526315789473685
+      },
+      {
+        "keys": [
+          "international school with forest campus paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 2.2222222222222223
+      },
+      {
+        "keys": [
+          "international school with outdoor learning paris"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 2.5384615384615383
+      },
+      {
+        "keys": [
+          "international school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "keys": [
+          "international schools in france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "international schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 98,
+        "ctr": 0,
+        "position": 28.510204081632654
+      },
+      {
+        "keys": [
+          "international schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 26.666666666666668
+      },
+      {
+        "keys": [
+          "international schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 23.176470588235293
+      },
+      {
+        "keys": [
+          "isv forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 34
+      },
+      {
+        "keys": [
+          "junior high schools near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "keys": [
+          "la forest school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "landmark international school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "lpf school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "malherbe international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 44.5
+      },
+      {
+        "keys": [
+          "middle school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "middle schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "nature based learning paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 1.8571428571428572
+      },
+      {
+        "keys": [
+          "nature based school paris"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 2.769230769230769
+      },
+      {
+        "keys": [
+          "nature school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 2.333333333333333
+      },
+      {
+        "keys": [
+          "nature school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 3.6666666666666665
+      },
+      {
+        "keys": [
+          "nature school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 1.1428571428571428
+      },
+      {
+        "keys": [
+          "nemzetközi iskola"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "open day international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 53,
+        "ctr": 0,
+        "position": 14.962264150943396
+      },
+      {
+        "keys": [
+          "orest paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "ourschool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "keys": [
+          "outdoor education school paris"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 2.666666666666667
+      },
+      {
+        "keys": [
+          "outdoor learning international school"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 44.8
+      },
+      {
+        "keys": [
+          "outdoor learning school paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 22.333333333333332
+      },
+      {
+        "keys": [
+          "outdoor learning school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "outdoor school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "paris forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "paris france school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "paris international school"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 17.294117647058822
+      },
+      {
+        "keys": [
+          "paris international schools"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "paris school"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12.666666666666666
+      },
+      {
+        "keys": [
+          "paris schools"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "preschool close to me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "preschool near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 34
+      },
+      {
+        "keys": [
+          "primary school for international families paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 25.4
+      },
+      {
+        "keys": [
+          "primary schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "keys": [
+          "private english schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "private international middle school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 21.6
+      },
+      {
+        "keys": [
+          "private international primary school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 21.6
+      },
+      {
+        "keys": [
+          "private international school ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "private international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 23.375
+      },
+      {
+        "keys": [
+          "private international school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 13.666666666666666
+      },
+      {
+        "keys": [
+          "private international schools ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 19.8
+      },
+      {
+        "keys": [
+          "private international schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 19.5
+      },
+      {
+        "keys": [
+          "private preschool west paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 28.25
+      },
+      {
+        "keys": [
+          "private school near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "private school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "private schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 25.785714285714285
+      },
+      {
+        "keys": [
+          "private schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "keys": [
+          "private schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "project based learning school paris"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 7.7
+      },
+      {
+        "keys": [
+          "project based school paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 15.333333333333334
+      },
+      {
+        "keys": [
+          "rainforest international school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "school for expat children paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "school forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 9.25
+      },
+      {
+        "keys": [
+          "school international"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "school near me"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 13.25
+      },
+      {
+        "keys": [
+          "school nesr me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "school next to me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "school paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "schooling in paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.75
+      },
+      {
+        "keys": [
+          "schools in paris for english speaking students"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 35.38461538461539
+      },
+      {
+        "keys": [
+          "schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "schools outside"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "scuola estiva a parigi-igny"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 64
+      },
+      {
+        "keys": [
+          "secondary international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "keys": [
+          "sextius michel ecole"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "keys": [
+          "site:forestinternationalschool.com"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "summer camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "summer camp in france for kids"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "the forest school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "türkçe"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "ve francii"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "visit international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 21.333333333333332
+      },
+      {
+        "keys": [
+          "école anglaise mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 7.866666666666666
+      },
+      {
+        "keys": [
+          "école bilingue mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "école en forêt paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "école en forêt paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 6.083333333333333
+      },
+      {
+        "keys": [
+          "école en forêt saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12.5
+      },
+      {
+        "keys": [
+          "école forest"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 10.428571428571429
+      },
+      {
+        "keys": [
+          "école forêt paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 13.857142857142858
+      },
+      {
+        "keys": [
+          "école internationale en forêt paris"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 2.9230769230769234
+      },
+      {
+        "keys": [
+          "école internationale ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "école internationale mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.857142857142857
+      },
+      {
+        "keys": [
+          "école internationale nature paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.857142857142857
+      },
+      {
+        "keys": [
+          "école internationale port marly"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 53.5
+      },
+      {
+        "keys": [
+          "école nature paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "اللغة"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "林間学校 英語"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      }
+    ],
+    "responseAggregationType": "byPage"
+  },
+  "queries": {
+    "rows": [
+      {
+        "keys": [
+          "forest international school paris"
+        ],
+        "clicks": 67,
+        "impressions": 163,
+        "ctr": 0.4110429447852761,
+        "position": 1.7484662576687118
+      },
+      {
+        "keys": [
+          "forest international school"
+        ],
+        "clicks": 53,
+        "impressions": 166,
+        "ctr": 0.3192771084337349,
+        "position": 2.6144578313253013
+      },
+      {
+        "keys": [
+          "forest school paris"
+        ],
+        "clicks": 20,
+        "impressions": 87,
+        "ctr": 0.22988505747126436,
+        "position": 2.137931034482759
+      },
+      {
+        "keys": [
+          "forest school"
+        ],
+        "clicks": 5,
+        "impressions": 91,
+        "ctr": 0.054945054945054944,
+        "position": 9.923076923076923
+      },
+      {
+        "keys": [
+          "forest school france"
+        ],
+        "clicks": 3,
+        "impressions": 13,
+        "ctr": 0.23076923076923078,
+        "position": 3.076923076923077
+      },
+      {
+        "keys": [
+          "sophie lovejoy"
+        ],
+        "clicks": 3,
+        "impressions": 19,
+        "ctr": 0.15789473684210525,
+        "position": 4.105263157894736
+      },
+      {
+        "keys": [
+          "forest international school france"
+        ],
+        "clicks": 2,
+        "impressions": 14,
+        "ctr": 0.14285714285714285,
+        "position": 2.2142857142857144
+      },
+      {
+        "keys": [
+          "forest school yvelines"
+        ],
+        "clicks": 2,
+        "impressions": 18,
+        "ctr": 0.1111111111111111,
+        "position": 7.944444444444445
+      },
+      {
+        "keys": [
+          "nature school paris"
+        ],
+        "clicks": 2,
+        "impressions": 16,
+        "ctr": 0.125,
+        "position": 11.1875
+      },
+      {
+        "keys": [
+          "fisp paris"
+        ],
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 0.09090909090909091,
+        "position": 7.7272727272727275
+      },
+      {
+        "keys": [
+          "forest language school"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forrest school"
+        ],
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "give me a link"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "keys": [
+          "la forest school"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 3
+      },
+      {
+        "keys": [
+          "october holiday camp"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 3
+      },
+      {
+        "keys": [
+          "stage nature enfant paris"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 64
+      },
+      {
+        "keys": [
+          "summer camp paris"
+        ],
+        "clicks": 1,
+        "impressions": 37,
+        "ctr": 0.02702702702702703,
+        "position": 32.21621621621622
+      },
+      {
+        "keys": [
+          "7 years old"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "alma forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "alma forest school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "anglais extrascolaire"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 70.6
+      },
+      {
+        "keys": [
+          "apply to international school france"
+        ],
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 35.541666666666664
+      },
+      {
+        "keys": [
+          "apply to international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 30.666666666666668
+      },
+      {
+        "keys": [
+          "august 2027"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "best international school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "best summer camp in paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "best summer camps paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 53.666666666666664
+      },
+      {
+        "keys": [
+          "bilingual school port marly"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "bilingual school saint germain en laye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "bilingual school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 23.357142857142858
+      },
+      {
+        "keys": [
+          "boarding school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "keys": [
+          "boarding schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "british primary school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "british primary school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.470588235294118
+      },
+      {
+        "keys": [
+          "camp d'été box hill"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "keys": [
+          "camp d'été à caterham"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 93
+      },
+      {
+        "keys": [
+          "camp d'été à caterham pour enfants de 7 ans"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 80.6
+      },
+      {
+        "keys": [
+          "camp holiday"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "camp in paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "camp international"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 45.666666666666664
+      },
+      {
+        "keys": [
+          "camp vacances anglais paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "keys": [
+          "can anyone go?"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "cheap preschool near me"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 11.478260869565217
+      },
+      {
+        "keys": [
+          "children camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 26.5
+      },
+      {
+        "keys": [
+          "children holiday camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 25.25
+      },
+      {
+        "keys": [
+          "college international"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "day camp"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "daycare with summer camp programs"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "dolomite forest international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "early years international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 15.625
+      },
+      {
+        "keys": [
+          "early years international school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 21.333333333333332
+      },
+      {
+        "keys": [
+          "earth schools"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 58.5
+      },
+      {
+        "keys": [
+          "eco school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "ecole anglophone paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "ecole bilingue yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
+          "ecole du parc"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "ecole ferdinand flocon"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "ecole forest"
+        ],
+        "clicks": 0,
+        "impressions": 52,
+        "ctr": 0,
+        "position": 9.73076923076923
+      },
+      {
+        "keys": [
+          "ecole forest trail"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "ecole foret"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "ecole internationale"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "ecole internationale ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 67.5
+      },
+      {
+        "keys": [
+          "ecole la foret"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "ecole maternelle bilingue anglais"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "keys": [
+          "ecole maternelle bilingue port-marly"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 83
+      },
+      {
+        "keys": [
+          "ecole maternelle forest"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "ecole primaire anglaise paris 15"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "keys": [
+          "ecoles internationales france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "education paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "elementaire francais anglais port-marly"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      },
+      {
+        "keys": [
+          "en français stp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "english bilingual school ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "english camp for children paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 26.5
+      },
+      {
+        "keys": [
+          "english camp for kids paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 29.5
+      },
+      {
+        "keys": [
+          "english camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "english holiday camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 16.75
+      },
+      {
+        "keys": [
+          "english holiday camp saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "english holiday camp west paris"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 4.777777777777778
+      },
+      {
+        "keys": [
+          "english language curriculum schools in paris for children aged 3-18"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 10.071428571428571
+      },
+      {
+        "keys": [
+          "english middle school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 17.375
+      },
+      {
+        "keys": [
+          "english middle school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "english middle school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 7.888888888888889
+      },
+      {
+        "keys": [
+          "english national curriculum school paris"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 9.88888888888889
+      },
+      {
+        "keys": [
+          "english nursery near paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 27.5
+      },
+      {
+        "keys": [
+          "english nursery west paris"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 5.6875
+      },
+      {
+        "keys": [
+          "english preschool paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 26.5
+      },
+      {
+        "keys": [
+          "english preschool west paris"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 4.714285714285714
+      },
+      {
+        "keys": [
+          "english primary school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "english primary school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "english primary school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 10.416666666666666
+      },
+      {
+        "keys": [
+          "english primary school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 10.75
+      },
+      {
+        "keys": [
+          "english school admission france"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 32.42857142857143
+      },
+      {
+        "keys": [
+          "english school for kids near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "english school france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "english school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "english school l'étang-la-ville"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.428571428571427
+      },
+      {
+        "keys": [
+          "english school le pecq"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 10.333333333333334
+      },
+      {
+        "keys": [
+          "english school le vésinet"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 14.666666666666666
+      },
+      {
+        "keys": [
+          "english school louveciennes"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "english school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 8.4
+      },
+      {
+        "keys": [
+          "english school marly-le-roi"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 13.071428571428571
+      },
+      {
+        "keys": [
+          "english school near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "english school paris"
+        ],
+        "clicks": 0,
+        "impressions": 46,
+        "ctr": 0,
+        "position": 31.52173913043478
+      },
+      {
+        "keys": [
+          "english school paris 15"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 29.75
+      },
+      {
+        "keys": [
+          "english school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "english school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 9.35
+      },
+      {
+        "keys": [
+          "english school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "english schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 55,
+        "ctr": 0,
+        "position": 24.89090909090909
+      },
+      {
+        "keys": [
+          "english schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "english speaking schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 47,
+        "ctr": 0,
+        "position": 30.404255319148938
+      },
+      {
+        "keys": [
+          "english summer camp in france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "english summer camp in paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 32.25
+      },
+      {
+        "keys": [
+          "english summer camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 27.0625
+      },
+      {
+        "keys": [
+          "english summer camp saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 15.666666666666666
+      },
+      {
+        "keys": [
+          "english summer camp west paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 24.666666666666668
+      },
+      {
+        "keys": [
+          "escola privada perto de mim"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "escuela internacional en paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 20.25
+      },
+      {
+        "keys": [
+          "escuela internacional paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "expat school paris 15"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "expat school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "fees in parent trx 8 paris"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 8.25
+      },
+      {
+        "keys": [
+          "first steps school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "fisp school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "forel international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "forest camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 9.9
+      },
+      {
+        "keys": [
+          "forest camp saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 12.833333333333334
+      },
+      {
+        "keys": [
+          "forest campus"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 18.666666666666668
+      },
+      {
+        "keys": [
+          "forest city international school fees"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "forest college"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "forest ecole"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forest farm nursery"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "forest heights staff"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "forest hill international delivery"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 21.5
+      },
+      {
+        "keys": [
+          "forest hill schools"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "forest international"
+        ],
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 3.3488372093023258
+      },
+      {
+        "keys": [
+          "forest international school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "forest international school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 4.388888888888889
+      },
+      {
+        "keys": [
+          "forest junior"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "forest kids international preschool"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keys": [
+          "forest language preschool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "forest paris"
+        ],
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 8.263157894736842
+      },
+      {
+        "keys": [
+          "forest park school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest primary school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "forest school admissions"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "forest school camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "forest school camps"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "forest school education"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest school fees"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 14.2
+      },
+      {
+        "keys": [
+          "forest school holiday clubs"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "forest school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 13.473684210526315
+      },
+      {
+        "keys": [
+          "forest school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 9.333333333333334
+      },
+      {
+        "keys": [
+          "forest school portal"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "forest school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 11.866666666666667
+      },
+      {
+        "keys": [
+          "forest school teacher"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "forest school term fees"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 18.5
+      },
+      {
+        "keys": [
+          "forest school webmail"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "forest school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 5.428571428571429
+      },
+      {
+        "keys": [
+          "forest schooling"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "forest schools"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "forest shcool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "forest shool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "forest stage"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "forest sxhool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest trail academy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "forest tuition"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "forest+international"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 5.181818181818182
+      },
+      {
+        "keys": [
+          "forestschool"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "forrst school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "frais de scolarité des écoles internationales à paris"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 67.69565217391305
+      },
+      {
+        "keys": [
+          "french international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 43.5
+      },
+      {
+        "keys": [
+          "french summer camps in paris"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 53.81818181818182
+      },
+      {
+        "keys": [
+          "french winter camps"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "holiday camp"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "keys": [
+          "holiday camp in french"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "holiday camp near paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 11.88888888888889
+      },
+      {
+        "keys": [
+          "holiday camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.142857142857142
+      },
+      {
+        "keys": [
+          "holiday camp west paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 2.75
+      },
+      {
+        "keys": [
+          "holiday camps"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "holidays camps"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "how to apply to international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 19.22222222222222
+      },
+      {
+        "keys": [
+          "ib school or french school paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "ife paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "immersion summer camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 55.5
+      },
+      {
+        "keys": [
+          "imyc logo"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "in france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "international camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "international curriculum paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "international elementary schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "international forest school"
+        ],
+        "clicks": 0,
+        "impressions": 6213,
+        "ctr": 0,
+        "position": 6.846933848382424
+      },
+      {
+        "keys": [
+          "international high school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 33.6
+      },
+      {
+        "keys": [
+          "international middle school paris"
+        ],
+        "clicks": 0,
+        "impressions": 32,
+        "ctr": 0,
+        "position": 23.15625
+      },
+      {
+        "keys": [
+          "international middle school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 12.642857142857142
+      },
+      {
+        "keys": [
+          "international middle school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 4.304347826086957
+      },
+      {
+        "keys": [
+          "international middle schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 18.5
+      },
+      {
+        "keys": [
+          "international nursery near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "international nursery paris"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 15.916666666666666
+      },
+      {
+        "keys": [
+          "international nursery saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "international nursery west paris"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 5.090909090909091
+      },
+      {
+        "keys": [
+          "international paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "international preschool"
+        ],
+        "clicks": 0,
+        "impressions": 44,
+        "ctr": 0,
+        "position": 45.88636363636363
+      },
+      {
+        "keys": [
+          "international preschool paris"
+        ],
+        "clicks": 0,
+        "impressions": 83,
+        "ctr": 0,
+        "position": 29.6144578313253
+      },
+      {
+        "keys": [
+          "international preschool saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "international preschool west paris"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 20.833333333333332
+      },
+      {
+        "keys": [
+          "international primary school paris"
+        ],
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 18.1875
+      },
+      {
+        "keys": [
+          "international primary school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 3.3333333333333335
+      },
+      {
+        "keys": [
+          "international primary school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 14.866666666666667
+      },
+      {
+        "keys": [
+          "international primary school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 16.65
+      },
+      {
+        "keys": [
+          "international private school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39.5
+      },
+      {
+        "keys": [
+          "international school admissions paris"
+        ],
+        "clicks": 0,
+        "impressions": 41,
+        "ctr": 0,
+        "position": 19.073170731707318
+      },
+      {
+        "keys": [
+          "international school france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "international school ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 20.666666666666668
+      },
+      {
+        "keys": [
+          "international school in france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "international school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 22.24
+      },
+      {
+        "keys": [
+          "international school l'étang-la-ville"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "international school le pecq"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 12.75
+      },
+      {
+        "keys": [
+          "international school le vésinet"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "international school mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 7.764705882352941
+      },
+      {
+        "keys": [
+          "international school marly-le-roi"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 12.25
+      },
+      {
+        "keys": [
+          "international school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 23.8
+      },
+      {
+        "keys": [
+          "international school of paris fees"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "international school of paris tuition"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "international school outdoor learning"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 15.5
+      },
+      {
+        "keys": [
+          "international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 268,
+        "ctr": 0,
+        "position": 22.91417910447761
+      },
+      {
+        "keys": [
+          "international school paris admissions"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "international school paris application"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 22.933333333333334
+      },
+      {
+        "keys": [
+          "international school paris expat families"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39.5
+      },
+      {
+        "keys": [
+          "international school paris fees"
+        ],
+        "clicks": 0,
+        "impressions": 54,
+        "ctr": 0,
+        "position": 15.12962962962963
+      },
+      {
+        "keys": [
+          "international school port marly"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 24.6
+      },
+      {
+        "keys": [
+          "international school rueil malmaison"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "international school saint germain en laye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "international school vernouillet"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 34.5
+      },
+      {
+        "keys": [
+          "international school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 42,
+        "ctr": 0,
+        "position": 11.238095238095237
+      },
+      {
+        "keys": [
+          "international school western paris"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 6.277777777777778
+      },
+      {
+        "keys": [
+          "international school with forest campus paris"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 10.7
+      },
+      {
+        "keys": [
+          "international school with outdoor learning paris"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 8.952380952380953
+      },
+      {
+        "keys": [
+          "international school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 16.88888888888889
+      },
+      {
+        "keys": [
+          "international schools in france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "international schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 98,
+        "ctr": 0,
+        "position": 28.510204081632654
+      },
+      {
+        "keys": [
+          "international schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 26.666666666666668
+      },
+      {
+        "keys": [
+          "international schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 23.176470588235293
+      },
+      {
+        "keys": [
+          "international summer camp france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 49.5
+      },
+      {
+        "keys": [
+          "isv forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 34
+      },
+      {
+        "keys": [
+          "junior high schools near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "keys": [
+          "key stage 3 paris"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 10.2
+      },
+      {
+        "keys": [
+          "key stage 3 school paris"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 11.916666666666666
+      },
+      {
+        "keys": [
+          "landmark international school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "language camps france paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "lpf school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "madame forest"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "malherbe international school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 44.5
+      },
+      {
+        "keys": [
+          "middle school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "middle school international"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "middle schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 37.92307692307692
+      },
+      {
+        "keys": [
+          "middle schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 35.22222222222222
+      },
+      {
+        "keys": [
+          "middle years programme paris"
+        ],
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 29.210526315789473
+      },
+      {
+        "keys": [
+          "natural school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "nature based learning paris"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 10.866666666666667
+      },
+      {
+        "keys": [
+          "nature based school paris"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 6.7
+      },
+      {
+        "keys": [
+          "nature school near paris"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 6.8
+      },
+      {
+        "keys": [
+          "nature school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 3.6666666666666665
+      },
+      {
+        "keys": [
+          "nature school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 1.1428571428571428
+      },
+      {
+        "keys": [
+          "near primary school"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "nemzetközi iskola"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "november holiday maths camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "october 18"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "october 19"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "october camp 2026"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "open day international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 53,
+        "ctr": 0,
+        "position": 14.962264150943396
+      },
+      {
+        "keys": [
+          "orest paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "ourschool"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "keys": [
+          "outdoor education school paris"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.647058823529413
+      },
+      {
+        "keys": [
+          "outdoor learning international school"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 44.8
+      },
+      {
+        "keys": [
+          "outdoor learning school paris"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 10.071428571428571
+      },
+      {
+        "keys": [
+          "outdoor learning school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 4.65
+      },
+      {
+        "keys": [
+          "outdoor school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "page idea: forest school paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 12.375
+      },
+      {
+        "keys": [
+          "page idea: holiday camp paris"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "paris camp"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "paris camps"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "paris forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "paris france school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "paris international school"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 17.294117647058822
+      },
+      {
+        "keys": [
+          "paris international schools"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "paris preschool"
+        ],
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 20.9
+      },
+      {
+        "keys": [
+          "paris school"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12.666666666666666
+      },
+      {
+        "keys": [
+          "paris schools"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "paris summer camp"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 31.833333333333332
+      },
+      {
+        "keys": [
+          "pre preschools near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "preschool anglais paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "preschool close to me"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 33.5
+      },
+      {
+        "keys": [
+          "preschool near"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "preschool near me"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 18.5
+      },
+      {
+        "keys": [
+          "primary school for international families paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 25.4
+      },
+      {
+        "keys": [
+          "primary schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 27.142857142857142
+      },
+      {
+        "keys": [
+          "private english schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "private international middle school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 21.6
+      },
+      {
+        "keys": [
+          "private international primary school paris"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 21.6
+      },
+      {
+        "keys": [
+          "private international school ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 47.666666666666664
+      },
+      {
+        "keys": [
+          "private international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 23.375
+      },
+      {
+        "keys": [
+          "private international school saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.714285714285714
+      },
+      {
+        "keys": [
+          "private international school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "private international school yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 16.142857142857142
+      },
+      {
+        "keys": [
+          "private international schools ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 19.8
+      },
+      {
+        "keys": [
+          "private international schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 19.5
+      },
+      {
+        "keys": [
+          "private preschool west paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 28.25
+      },
+      {
+        "keys": [
+          "private primary school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 6.833333333333333
+      },
+      {
+        "keys": [
+          "private school near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "private school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "private schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 25.785714285714285
+      },
+      {
+        "keys": [
+          "private schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "keys": [
+          "private schools paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "project based learning school paris"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.352941176470587
+      },
+      {
+        "keys": [
+          "project based school paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 15.333333333333334
+      },
+      {
+        "keys": [
+          "rainforest international school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "school camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "school fees paris international"
+        ],
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 19.348837209302324
+      },
+      {
+        "keys": [
+          "school for expat children paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "school for international families paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "school forest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "school holiday camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "school holiday courses"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 4.5
+      },
+      {
+        "keys": [
+          "school in paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 9.25
+      },
+      {
+        "keys": [
+          "school international"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "school near me"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 13.25
+      },
+      {
+        "keys": [
+          "school nesr me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "school next to me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "school paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "school stage"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "school tour ib program france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "keys": [
+          "school+camping"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "schooling in paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "schools in paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.75
+      },
+      {
+        "keys": [
+          "schools in paris for english speaking students"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 35.38461538461539
+      },
+      {
+        "keys": [
+          "schools in paris france"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "schools outside"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "scuola estiva a parigi-igny"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 52.15384615384615
+      },
+      {
+        "keys": [
+          "secondary international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "keys": [
+          "sextius michel ecole"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "keys": [
+          "site:forestinternationalschool.com"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "site:www.forestinternationalschool.com"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "sixth form applications that are still open near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "sommercamp paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 31.5
+      },
+      {
+        "keys": [
+          "sortie scolaire anglais paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "stage anglais vacances ete"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 63.5
+      },
+      {
+        "keys": [
+          "stage nature enfant paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 14.5
+      },
+      {
+        "keys": [
+          "stage vacances anglais paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "stage vacances montessori port marly"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "stage vacances scolaires ile de-france"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "stage été 2027"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "keys": [
+          "summer camp"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24.5
+      },
+      {
+        "keys": [
+          "summer camp anglais saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "summer camp english"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "summer camp france paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "summer camp igny"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 47.5
+      },
+      {
+        "keys": [
+          "summer camp in france 2023"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 91
+      },
+      {
+        "keys": [
+          "summer camp in france for kids"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "summer camp in paris"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 31.133333333333333
+      },
+      {
+        "keys": [
+          "summer camp international"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 50.333333333333336
+      },
+      {
+        "keys": [
+          "summer camp international school"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 20.666666666666668
+      },
+      {
+        "keys": [
+          "summer camp paris 2026"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "summer camp saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "summer camp west paris"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 7.909090909090909
+      },
+      {
+        "keys": [
+          "summer camps 2024"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "summer camps paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 34.625
+      },
+      {
+        "keys": [
+          "summer holiday camp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "summer school west paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "keys": [
+          "the forest school"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "the paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "türkçe"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "usutu forest school fees"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "vacances scolaires anglais paris"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "vacances scolaires anglais yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 17.25
+      },
+      {
+        "keys": [
+          "ve francii"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "visit international school paris"
+        ],
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 21.333333333333332
+      },
+      {
+        "keys": [
+          "wander and wonder club"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "wander and wonder nature club"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "what are the differences between ics paris and british international school of paris?"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "which is most affordable"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "école anglaise mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 12.772727272727273
+      },
+      {
+        "keys": [
+          "école anglaise marly-le-roi"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "école anglophone yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "école bilingue anglais français maternelle"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      },
+      {
+        "keys": [
+          "école bilingue anglais français yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 72.66666666666667
+      },
+      {
+        "keys": [
+          "école bilingue anglais yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "école bilingue le pecq"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 3.2
+      },
+      {
+        "keys": [
+          "école bilingue mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 19.272727272727273
+      },
+      {
+        "keys": [
+          "école bilingue marly-le-roi"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 3.6
+      },
+      {
+        "keys": [
+          "école en forêt paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "école en forêt paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 6.083333333333333
+      },
+      {
+        "keys": [
+          "école en forêt saint-germain-en-laye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12.5
+      },
+      {
+        "keys": [
+          "école forest"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 10.428571428571429
+      },
+      {
+        "keys": [
+          "école forêt paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 13.857142857142858
+      },
+      {
+        "keys": [
+          "école internationale 78"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 20.333333333333332
+      },
+      {
+        "keys": [
+          "école internationale en forêt paris"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 6.8
+      },
+      {
+        "keys": [
+          "école internationale fourqueux"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "école internationale ile de france"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "école internationale mareil-marly"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.235294117647058
+      },
+      {
+        "keys": [
+          "école internationale marly-le-roi"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "école internationale nature paris"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.9
+      },
+      {
+        "keys": [
+          "école internationale port marly"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 34.833333333333336
+      },
+      {
+        "keys": [
+          "école internationale vernouillet"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "keys": [
+          "école internationale yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 21.5
+      },
+      {
+        "keys": [
+          "école maternelle anglais paris"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 23.285714285714285
+      },
+      {
+        "keys": [
+          "école maternelle anglaise paris"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "école maternelle anglaise paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 20.5
+      },
+      {
+        "keys": [
+          "école maternelle privée anglais paris"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 28.625
+      },
+      {
+        "keys": [
+          "école maternelle privée bilingue anglais paris"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 34.888888888888886
+      },
+      {
+        "keys": [
+          "école nature paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "école primaire anglaise paris ouest"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 17.333333333333332
+      },
+      {
+        "keys": [
+          "école primaire bilingue anglais français"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 62
+      },
+      {
+        "keys": [
+          "école primaire internationale yvelines"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24.5
+      },
+      {
+        "keys": [
+          "école élémentaire anglaise paris"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "éducation pour familles expatriées à paris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "élémentaire bilingue maisons-laffitte"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "اللغة"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "林間学校 英語"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "森林學校"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "retrieved_on": "2026-09-30",
+  "ahrefs": {
+    "project_id": 10043266,
+    "project_name": "Forest-international",
+    "tracked_keyword_count": 301,
+    "country": "FR",
+    "volume_definition": "Estimated average monthly searches; not site traffic",
+    "keywords": [
+      {
+        "keyword": "international school paris",
+        "volume": 250,
+        "global_volume": 900,
+        "difficulty": 7
+      },
+      {
+        "keyword": "english school paris",
+        "volume": 150,
+        "global_volume": 200,
+        "difficulty": 45
+      },
+      {
+        "keyword": "international school saint germain en laye",
+        "volume": 50,
+        "global_volume": 60,
+        "difficulty": null
+      },
+      {
+        "keyword": "international school west paris",
+        "volume": 0,
+        "global_volume": 0,
+        "difficulty": null
+      },
+      {
+        "keyword": "english school west paris",
+        "volume": 0,
+        "global_volume": 0,
+        "difficulty": null
+      },
+      {
+        "keyword": "forest international school paris",
+        "volume": 60,
+        "global_volume": 100,
+        "difficulty": 0
+      }
+    ],
+    "rank_tracker_example": {
+      "keyword": "international school west paris",
+      "position": 8,
+      "url": "https://www.forest-international.com/news/english-international-schools-west-paris-yvelines",
+      "device": "desktop",
+      "location": "Yvelines, Ile-de-France, France",
+      "serp_updated": "2026-09-28T07:03:09Z"
+    }
+  },
+  "measurement_notes": [
+    "GSC existing script totals sum disclosed query rows; use dimensionless query for property totals.",
+    "GSC date window 2026-08-31 through 2026-09-28 is 29 inclusive calendar days despite script description of 28 days.",
+    "PostHog conversion registry includes popup_shown: exposure is not an inquiry. Other named conversion events are clicks, not completed registrations.",
+    "PostHog includes local preview pageviews; production-host filtering is necessary.",
+    "Google Forms clicks in announcement popup are classified masterclass_register_click regardless of actual event.",
+    "Do not join GSC keywords to individual PostHog inquiries; these are separate aggregate datasets."
+  ]
+}

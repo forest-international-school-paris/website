@@ -12,7 +12,8 @@
   `POSTHOG_PERSONAL_API_KEY` (gitignored; repo is public).
 - Conversion events (defined in `Analytics.astro`; list mirrored in `seo/_registry.json`):
   `apply_click`, `contact_form_click`, `masterclass_register_click`, `whatsapp_click`,
-  `email_click`, `phone_click`, `popup_shown`, `popup_cta_click`, plus autocaptured
+  `email_click`, `phone_click`, `event_register_click`. Exposure (`popup_shown`) and
+  legacy engagement (`popup_cta_click`) are separate from intent clicks, plus autocaptured
   `$pageview`/`$pageleave`.
 
 Weekly snapshot:
@@ -23,15 +24,28 @@ node scripts/measure-posthog.mjs          # → seo/metrics/posthog-YYYY-MM-DD.j
 
 What it computes (28-day window, HogQL over `/api/environments/493129/query/`):
 sessions and pageviews split by channel (organic search / direct / referral / social),
-top landing pages for organic, conversion-event counts split by channel, and
+top landing pages for organic, intent-click counts split by channel, and
 organic-attributed conversions per page. **Ranking rule:** a page with organic
 conversions > a page with organic traffic only > everything else. That ordering decides
 which content gets optimization time.
 
+Measurement version 2 (2026-09-30): only production hosts from the registry are included.
+Sessions are distinct session IDs with an event in the reporting window; intent-session
+counts deduplicate across intent events. Click counts are not completed forms, enquiries,
+or attendance. Historical `masterclass_register_click` also includes announcement form
+clicks; new announcement CTAs use `event_register_click` with event name and date.
+Popup exposure fires only when the dialog opens, once per page load. Local previews do
+not initialise analytics. Historical local events are excluded by report host filters.
+Do not compare version 1 conversion totals directly with version 2.
+
+GSC reporting uses an inclusive 28-day window, ending two days before the run. Property
+totals come from a dimensionless query; disclosed query totals and clusters are separate
+because privacy-filtered queries do not sum to the full property total.
+
 Data started 2026-07-01 — early numbers are small; judge trends after 4+ weeks, don't
 over-react to single-day noise.
 
-## 2. Google Search Console (needs one-time user action)
+## 2. Google Search Console (OAuth configured)
 
 Property: `forest-international.com`, viewable ONLY with Google account
 koreal6803@gmail.com (no permission to add users — the service-account route is

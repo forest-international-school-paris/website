@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-09-30T09:26:46.840Z",
+  "hostname": {
+    "columns": [
+      "host",
+      "n"
+    ],
+    "results": [
+      [
+        "forest-international.com",
+        2984
+      ],
+      [
+        "localhost:4321",
+        41
+      ],
+      [
+        "127.0.0.1:4322",
+        10
+      ],
+      [
+        "www.forestinternationalschool.com",
+        1
+      ]
+    ]
+  },
+  "organic": {
+    "columns": [
+      "event",
+      "events",
+      "sessions"
+    ],
+    "results": [
+      [
+        "popup_shown",
+        494,
+        420
+      ],
+      [
+        "masterclass_register_click",
+        24,
+        23
+      ],
+      [
+        "whatsapp_click",
+        13,
+        9
+      ],
+      [
+        "email_click",
+        11,
+        9
+      ],
+      [
+        "apply_click",
+        9,
+        7
+      ],
+      [
+        "contact_form_click",
+        4,
+        3
+      ]
+    ]
+  }
+}

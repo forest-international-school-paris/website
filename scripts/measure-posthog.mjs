@@ -41,6 +41,9 @@ if (!KEY) {
 const registry = JSON.parse(readFileSync(join(ROOT, 'seo/_registry.json'), 'utf8'));
 const CONV = registry.posthog.conversion_events;
 const DAYS = 28;
+const hostList = registry.posthog.production_hosts.map(h => `'${h}'`).join(',');
+const production = `properties.$host in (${hostList})`;
+const exposureList = registry.posthog.exposure_events.map(e => `'${e}'`).join(',');
 const convList = CONV.map((e) => `'${e}'`).join(',');
 
 async function hogql(query) {
@@ -56,28 +59,36 @@ async function hogql(query) {
 
 const QUERIES = {
   sessions_by_channel: `
-    select $channel_type as channel, count() as sessions
-    from sessions where $start_timestamp >= now() - interval ${DAYS} day
+    select session.$channel_type as channel, count(distinct properties.$session_id) as sessions
+    from events where timestamp >= now() - interval ${DAYS} day and ${production}
     group by channel order by sessions desc`,
   organic_entry_pages: `
-    select $entry_pathname as path, count() as sessions
-    from sessions
-    where $start_timestamp >= now() - interval ${DAYS} day and $channel_type = 'Organic Search'
+    select session.$entry_pathname as path, count(distinct properties.$session_id) as sessions
+    from events where timestamp >= now() - interval ${DAYS} day and ${production}
+      and session.$channel_type = 'Organic Search'
     group by path order by sessions desc limit 25`,
   conversions_by_channel: `
     select event, session.$channel_type as channel, count() as n
-    from events
-    where event in (${convList}) and timestamp >= now() - interval ${DAYS} day
+    from events where event in (${convList}) and timestamp >= now() - interval ${DAYS} day
+      and ${production}
     group by event, channel order by n desc`,
   organic_conversions_by_page: `
     select properties.$pathname as path, event, count() as n
-    from events
-    where event in (${convList}) and timestamp >= now() - interval ${DAYS} day
-      and session.$channel_type = 'Organic Search'
+    from events where event in (${convList}) and timestamp >= now() - interval ${DAYS} day
+      and ${production} and session.$channel_type = 'Organic Search'
     group by path, event order by n desc limit 50`,
+  exposures_by_channel: `
+    select event, session.$channel_type as channel, count() as n
+    from events where event in (${exposureList}) and timestamp >= now() - interval ${DAYS} day
+      and ${production}
+    group by event, channel order by n desc`,
+  organic_intent_sessions: `
+    select count(distinct properties.$session_id) as sessions
+    from events where event in (${convList}) and timestamp >= now() - interval ${DAYS} day
+      and ${production} and session.$channel_type = 'Organic Search'`,
 };
 
-const out = { generated_at: new Date().toISOString(), window_days: DAYS, project: PROJECT, data: {}, errors: {} };
+const out = { generated_at: new Date().toISOString(), window_days: DAYS, measurement_version: registry.posthog.measurement_version, production_hosts: registry.posthog.production_hosts, conversion_note: registry.posthog.conversion_note, project: PROJECT, data: {}, errors: {} };
 for (const [name, q] of Object.entries(QUERIES)) {
   try {
     out.data[name] = await hogql(q);
@@ -99,6 +110,6 @@ console.log('\nSessions by channel (28d):');
 for (const [channel, n] of ch) console.log(`  ${String(channel).padEnd(18)} ${n}`);
 const conv = out.data.conversions_by_channel?.results || [];
 const organicConv = conv.filter(([, c]) => c === 'Organic Search');
-console.log(`\nOrganic-attributed conversions (28d): ${organicConv.reduce((s, r) => s + r[2], 0)}`);
+console.log(`\nOrganic-attributed intent clicks (28d; not completed submissions): ${organicConv.reduce((s, r) => s + r[2], 0)}`);
 for (const [event, , n] of organicConv) console.log(`  ${String(event).padEnd(28)} ${n}`);
 if (Object.keys(out.errors).length) process.exitCode = 1;

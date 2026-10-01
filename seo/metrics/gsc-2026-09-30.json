@@ -1,0 +1,461 @@
+{
+  "generated_at": "2026-09-30T09:31:45.645Z",
+  "site": "sc-domain:forest-international.com",
+  "window": {
+    "start": "2026-09-01",
+    "end": "2026-09-28"
+  },
+  "clusters": {
+    "brand": {
+      "clicks": 138,
+      "impressions": 542,
+      "position": 3
+    },
+    "programs": {
+      "clicks": 13,
+      "impressions": 6862,
+      "position": 8.1
+    },
+    "other": {
+      "clicks": 6,
+      "impressions": 544,
+      "position": 20.3
+    },
+    "camps": {
+      "clicks": 3,
+      "impressions": 394,
+      "position": 23.4
+    },
+    "choose-school": {
+      "clicks": 0,
+      "impressions": 1157,
+      "position": 21.3
+    },
+    "local": {
+      "clicks": 0,
+      "impressions": 265,
+      "position": 16.2
+    }
+  },
+  "striking_distance": [
+    {
+      "query": "international forest school",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 5955,
+      "position": 6.8
+    },
+    {
+      "query": "forest school",
+      "cluster": "programs",
+      "clicks": 5,
+      "impressions": 88,
+      "position": 9.3
+    },
+    {
+      "query": "international school paris fees",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 52,
+      "position": 15.1
+    },
+    {
+      "query": "ecole forest",
+      "cluster": "other",
+      "clicks": 0,
+      "impressions": 51,
+      "position": 9.8
+    },
+    {
+      "query": "open day international school paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 51,
+      "position": 14.9
+    },
+    {
+      "query": "international primary school paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 46,
+      "position": 18.1
+    },
+    {
+      "query": "international school west paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 42,
+      "position": 11.2
+    },
+    {
+      "query": "school fees paris international",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 41,
+      "position": 19.7
+    },
+    {
+      "query": "international school admissions paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 40,
+      "position": 19.1
+    },
+    {
+      "query": "international school yvelines",
+      "cluster": "local",
+      "clicks": 0,
+      "impressions": 36,
+      "position": 16.9
+    },
+    {
+      "query": "paris international school",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 33,
+      "position": 17.2
+    },
+    {
+      "query": "english primary school west paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 24,
+      "position": 10.4
+    },
+    {
+      "query": "cheap preschool near me",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 23,
+      "position": 11.5
+    },
+    {
+      "query": "forest+international",
+      "cluster": "brand",
+      "clicks": 0,
+      "impressions": 22,
+      "position": 5.2
+    },
+    {
+      "query": "summer camp west paris",
+      "cluster": "camps",
+      "clicks": 0,
+      "impressions": 22,
+      "position": 7.9
+    },
+    {
+      "query": "école anglaise mareil-marly",
+      "cluster": "local",
+      "clicks": 0,
+      "impressions": 22,
+      "position": 12.8
+    },
+    {
+      "query": "international school with outdoor learning paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 21,
+      "position": 9
+    },
+    {
+      "query": "english school west paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 9.3
+    },
+    {
+      "query": "international primary school yvelines",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 16.6
+    },
+    {
+      "query": "international school with forest campus paris",
+      "cluster": "camps",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 10.7
+    },
+    {
+      "query": "nature based school paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 6.7
+    },
+    {
+      "query": "nature school near paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 6.8
+    },
+    {
+      "query": "école internationale en forêt paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 6.8
+    },
+    {
+      "query": "forest paris",
+      "cluster": "other",
+      "clicks": 0,
+      "impressions": 19,
+      "position": 8.3
+    },
+    {
+      "query": "forest school mareil-marly",
+      "cluster": "brand",
+      "clicks": 0,
+      "impressions": 19,
+      "position": 13.5
+    },
+    {
+      "query": "forest school yvelines",
+      "cluster": "programs",
+      "clicks": 2,
+      "impressions": 18,
+      "position": 7.9
+    },
+    {
+      "query": "english middle school west paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 18,
+      "position": 7.9
+    },
+    {
+      "query": "english national curriculum school paris",
+      "cluster": "other",
+      "clicks": 0,
+      "impressions": 18,
+      "position": 9.9
+    },
+    {
+      "query": "international school western paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 18,
+      "position": 6.3
+    },
+    {
+      "query": "british primary school west paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 17,
+      "position": 8.5
+    },
+    {
+      "query": "international school mareil-marly",
+      "cluster": "local",
+      "clicks": 0,
+      "impressions": 17,
+      "position": 7.8
+    },
+    {
+      "query": "outdoor education school paris",
+      "cluster": "other",
+      "clicks": 0,
+      "impressions": 17,
+      "position": 8.6
+    },
+    {
+      "query": "project based learning school paris",
+      "cluster": "other",
+      "clicks": 0,
+      "impressions": 17,
+      "position": 8.4
+    },
+    {
+      "query": "école internationale mareil-marly",
+      "cluster": "local",
+      "clicks": 0,
+      "impressions": 17,
+      "position": 8.2
+    },
+    {
+      "query": "nature school paris",
+      "cluster": "programs",
+      "clicks": 2,
+      "impressions": 16,
+      "position": 11.2
+    },
+    {
+      "query": "english nursery west paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 16,
+      "position": 5.7
+    },
+    {
+      "query": "english primary school yvelines",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 16,
+      "position": 10.8
+    },
+    {
+      "query": "fees in parent trx 8 paris",
+      "cluster": "choose-school",
+      "clicks": 0,
+      "impressions": 16,
+      "position": 8.3
+    },
+    {
+      "query": "english school mareil-marly",
+      "cluster": "local",
+      "clicks": 0,
+      "impressions": 15,
+      "position": 8.4
+    },
+    {
+      "query": "forest school near paris",
+      "cluster": "programs",
+      "clicks": 0,
+      "impressions": 15,
+      "position": 9.3
+    }
+  ],
+  "top_pages": [
+    {
+      "page": "https://forest-international.com/",
+      "clicks": 220,
+      "impressions": 9355,
+      "position": 8.7
+    },
+    {
+      "page": "https://forest-international.com/holiday-camps/",
+      "clicks": 32,
+      "impressions": 1049,
+      "position": 10.1
+    },
+    {
+      "page": "https://forest-international.com/tuition/",
+      "clicks": 18,
+      "impressions": 796,
+      "position": 6.9
+    },
+    {
+      "page": "https://forest-international.com/fr/stages-vacances/",
+      "clicks": 15,
+      "impressions": 651,
+      "position": 8.4
+    },
+    {
+      "page": "https://forest-international.com/fr/admissions/",
+      "clicks": 11,
+      "impressions": 646,
+      "position": 10.2
+    },
+    {
+      "page": "https://forest-international.com/team/",
+      "clicks": 10,
+      "impressions": 209,
+      "position": 2.7
+    },
+    {
+      "page": "https://forest-international.com/about/",
+      "clicks": 6,
+      "impressions": 556,
+      "position": 5.2
+    },
+    {
+      "page": "https://forest-international.com/contact/",
+      "clicks": 4,
+      "impressions": 272,
+      "position": 3.3
+    },
+    {
+      "page": "https://forest-international.com/news/forest-international-school-madame-figaro/",
+      "clicks": 3,
+      "impressions": 32,
+      "position": 8.9
+    },
+    {
+      "page": "https://forest-international.com/admissions/",
+      "clicks": 1,
+      "impressions": 395,
+      "position": 9.6
+    },
+    {
+      "page": "https://forest-international.com/early-years/",
+      "clicks": 1,
+      "impressions": 216,
+      "position": 17.6
+    },
+    {
+      "page": "https://forest-international.com/fr/news/ecole-anglaise-paris-maternelle-primaire/",
+      "clicks": 1,
+      "impressions": 128,
+      "position": 18.7
+    },
+    {
+      "page": "https://forest-international.com/news/welcome-new-school-year/",
+      "clicks": 1,
+      "impressions": 7,
+      "position": 5
+    },
+    {
+      "page": "https://forest-international.com/middle-school/",
+      "clicks": 0,
+      "impressions": 72,
+      "position": 23.6
+    },
+    {
+      "page": "https://forest-international.com/news/",
+      "clicks": 0,
+      "impressions": 17,
+      "position": 5.5
+    },
+    {
+      "page": "https://forest-international.com/news/english-international-schools-west-paris-yvelines/",
+      "clicks": 0,
+      "impressions": 459,
+      "position": 11.3
+    },
+    {
+      "page": "https://forest-international.com/news/english-school-paris-pre-elementary-primary/",
+      "clicks": 0,
+      "impressions": 152,
+      "position": 6.3
+    },
+    {
+      "page": "https://forest-international.com/news/international-school-paris-visit-checklist/",
+      "clicks": 0,
+      "impressions": 20,
+      "position": 8.3
+    },
+    {
+      "page": "https://forest-international.com/news/summer-school-paris-2026-english-camp/",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 5.1
+    },
+    {
+      "page": "https://forest-international.com/primary/",
+      "clicks": 0,
+      "impressions": 38,
+      "position": 6.9
+    },
+    {
+      "page": "https://forest-international.com/tuition/infant",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    }
+  ],
+  "totals": {
+    "clicks": 315,
+    "impressions": 12053,
+    "ctr": 0.026134572305650045,
+    "position": 10.130506927735834
+  },
+  "disclosed_query_totals": {
+    "clicks": 160,
+    "impressions": 9764,
+    "queries": 404
+  }
+}

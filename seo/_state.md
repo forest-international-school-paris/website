@@ -1,5 +1,22 @@
 # SEO Loop State — forest-international.com
 
+## 2026-09-30 — Homepage and measurement update (local, not deployed)
+
+- Homepage title/H1 use international school + west Paris; English-language, ages and
+  curriculum remain in the hero paragraph; nature is the distinguishing proposition.
+- Measurement v2 separates popup exposures from intent clicks and filters production
+  hosts. New announcement form clicks use event_register_click with event name/date;
+  historical masterclass_register_click remains ambiguous. No form-completion or
+  attendance tracking has been added.
+- PostHog v2 baseline: 61 organic intent clicks over 28 days. Do not compare with v1's
+  inflated conversion totals. See seo/metrics/posthog-2026-09-30.json.
+- GSC corrected 28-day baseline (2026-09-01..09-28): 315 property clicks / 12,053
+  impressions; disclosed query totals remain separate. See gsc-2026-09-30.json.
+- Follow-up after deployment: record deployment date; compare homepage non-brand
+  queries and organic intent sessions. Investigate international forest school by
+  country/device before attributing its zero clicks to headline copy. No ranking
+  improvement or conversion lift has been established by this local update.
+
 > Memory of the autonomous loop (`/school-seo-loop`). Every iteration reads this first
 > and updates it last. Rules live in root `CLAUDE.md`; thresholds in `seo/_registry.json`.
 
