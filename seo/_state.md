@@ -1,5 +1,21 @@
 # SEO Loop State — forest-international.com
 
+## 2026-10-01 — Open House registration and navigation deployed
+
+- Commit `9189942` pushed to `main`; Cloudflare Workers build completed successfully.
+- Verified HTTP 200 and updated markup on `/`, `/about/` and `/open-house/register/`.
+- Open House CTAs now use the embedded registration page in the same tab. Mobile
+  offers a compact Save date control beside the return link; desktop retains event
+  details and calendar actions in a sidebar. No form-completion tracking was added.
+- Homepage campus link targets `/about/#school-3d`; mobile photo corners and contact
+  navigation were refined. Production sitemap includes `/about/` and continues to
+  exclude the noindex Open House utility pages.
+- IndexNow accepted the homepage and About page (HTTP 200). Utility pages were not
+  submitted. Manual follow-up: inspect these indexable URLs in GSC on 2026-10-08.
+- Google Form description still shows 26 September 2026; the school must update it
+  to the confirmed 5 December 2026 event. No Google Form settings were changed here.
+
+
 ## 2026-09-30 — Homepage and measurement update (local, not deployed)
 
 - Homepage title/H1 use international school + west Paris; English-language, ages and
