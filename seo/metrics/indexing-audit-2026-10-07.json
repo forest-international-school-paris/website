@@ -1,0 +1,215 @@
+{
+  "checked_on": "2026-10-07",
+  "source": "Search Console URL Inspection API plus live HTTP checks; Page Indexing UI last updated 2026-10-04",
+  "summary": {
+    "urls_inspected": 28,
+    "current_indexable_pages_indexed": 20,
+    "intentional_noindex_pages": 6,
+    "historical_404s": 2
+  },
+  "page_indexing_report": {
+    "indexed": 20,
+    "redirect": 20,
+    "alternate_with_canonical": 10,
+    "noindex": 2,
+    "not_found": 1
+  },
+  "urls": [
+    {
+      "url": "https://forest-international.com/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-07T07:55:09Z"
+    },
+    {
+      "url": "https://forest-international.com/about/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-07T07:59:01Z"
+    },
+    {
+      "url": "https://forest-international.com/admissions/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-06T22:03:19Z"
+    },
+    {
+      "url": "https://forest-international.com/campus-rental/",
+      "http_status": 404,
+      "noindex": false,
+      "coverage": "Not found (404)",
+      "last_crawl": "2026-10-04T11:21:27Z"
+    },
+    {
+      "url": "https://forest-international.com/contact/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-07T13:03:58Z"
+    },
+    {
+      "url": "https://forest-international.com/early-years/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-03T18:03:26Z"
+    },
+    {
+      "url": "https://forest-international.com/fr/admissions/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-04T22:48:28Z"
+    },
+    {
+      "url": "https://forest-international.com/fr/news/ecole-anglaise-paris-maternelle-primaire/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-09-23T12:53:46Z"
+    },
+    {
+      "url": "https://forest-international.com/fr/stages-vacances/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-04T19:03:27Z"
+    },
+    {
+      "url": "https://forest-international.com/holiday-camps/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-06T19:33:55Z"
+    },
+    {
+      "url": "https://forest-international.com/legal/",
+      "http_status": 200,
+      "noindex": true,
+      "coverage": "Excluded by \u2018noindex\u2019 tag",
+      "last_crawl": "2026-10-01T22:47:44Z"
+    },
+    {
+      "url": "https://forest-international.com/middle-school/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-05T18:04:29Z"
+    },
+    {
+      "url": "https://forest-international.com/news/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-04T10:18:26Z"
+    },
+    {
+      "url": "https://forest-international.com/news/english-international-schools-west-paris-yvelines/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-02T19:48:48Z"
+    },
+    {
+      "url": "https://forest-international.com/news/english-school-paris-pre-elementary-primary/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-09-22T08:42:29Z"
+    },
+    {
+      "url": "https://forest-international.com/news/forest-international-school-madame-figaro/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-02T20:39:48Z"
+    },
+    {
+      "url": "https://forest-international.com/news/international-school-paris-visit-checklist/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-09-23T11:38:46Z"
+    },
+    {
+      "url": "https://forest-international.com/news/summer-school-paris-2026-english-camp/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-09-25T10:52:35Z"
+    },
+    {
+      "url": "https://forest-international.com/news/welcome-new-school-year/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-03T01:38:49Z"
+    },
+    {
+      "url": "https://forest-international.com/open-house/register/",
+      "http_status": 200,
+      "noindex": true,
+      "coverage": "URL is unknown to Google",
+      "last_crawl": null
+    },
+    {
+      "url": "https://forest-international.com/open-house/thank-you/",
+      "http_status": 200,
+      "noindex": true,
+      "coverage": "URL is unknown to Google",
+      "last_crawl": null
+    },
+    {
+      "url": "https://forest-international.com/primary/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-05T17:04:23Z"
+    },
+    {
+      "url": "https://forest-international.com/privacy/",
+      "http_status": 200,
+      "noindex": true,
+      "coverage": "Excluded by \u2018noindex\u2019 tag",
+      "last_crawl": "2026-10-02T01:17:44Z"
+    },
+    {
+      "url": "https://forest-international.com/survey/calendar/",
+      "http_status": 200,
+      "noindex": true,
+      "coverage": "URL is unknown to Google",
+      "last_crawl": null
+    },
+    {
+      "url": "https://forest-international.com/survey/thank-you/",
+      "http_status": 200,
+      "noindex": true,
+      "coverage": "URL is unknown to Google",
+      "last_crawl": null
+    },
+    {
+      "url": "https://forest-international.com/team/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-05T20:03:30Z"
+    },
+    {
+      "url": "https://forest-international.com/tuition/",
+      "http_status": 200,
+      "noindex": false,
+      "coverage": "Submitted and indexed",
+      "last_crawl": "2026-10-06T23:18:52Z"
+    },
+    {
+      "url": "https://forest-international.com/tuition/infant",
+      "http_status": 404,
+      "noindex": false,
+      "coverage": "URL is unknown to Google",
+      "last_crawl": null
+    }
+  ]
+}

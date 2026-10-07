@@ -1,5 +1,28 @@
 # SEO Loop State — forest-international.com
 
+## 2026-10-07 — Search Console indexing alert investigated
+
+- Existing school OAuth credentials work; no new credentials created or published.
+- Inspected 28 URLs from current routes and historical GSC page performance. All 20
+  current indexable pages return HTTP 200 and are indexed. All current internal
+  asset/page links resolve in the production build.
+- Page Indexing UI (updated 4 October): 20 indexed; exclusions are 20 redirects,
+  10 canonical alternatives, 2 noindex pages and 1 missing page.
+- The alert's noindex pages are `/legal/` and `/privacy/`; keep their deliberate
+  exclusions. Registration and survey utilities also remain noindex and off sitemap.
+- The alert's only 404 is `/campus-rental/`, intentionally deleted by staff in commit
+  `be13976` on 19 August. With no equivalent replacement, retain the correct 404;
+  do not restore an unconfirmed service or redirect it to an unrelated page.
+- Additional broken URL in GSC performance history: `/tuition/infant`. Added exact
+  HTTP 301 rules (with slash and index.html variants) to `/tuition/#fees`, which
+  contains the current Early Years fees. No school facts changed.
+- Build passed. Evidence: `seo/metrics/indexing-audit-2026-10-07.json` records the
+  pre-fix inspection. Deployment verification pending below.
+- Follow-up due 14 October: inspect `/tuition/infant` and `/tuition/` in GSC;
+  Google crawl status can lag the deployed redirect. No validation requested for
+  intentional noindex/404 exclusions.
+
+
 ## 2026-10-01 — Open House registration and navigation deployed
 
 - Commit `9189942` pushed to `main`; Cloudflare Workers build completed successfully.

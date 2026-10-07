@@ -1,0 +1,5 @@
+# Legacy fees URL still appearing in Search Console performance history.
+# Keep both URL forms and the old static HTML form on the current fees table.
+/tuition/infant /tuition/#fees 301
+/tuition/infant/ /tuition/#fees 301
+/tuition/infant/index.html /tuition/#fees 301
