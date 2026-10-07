@@ -17,7 +17,10 @@
   HTTP 301 rules (with slash and index.html variants) to `/tuition/#fees`, which
   contains the current Early Years fees. No school facts changed.
 - Build passed. Evidence: `seo/metrics/indexing-audit-2026-10-07.json` records the
-  pre-fix inspection. Deployment verification pending below.
+  pre-fix inspection. Fix pushed as `f523dbc`; production verified on 7 October:
+  all three legacy URL forms return HTTP 301 to `/tuition/#fees`, whose page serves
+  HTTP 200 with the fees anchor. Live sitemap contains exactly the 20 indexed
+  canonical pages. IndexNow accepted `/tuition/` (HTTP 200).
 - Follow-up due 14 October: inspect `/tuition/infant` and `/tuition/` in GSC;
   Google crawl status can lag the deployed redirect. No validation requested for
   intentional noindex/404 exclusions.
