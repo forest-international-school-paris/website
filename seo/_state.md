@@ -1,5 +1,33 @@
 # SEO Loop State — forest-international.com
 
+## 2026-10-09 — Mid-year transfer guide (Paris 15e school closure)
+
+- Trigger: a bilingual school in Paris 15e is closing (BODACC liquidation notice published
+  2026-10-04; actual last day of classes unknown). Its families need a new school mid-year.
+- Decision: the site never names that school (dénigrement risk; facts may change, e.g. a
+  takeover). Its brand term is navigational (its own site ranks #1) → handled by paid
+  search if the school runs ads; organic targets the mid-year-transfer intent instead.
+  Competitor-specific notes stay outside this public repo.
+- Ahrefs FR (2026-10-09): "changer/changement d'école en cours d'année" 150+200/mo KD 0,
+  "ecole bilingue paris 15" 150 KD 6, "…paris 16" 90, "…issy" 90, "…boulogne" 60.
+- GSC baseline 2026-07-01..10-07: "ecole primaire anglaise paris 15" 63 imp pos 33.8,
+  "english school paris 15" 41 imp pos 43.7, 0 clicks. New registry cluster
+  `paris-transfer` isolates these queries from today (first-match-wins, so they leave
+  `programs`/`choose-school` — account for that in week-over-week deltas).
+- User-confirmed facts (2026-10-09): door-to-door bus serves Paris 15e; earliest mid-year
+  start November 2026. Still unknown: bus price tier for 15e, places per year group,
+  fees for a November start — the copy points to the admissions team for all three.
+- Shipped: `fr/news/changer-ecole-cours-annee` (guide). Hub back-link from the
+  `/fr/admissions` FAQ + inbound link from the FR comparison guide. Linter fix: inline
+  markdown images are checked as images (not routes); FR "4 850 €" fees are now flagged
+  for verification.
+- Next: EN mirror (backlog P1-next, not before 2026-10-10 per daily cap) with hreflang pair.
+- User actions: (1) paid search on Paris 15/16 + inner-west terms if the school has an
+  ads account, landing on the guide with UTM utm_campaign=mid-year-transfer-2026;
+  (2) Ahrefs rank tracker (project 10043266): add a Paris location for these terms
+  (current location is Yvelines); (3) head of school: direct outreach through parent
+  networks, sharing the guide URL.
+
 ## 2026-10-07 — Search Console indexing alert investigated
 
 - Existing school OAuth credentials work; no new credentials created or published.

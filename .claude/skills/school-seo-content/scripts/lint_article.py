@@ -110,6 +110,14 @@ class Lint:
             self.warns.append(f"[{rule}] {msg}")
 
 
+def check_image(L, src, where):
+    """Images must be existing site assets under /images/ (Bible #3)."""
+    if not src.startswith("/images/"):
+        L.err("image_path", f"{where} {src} must live under /images/ (existing site assets only — Bible #3)")
+    elif not os.path.exists(os.path.join(REPO, "public", src.lstrip("/"))):
+        L.err("image_exists", f"{where} file not found: public{src}")
+
+
 def lint_file(path, routes):
     text = open(path, encoding="utf-8").read()
     fm, body = parse_frontmatter(text)
@@ -139,11 +147,7 @@ def lint_file(path, routes):
     elif desc and not 110 <= len(desc) <= 160:
         L.warn("desc_length", f"description {len(desc)} chars (aim 110-160)")
     if fm.get("image"):
-        img = os.path.join(REPO, "public", fm["image"].lstrip("/"))
-        if not fm["image"].startswith("/images/"):
-            L.err("image_path", "image must live under /images/ (existing site assets only — Bible #3)")
-        elif not os.path.exists(img):
-            L.err("image_exists", f"image file not found: public{fm['image']}")
+        check_image(L, fm["image"], "frontmatter image")
     if fm.get("date"):
         try:
             d = datetime.date.fromisoformat(str(fm["date"])[:10])
@@ -181,7 +185,11 @@ def lint_file(path, routes):
         L.warn("em_dash_density", f"{dashes} em-dashes in {words} words (AI-tone rhythm)")
 
     # --- links ---------------------------------------------------------------
-    links = re.findall(r"\[([^\]]*)\]\(([^)\s]+)\)", prose)
+    for alt, src in re.findall(r"!\[([^\]]*)\]\(([^)\s]+)\)", prose):
+        check_image(L, src, "inline image")
+        if not alt.strip():
+            L.err("image_alt", f"inline image {src} has no alt text (checklist §F photos)")
+    links = re.findall(r"(?<!!)\[([^\]]*)\]\(([^)\s]+)\)", prose)
     internal = [(t, u) for t, u in links if u.startswith("/")]
     for _, u in links:
         if u in ("#", ""):
@@ -200,7 +208,7 @@ def lint_file(path, routes):
             L.warn("anchor_repeat", f"anchor {a!r} used {n}× (≤2; checklist §D)")
 
     # --- fact-verification flags (judgment items for the §E review) -----------
-    for pat, what in ((r"€\s?\d[\d,.]*", "fee"), (r"\b\d{1,2}[:h]\d{2}\b", "time"),
+    for pat, what in ((r"€\s?\d[\d,.]*|\d[\d\s,.]*\s€", "fee"), (r"\b\d{1,2}[:h]\d{2}\b", "time"),
                       (r"\b20\d{2}\b", "year"), (r"free of charge", "pricing claim"),
                       (r"\+33[\s\d]{9,}", "phone")):
         hits = re.findall(pat, prose)

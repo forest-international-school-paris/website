@@ -141,7 +141,7 @@ Les écoles privées anglophones et internationales à Paris ont souvent des fra
 
 ### Peut-on candidater en cours d'année ?
 
-À Forest, les candidatures peuvent être envoyées tout au long de l'année scolaire et l'équipe admissions peut renseigner les familles sur les places disponibles. Les autres écoles varient selon leurs calendriers et leurs listes d'attente.
+À Forest, les candidatures peuvent être envoyées tout au long de l'année scolaire et l'équipe admissions peut renseigner les familles sur les places disponibles. Les autres écoles varient selon leurs calendriers et leurs listes d'attente. Les documents à prévoir et le bon moment pour arriver sont détaillés dans notre guide pour [changer d'école en cours d'année](/fr/news/changer-ecole-cours-annee/).
 
 ## Prochaine étape
 
