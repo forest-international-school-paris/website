@@ -24,7 +24,19 @@
 - Published: commit `557a1a2` pushed 2026-10-09; live ~90 s later (HTTP 200), in the live
   sitemap, both back-links live; IndexNow HTTP 200 for the guide, `/fr/admissions/` and
   the FR comparison guide. T+7 GSC inspection due 2026-10-16.
-- Next: EN mirror (backlog P1-next, not before 2026-10-10 per daily cap) with hreflang pair.
+- Same day, second batch (user instruction 2026-10-09: "do it now, don't wait" — explicit
+  override of the 1-new-post/day cap for the EN counterpart of the same intent):
+  - New user-confirmed facts: places in every year group (as of October 2026); mid-year
+    tuition pro rata to the time remaining, reduction possible; principal's quote on shy
+    newcomers + small classes (relayed by the user, translated). Bus tier for Paris 15e:
+    not published anywhere → copy keeps the dated 4,850–9,850 € range (no guessed tier).
+  - EN guide `news/changing-school-mid-year-paris` + hreflang pair with the FR guide.
+  - Money pages (user-confirmed fact): pro-rata line on `/tuition` (Tuition fee),
+    `/admissions` (new "Joining mid-year" row → EN guide) and `/fr/admissions` FAQ.
+  - Ahrefs rank tracker: 13 keywords added for location Paris (id 1006094), tag
+    `paris-transfer-2026`; the 301 Yvelines keywords untouched (PUT is additive).
+  - Paid-search import files prepared outside the repo (user's Downloads), campaign
+    imports paused.
 - User actions: (1) paid search on Paris 15/16 + inner-west terms if the school has an
   ads account, landing on the guide with UTM utm_campaign=mid-year-transfer-2026;
   (2) Ahrefs rank tracker (project 10043266): add a Paris location for these terms
@@ -197,6 +209,12 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 
 ## Scheduled
 
+- 2026-10-24: the Toussaint camp (19–23 Oct) is over → point the camp paragraph in both
+  mid-year guides to the next camp on `/holiday-camps` or remove it.
+- 2026-11-02: freshness — confirm with the user that places remain in every year group;
+  if not, edit both mid-year guides (and the paid-search copy, if live).
+- 2026-12-06: the 5 December Open House has passed → update the visit step in both
+  mid-year guides (and the Open House headline in the paid-search ads).
 - 2026-10-16: T+7 GSC inspection of `/fr/news/changer-ecole-cours-annee/` (indexed?) and
   first `paris-transfer` cluster read (baseline: ~110 imp, 0 clicks, pos 34–44).
 - 2026-07-24: T+7 GSC inspection for `/tuition`, `/early-years`, `/primary`, and

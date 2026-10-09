@@ -43,7 +43,7 @@ Parents often ask whether a smaller school outside central Paris can compare wit
 | French | English is the teaching language and French is part of the programme; Early Years includes 4.5 hours of immersive French each week | Ask whether French is foreign-language French, native-level French, bilingual instruction or a daily subject |
 | Outdoor learning | Children learn on a forest campus in Mareil-Marly, with forest and gardens used as part of school life | Ask whether outdoor learning is daily, weekly, seasonal or mainly recreational |
 | Specialist lessons | Early Years includes specialist teachers for Music, Sport and French; Primary includes language support, technology, swimming and outdoor activities | Ask which subjects are taught by the class teacher and which by specialists |
-| Admissions | [Admissions](/admissions/) are open year-round, with visits, virtual meetings and Open Days | Ask about testing, waiting lists, mid-year entry and the documents needed before a place can be confirmed |
+| Admissions | [Admissions](/admissions/) are open year-round, with visits, virtual meetings and Open Days | Ask about testing, waiting lists, [mid-year entry](/news/changing-school-mid-year-paris/) and the documents needed before a place can be confirmed |
 | Fees | Forest publishes tuition and additional fees on one [fees page](/tuition/), including cantine, bus, breakfast club and after-school club where relevant | Compare the first-year total, not only annual tuition: application, registration, capital, lunch, bus and learning-support fees can change the total |
 | Location | Forest is in Mareil-Marly, near Saint-Germain-en-Laye, west of Paris | Compare real morning and afternoon routes from your home, not only the distance on a map |
 

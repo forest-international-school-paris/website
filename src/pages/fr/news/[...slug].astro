@@ -4,6 +4,7 @@ import ArticleView from '../../../components/ArticleView.astro';
 import VisitBand from '../../../components/VisitBand.astro';
 import { ArrowRight } from '@lucide/astro';
 import { getCollection } from 'astro:content';
+import { postAlternates } from '../../../lib/post-translations';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -17,16 +18,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const slug = post.id.replace('fr/', '');
-const translations: Record<string, string> = {
-  'ecole-anglaise-paris-maternelle-primaire': '/news/english-school-paris-pre-elementary-primary/',
-};
-const alternates = translations[slug]
-  ? [
-      { hreflang: 'fr', href: `/fr/news/${slug}` },
-      { hreflang: 'en', href: translations[slug] },
-      { hreflang: 'x-default', href: translations[slug] },
-    ]
-  : [];
+const alternates = postAlternates('fr', slug);
 ---
 
 <Layout

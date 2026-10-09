@@ -11,6 +11,8 @@ tags: ["admissions", "changement d'école", "Paris", "Ouest parisien"]
 
 Oui, un enfant peut changer d'école en cours d'année en France, de la maternelle au collège. Pour rejoindre une école privée, il faut une place dans la nouvelle école, un certificat de radiation délivré par l'ancienne et un dossier : identité de l'enfant, vaccinations obligatoires et, pour les plus grands, les bulletins. À la Forest International School Paris, école anglophone de Mareil-Marly pour les enfants de 2 à 15 ans, les candidatures sont étudiées toute l'année et une arrivée est possible dès novembre 2026.
 
+*English version: [changing school mid-year in Paris](/news/changing-school-mid-year-paris/).*
+
 Les raisons d'un changement en cours d'année sont variées : un déménagement, une école qui ne convient plus à l'enfant, ou une école qui annonce sa fermeture. Dans ce dernier cas, de nombreuses familles cherchent en même temps, souvent dans les mêmes écoles. Mieux vaut alors commencer les démarches avant les vacances plutôt qu'après.
 
 ## Les démarches, étape par étape
@@ -26,7 +28,7 @@ Le site officiel [Service Public](https://www.service-public.gouv.fr/particulier
 
 Si l'école de votre enfant ferme, n'attendez pas la dernière semaine pour demander le certificat de radiation et une copie des bulletins de l'année. Faites la demande par écrit tant que l'équipe administrative reste joignable : ces documents peuvent être plus difficiles à obtenir une fois l'école fermée.
 
-Pour une école publique, la démarche passe par la mairie de votre commune, qui délivre un certificat d'inscription indiquant l'école d'affectation. Paris compte aussi des [écoles publiques labellisées bilingues](https://www.paris.fr/pages/les-ecoles-bilingues-publiques-a-paris-22426) en anglais, espagnol ou allemand ; elles accueillent uniquement les enfants qui habitent leur secteur.
+Pour une école maternelle ou élémentaire publique, la démarche passe par la mairie de votre commune, qui délivre un certificat d'inscription indiquant l'école d'affectation. Paris compte aussi des [écoles publiques labellisées bilingues](https://www.paris.fr/pages/les-ecoles-bilingues-publiques-a-paris-22426) en anglais, espagnol ou allemand ; elles accueillent uniquement les enfants qui habitent leur secteur.
 
 ## Novembre, janvier ou septembre : choisir le moment
 
@@ -34,7 +36,7 @@ Si l'école de votre enfant ferme, la vraie question devient le moment de son ar
 
 En Île-de-France comme dans toute la métropole, les vacances de la Toussaint 2026 commencent le samedi 17 octobre après les cours, et la classe reprend le lundi 2 novembre au matin, selon le [calendrier scolaire publié par Service Public](https://www.service-public.gouv.fr/particuliers/vosdroits/F31952). Arriver au retour des vacances permet à l'enfant de commencer une nouvelle période avec sa classe plutôt qu'en cours de période. Janvier offre le même avantage, avec quelques semaines de plus pour visiter et décider. Septembre reste possible si l'école actuelle de votre enfant reste ouverte jusqu'à la fin de l'année.
 
-À Forest, une arrivée est possible dès novembre 2026. Pour savoir si une place est disponible dans la classe de votre enfant, le plus simple est de demander directement à l'équipe admissions : l'école ne pratique pas de liste d'attente.
+À Forest, une arrivée est possible dès novembre 2026, et des places sont disponibles dans tous les niveaux, de la maternelle au collège (octobre 2026). L'école ne pratique pas de liste d'attente.
 
 Si votre enfant a entre 2 et 12 ans, le [stage de la Toussaint](/fr/stages-vacances/) peut servir de première semaine sur le campus. Il a lieu du 19 au 23 octobre 2026, de 10h à 16h, pour 450 € la semaine, repas en supplément à 40 € la semaine (tarifs en octobre 2026). Les stages sont ouverts aux enfants qui ne sont pas scolarisés à Forest, et un transport est possible sur demande depuis Saint-Germain-en-Laye, Le Pecq et Paris 16.
 
@@ -58,7 +60,7 @@ Si vous souhaitez conserver le programme de l'Éducation nationale à parts éga
 
 Forest se trouve au 28 Rue de Tour d'Echelle à Mareil-Marly, dans les Yvelines, près de Saint-Germain-en-Laye. Pour une famille installée dans le 15e arrondissement ou les communes voisines, la question du trajet vient souvent avant toutes les autres.
 
-En octobre 2026, le bus de l'école fonctionne en porte-à-porte et dessert Paris 15e. Son tarif, de 4 850 € à 9 850 € selon l'adresse de prise en charge, figure sur la page [Tuition & Fees](/tuition/) (en anglais). Pour le 16e ou une autre commune, Boulogne-Billancourt ou Issy-les-Moulineaux par exemple, demandez à l'équipe si votre adresse est desservie avant de compter sur cette solution.
+En octobre 2026, le bus de l'école fonctionne en porte-à-porte et dessert Paris 15e. Son tarif, de 4 850 € à 9 850 € selon l'adresse de prise en charge, figure sur la page [Tuition & Fees](/tuition/) (en anglais). Pour le 16e arrondissement ou une commune voisine, Boulogne-Billancourt ou Issy-les-Moulineaux par exemple, demandez à l'équipe si votre adresse est desservie avant de compter sur cette solution.
 
 Si vous préférez faire le trajet vous-même, testez-le un jour de semaine à l'heure réelle du départ, vers 8h, puis à l'heure du retour. Le petit-déjeuner dès 8h et l'accueil jusqu'à 18h, proposés en option, donnent un peu de marge aux parents qui travaillent à Paris.
 
@@ -73,9 +75,13 @@ L'inscription suit les mêmes quatre étapes qu'en septembre, présentées sur l
 3. **Le dossier d'inscription**, avec les documents demandés, si l'école correspond à votre projet.
 4. **La confirmation de la place** : un membre de l'équipe admissions vous accompagne à chaque étape.
 
-Il n'y a pas de date limite liée à l'anniversaire de l'enfant. Les frais de dossier et de scolarité sont publiés sur la page des frais ; pour une arrivée en novembre, demandez à l'équipe le montant exact qui s'applique à votre situation.
+Il n'y a pas de date limite liée à l'anniversaire de l'enfant. Pour une arrivée en cours d'année, les frais de scolarité sont calculés au prorata du temps restant, et une réduction peut être accordée : l'équipe admissions vous indique le montant exact pour votre situation. Le barème annuel est publié sur la page des frais.
 
 En primaire, un nouvel élève rejoint une classe de 15 élèves au maximum, avec un professeur principal qui enseigne toutes les matières académiques. Les classes sont multi-niveaux et chaque enfant y progresse à son rythme : un élève qui arrive en novembre rejoint un groupe où tout le monde n'en est pas au même point. D'avril à novembre, les cours de natation ont lieu deux fois par semaine avec les professeurs de sport, dans la piscine couverte et chauffée du campus. Au printemps, la classe part en forêt à vélo et pour de longues sorties.
+
+> « Au début, les enfants sont un peu timides. Comme nos classes sont petites, les enseignants peuvent suivre le développement de chaque enfant et l'aider à prendre confiance dans ce nouvel environnement, pour apprendre comme pour se faire des amis. »
+>
+> Sophie Lovejoy, à la tête de Forest International School Paris
 
 ## Aider votre enfant pendant les premières semaines
 
@@ -102,10 +108,14 @@ En primaire, un soutien ESL est proposé. En primaire comme au collège, le sout
 
 Oui : en octobre 2026, le bus de l'école dessert Paris 15e, en porte-à-porte. Le tarif dépend de l'adresse de prise en charge ; la fourchette est publiée sur la page des frais.
 
+### Les frais de scolarité sont-ils dus pour l'année entière si mon enfant arrive en novembre ?
+
+Non. Pour une arrivée en cours d'année, les frais de scolarité sont calculés au prorata du temps restant, et une réduction peut être accordée. L'équipe admissions vous indique le montant exact.
+
 ### Quand mon enfant peut-il commencer à Forest ?
 
-Dès novembre 2026, sous réserve d'une place disponible dans sa classe d'âge. Les candidatures sont étudiées toute l'année, sans liste d'attente.
+Dès novembre 2026. En octobre 2026, des places sont disponibles dans tous les niveaux, et les candidatures sont étudiées toute l'année, sans liste d'attente.
 
 ## Prochaine étape
 
-Le plus utile est de venir voir le campus avec votre enfant : [prenez rendez-vous pour une visite](/contact/), et l'équipe vous dira quelles places sont disponibles dans sa classe d'âge et ce qu'une arrivée en novembre implique pour votre famille.
+Le plus utile est de venir voir le campus avec votre enfant : [prenez rendez-vous pour une visite](/contact/), et l'équipe vous présentera sa future classe et ce qu'une arrivée en novembre implique pour votre famille.
