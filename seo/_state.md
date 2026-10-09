@@ -37,6 +37,9 @@
     `paris-transfer-2026`; the 301 Yvelines keywords untouched (PUT is additive).
   - Paid-search import files prepared outside the repo (user's Downloads), campaign
     imports paused.
+  - Published: commit `816cb36`; live ~60 s after push (EN guide 200, hreflang pair live,
+    `/tuition` + `/admissions` fee line live, EN guide in sitemap). IndexNow HTTP 200 for
+    6 URLs. T+7 GSC inspection of the EN guide due 2026-10-16 with the FR one.
 - User actions: (1) paid search on Paris 15/16 + inner-west terms if the school has an
   ads account, landing on the guide with UTM utm_campaign=mid-year-transfer-2026;
   (2) Ahrefs rank tracker (project 10043266): add a Paris location for these terms
