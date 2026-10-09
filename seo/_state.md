@@ -21,6 +21,9 @@
   `/fr/admissions` FAQ + inbound link from the FR comparison guide. Linter fix: inline
   markdown images are checked as images (not routes); FR "4 850 €" fees are now flagged
   for verification.
+- Published: commit `557a1a2` pushed 2026-10-09; live ~90 s later (HTTP 200), in the live
+  sitemap, both back-links live; IndexNow HTTP 200 for the guide, `/fr/admissions/` and
+  the FR comparison guide. T+7 GSC inspection due 2026-10-16.
 - Next: EN mirror (backlog P1-next, not before 2026-10-10 per daily cap) with hreflang pair.
 - User actions: (1) paid search on Paris 15/16 + inner-west terms if the school has an
   ads account, landing on the guide with UTM utm_campaign=mid-year-transfer-2026;
@@ -194,6 +197,8 @@ Multi-iteration. Phase 1 (diagnosis + architecture) DONE this iteration:
 
 ## Scheduled
 
+- 2026-10-16: T+7 GSC inspection of `/fr/news/changer-ecole-cours-annee/` (indexed?) and
+  first `paris-transfer` cluster read (baseline: ~110 imp, 0 clicks, pos 34–44).
 - 2026-07-24: T+7 GSC inspection for `/tuition`, `/early-years`, `/primary`, and
   `/middle-school` after the 2026-07-17 terminology/fee-clarity deployment. Check that
   the canonical pages remain indexed and watch fee/programme queries for unexpected
